@@ -1,0 +1,1 @@
+console.log("Exporting module");const shippingCost=10,cart=[],addToCart=function(t,o){cart.push({product:t,quantity:o}),console.log(o+` ${t} added to cart`)},totalPrice=237,totalQuantity=23;export default function(t,o){cart.push({product:t,quantity:o}),console.log(o+` ${t} added to cart`)}export{cart,addToCart,totalPrice,totalQuantity as tq};

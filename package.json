@@ -1,0 +1,31 @@
+{
+  "name": "complete-javascript-course",
+  "version": "1.0.0",
+  "description": "learning",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ICEDBANK/complete-javascript-course.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ICEDBANK/complete-javascript-course/issues"
+  },
+  "homepage": "https://github.com/ICEDBANK/complete-javascript-course#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-git": "^2.10.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "lodash.debounce": "^4.0.8"
+  }
+}

@@ -1,0 +1,1 @@
+class SearchView{_parentEl=document.querySelector(".search");getQuery(){var e=this._parentEl.querySelector(".search__field").value;return this._clearInput(),e}_clearInput(){this._parentEl.querySelector(".search__field").value=""}addHandlerSearch(r){this._parentEl.addEventListener("submit",function(e){e.preventDefault(),r()})}}export default new SearchView;

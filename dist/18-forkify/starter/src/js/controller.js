@@ -1,0 +1,1 @@
+const recipeContainer=document.querySelector(".recipe"),timeout=function(t){return new Promise(function(e,o){setTimeout(function(){o(new Error(`Request took too long! Timeout after ${t} second`))},1e3*t)})};
