@@ -119,71 +119,78 @@
 // line
 // literal`);
 
-// Conditional statements
+// // Conditional statements
 
-const age = 15;
-const isOldEnough = 18
+// const age = 15;
+// const isOldEnough = 18
 
 
-if(age >= isOldEnough) {
+// if(age >= isOldEnough) {
 
-    console.log(`Sarah is ${age} years old and she is old enough to drive`);
+//     console.log(`Sarah is ${age} years old and she is old enough to drive`);
 
-}else {
-    const yearsLeft = isOldEnough - age;
-    console.log(`Sarah is ${age} years old she is not old enough to drive,
-    She will have to wait ${yearsLeft} more years before applying`);
+// }else {
+//     const yearsLeft = isOldEnough - age;
+//     console.log(`Sarah is ${age} years old she is not old enough to drive,
+//     She will have to wait ${yearsLeft} more years before applying`);
 
-}
+// }
 
-const birthYear = 1988;
-let century = 0; 
+// const birthYear = 1988;
+// let century = 0; 
 
-if (birthYear <= 2000) {
+// if (birthYear <= 2000) {
 
-    century = 20;
+//     century = 20;
 
-}else {
+// }else {
 
-    century = 21;
+//     century = 21;
 
-}
-console.log(century);
+// }
+// console.log(century);
 
-// Type Conversion
+// // Type Conversion
 
-const inputYear = '1991';
-let numInputYear = (Number(inputYear));
-console.log(numInputYear + 18);
+// const inputYear = '1991';
+// let numInputYear = (Number(inputYear));
+// console.log(numInputYear + 18);
 
-console.log(String(23),23);
+// console.log(String(23),23);
 
-//  Type Coercion
+// //  Type Coercion
 
-console.log('I am ' + 23 + ' years old'); // console.log is making a number a string
-console.log ('23' - '10' - '3'); // console.log is making a string into a number
+// console.log('I am ' + 23 + ' years old'); // console.log is making a number a string
+// console.log ('23' - '10' - '3'); // console.log is making a string into a number
 
-let n = '1' + 1; // = 11
-n = n - 1;  // = 10
-console.log(n);
+// let n = '1' + 1; // = 11
+// n = n - 1;  // = 10
+// console.log(n);
 
-// Truthy and Falsy Values
-// 5 Falsey Value : 0, '', undefined, null, Nan
+// // Truthy and Falsy Values
+// // 5 Falsey Value : 0, '', undefined, null, Nan
 
-console.log(Boolean(0));         // False   
-console.log(Boolean(undefined)); // False
-console.log(Boolean('test'));    // True
-console.log(Boolean({}));        // True
-console.log(Boolean(''));       // False
+// console.log(Boolean(0));         // False   
+// console.log(Boolean(undefined)); // False
+// console.log(Boolean('test'));    // True
+// console.log(Boolean({}));        // True
+// console.log(Boolean(''));       // False
 
-const money = 0;
+// const money = 0;
 
-    if(money){
-        console.log("Don't Spend it at all :");
-    }else{console.log('you should get a job!')}
+//     if(money){
+//         console.log("Don't Spend it at all :");
+//     }else{console.log('you should get a job!')}
 
-    let height;
-    if(height){console.log('height is defined')}else{console.log('height is undefined')}
+//     let height;
+//     if(height){console.log('height is defined')}else{console.log('height is undefined')}
 
 // Equality Operators == vs ===
 
+const age = "18";
+if(age === 18) console.log('Adult, <Strict>');      // === Strict equality
+if(age == 18) console.log('Adult <Loose>');         // == loose equilty
+
+const fav = prompt("What's your favorit Number");
+console.log(typeof fav, fav);
+console.log(typeof fav, Number(fav), typeof(Number(fav)));
