@@ -201,7 +201,13 @@
 
 // Boolean Logic
 
-const hasDL = true;
-const hasGV = false;
+const hasDL = true;     // has driverlicens
+const hasGV = true;    // has good vision
 
-console.log(hasDL && hasGV);
+console.log(hasDL && hasGV); // AND operator
+console.log(hasDL || hasGV); // OR operator
+console.log(!hasDL);         // NOT operator
+
+const shouldDrive = hasDL && hasGV;
+
+if (shouldDrive){console.log('sarah can drive')}else{console.log('Someone else should drive')}
