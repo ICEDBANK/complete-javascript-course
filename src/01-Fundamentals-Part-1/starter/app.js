@@ -150,8 +150,20 @@ if (birthYear <= 2000) {
 }
 console.log(century);
 
-// Type Conversion and Coercion
+// Type Conversion
 
 const inputYear = '1991';
 let numInputYear = (Number(inputYear));
 console.log(numInputYear + 18);
+
+console.log(String(23),23);
+
+//  Type Coercion
+
+console.log('I am ' + 23 + ' years old'); // console.log is making a number a string
+console.log ('23' - '10' - '3'); // console.log is making a string into a number
+
+let n = '1' + 1;
+n = n - 1;
+console.log(n);
+
