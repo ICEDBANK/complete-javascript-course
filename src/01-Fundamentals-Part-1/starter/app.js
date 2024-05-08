@@ -191,6 +191,10 @@ const age = "18";
 if(age === 18) console.log('Adult, <Strict>');      // === Strict equality
 if(age == 18) console.log('Adult <Loose>');         // == loose equilty
 
-const fav = prompt("What's your favorit Number");
+const fav = Number(prompt("What's your favorit Number"));
 console.log(typeof fav, fav);
 console.log(typeof fav, Number(fav), typeof(Number(fav)));
+
+if ( fav === 23){console.log('Cool! 23 is an Amazing Age')}else if(fav === 7 ){console.log('7 is a a cool age')}else if(fav >= 24){console.log('cool')}
+
+if (fav !== 23) console.log('Why not 23');
