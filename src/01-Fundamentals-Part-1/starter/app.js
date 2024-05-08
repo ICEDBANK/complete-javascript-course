@@ -167,9 +167,23 @@ let n = '1' + 1; // = 11
 n = n - 1;  // = 10
 console.log(n);
 
+// Truthy and Falsy Values
 // 5 Falsey Value : 0, '', undefined, null, Nan
-console.log(Boolean(0));
-console.log(Boolean(undefined));
-console.log(Boolean('test'));
-console.log(Boolean({}));
+
+console.log(Boolean(0));         // False   
+console.log(Boolean(undefined)); // False
+console.log(Boolean('test'));    // True
+console.log(Boolean({}));        // True
+console.log(Boolean(''));       // False
+
+const money = 0;
+
+    if(money){
+        console.log("Don't Spend it at all :");
+    }else{console.log('you should get a job!')}
+
+    let height;
+    if(height){console.log('height is defined')}else{console.log('height is undefined')}
+
+// Equality Operators == vs ===
 
