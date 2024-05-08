@@ -149,3 +149,6 @@ if (birthYear <= 2000) {
 
 }
 console.log(century);
+
+// Type Conversion and Coercion
+
