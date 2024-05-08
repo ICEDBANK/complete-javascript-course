@@ -152,3 +152,6 @@ console.log(century);
 
 // Type Conversion and Coercion
 
+const inputYear = '1991';
+let numInputYear = (Number(inputYear));
+console.log(numInputYear + 18);
