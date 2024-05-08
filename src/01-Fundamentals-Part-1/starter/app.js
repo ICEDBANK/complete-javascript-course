@@ -211,3 +211,10 @@ console.log(!hasDL);         // NOT operator
 const shouldDrive = hasDL && hasGV;
 
 if (shouldDrive){console.log('sarah can drive')}else{console.log('Someone else should drive')}
+
+const isTired = false; //
+
+console.log(hasDL || hasGV || isTired); // OR operator
+console.log(hasDL && hasGV && isTired); // AND operator
+
+if(hasDL && hasGV && !isTired){console.log('sarah can drive')}else{console.log('Someone else should drive')}
