@@ -24,6 +24,8 @@
 
     logger();
 
+    /* Declare function / function Name (fruitProcessor) / Pass parameters ( apples, oranges )*/
+
     function fruitProcessor(apples, oranges) {
 
         console.log (apples, oranges);
@@ -31,6 +33,8 @@
         return juice;
 
     }
+    
+    /* storing  */
 
     const smoothie = fruitProcessor(5 , 0);
     console.log(smoothie);
