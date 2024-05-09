@@ -154,57 +154,60 @@ const day = 'monday';
 
 // Stric Comparison day === {day}
 
-    switch(day) {
-        case 'monday':
-            console.log('plan course structure');
-            console.log('Go to coding meetup');
-        break;
-        case 'tuesday':
-            console.log('prepare theory videos');
-        break;
-        case 'wednesday':
-            case 'thursday':
-                console.log('write code examples');
-        break;
-        case 'friday':
-            console.log('Record videos');
-        break;
-        case 'saturday':
-            case 'sunday':
-                console.log('Weekend Rest');
-                break;
-        default:
-            console.log('Not a valid day');
-    }
+    // switch(day) {
+    //     case 'monday':
+    //         console.log('plan course structure');
+    //         console.log('Go to coding meetup');
+    //     break;
+    //     case 'tuesday':
+    //         console.log('prepare theory videos');
+    //     break;
+    //     case 'wednesday':
+    //         case 'thursday':
+    //             console.log('write code examples');
+    //     break;
+    //     case 'friday':
+    //         console.log('Record videos');
+    //     break;
+    //     case 'saturday':
+    //         case 'sunday':
+    //             console.log('Weekend Rest');
+    //             break;
+    //     default:
+    //         console.log('Not a valid day');
+    // }
 
-    if (day === 'monday'){
+    // if (day === 'monday'){
 
-        console.log('plan course structure');
-        console.log('Go to coding meetup');
+    //     console.log('plan course structure');
+    //     console.log('Go to coding meetup');
 
-    }else if(day === 'tuesday'){
+    // }else if(day === 'tuesday'){
 
-        console.log('prepare theory videos');
+    //     console.log('prepare theory videos');
 
-    }else if(day === 'wednesday' || day === 'thursday'){
+    // }else if(day === 'wednesday' || day === 'thursday'){
 
-        console.log('write code examples');
+    //     console.log('write code examples');
 
-    }else if(day === 'friday'){
+    // }else if(day === 'friday'){
 
-        console.log('Record videos');
+    //     console.log('Record videos');
 
-    }else if(day === 'saturday' || day === 'sunday'){
+    // }else if(day === 'saturday' || day === 'sunday'){
 
-        console.log('Weekend Rest');
+    //     console.log('Weekend Rest');
 
-    }else{
+    // }else{
 
-        console.log('Not a valid day');
+    //     console.log('Not a valid day');
 
-    } 
+    // } 
 
 
+    // Statements and expressions
+
+    
 
 
 
