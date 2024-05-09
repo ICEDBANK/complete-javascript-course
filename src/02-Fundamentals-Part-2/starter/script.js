@@ -39,6 +39,9 @@
     const smoothie = fruitProcessor(5 , 0);
     console.log(smoothie);
 
+    const appleOrangeJuice = fruitProcessor(2 , 4);
+    
+
 // Function Declarations vs. Expressions
 
 
