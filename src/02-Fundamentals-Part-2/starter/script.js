@@ -50,7 +50,17 @@
 
 // Function Declarations vs. Expressions
 
+    ///* 
 
+        function calcAge1 (birthYear) {
+
+            const age = 2024 - birthYear;
+
+            return
+
+        }
+
+    //*/
 
 // Arrow Functions
 
