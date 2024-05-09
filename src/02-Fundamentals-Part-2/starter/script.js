@@ -1,6 +1,11 @@
 // Activating Strict Mode - A special mode in javascript which makes it easier to write secure code
 
     'use strict'; // Initiat at begining of code
+    let hasDriversLicense = false;
+    const passTest = true;
+
+    if(passTest)hasDriversLicense = true;
+    if(hasDriversLicense) console.log('I can drive!');
 
 // Functions
 
