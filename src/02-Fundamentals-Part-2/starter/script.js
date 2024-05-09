@@ -14,7 +14,7 @@
 
 // Functions
 
-    function logger() {
+    function logger(e) {
 
         console.log('My Name is Joshua');
 
