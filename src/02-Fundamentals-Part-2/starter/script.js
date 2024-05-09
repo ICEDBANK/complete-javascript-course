@@ -50,7 +50,7 @@
 
 // Function Declarations vs. Expressions
 
-    ///* 
+    /* 
 
         // Function Declaration    
 
@@ -60,7 +60,7 @@
 
         }
 
-        const age1 = calcAge1(1988);
+        const age1 = calcAge1(1988); // Can be called before or after function is initialized
         console.log(age1);
 
         // Function Expression
@@ -71,26 +71,131 @@
 
         }
 
-        const age2 = calcAge2(1989);
+        const age2 = calcAge2(1989); // must be called after the function is delcared
         console.log( age1, age2);
 
-    //*/
+
+
+    */
 
 // Arrow Functions
 
+    /*
 
+        const calcAge3 = birthYear => 1988 - birthYear;
+
+        const age3 = calcAge3(1988);
+        console.log(age3);
+
+        const yearsUntilRetirement = (birthYear, firstName) => {
+
+            const age = 2024 - birthYear;
+            const retirment = 65 - age;
+
+            return `${firstName} will be able to retire in ${retirment} years`;
+
+        }
+
+        console.log(yearsUntilRetirement(1988, 'Joshua'));
+        console.log(yearsUntilRetirement(1994, 'Jesse'));
+
+    */
 
 // Functions Calling Other Functions
 
+    /*
 
+        function cutFruit (fruit) {
+
+            return fruit * 4;
+
+        }
+
+        function fruitProcessor(apples, oranges) {
+
+            const applePieces = cutFruit(apples);
+            const orangePieces = cutFruit(oranges);
+
+            console.log (apples, oranges);
+            const juice = `Juice with ${applePieces} apples and ${orangePieces} oranges.`;
+            return juice;
+
+        }
+
+        console.log(fruitProcessor(2,3));
+
+    */
 
 // Review Functions
 
+    /* 
 
+        // birthYear is exclusive  calcAge4
+        const calcAge4 = function (birthYear) {
+
+            return 2024 - birthYear;
+
+        }
+
+        // birthYear is exclusive  calcAge4
+        const yearsUntilRetirement = function(birthYear, firstName) {
+
+            const age = calcAge4(birthYear);
+            const retirment = 65 - age;
+
+            if( retirment > 0 ) {
+
+                console.log(`${firstName} will be able to retire in ${retirment} years`);
+
+                return retirment;
+                
+            }else{
+
+                console.log(`${firstName} has already retired`);
+                return -1;
+
+            }
+
+            //return `${firstName} will be able to retire in ${retirment} years`;
+
+        }
+        
+
+        console.log(yearsUntilRetirement(1988, 'Joshua'));
+        console.log(yearsUntilRetirement(1950, 'Jesse'));
+        
+    */
 
 // Coding Excercis 5 Challenge #1
 
+    ///*
 
+        const calcAverage = (a, b, c) => (a+b+c)/3;
+
+        let scoreDolphins = calcAverage(85,54,41);
+        let scoreKoalas = calcAverage(23,34,27);
+
+        function checkWinner(avgDolphins, avgKoalas){
+            
+            if(avgDolphins > 2 * avgKoalas){
+                
+                console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+                
+            }else if(avgKoalas > 2 * avgDolphins){
+                
+                console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`)
+                
+            }else{
+                
+                console.log('No team wins...')
+                
+            }
+            
+        }
+
+        checkWinner(scoreDolphins, scoreKoalas);
+
+    //*/
 
 // Intro Into Arrays
 
