@@ -1,220 +1,233 @@
-// let js = 'amazing';
+    let js = 'amazing';
 
-// console.log(40 + 8 + 23 - 10);
+    console.log(40 + 8 + 23 - 10);
 
 
-// let firstName = ('Joshua');
-// let lastName = ('Rice');
-// let fullName = (firstName + ' ' + lastName);
-// console.log(fullName);
+    let firstName = ('Joshua');
+    let lastName = ('Rice');
+    let fullName = (firstName + ' ' + lastName);
+    console.log(fullName);
 
-// // 7 type of data types
+    // 7 type of data types
 
-// let age = 23; // <-Number Datatype
-// let dataString = ('testing'); // <- String
-// let fullage = false; // <- Boolean
-// let children; // <- undefined
+    let xage = 23; // <-Number Datatype
+    let dataString = ('testing'); // <- String
+    let fullage = false; // <- Boolean
+    let children; // <- undefined
 
-// let javaScriptIsFun = true;
-// console.log(javaScriptIsFun);
+    let javaScriptIsFun = true;
+    console.log(javaScriptIsFun);
 
-// console.log(typeof javaScriptIsFun);
-// console.log(typeof 23);
-// console.log(typeof 'Joshua');
-// console.log(typeof 15.254);
+    console.log(typeof javaScriptIsFun);
+    console.log(typeof 23);
+    console.log(typeof 'Joshua');
+    console.log(typeof 15.254);
 
-// javaScriptIsFun = 'YES!'; // Dynamic Typing see line 18
-// console.log(typeof javaScriptIsFun);
+    javaScriptIsFun = 'YES!'; // Dynamic Typing see line 18
+    console.log(typeof javaScriptIsFun);
 
-// let year;
-// console.log(typeof year); // returns as undefined
+    let year;
+    console.log(typeof year); // returns as undefined
 
-// console.log(typeof null); // returns as an object
+    console.log(typeof null); // returns as an object
 
-// let drinkingAge = 21; // Keyword "let" allows mutation
-// drinkingAge = 18;
+    let drinkingAge = 21; // Keyword "let" allows mutation
+    drinkingAge = 18;
 
-// const birthYear = 1988; // const variables can not be mutated
-// // birthYear = 2001;
+    const xbirthYear = 1988; // const variables can not be mutated
+    // birthYear = 2001;
 
-// // *** Operators ***
-// const currentYear = 2024;
+    // *** Operators ***
+    const currentYear = 2024;
 
-// const ageJosh = currentYear - 1988;
-// console.log(ageJosh);
+    const ageJosh = currentYear - 1988;
+    console.log(ageJosh);
 
-// const ageSarah = currentYear - 1989;
-// console.log(ageJosh,ageSarah);
+    const ageSarah = currentYear - 1989;
+    console.log(ageJosh,ageSarah);
 
-// console.log(ageJosh * 2, ageJosh / 2 ** 3);
-// // 2 ** 3 means 2 to the power of 3 = 2*2*2
+    console.log(ageJosh * 2, ageJosh / 2 ** 3);
+    // 2 ** 3 means 2 to the power of 3 = 2*2*2
 
-// console.log(firstName + ' ' + lastName);
-// // concatenation of two variables using the plus sign
+    console.log(firstName + ' ' + lastName);
+    // concatenation of two variables using the plus sign
 
-// let x = 10 + 5; // 15
-// console.log(x);
-// // = and * are two different mathamatical operators
-// x += 10; // 15 + 10 = 25
-// console.log(x);
-// x *= 4; // 25 * 4 = 100
-// console.log(x);
-// x++;
-// console.log(x);
-// x--;
-// console.log(x);
-// --x;
-// console.log(x);
+    let x = 10 + 5; // 15
+    console.log(x);
+    // = and * are two different mathamatical operators
+    x += 10; // 15 + 10 = 25
+    console.log(x);
+    x *= 4; // 25 * 4 = 100
+    console.log(x);
+    x++;
+    console.log(x);
+    x--;
+    console.log(x);
+    --x;
+    console.log(x);
 
-// //comparison operators
-// console.log(ageJosh > ageSarah);
-// console.log(ageJosh < ageSarah);
-// console.log(ageJosh >= ageSarah);
-// console.log(ageJosh <= ageSarah);
-// console.log(ageJosh != ageSarah);
+    //comparison operators
+    console.log(ageJosh > ageSarah);
+    console.log(ageJosh < ageSarah);
+    console.log(ageJosh >= ageSarah);
+    console.log(ageJosh <= ageSarah);
+    console.log(ageJosh != ageSarah);
 
-// console.log(currentYear - 1988 > currentYear - 1989);
+    console.log(currentYear - 1988 > currentYear - 1989);
 
-// // Operator Precedence
-// const operatorPrecedence =  currentYear - 1988 > currentYear - 1989;
-// console.log(operatorPrecedence);
-// // subtraction has precedence over > greater than
+    // Operator Precedence
+    const operatorPrecedence =  currentYear - 1988 > currentYear - 1989;
+    console.log(operatorPrecedence);
+    // subtraction has precedence over > greater than
 
-// let w,y;
-// w = y = 25 - 10 - 5; // 25 - 10 - 5 = 10, w = y = 10;
-// console.log ( w , y);
+    let w,y;
+    w = y = 25 - 10 - 5; // 25 - 10 - 5 = 10, w = y = 10;
+    console.log ( w , y);
 
-// const averageAge = ((ageJosh + ageSarah) / 2);
-// console.log(ageJosh , ageSarah , averageAge);
+    const averageAge = ((ageJosh + ageSarah) / 2);
+    console.log(ageJosh , ageSarah , averageAge);
 
-// // Section 1 Coding Challenge with Bonus 
+    // Section 1 Coding Challenge with Bonus 
 
-// const massMark = 78;
-// const heightMark = 1.69;
-// const massJohn = 92;
-// const heightJohn = 1.76;
+    const massMark = 78;
+    const heightMark = 1.69;
+    const massJohn = 92;
+    const heightJohn = 1.76;
 
-// const bmiJohn = massJohn / ( heightJohn * heightJohn );
-// const bmiMark = massMark / ( heightMark * heightMark );
+    const bmiJohn = massJohn / ( heightJohn * heightJohn );
+    const bmiMark = massMark / ( heightMark * heightMark );
 
-// console.log("John's BMI =" + bmiJohn + " Mark's BMI =" + bmiMark);
+    console.log("John's BMI =" + bmiJohn + " Mark's BMI =" + bmiMark);
 
-// const markHigherBMI = bmiMark > bmiJohn;
+    const markHigherBMI = bmiMark > bmiJohn;
 
-// console.log( markHigherBMI );
+    console.log( markHigherBMI );
 
-// const nameFirst = 'Joshua';
-// const job = 'Programmer';
+    const nameFirst = 'Joshua';
+    const job = 'Programmer';
 
-// const joshua = "I'm " + nameFirst + ' a ' + (currentYear - birthYear) + ' ' + job;
+    const joshua = "I'm " + nameFirst + ' a ' + (currentYear - birthYear) + ' ' + job;
 
-// console.log(joshua);
+    console.log(joshua);
 
-// const joshuaNew = `I'm ${nameFirst}, a ${currentYear - birthYear} year old ${job}`; // Template literals
-// console.log(joshuaNew);
+    const joshuaNew = `I'm ${nameFirst}, a ${currentYear - birthYear} year old ${job}`; // Template literals
+    console.log(joshuaNew);
 
-// console.log(`Just a regular String...`);
-// console.log(`sting
-// multi
-// line
-// literal`);
+    console.log(`Just a regular String...`);
+    console.log(`sting
+    multi
+    line
+    literal`);
 
-// // Conditional statements
+// Conditional statements
 
-// const age = 15;
-// const isOldEnough = 18
+    const yage = 15;
+    const isOldEnough = 18
 
 
-// if(age >= isOldEnough) {
+    if(age >= isOldEnough) {
 
-//     console.log(`Sarah is ${age} years old and she is old enough to drive`);
+    console.log(`Sarah is ${age} years old and she is old enough to drive`);
 
-// }else {
-//     const yearsLeft = isOldEnough - age;
-//     console.log(`Sarah is ${age} years old she is not old enough to drive,
-//     She will have to wait ${yearsLeft} more years before applying`);
+    }else {
+    const yearsLeft = isOldEnough - age;
+    console.log(`Sarah is ${age} years old she is not old enough to drive,
+    She will have to wait ${yearsLeft} more years before applying`);
 
-// }
+    }
 
-// const birthYear = 1988;
-// let century = 0; 
+    const birthYear = 1988;
+    let century = 0; 
 
-// if (birthYear <= 2000) {
+    if (birthYear <= 2000) {
 
-//     century = 20;
+    century = 20;
 
-// }else {
+    }else {
 
-//     century = 21;
+    century = 21;
 
-// }
-// console.log(century);
+    }
+    console.log(century);
 
-// // Type Conversion
+    const day = 'monday';
 
-// const inputYear = '1991';
-// let numInputYear = (Number(inputYear));
-// console.log(numInputYear + 18);
+// Stric Comparison day === {day}
 
-// console.log(String(23),23);
+    switch(day) {
+        case 'monday':
+            console.log('plan course structure');
+            console.log('Go to coding meetup');
+        break;
+        case 'tuesday':
+            console.log('prepare theory videos');
+        break;
+        case 'wednesday':
+            case 'thursday':
+                console.log('write code examples');
+        break;
+        case 'friday':
+            console.log('Record videos');
+        break;
+        case 'saturday':
+            case 'sunday':
+                console.log('Weekend Rest');
+                break;
+        default:
+            console.log('Not a valid day');
+    }
 
-// //  Type Coercion
+    if (day === 'monday'){
 
-// console.log('I am ' + 23 + ' years old'); // console.log is making a number a string
-// console.log ('23' - '10' - '3'); // console.log is making a string into a number
+        console.log('plan course structure');
+        console.log('Go to coding meetup');
 
-// let n = '1' + 1; // = 11
-// n = n - 1;  // = 10
-// console.log(n);
+    }else if(day === 'tuesday'){
 
-// // Truthy and Falsy Values
-// // 5 Falsey Value : 0, '', undefined, null, Nan
+        console.log('prepare theory videos');
 
-// console.log(Boolean(0));         // False   
-// console.log(Boolean(undefined)); // False
-// console.log(Boolean('test'));    // True
-// console.log(Boolean({}));        // True
-// console.log(Boolean(''));       // False
+    }else if(day === 'wednesday' || day === 'thursday'){
 
-// const money = 0;
+        console.log('write code examples');
 
-//     if(money){
-//         console.log("Don't Spend it at all :");
-//     }else{console.log('you should get a job!')}
+    }else if(day === 'friday'){
 
-//     let height;
-//     if(height){console.log('height is defined')}else{console.log('height is undefined')}
+        console.log('Record videos');
 
-// Equality Operators == vs ===
+    }else if(day === 'saturday' || day === 'sunday'){
 
-// const age = "18";
-// if(age === 18) console.log('Adult, <Strict>');      // === Strict equality
-// if(age == 18) console.log('Adult <Loose>');         // == loose equilty
+        console.log('Weekend Rest');
 
-// const fav = Number(prompt("What's your favorit Number"));
-// console.log(typeof fav, fav);
-// console.log(typeof fav, Number(fav), typeof(Number(fav)));
+    }else{
 
-// if ( fav === 23){console.log('Cool! 23 is an Amazing Age')}else if(fav === 7 ){console.log('7 is a a cool age')}else if(fav >= 24){console.log('cool')}
+        console.log('Not a valid day');
 
-// if (fav !== 23) console.log('Why not 23');
+    } 
 
-// Boolean Logic
+//Statements and expressions
 
-const hasDL = true;     // has driverlicens
-const hasGV = true;    // has good vision
+    const me = 'joshua'; // statement
+    console.log(`Hi, my name is ${me}. It is a pleasure to meet you`); // Expression
 
-console.log(hasDL && hasGV); // AND operator
-console.log(hasDL || hasGV); // OR operator
-console.log(!hasDL);         // NOT operator
+// The conditional (Ternary) Opertor
 
-const shouldDrive = hasDL && hasGV;
+    // condition ? (if) : (else)
 
-if (shouldDrive){console.log('sarah can drive')}else{console.log('Someone else should drive')}
+    const age = 19;
+    const dage = 20;
+    age <= dage ? 
+    console.log(`I am not old enough to drink yet but i have ${dage + 1 - age} years left before i can legally`) : 
+    console.log(`I am old enough to drink by ${age - (dage + 1)} year(s)`);
 
-const isTired = false; //
+    const drink = age >= 21 ? 'Wine' : 'Water'; // <- This is considered an expression 
+    console.log (drink);
 
-console.log(hasDL || hasGV || isTired); // OR operator
-console.log(hasDL && hasGV && isTired); // AND operator
+    console.log(`I like to drink ${age >= 21 ? 'Wine' : 'Water'}`) 
 
-if(hasDL && hasGV && !isTired){console.log('sarah can drive')}else{console.log('Someone else should drive')}
+    const bill = 275;
+
+/* Write your code below. Good luck! 🙂 */
+
+let tip = bill > 50 && bill < 300 ? bill + (bill * 0.15) : bill + (bill * 0.20)
+
+console.log(`Your Bill was ${bill}, the tip was ${tip = tip = bill > 50 && bill < 300 ? bill * 0.15 : bill * 0.20} and the total value is ${tip+bill}`)
