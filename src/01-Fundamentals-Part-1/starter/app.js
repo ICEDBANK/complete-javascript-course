@@ -225,3 +225,6 @@ const day = 'monday';
 
     console.log(`I like to drink ${age >= 21 ? 'Wine' : 'Water'}`) 
 
+    bill = 301;
+    tip = bill > 50 && bill < 300 ? bill + (bill * 0.15) : bill + (bill * 0.20)
+    console.log(tip)
