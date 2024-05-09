@@ -71,8 +71,8 @@
 
         }
 
-        const age2 = calcAge2(1988);
-        console.log(age2);
+        const age2 = calcAge2(1989);
+        console.log( age1, age2);
 
     //*/
 
