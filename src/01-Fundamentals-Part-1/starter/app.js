@@ -207,7 +207,21 @@ const day = 'monday';
 
     // Statements and expressions
 
-    
+    // const me = 'joshua'; // statement
+    // console.log(`Hi, my name is ${me}. It is a pleasure to meet you`); // Expression
 
+// The conditional (Ternary) Opertor
 
+    // condition ? (if) : (else)
+
+    const age = 19;
+    const dage = 20;
+    age <= dage ? 
+    console.log(`I am not old enough to drink yet but i have ${dage + 1 - age} years left before i can legally`) : 
+    console.log(`I am old enough to drink by ${age - (dage + 1)} year(s)`);
+
+    const drink = age >= 21 ? 'Wine' : 'Water'; // <- This is considered an expression 
+    console.log (drink);
+
+    console.log(`I like to drink ${age >= 21 ? 'Wine' : 'Water'}`) 
 
