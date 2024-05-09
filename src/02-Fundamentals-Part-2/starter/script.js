@@ -58,8 +58,8 @@
 
         }
 
-        calcAge1(1988);
-        console.log(calcAge1);
+        const age = calcAge1(1988);
+        console.log(age);
 
     //*/
 
