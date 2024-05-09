@@ -16,9 +16,13 @@
 
     function logger() {
 
-        console.log('');
+        console.log('My Name is Joshua');
 
     }
+
+    // Calling / Running / Invoking Function
+
+    logger();
 
 // Function Declarations vs. Expressions
 
