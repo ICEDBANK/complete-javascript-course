@@ -54,11 +54,12 @@
 
         function calcAge1 (birthYear) {
 
-            const age = 2024 - birthYear;
-
-            return
+            return 2024 - birthYear;
 
         }
+
+        calcAge1(1988);
+        console.log(calcAge1);
 
     //*/
 
