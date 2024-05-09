@@ -34,7 +34,7 @@
 
     }
     
-    /* storing the result of the function into a variable and passing arguments within the function */
+    /* storing the result of the function into a variable and passing arguments (5 , 0 ) within the function */
 
     const smoothie = fruitProcessor(5 , 0);
     console.log(smoothie);
