@@ -40,7 +40,7 @@
     console.log(smoothie);
 
     const appleOrangeJuice = fruitProcessor(2 , 4);
-    
+    console.log(appleOrangeJuice);
 
 // Function Declarations vs. Expressions
 
