@@ -1,6 +1,6 @@
-// Activating Strict Mode
+// Activating Strict Mode - A special mode in javascript which makes it easier to write secure code
 
-
+    'use strict'; // Initiat at begining of code
 
 // Functions
 
