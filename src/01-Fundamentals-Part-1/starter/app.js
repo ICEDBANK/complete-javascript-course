@@ -121,31 +121,90 @@
 
 // Conditional statements
 
-const age = 15;
-const isOldEnough = 18
+// const age = 15;
+// const isOldEnough = 18
 
 
-if(age >= isOldEnough) {
+// if(age >= isOldEnough) {
 
-    console.log(`Sarah is ${age} years old and she is old enough to drive`);
+//     console.log(`Sarah is ${age} years old and she is old enough to drive`);
 
-}else {
-    const yearsLeft = isOldEnough - age;
-    console.log(`Sarah is ${age} years old she is not old enough to drive,
-    She will have to wait ${yearsLeft} more years before applying`);
+// }else {
+//     const yearsLeft = isOldEnough - age;
+//     console.log(`Sarah is ${age} years old she is not old enough to drive,
+//     She will have to wait ${yearsLeft} more years before applying`);
 
-}
+// }
 
-const birthYear = 1988;
-let century = 0; 
+// const birthYear = 1988;
+// let century = 0; 
 
-if (birthYear <= 2000) {
+// if (birthYear <= 2000) {
 
-    century = 20;
+//     century = 20;
 
-}else {
+// }else {
 
-    century = 21;
+//     century = 21;
 
-}
-console.log(century);
+// }
+// console.log(century);
+
+const day = 'monday';
+
+// Stric Comparison day === {day}
+
+    switch(day) {
+        case 'monday':
+            console.log('plan course structure');
+            console.log('Go to coding meetup');
+        break;
+        case 'tuesday':
+            console.log('prepare theory videos');
+        break;
+        case 'wednesday':
+            case 'thursday':
+                console.log('write code examples');
+        break;
+        case 'friday':
+            console.log('Record videos');
+        break;
+        case 'saturday':
+            case 'sunday':
+                console.log('Weekend Rest');
+                break;
+        default:
+            console.log('Not a valid day');
+    }
+
+    if (day === 'monday'){
+
+        console.log('plan course structure');
+        console.log('Go to coding meetup');
+
+    }else if(day === 'tuesday'){
+
+        console.log('prepare theory videos');
+
+    }else if(day === 'wednesday' || day === 'thursday'){
+
+        console.log('write code examples');
+
+    }else if(day === 'friday'){
+
+        console.log('Record videos');
+
+    }else if(day === 'saturday' || day === 'sunday'){
+
+        console.log('Weekend Rest');
+
+    }else{
+
+        console.log('Not a valid day');
+
+    } 
+
+
+
+
+
