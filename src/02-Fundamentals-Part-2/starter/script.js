@@ -32,7 +32,8 @@
 
     }
 
-    fruitProcessor(5 , 0);
+    const smoothie = fruitProcessor(5 , 0);
+    console.log(smoothie);
 
 // Function Declarations vs. Expressions
 
