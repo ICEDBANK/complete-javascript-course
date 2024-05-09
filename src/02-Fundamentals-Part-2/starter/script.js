@@ -52,14 +52,27 @@
 
     ///* 
 
+        // Function Declaration    
+
         function calcAge1 (birthYear) {
 
             return 2024 - birthYear;
 
         }
 
-        const age = calcAge1(1988);
-        console.log(age);
+        const age1 = calcAge1(1988);
+        console.log(age1);
+
+        // Function Expression
+
+        const calcAge2 = function(birthYear) {
+
+            return 2024 - birthYear;
+
+        }
+
+        const age2 = calcAge2(1988);
+        console.log(age2);
 
     //*/
 
