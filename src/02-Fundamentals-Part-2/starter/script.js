@@ -14,33 +14,39 @@
 
 // Functions
 
-    function logger() {
+    /* 
+        
+        function logger() {
 
-        console.log(`Joshua`);
+            console.log(`Joshua`);
 
-    }
+        }
 
-    // Calling / Running / Invoking Function
+        // Calling / Running / Invoking Function
 
-    logger();
+        logger();
 
-    /* Declare function / function Name (fruitProcessor) / Pass parameters ( apples, oranges )*/
+        // Declare function / function Name (fruitProcessor) / Pass parameters ( apples, oranges )
 
-    function fruitProcessor(apples, oranges) {
+        function fruitProcessor(apples, oranges) {
 
-        console.log (apples, oranges);
-        const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
-        return juice;
+            console.log (apples, oranges);
+            const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+            return juice;
 
-    }
+        }
+        
+        // storing the result of the function into a variable and passing arguments (5 , 0 ) within the function
+
+        const smoothie = fruitProcessor(5 , 0);
+        console.log(smoothie);
+
+        const appleOrangeJuice = fruitProcessor(2 , 4);
+        console.log(appleOrangeJuice);    
+        
+    */
+
     
-    /* storing the result of the function into a variable and passing arguments (5 , 0 ) within the function */
-
-    const smoothie = fruitProcessor(5 , 0);
-    console.log(smoothie);
-
-    const appleOrangeJuice = fruitProcessor(2 , 4);
-    console.log(appleOrangeJuice);
 
 // Function Declarations vs. Expressions
 
