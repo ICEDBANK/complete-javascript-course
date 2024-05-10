@@ -210,7 +210,7 @@
             const friendsArray = ['Austin', 'Sarah', 'Ducky']; // illeteral syntax **
             console.log(friendsArray);
 
-            const years = new Array(1988, 1989, 2017, 2021);
+            const years1 = new Array(1988, 1989, 2017, 2021);
 
             console.log(friendsArray[0]);
             console.log(friendsArray[2]);
@@ -226,6 +226,16 @@
             const firstName = 'joshua';
             const joshua = [firstName, 'Rice', 2024 - 1988, 'Programmer' , friendsArray];
             console.log(joshua);
+
+            // Exercise using arrays
+
+            const calcAge4 = function (birthYear) {
+
+                return 2024 - birthYear;
+    
+            }
+
+            const years = [1988, 1989, 2017, 2021];
 
         //*/
 
