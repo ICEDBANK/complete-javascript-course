@@ -317,7 +317,7 @@
 
         // }
 
-        const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+        const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2; // Arrow Function returning 
 
         const bills = [125,555,44];
 
