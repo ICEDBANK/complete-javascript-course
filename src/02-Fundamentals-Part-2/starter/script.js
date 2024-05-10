@@ -360,7 +360,7 @@
         }
 
         console.log(joshua);
-        console.log(joshua.lastName); // joshua"DOT"lastName is an opertor to retrieve data from object joshua
+        console.log(joshua.lastName); // joshua"DOT"lastName is an opertor to retrieve property "lastName" from object joshua
 
         // Bracket notation
 
