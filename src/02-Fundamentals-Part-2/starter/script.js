@@ -268,7 +268,7 @@
             console.log(newLength);
 
             // Remove Elements
-            newLength = friendsArray.pop(); // unshift function will "push" the value to the start of an array, it also return the new length
+            newLength = friendsArray.pop(); // pop function will remove last element of an array and return the value of that last element
             console.log(friendsArray);
             console.log(newLength);
 
