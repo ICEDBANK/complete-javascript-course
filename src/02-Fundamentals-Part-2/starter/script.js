@@ -364,7 +364,7 @@
 
         // Bracket notation
 
-        console.log(joshua['lastName']); // joshua"DOT"lastName is an opertor to retrieve data from object joshua
+        console.log(joshua['lastName']); // joshua open and close square brackets with 
 
    //*/
 
