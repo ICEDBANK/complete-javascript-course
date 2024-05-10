@@ -221,7 +221,11 @@
             console.log(friendsArray[0]);
             console.log(friendsArray);
 
-            
+            //friendsArray = ['jack', 'jill', 'hill']; <- can not replace all elements
+
+            const firstName = 'joshua';
+            const joshua = [firstName, 'Rice', 2024 - 1988, 'Programmer' , friendsArray];
+            console.log(joshua);
 
         //*/
 
