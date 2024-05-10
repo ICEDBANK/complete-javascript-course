@@ -294,9 +294,9 @@
 
     function calcTip(bill){
     
-        const bill = bill;
+        const owe = bill;
         const tips = [.15, .2]
-        const tip = bill <= 300 && bill >= 50 ? bill * tips[0] : bill * tips[1];
+        const tip = owe <= 300 && owe >= 50 ? owe * tips[0] : owe * tips[1];
         
         
         return bill;
