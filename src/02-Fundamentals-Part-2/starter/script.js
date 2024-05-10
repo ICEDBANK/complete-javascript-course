@@ -280,6 +280,8 @@
             console.log(newLength);
             console.log(popElement);
 
+            console.log(friendsArray.indexOf('Sarah'));
+
     //*/
 
 // Coding Excercis 6 Challenge #2
