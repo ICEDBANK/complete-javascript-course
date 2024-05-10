@@ -329,9 +329,9 @@
 
 // Intro Into Objects
 
-    // Objec
-
     ///*
+
+        // Object literals, The difference between arrays and objects is object allowed unstructured data unlike arrays
 
         const joshua = 
         {
