@@ -215,7 +215,10 @@
             console.log(friendsArray[0]);
             console.log(friendsArray[2]);
             console.log(friendsArray.length);
-            console.log(friendsArray[friendsArray.length-1]);
+            console.log(friendsArray[friendsArray.length-1]); // Prints last element within array
+
+            friendsArray[0] = 'Dwight';
+            console.log(friendsArray[0]);
 
         //*/
 
