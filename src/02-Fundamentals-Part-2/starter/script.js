@@ -219,6 +219,9 @@
 
             friendsArray[0] = 'Dwight';
             console.log(friendsArray[0]);
+            console.log(friendsArray);
+
+            
 
         //*/
 
