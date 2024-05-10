@@ -377,6 +377,12 @@
         const interestedIn = prompt('What do you want to know about Joshua? Chose between firstName, lastName, age, job, and friends' );
         console.log(joshua[interestedIn]);
 
+        if(joshua[interestedIn]){
+            console.log(joshua[interestedIn]);
+        }else{
+            console.log('Wrong request Chose between firstName, lastName, age, job, and friends');
+        }
+
    //*/
 
 // Object Methods
