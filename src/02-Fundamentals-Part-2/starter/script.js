@@ -364,7 +364,7 @@
 
         // Bracket notation
 
-        console.log(joshua['lastName']); // joshua open and close square brackets with 
+        console.log(joshua['lastName']); // Accessing the 'lastName' property of the 'joshua' object using bracket notation 
 
    //*/
 
