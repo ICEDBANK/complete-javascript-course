@@ -375,7 +375,7 @@
         // When we need to compute the property name like above we have to use the bracket notation otherwise use DOT ( mush cleaner)
 
         const interestedIn = prompt('What do you want to know about Joshua? Chose between firstName, lastName, age, job, and friends' );
-        console.log(interestedIn);
+        console.log(jonas.interestedIn);
 
    //*/
 
