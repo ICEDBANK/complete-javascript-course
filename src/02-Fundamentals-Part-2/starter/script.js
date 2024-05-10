@@ -256,14 +256,18 @@
             // Javascript has built in funtions that can be placed on arrays called methods
 
             const friendsArray = ['Austin', 'Sarah', 'Ducky'];
+
+            // Add-to methods
             
             let newLength = friendsArray.push('Keith'); // push function will "push" the value to the end of an array, it also return the new length
             console.log(friendsArray);
             console.log(newLength);
 
-            newLength = friendsArray.unshift('John');
+            newLength = friendsArray.unshift('John'); // unshift function will "push" the value to the start of an array, it also return the new length
             console.log(friendsArray);
             console.log(newLength);
+
+            
 
     //*/
 
