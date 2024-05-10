@@ -348,7 +348,21 @@
         
    ///*
 
-        
+        // object DOT notation
+
+        const joshua = 
+        {
+            firstName : 'Joshua',
+            lastName : 'Rice',
+            age: 2024 - 1988,
+            job: 'Programmer',
+            friends: ['Sarah', 'Austin', 'Ducky']
+        }
+
+        console.log(joshua);
+        console.log(joshua.lastName); // joshua"DOT"lastName is an opertor to retrieve data from object joshua
+
+        // Bracket notation
 
    //*/
 
