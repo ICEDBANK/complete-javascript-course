@@ -384,7 +384,7 @@
         // }
 
         joshua.location = 'Pennsylvania';
-        joshua.github = 'ICEDBANK';
+        joshua['GitHub'] = 'icedbank';
         console.log(joshua);
 
    //*/
