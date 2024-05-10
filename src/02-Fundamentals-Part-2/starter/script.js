@@ -390,7 +390,16 @@
         // Exercise Challenge write a sentance in a dynamic way
         // joshua has 3 friends, and his best friend is Sarah
 
+        // Outputting a formatted string using template literals to display information about Joshua and his friends
+
+        // Template literal with placeholders for dynamic values
         console.log(`${joshua.firstName} has ${joshua.friends.length} friends and his best friend is ${joshua.friends[0]}`);
+        // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        // 1. Interpolation: `${joshua.firstName}` accesses the value of the 'firstName' property of the 'joshua' object.
+        // 2. Interpolation: `${joshua.friends.length}` accesses the length of the 'friends' array property of the 'joshua' object.
+        // 3. Access: `joshua.friends[0]` accesses the first element of the 'friends' array property of the 'joshua' object.
+        // 4. Output: Outputs the formatted string containing the dynamic values.
+
 
    //*/
 
