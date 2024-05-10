@@ -346,7 +346,7 @@
 
 // Dot vs. Bracket Notation
         
-   ///*
+   /*
 
         // object DOT notation
 
@@ -401,11 +401,15 @@
         // 4. Output: Outputs the formatted string containing the dynamic values.
 
 
-   //*/
+   */
 
 // Object Methods
+        
+   ///*
 
 
+
+   //*/
 
 // Coding Excercis 7 Challenge #3
 
