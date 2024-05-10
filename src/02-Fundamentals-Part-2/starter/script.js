@@ -292,19 +292,22 @@
             
     ///*
 
-    function calcTip(bill){
+    /* Write your code below. Good luck! 🙂 */
+
+function calcTip(bill){
     
-        const owe = bill;
-        const tips = [.15, .2]
-        const tip = owe <= 300 && owe >= 50 ? owe * tips[0] : owe * tips[1];
-        
-        
-        return console.log(`The bill was ${owe}, the tip was ${tip}, and the total value ${owe + tip}`);
-        
-    }
+    const owe = bill;
+    const tips = [.15, .2]
+    const tip = owe <= 300 && owe >= 50 ? owe * tips[0] : owe * tips[1];
+    const total = [tip.push];
     
-    const bills = [calcTip(125), calcTip(555), calcTip(44)];
-    console.log(bills);
+    return console.log(`The bill was ${owe}, the tip was ${tip}, and the total value ${owe + tip}`);
+    
+}
+
+const bills = [calcTip(125), calcTip(555), calcTip(44)];
+console.log(bills);
+
     
 
     //*/
