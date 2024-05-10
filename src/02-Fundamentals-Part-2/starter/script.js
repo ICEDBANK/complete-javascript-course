@@ -201,9 +201,18 @@
         
         ///*
 
+            // Array and objects are javascript two primary data structures
+
             const f1 = 'name1';
             const f2 = 'name2';
             const f3 = 'name3';
+
+            const friendsArray = ['Austin', 'Sarah', 'Ducky']; // illeteral syntax **
+            console.log(friendsArray);
+
+            const years = new Array(1988, 1989, 2017, 2021);
+
+            console.log(friendsArray[0]);
 
         //*/
 
