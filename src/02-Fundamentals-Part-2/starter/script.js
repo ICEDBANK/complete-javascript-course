@@ -366,8 +366,8 @@
 
         console.log(joshua['lastName']); // Accessing the 'lastName' property of the 'joshua' object using bracket notation accepts expressions
 
-        const namekey = 'Name';
-        console.log(joshua[`first` + namekey]);
+        const namekey = 'Name'; // expression
+        console.log(joshua[`first` + namekey]); // concatenating 
         console.log(joshua[`last` + namekey]);
 
    //*/
