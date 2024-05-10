@@ -255,7 +255,10 @@
 
             // Javascript has built in funtions that can be placed on arrays called methods
 
+            const friendsArray = ['Austin', 'Sarah', 'Ducky'];
             
+            friendsArray.push('Keith'); // push function will "push" the value to the end of an array
+            console.log(friendsArray);
 
     //*/
 
