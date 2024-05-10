@@ -321,7 +321,7 @@
 
         const bills = [125,555,44];
 
-        const tip = [calcTip()]
+        const tip = [calcTip(bill[0]),calcTip(bill[1]),calcTip(bill[2]) ]
 
     //*/
 
