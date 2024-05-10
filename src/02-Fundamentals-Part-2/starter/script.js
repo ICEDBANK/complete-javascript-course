@@ -329,9 +329,18 @@
 
 // Intro Into Objects
 
+    // Objec
+
     ///*
 
-        
+        const joshua = 
+        {
+            firstName : 'Joshua',
+            lastName : 'Rice',
+            age: 2024 - 1988,
+            job: 'Programmer',
+            friends: ['Sarah', 'Austin', 'Ducky']
+        }
 
     //*/
 
