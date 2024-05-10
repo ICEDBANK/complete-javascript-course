@@ -274,6 +274,8 @@
             console.log(newLength);
             console.log(popElement);
 
+            friendsArray.shift();
+
     //*/
 
 // Coding Excercis 6 Challenge #2
