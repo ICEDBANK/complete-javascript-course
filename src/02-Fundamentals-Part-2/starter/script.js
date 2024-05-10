@@ -237,7 +237,12 @@
 
             const years = [1988, 1989, 2010, 2017, 2021];
 
-            calcAge4(years);
+            //console.log(calcAge4(years)); // <-- can not compute NaN
+
+            const age4 = calcAge4(years[0]);
+            const age5 = calcAge4(years[3]);
+            const age6 = calcAge4(years[years.length-1]);
+            console.log(age4, age5, age6);
 
         //*/
 
