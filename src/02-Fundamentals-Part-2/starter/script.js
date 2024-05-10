@@ -215,6 +215,7 @@
             console.log(friendsArray[0]);
             console.log(friendsArray[2]);
             console.log(friendsArray.length);
+            console.log(friendsArray.length-1);
 
         //*/
 
