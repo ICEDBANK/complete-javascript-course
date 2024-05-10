@@ -369,7 +369,8 @@
         const namekey = 'Name'; // expression
         console.log(joshua[`first` + namekey]); // Accessing the property "firstName" of the 'joshua' object by concatenating the string "first" with the value of the variable 'namekey'
 
-        console.log(joshua[`last` + namekey]);
+        console.log(joshua[`last` + namekey]); // Accessing the property "lastName" of the 'joshua' object by concatenating the string "last" with the value of the variable 'namekey'
+        
 
    //*/
 
