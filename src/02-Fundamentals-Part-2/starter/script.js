@@ -199,7 +199,7 @@
 
 // Intro Into Arrays
         
-        ///*
+        /*
 
             // Array and objects are javascript two primary data structures
 
@@ -247,11 +247,15 @@
             const ages = [calcAge4(years[0]), calcAge4(years[3]), calcAge4(years[years.length-1])]; // Any position of an array needs to be a expression  function calls are legal
             console.log(ages);
 
-        //*/
+        */
 
 // Basic Array Operations ( Methods )
+            
+    ///*
 
+            
 
+    //*/
 
 // Coding Excercis 6 Challenge #2
 
