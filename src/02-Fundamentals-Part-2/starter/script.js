@@ -299,7 +299,7 @@
         const tip = owe <= 300 && owe >= 50 ? owe * tips[0] : owe * tips[1];
         
         
-        return bill;
+        return console.log(`The bill was ${owe}, the tip was ${tip}, and the total value ${owe + tip}`);
         
     }
     
