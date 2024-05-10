@@ -198,8 +198,14 @@
     */
 
 // Intro Into Arrays
+        
+        ///*
 
+            const f1 = 'name1';
+            const f2 = 'name2';
+            const f3 = 'name3';
 
+        //*/
 
 // Basic Array Operations ( Methods )
 
