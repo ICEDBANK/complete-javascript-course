@@ -268,9 +268,10 @@
             console.log(newLength);
 
             // Remove Elements
-            newLength = friendsArray.pop(); // pop function will remove last element of an array and return the value of that last element
+            let popElement = friendsArray.pop(); // pop function will remove last element of an array and return the value of that last element
             console.log(friendsArray);
             console.log(newLength);
+            console.log()
 
     //*/
 
