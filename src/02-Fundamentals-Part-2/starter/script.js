@@ -213,6 +213,8 @@
             const years = new Array(1988, 1989, 2017, 2021);
 
             console.log(friendsArray[0]);
+            console.log(friendsArray[2]);
+            console.log(friendsArray.length);
 
         //*/
 
