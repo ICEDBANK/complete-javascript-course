@@ -274,7 +274,11 @@
             console.log(newLength);
             console.log(popElement);
 
-            friendsArray.shift();
+            popElement = friendsArray.shift();
+            newLength = friendsArray;
+            console.log(friendsArray);
+            console.log(newLength);
+            console.log(popElement);
 
     //*/
 
