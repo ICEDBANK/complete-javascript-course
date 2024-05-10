@@ -280,7 +280,9 @@
             console.log(newLength);
             console.log(popElement);
 
-            console.log(friendsArray.indexOf('Sarah'));
+            console.log(friendsArray.indexOf('Sarah')); // allows you to find the position of a element
+
+            console.log(friendsArray.includes('Sarah')); // verifies an element existance within an array
 
     //*/
 
