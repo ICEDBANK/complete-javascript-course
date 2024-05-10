@@ -168,7 +168,7 @@
 
 // Coding Excercis 5 Challenge #1
 
-    ///*
+    /*
 
         const calcAverage = (a , b, c, d) => (a+b+c+d) / 4;
 
@@ -195,7 +195,7 @@
 
         winner(ads , aks);
 
-    //*/
+    */
 
 // Intro Into Arrays
 
