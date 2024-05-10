@@ -170,30 +170,30 @@
 
     ///*
 
-        const calcAverage = (a, b, c) => (a+b+c)/3;
+        const calcAverage = (a , b, c, d) => (a+b+c+d) / 4;
 
-        let scoreDolphins = calcAverage(85,54,41);
-        let scoreKoalas = calcAverage(23,34,27);
+        let ads = calcAverage(70, 90, 80, 50);
+        let aks = calcAverage(230, 300, 400, 250);
 
-        function checkWinner(avgDolphins, avgKoalas){
-            
-            if(avgDolphins > 2 * avgKoalas){
-                
-                console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
-                
-            }else if(avgKoalas > 2 * avgDolphins){
-                
-                console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`)
-                
-            }else{
-                
-                console.log('No team wins...')
-                
+        function winner ( ds , ks) {
+
+            if( ds >= 2 * ks) {
+
+                console.log(`ds wins (${ds} vs. ${ks})`);
+
+            }else if (ks >= 2 * ds){
+
+                console.log(`ks wins (${ks} vs. ${ds})`);
+
+            }else {
+
+                console.log(`No one wins...`);
+
             }
-            
+
         }
 
-        checkWinner(scoreDolphins, scoreKoalas);
+        winner(ads , aks);
 
     //*/
 
