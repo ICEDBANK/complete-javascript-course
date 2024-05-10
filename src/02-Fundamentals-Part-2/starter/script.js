@@ -390,7 +390,7 @@
         // Exercise Challenge write a sentance in a dynamic way
         // joshua has 3 friends, and his best friend is Sarah
 
-        console.log(`Joshua has ${joshua.friends.length} and his best friend is `);
+        console.log(`Joshua has ${joshua.friends.length} friends and his best friend is ${joshua['friends[0]']}`);
 
    //*/
 
