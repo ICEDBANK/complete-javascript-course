@@ -244,6 +244,8 @@
             const age6 = calcAge4(years[years.length-1]);
             console.log(age4, age5, age6);
 
+            const ages = [calcAge4(years[0])];
+
         //*/
 
 // Basic Array Operations ( Methods )
