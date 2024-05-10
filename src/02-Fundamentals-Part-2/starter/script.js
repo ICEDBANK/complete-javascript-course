@@ -251,7 +251,7 @@
 
 // Basic Array Operations ( Methods )
             
-    ///*
+    /*
 
             // Javascript has built in funtions that can be placed on arrays called methods
 
@@ -286,11 +286,35 @@
 
             if (friendsArray.includes('Sarah')) console.log('You have a friend call Sarah');
 
-    //*/
+    */
 
 // Coding Excercis 6 Challenge #2
+            
+    ///*
 
+    function calcTip(bill){
+    
+    
+    
+        if(bill >= 50 && bill <= 300){
+            
+            bill = bill + (bill * 0.15);
+            
+        }else{
+            
+            bill = bill + (bill * 0.2);
+            
+        }
+        
+        return bill;
+        
+    }
+    
+    const bills = [calcTip(125), calcTip(555), calcTip(44)];
+    console.log(bills);
+    
 
+    //*/
 
 // Intro Into Objects
 
