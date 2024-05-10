@@ -237,7 +237,7 @@
 
             const years = [1988, 1989, 2010, 2017, 2021];
 
-            // calcAge4(years);
+            calcAge4(years);
 
         //*/
 
