@@ -257,7 +257,11 @@
 
             const friendsArray = ['Austin', 'Sarah', 'Ducky'];
             
-            const newLength = friendsArray.push('Keith'); // push function will "push" the value to the end of an array
+            const newLength = friendsArray.push('Keith'); // push function will "push" the value to the end of an array, it also return the new length
+            console.log(friendsArray);
+            console.log(newLength);
+
+            friendsArray.unshift('John');
             console.log(friendsArray);
             console.log(newLength);
 
