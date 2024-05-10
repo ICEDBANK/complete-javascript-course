@@ -372,7 +372,9 @@
         console.log(joshua[`last` + namekey]); // Accessing the property "lastName" of the 'joshua' object by concatenating the string "last" with the value of the variable 'namekey'
         //console.loger(joshua.'last' + nameKey);
 
-        // When we need to compute 
+        // When we need to compute the property name like above we have to use the bracket notation otherwise use DOT ( mush cleaner)
+
+        prompt('What do you want to know about Joshua? Cho' )
 
    //*/
 
