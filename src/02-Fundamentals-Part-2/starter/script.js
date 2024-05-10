@@ -290,26 +290,28 @@
 
 // Coding Excercis 6 Challenge #2
             
+    /* // My attempt it works to my liking and does what i need it to do
+
+    function calcTip(bill){
+    
+        const owe = bill;
+        const tips = [.15, .2]
+        const tip = owe <= 300 && owe >= 50 ? owe * tips[0] : owe * tips[1];
+        
+        
+        return console.log(`The bill was ${owe}, the tip was ${tip}, and the total value ${owe + tip}`);
+        
+    }
+    
+    const bills = [calcTip(125), calcTip(555), calcTip(44)];
+    console.log(bills);
+    
+
+    */
+
     ///*
 
-    /* Write your code below. Good luck! 🙂 */
-
-function calcTip(bill){
-    
-    const owe = bill;
-    const tips = [.15, .2]
-    const tip = owe <= 300 && owe >= 50 ? owe * tips[0] : owe * tips[1];
-    const total = [];
-    total = total
-    
-    return console.log(`The bill was ${owe}, the tip was ${tip}, and the total value ${owe + tip}`);
-    
-}
-
-const bills = [calcTip(125), calcTip(555), calcTip(44)];
-console.log(bills);
-
-    
+        
 
     //*/
 
