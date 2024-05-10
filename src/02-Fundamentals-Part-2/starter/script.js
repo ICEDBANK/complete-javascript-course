@@ -284,7 +284,7 @@
 
             console.log(friendsArray.includes('Sarah')); // verifies an element existance within an array
 
-            if (friendsArray.includes('Sarah')) console
+            if (friendsArray.includes('Sarah')) console.log('You have a friend call Sarah');
 
     //*/
 
