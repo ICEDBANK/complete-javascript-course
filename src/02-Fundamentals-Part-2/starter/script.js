@@ -253,6 +253,8 @@
             
     ///*
 
+            // Javascript has built in funtions that can be placed on arrays called methods
+
             
 
     //*/
