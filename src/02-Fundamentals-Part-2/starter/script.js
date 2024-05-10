@@ -387,6 +387,9 @@
         joshua['GitHub'] = 'icedbank';
         console.log(joshua);
 
+        // Exercise Challenge write a sentance in a dynamic way
+        // joshua has 3 friends, and his best friend is Sarah
+
    //*/
 
 // Object Methods
