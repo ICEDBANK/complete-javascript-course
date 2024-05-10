@@ -294,7 +294,7 @@
 
     function calcTip(bill){
     
-    
+        const tips = []
     
         if(bill >= 50 && bill <= 300){
             
