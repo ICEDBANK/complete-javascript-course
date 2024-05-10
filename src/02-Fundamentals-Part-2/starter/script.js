@@ -284,6 +284,8 @@
 
             console.log(friendsArray.includes('Sarah')); // verifies an element existance within an array
 
+            if (friendsArray.includes('Sarah')) console
+
     //*/
 
 // Coding Excercis 6 Challenge #2
