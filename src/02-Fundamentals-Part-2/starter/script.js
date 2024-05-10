@@ -329,7 +329,7 @@
 
 // Intro Into Objects
 
-    ///*
+    /*
 
         // Object literals, The difference between arrays and objects is object allowed unstructured data unlike arrays
 
@@ -342,11 +342,15 @@
             friends: ['Sarah', 'Austin', 'Ducky']
         }
 
-    //*/
+    */
 
 // Dot vs. Bracket Notation
+        
+   ///*
 
+        
 
+   //*/
 
 // Object Methods
 
