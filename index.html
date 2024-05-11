@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Optimal Storage Solution</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>test</h1>
+    <button onclick="findOptimalStorage()">Find Optimal Storage Solution</button>
+    <table id="outputTable">
+        <thead>
+            <tr>
+                <th>Cell</th>
+                <th>Contents</th>
+                <th>Volume</th>
+                <th>Remaining Weight Capacity</th>
+            </tr>
+        </thead>
+        <tbody id="outputBody"></tbody>
+    </table>
+
+    <script src="app.js"></script>
 </body>
 </html>
