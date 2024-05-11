@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optimal Storage Solution</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <button onclick="findOptimalStorage()">Find Optimal Storage Solution</button>
-    <table id="outputTable">
-        <thead>
+    <button onclick="findOptimalStorage()" class="btn btn-primary">Find Optimal Storage Solution</button>
+    <table class="table mt-3">
+        <thead class="thead-dark">
             <tr>
-                <th>Cell</th>
-                <th>Contents</th>
-                <th>Volume</th>
-                <th>Remaining Weight Capacity</th>
+                <th scope="col">Cell</th>
+                <th scope="col">Contents</th>
+                <th scope="col">Volume</th>
+                <th scope="col">Remaining Weight Capacity</th>
             </tr>
         </thead>
         <tbody id="outputBody"></tbody>
     </table>
 
     <script src="app.js"></script>
+    <script>
+        // Function to update HTML table with available volume in big cell
+        function updateAvailableVolume(volume) {
+            document.getElementById('outputBody').innerHTML += `<tr><td>Big Cell</td><td>${volume} (Available Volume)</td><td>${volume}</td><td>N/A</td></tr>`;
+        }
+    </script>
 </body>
 </html>
