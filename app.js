@@ -102,7 +102,8 @@ function findOptimalStorage() {
 
 
 // // The goal is to determine to optimal storage solution
-// This needs to be trigger with a onClick function call within index.html and im using a external file for javascript called app.js
+// using React.js and react-bootstrap
+// This needs to be trigger with a onClick function call App.js
 // all solutions will display witin a table styled with bootstap classes
 // // The app will iterate through every option until bundleQuantity reach zero for each bundle object
 // // as the app fills a cell it will calculate the remaining cells available to fill and repeat the process untill bundleQuantity reaches 0 for each bundle object. Once complete it will output the number of cells that are left to fill

@@ -405,15 +405,93 @@
 
 // Object Methods
         
-   ///*
+   /*
 
+   const joshua = 
+   {
+       firstName : 'Joshua',
+       lastName : 'Rice',
+       birthYear: 1988,
+       job: 'Programmer',
+       friends: ['Sarah', 'Austin', 'Ducky'],
+       hasDriverLicense: true,
 
+       //calcAge: function(birthYear){return 2024 - birthYear;}
 
-   //*/
+       //calcAge: function(){console.log (this); return 2024 - this.birthYear;}
+
+       calcAge: function(){this.age = 2037 - this.birthYear; return this.age;}
+
+   };
+   
+   console.log(joshua.age);
+   //console.log(joshua ['calcAge'](1988));
+
+   */
 
 // Coding Excercis 7 Challenge #3
 
+/*
 
+   
+const joshua = 
+{
+    firstName : 'Joshua',
+    lastName : 'Rice',
+    birthYear: 1988,
+    job: 'Programmer',
+    friends: ['Sarah', 'Austin', 'Ducky'],
+    hasDriverLicense: false,
+
+    //calcAge: function(birthYear){return 2024 - birthYear;}
+
+    //calcAge: function(){console.log (this); return 2024 - this.birthYear;}
+
+    calcAge: function(){this.age = 2024 - this.birthYear; return this.age;},
+
+    getSummary : function(){return `${this.firstName}, is a ${this.calcAge()} year old ${this.job} and he ${this.hasDriverLicense ? "has a drivers License" : "does not have a drivers Licenese"}`}
+
+};
+
+   console.log(joshua.getSummary());
+
+*/
+
+
+
+    /* Write your code below. Good luck! 🙂 */
+
+    /*
+
+        const mark = {
+            fullName: 'Mark Miller',
+            mass: 78,
+            height: 1.69,
+            bmi: 0,
+            calcBMI: function(){return this.bmi = this.mass / ( this.height * this.height)}
+        }
+
+        const john = {
+            fullName: 'John Smith',
+            mass: 78,
+            height: 1.69,
+            bmi: 0,
+            calcBMI: function(){return this.bmi = this.mass / ( this.height * this.height)}
+        }
+
+            if(mark.calcBMI() > john.calcBMI()) {
+
+                console.log(`${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${john.fullName}'s (${john.calcBMI()})!`);
+
+            } else {
+
+                console.log(`${john.fullName}'s BMI (${john.calcBMI()}) is higher than ${mark.fullName}'s (${mark.calcBMI()})!`);
+
+            }
+
+
+
+    */
 
 // Iteration: The For Loop
 
