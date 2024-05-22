@@ -612,7 +612,8 @@ const joshua =
 
                         while ( rep <= 10) {
 
-                            console.log(`lifting Weights repetition ${rep} (While Loop)`)
+                            console.log(`lifting Weights repetition ${rep} (While Loop)`);
+                            rep++;
 
                         }
 
