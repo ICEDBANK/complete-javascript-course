@@ -494,20 +494,129 @@ const joshua =
     */
 
 // Iteration: The For Loop
+            
+            /*
 
+                // for loop keeps running while condition is TRUE
+                for(let rep = 1; rep <= 10; rep++ ){
 
+                    console.log(`Lifting weights repetition ${rep}`);
+
+                }
+
+            */
 
 // Looping Arrays, Breaking and Continuing
 
+                /*
 
+                const joshua = [
+                    'Joshua',
+                    'Rice',
+                    2024 - 1988,
+                    'Programmer',
+                    ['Sarah', 'Austin', 'Ducky'],
+                ];
+                
+                const types = [];
+                const type = [];
+                
+                for (let i = 0; i < joshua.length; i++) {
+                    // Reading from joshua array
+                    console.log(joshua[i], typeof joshua[i]);
+                
+                    // Filling types Array
+                    types[i] = typeof joshua[i];
+                
+                    // Filling type Array using push Method
+                    type.push(typeof joshua[i]);
+                }
+                
+                console.log(type);
+                
+                const year = [1988, 2006, 2010, 2017, 2021];
+                const ages = [];
+                
+                for (let i = 0; i < year.length; i++) {
+                    ages.push(2024 - year[i]);
+                }
+                
+                console.log(ages);
+                
+                // continue and Break conditional loops
+                
+                console.log('---- Strings Only ----');
+                
+                for (let i = 0; i < joshua.length; i++) {
+                    if (typeof joshua[i] !== 'string') continue;
+                
+                    // Reading from joshua array
+                    console.log(joshua[i], typeof joshua[i]);
+                }
+                
+                console.log('---- Numbers Only ----');
+                
+                for (let i = 0; i < joshua.length; i++) {
+                    if (typeof joshua[i] === 'number') {
+                        // Reading from joshua array
+                        console.log(joshua[i], typeof joshua[i]);
+                        break; // This will stop the loop after the first number is found
+                    }
+                }
+                
+
+                */
 
 // Looping Backwards and Loops In Loops
 
+                /*
 
+                const joshua = [
+                    'Joshua',
+                    'Rice',
+                    2024 - 1988,
+                    'Programmer',
+                    ['Sarah', 'Austin', 'Ducky'],
+                ];
+
+                    // Looping throught an array backwards
+
+                    for(let i = joshua.length - 1; i >= 0; i-- ){
+
+                        console.log(i, joshua[i]);
+
+                    }
+
+                    // Nested loop statments
+
+                    for(let exercise = 1; exercise < 4; exercise++) {
+                        console.log(`${exercise} Bench Press repetition ${exercise}`);
+                    
+                        for(let rep = 1; rep < 6; rep++) {
+                            console.log(`Excercies ${rep}: Biceps Curls repetition ${rep}`);
+                        }
+                    }
+
+                */
 
 // The While Loop
+                    
+                    ///*
 
+                        for (let rep = 1; rep <= 10; rep++) {
 
+                            console.log(`Lifting weights repetition ${rep} (For Loop)`);
+
+                        }
+                        let rep = 1;
+
+                        while ( rep <= 10) {
+
+                            console.log(`lifting Weights repetition ${rep} (While Loop)`)
+
+                        }
+
+                    //*/
 
 // Coding Excercis 8 Challenge #4
 
