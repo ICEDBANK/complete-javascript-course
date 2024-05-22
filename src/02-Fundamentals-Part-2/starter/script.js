@@ -647,7 +647,7 @@ const calcTip = function (bill) {
           
           const tip = calcTip(bills[i]);
           tips.push(tip);
-          totals.push(bill[i] + tip);
+          totals.push(bills[i] + tip);
           console.log(totals);
       }
   
