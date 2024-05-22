@@ -612,17 +612,18 @@ const joshua =
 
                         while ( rep <= 10) {
 
-                            console.log(`lifting Weights repetition ${rep} (While Loop)`);
+                            //console.log(`lifting Weights repetition ${rep} (While Loop)`);
                             rep++;
 
                         }
 
                         let dice = Math.trunc(Math.random() * 6) +1 ;
-                        console.log(dice);
+                        //console.log(dice);
 
                         while (dice !== 6) {
 
                             console.log(`You Rolled a ${dice}`);
+                            dice = Math.trunc(Math.random() * 6) +1 ;
 
                         }
 
