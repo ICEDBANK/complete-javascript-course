@@ -617,6 +617,8 @@ const joshua =
 
                         }
 
+                        let dice = Math.random() * 6;
+
                     //*/
 
 // Coding Excercis 8 Challenge #4
