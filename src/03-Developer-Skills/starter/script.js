@@ -2,3 +2,5 @@
 "use strict";
 
 const x = 23;
+
+const calcAverage = function () {};
