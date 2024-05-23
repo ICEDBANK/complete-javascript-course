@@ -648,8 +648,12 @@ const calcTip = function (bill) {
           const tip = calcTip(bills[i]);
           tips.push(tip);
           totals.push(bills[i] + tip);
-          console.log(totals);
+          
       }
+
+      console.log(bills);
+      console.log(tips);
+      console.log(totals);
   
 //  const calcAverage(arr){
       
