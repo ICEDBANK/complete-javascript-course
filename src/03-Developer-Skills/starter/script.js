@@ -177,9 +177,6 @@ TEST DATA 1: [17, 21, 23]
 TEST DATA 2: [12, 5, -5, 0, 4]
 */
 
-const testData1 = [17, 21, 23];
-const testData2 = [12, 5, -5, 0, 4];
-
 const printForcast = function (arr) {
   let foreCastString = '... ';
 
@@ -189,6 +186,9 @@ const printForcast = function (arr) {
 
   console.log(foreCastString);
 };
+
+const testData1 = [17, 21, 23];
+const testData2 = [12, 5, -5, 0, 4];
 
 printForcast([testData1]);
 printForcast([testData2]);
