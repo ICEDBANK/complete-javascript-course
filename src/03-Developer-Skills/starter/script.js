@@ -189,3 +189,6 @@ const printForcast = function (arr) {
 
   console.log(forcastString);
 };
+
+printForcast([testData1]);
+printForcast([testData2]);
