@@ -105,6 +105,6 @@ const calcTempAmplitudeNew = function (t1, t2) {
 };
 
 calcTempAmplitudeNew([3, 7, 4, 8, 1]);
-const amplitudeNew = calcTempAmplitudeNew(temperatures);
+const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [65, 45, 57]);
 
 console.log(amplitudeNew);
