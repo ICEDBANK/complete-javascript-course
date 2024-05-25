@@ -54,7 +54,11 @@ const calcTempAmplitude = function (temp) {
   }
 
   console.log(`Max: ${max}, Min: ${min}`);
+
+  return max - min;
 };
 
 calcTempAmplitude([3, 7, 4, 8, 1]);
-calcTempAmplitude(temperatures);
+const amplitude = calcTempAmplitude(temperatures);
+
+console.log(amplitude);
