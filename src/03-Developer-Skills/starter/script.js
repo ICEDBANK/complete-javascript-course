@@ -43,12 +43,16 @@ const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 
 const calcTempAmplitude = function (temp) {
   let max = temp[0];
+  let min = temp[0];
 
   for (let i = 0; i < temp.length; i++) {
-    if (temp[i] > max) max = temp[i];
+    const curTemp = temp[i];
+
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
   }
 
-  console.log(max);
+  console.log(`Max: ${max}, Min: ${min}`);
 };
 
-calcTempAmplitude([3, 7, 4]);
+calcTempAmplitude([3, 7, 4, 8, 1]);
