@@ -181,7 +181,7 @@ const testData1 = [17, 21, 23];
 const testData2 = [12, 5, -5, 0, 4];
 
 const printForcast = function (arr) {
-  const forecastString = '...';
+  let forecastString = '...';
 
   for (let i = 0; i < arr.length; i++) {
     forecastString += `${arr[i]}ºC in ${i + 1} days ... `;
