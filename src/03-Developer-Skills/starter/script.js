@@ -190,8 +190,8 @@ const printForcast = function (arr) {
 const testData1 = [17, 21, 23];
 const testData2 = [12, 5, -5, 0, 4];
 
-printForcast(testData1);
-printForcast(testData2);
+printForcast([testData1]);
+printForcast([testData2]);
 
 const printForecastNew = function (arr) {
   let forecastString = '... ';
