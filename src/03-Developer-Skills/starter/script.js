@@ -41,7 +41,7 @@ const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 
 */
 
-const calcTempAmplitudeNew = function (temp) {
+const calcTempAmplitude = function (temp) {
   let max = temp[0];
   let min = temp[0];
 
@@ -58,8 +58,8 @@ const calcTempAmplitudeNew = function (temp) {
   return max - min;
 };
 
-calcTempAmplitudeNew([3, 7, 4, 8, 1]);
-const amplitude = calcTempAmplitudeNew(temperatures);
+calcTempAmplitude([3, 7, 4, 8, 1]);
+const amplitude = calcTempAmplitude(temperatures);
 
 console.log(amplitude);
 
