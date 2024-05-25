@@ -116,9 +116,9 @@ const measureKelvin = function () {
     value: prompt('Degrees Celsius: '),
   };
 
-  console.log(`${measurement.value}`);
+  console.log(`${measurement.value.value}`);
 
-  const kelvin = measurement.value + 273;
+  const kelvin = measurement.value.value + 273;
   return kelvin;
 };
 
