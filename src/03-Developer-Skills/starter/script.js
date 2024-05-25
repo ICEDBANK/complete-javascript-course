@@ -48,6 +48,7 @@ const calcTempAmplitude = function (temp) {
   for (let i = 0; i < temp.length; i++) {
     const curTemp = temp[i];
 
+    if (typeof curTemp !== 'number') continue;
     if (curTemp > max) max = curTemp;
     if (curTemp < min) min = curTemp;
   }
@@ -56,3 +57,4 @@ const calcTempAmplitude = function (temp) {
 };
 
 calcTempAmplitude([3, 7, 4, 8, 1]);
+calcTempAmplitude(temperatures);
