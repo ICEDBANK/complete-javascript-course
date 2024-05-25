@@ -113,7 +113,7 @@ const measureKelvin = function () {
   const measurement = {
     type: 'temp',
     unit: 'cels',
-    value: Number(prompt('Degrees Celsius')),
+    value: Number(prompt('Degrees Celsius')), // Fix the bug ( convert string to Number since Prompt only accepts Strings )
   };
 
   // B.) Find the Bug
@@ -131,3 +131,27 @@ const measureKelvin = function () {
 
 // A.) Identify the Problem
 console.log(measureKelvin());
+
+const calcTempAmplitudeBug = function (t1, t2) {
+  const temp = t1.concat(t2);
+
+  let max = temp[0];
+  let min = temp[0];
+
+  for (let i = 0; i < temp.length; i++) {
+    const curTemp = temp[i];
+
+    if (typeof curTemp !== 'number') continue;
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+
+  console.log(`Max: ${max}, Min: ${min}`);
+
+  return max - min;
+};
+
+calcTempAmplitudeBug([3, 7, 4, 8, 1]);
+const amplitudeBug = calcTempAmplitudeBug([3, 5, 1], [65, 45, 57]);
+
+console.log(amplitudeBug);
