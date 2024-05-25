@@ -192,3 +192,20 @@ const testData2 = [12, 5, -5, 0, 4];
 
 printForcast([testData1]);
 printForcast([testData2]);
+
+const printForecastNew = function (arr) {
+  let forecastString = '... ';
+
+  for (let i = 0; i < arr.length; i++) {
+    forecastString += `${arr[i]}ºC in ${i + 1} days ... `;
+  }
+
+  console.log(forecastString);
+};
+
+// Test Data
+const testData3 = [17, 21, 23];
+const testData4 = [12, 5, -5, 0, 4];
+
+printForecastNew(testData3);
+printForecastNew(testData4);
