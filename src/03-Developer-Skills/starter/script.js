@@ -123,4 +123,4 @@ const measureKelvin = function () {
 };
 
 // A.) Identify the Problem
-console.log(measureKelvin);
+console.log(measureKelvin());
