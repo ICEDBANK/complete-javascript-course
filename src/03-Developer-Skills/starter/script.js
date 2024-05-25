@@ -184,7 +184,7 @@ const printForcast = function (arr) {
     forCast += `${arr[i]}°C in ${i + 1} days ... `;
   }
 
-  console.log(forcast);
+  //console.log(forcast);
 };
 
 const testData1 = [17, 21, 23];
