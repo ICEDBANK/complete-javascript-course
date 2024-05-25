@@ -113,7 +113,8 @@ const measureKelvin = function () {
   const measurement = {
     type: 'temp',
     unit: 'cels',
-    value: Number(prompt('Degrees Celsius')), // Fix the bug ( convert string to Number since Prompt only accepts Strings )
+    //value: Number(prompt('Degrees Celsius')), // Fix the bug ( convert string to Number since Prompt only accepts Strings )
+    value: 10,
   };
 
   // B.) Find the Bug
@@ -132,11 +133,13 @@ const measureKelvin = function () {
 // A.) Identify the Problem
 console.log(measureKelvin());
 
+// Using a debugger
+
 const calcTempAmplitudeBug = function (t1, t2) {
   const temp = t1.concat(t2);
 
-  let max = temp[0];
-  let min = temp[0];
+  let max = 0;
+  let min = 0;
 
   for (let i = 0; i < temp.length; i++) {
     const curTemp = temp[i];
