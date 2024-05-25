@@ -184,7 +184,7 @@ const printForcast = function (arr) {
   let foreCastString = '...';
 
   for (let i = 0; i < arr.length; i++) {
-    foreCastString += `${arr[i]}ºC in ${i + 1} days ... `;
+    foreCastString += `${arr[i]}ºC in ${arr[i + 1]} days ... `;
   }
 
   console.log(foreCastString);
