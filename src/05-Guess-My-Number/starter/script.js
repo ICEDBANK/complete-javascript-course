@@ -24,6 +24,7 @@ const setMessage = message => {
 const setScore = score => {
   score--;
   document.querySelector('.score').textContent = score;
+  return score;
 };
 
 document.querySelector('.check').addEventListener('click', function () {
