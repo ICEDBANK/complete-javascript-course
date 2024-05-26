@@ -19,15 +19,15 @@ document.querySelector('.number').textContent = secretNumber;
 
 document.querySelector('.check').addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
+  let message = document.querySelector('.message').textContent;
 
   if (!guess) {
-    document.querySelector('.message').textContent = 'No Number';
+    message = 'Nu Number';
   } else if (guess > 20 || guess < 1) {
-    document.querySelector('.message').textContent =
-      'Enter a Number between 1 and 20';
+    message = 'Enter a Number between 1 and 20';
   } else if (guess === secretNumber) {
-    document.querySelector('.message').textContent = 'Correct Number';
+    message = 'Correct Number';
   } else if (guess !== secretNumber) {
-    document.querySelector('.message').textContent = 'Incorrect, Try Again';
+    message = 'Incorrect, Try Again';
   }
 });
