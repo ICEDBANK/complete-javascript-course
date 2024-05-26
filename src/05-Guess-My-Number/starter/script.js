@@ -23,7 +23,6 @@ console.log(`Secret Number : ${secretNumber}`);
 document.querySelector('.number').textContent = '?';
 
 let score = MAX_SCORE;
-let guess = Number(document.querySelector('.guess').textContent);
 
 const updateMessage = message => {
   document.querySelector('.message').textContent = message;
@@ -34,7 +33,7 @@ const updateScore = () => {
 
 document.querySelector('.check').addEventListener('click', function () {
   console.log(`class .check clicked`);
-  let guess = 0;
+  let guess = Number(document.querySelector('.guess').textContent);
 
   if (!guess) {
     updateMessage('No Number');
