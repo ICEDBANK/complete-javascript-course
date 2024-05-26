@@ -66,7 +66,7 @@ document.querySelector('.check').addEventListener('click', function () {
 });
 
 document.querySelector('.again').addEventListener('click', function () {
-  guess = '';
+  document.querySelector('.guess').value = '';
   score = MAX_SCORE;
   updateScore();
   document.querySelector('.number').textContent = '?';
