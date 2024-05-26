@@ -33,7 +33,7 @@ const updateScore = () => {
 
 document.querySelector('.check').addEventListener('click', function () {
   console.log(`class .check clicked`);
-  let guess = Number(document.querySelector('.guess').textContent);
+  let guess = Number(document.querySelector('.guess').value);
   console.log(guess);
 
   if (!guess) {
