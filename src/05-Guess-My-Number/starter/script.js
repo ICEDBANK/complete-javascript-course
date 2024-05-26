@@ -17,11 +17,12 @@ console.log(document.querySelector('.guess').value);
 const MAX_SCORE = 20;
 const MAX_NUMBER = 20;
 const MIN_NUMBER = 1;
-let score = MAX_SCORE;
 
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
 console.log(`Secret Number : ${secretNumber}`);
 document.querySelector('.number').textContent = '?';
+
+let score = MAX_SCORE;
 
 const setMessage = message => {
   document.querySelector('.message').textContent = message;
