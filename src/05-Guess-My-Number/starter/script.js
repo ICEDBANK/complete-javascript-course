@@ -31,6 +31,11 @@ const updateScore = () => {
   document.querySelector('.score').textContent = score;
 };
 
+const youWon = () => {
+  document.querySelector('body').style.backgroundColor = '#60b347';
+  document.querySelector('.number').style.width = '30rem';
+};
+
 document.querySelector('.check').addEventListener('click', function () {
   console.log(`class .check clicked`);
   let guess = Number(document.querySelector('.guess').value);
@@ -39,6 +44,7 @@ document.querySelector('.check').addEventListener('click', function () {
   if (!guess) {
     updateMessage('No Number');
   } else if (guess === secretNumber) {
+    youWon();
     updateMessage('Correct Answer');
     document.querySelector('.number').textContent = secretNumber;
   } else {
