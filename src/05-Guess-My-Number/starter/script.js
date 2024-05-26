@@ -38,6 +38,8 @@ document.querySelector('.check').addEventListener('click', function () {
     setMessage('No Number');
   } else if (guess > MAX_NUMBER || guess < MIN_NUMBER) {
     setMessage('Enter A number Between 1 and 20');
+    score--;
+    updateScore();
   } else if (guess === secretNumber) {
     setMessage('Correct');
     document.querySelector('.number').textContent = secretNumber;
