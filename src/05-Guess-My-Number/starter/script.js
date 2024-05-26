@@ -31,6 +31,10 @@ const updateScore = () => {
   document.querySelector('.score').textContent = score;
 };
 
+const updateHighScore = () => {
+  document.querySelector('.highscore').textContent = score;
+};
+
 const youWon = () => {
   document.querySelector('body').style.backgroundColor = '#60b347';
   document.querySelector('.number').style.width = '30rem';
@@ -66,6 +70,7 @@ document.querySelector('.check').addEventListener('click', function () {
 });
 
 document.querySelector('.again').addEventListener('click', function () {
+  updateHighScore();
   document.querySelector('.guess').value = '';
   score = MAX_SCORE;
   updateScore();
