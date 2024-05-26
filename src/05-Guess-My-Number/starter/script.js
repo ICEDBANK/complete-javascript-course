@@ -19,7 +19,6 @@ const MAX_NUMBER = 20;
 const MIN_NUMBER = 1;
 let highScore = 0;
 let score = MAX_SCORE;
-let secretNumber = generateSecretNumber();
 
 console.log(`Secret Number: ${secretNumber}`);
 document.querySelector('.number').textContent = '?';
@@ -52,6 +51,8 @@ const resetStyle = () => {
 const generateSecretNumber = () => {
   return Math.trunc(Math.random() * (MAX_NUMBER - MIN_NUMBER + 1)) + MIN_NUMBER;
 };
+
+let secretNumber = generateSecretNumber();
 
 document.querySelector('.check').addEventListener('click', function () {
   console.log(`class .check clicked`);
