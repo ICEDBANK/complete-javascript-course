@@ -15,7 +15,7 @@ console.log(document.querySelector('.guess').value);
 */
 
 const MAX_SCORE = 20;
-const MAX_Number = 20;
+const MAX_NUMBER = 20;
 const MIN_NUMBER = 1;
 let score = MAX_SCORE;
 
