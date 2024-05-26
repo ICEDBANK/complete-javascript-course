@@ -23,7 +23,6 @@ const setMessage = message => {
 
 document.querySelector('.check').addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
-  let message = document.querySelector('.message').textContent;
 
   if (!guess) {
     setMessage('No Number');
