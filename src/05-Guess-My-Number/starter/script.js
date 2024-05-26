@@ -72,5 +72,6 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.number').textContent = '?';
   resetStyle();
   secretNumber = Math.trunc(Math.random() * 20) + 1;
+  console.log(secretNumber);
   updateMessage('Start guessing...');
 });
