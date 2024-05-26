@@ -32,7 +32,7 @@ const updateScore = () => {
   document.querySelector('.score').textContent;
 };
 
-document.querySelector('click').addEventListener('.click', function () {
+document.querySelector('.check').addEventListener('click', function () {
   let guess = 0;
 
   if (!guess) {
