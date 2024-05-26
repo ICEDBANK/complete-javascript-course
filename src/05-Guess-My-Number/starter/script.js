@@ -34,6 +34,7 @@ const updateScore = () => {
 document.querySelector('.check').addEventListener('click', function () {
   console.log(`class .check clicked`);
   let guess = Number(document.querySelector('.guess').textContent);
+  console.log(guess);
 
   if (!guess) {
     updateMessage('No Number');
