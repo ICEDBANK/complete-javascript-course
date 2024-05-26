@@ -28,7 +28,7 @@ const updateMessage = message => {
   document.querySelector('.message').textContent = message;
 };
 const updateScore = () => {
-  document.querySelector('.score').textContent;
+  document.querySelector('.score').textContent = score;
 };
 
 document.querySelector('.check').addEventListener('click', function () {
