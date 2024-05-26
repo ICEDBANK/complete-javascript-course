@@ -18,24 +18,29 @@ const MAX_SCORE = 20;
 const MAX_NUMBER = 20;
 const MIN_NUMBER = 1;
 let highScore = 0;
-let score = MAX_SCORE;
 
-console.log(`Secret Number: ${secretNumber}`);
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
+console.log(`Secret Number : ${secretNumber}`);
 document.querySelector('.number').textContent = '?';
+
+let score = MAX_SCORE;
 
 const updateMessage = message => {
   document.querySelector('.message').textContent = message;
 };
-
 const updateScore = () => {
   document.querySelector('.score').textContent = score;
 };
 
 const updateHighScore = () => {
+  let newHighScore = 0;
+
   if (score > highScore) {
-    highScore = score;
-    document.querySelector('.highscore').textContent = highScore;
+    newHighScore = score;
+  } else {
+    newHighScore = highScore;
   }
+  document.querySelector('.highscore').textContent = newHighScore;
 };
 
 const youWon = () => {
@@ -48,15 +53,9 @@ const resetStyle = () => {
   document.querySelector('.number').style.width = '15rem';
 };
 
-const generateSecretNumber = () => {
-  return Math.trunc(Math.random() * (MAX_NUMBER - MIN_NUMBER + 1)) + MIN_NUMBER;
-};
-
-let secretNumber = generateSecretNumber();
-
 document.querySelector('.check').addEventListener('click', function () {
   console.log(`class .check clicked`);
-  const guess = Number(document.querySelector('.guess').value);
+  let guess = Number(document.querySelector('.guess').value);
   console.log(guess);
 
   if (!guess) {
@@ -65,14 +64,13 @@ document.querySelector('.check').addEventListener('click', function () {
     youWon();
     updateMessage('Correct Answer');
     document.querySelector('.number').textContent = secretNumber;
-    updateHighScore();
   } else {
-    if (score > 1) {
-      updateMessage(guess < secretNumber ? 'Too Low' : 'Too High');
+    if (score >= 1) {
+      updateMessage(guess < secretNumber ? 'To Low' : 'To High');
       score--;
       updateScore();
     } else {
-      updateMessage('You Lost! Click "Again" Button To Restart');
+      updateMessage('You Lost Click "Again" Button To Restart');
       score = 0;
       updateScore();
     }
@@ -80,13 +78,13 @@ document.querySelector('.check').addEventListener('click', function () {
 });
 
 document.querySelector('.again').addEventListener('click', function () {
-  score = MAX_SCORE;
-  secretNumber = generateSecretNumber();
-  console.log(`Secret Number: ${secretNumber}`);
-
-  updateScore();
-  updateMessage('Start guessing...');
+  updateHighScore();
   document.querySelector('.guess').value = '';
+  score = MAX_SCORE;
+  updateScore();
   document.querySelector('.number').textContent = '?';
   resetStyle();
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  console.log(secretNumber);
+  updateMessage('Start guessing...');
 });
