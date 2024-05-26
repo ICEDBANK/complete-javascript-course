@@ -33,6 +33,7 @@ const updateScore = () => {
 };
 
 document.querySelector('.check').addEventListener('click', function () {
+  console.log(`class .check clicked`);
   let guess = 0;
 
   if (!guess) {
