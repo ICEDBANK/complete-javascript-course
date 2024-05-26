@@ -21,28 +21,28 @@ const setMessage = message => {
   document.querySelector('.message').textContent = message;
 };
 
-const setScore = () => {
-  let score = 20;
+const setScore = score => {
   score--;
   document.querySelector('.score').textContent = score;
 };
 
 document.querySelector('.check').addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
+  let score = 20;
 
   if (!guess) {
     setMessage('No Number');
   } else if (guess > 20 || guess < 1) {
     setMessage('Enter a Number between 1 and 20');
-    setScore();
+    setScore(score);
   } else if (guess === secretNumber) {
     setMessage('Correct Number');
-    setScore();
+    setScore(score);
   } else if (guess < secretNumber) {
     setMessage('Too Low');
-    setScore();
+    setScore(score);
   } else {
     setMessage('Too High');
-    setScore();
+    setScore(score);
   }
 });
