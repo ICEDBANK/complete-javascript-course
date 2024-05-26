@@ -27,5 +27,7 @@ document.querySelector('.check').addEventListener('click', function () {
       'Enter a Number between 1 and 20';
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = 'Correct Number';
+  } else if (guess !== secretNumber) {
+    document.querySelector('.message').textContent = 'Incorrect, Try Again';
   }
 });
