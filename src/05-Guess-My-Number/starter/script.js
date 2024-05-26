@@ -31,7 +31,9 @@ document.querySelector('.check').addEventListener('click', function () {
     setMessage('Enter a Number between 1 and 20');
   } else if (guess === secretNumber) {
     setMessage('Correct Number');
-  } else if (guess !== secretNumber) {
-    setMessage('Incorrect, Try Again');
+  } else if (guess < secretNumber) {
+    setMessage('To Low');
+  } else if (guess > secretNumber) {
+    setMessage('To High');
   }
 });
