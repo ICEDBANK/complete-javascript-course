@@ -17,6 +17,7 @@ console.log(document.querySelector('.guess').value);
 const MAX_SCORE = 20;
 const MAX_NUMBER = 20;
 const MIN_NUMBER = 1;
+let highScore = 0;
 
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 console.log(`Secret Number : ${secretNumber}`);
@@ -32,7 +33,14 @@ const updateScore = () => {
 };
 
 const updateHighScore = () => {
-  document.querySelector('.highscore').textContent = score;
+  let newHighScore = 0;
+
+  if (score > highScore) {
+    newHighScore = score;
+  } else {
+    newHighScore = highScore;
+  }
+  document.querySelector('.highscore').textContent = newHighScore;
 };
 
 const youWon = () => {
