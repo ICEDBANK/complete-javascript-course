@@ -23,36 +23,18 @@ console.log(`Secret Number : ${secretNumber}`);
 document.querySelector('.number').textContent = '?';
 
 let score = MAX_SCORE;
+let guess = Number(document.querySelector('.guess').textContent);
 
-const setMessage = message => {
+const updateMessage = message => {
   document.querySelector('.message').textContent = message;
 };
-
 const updateScore = () => {
-  document.querySelector('.score').textContent = score;
+  document.querySelector('.score').textContent;
 };
 
-document.querySelector('.check').addEventListener('click', function () {
-  let guess = Number(document.querySelector('.guess').value);
-
-  if (!guess) {
-    setMessage('No Number');
-  } else if (guess > MAX_NUMBER || guess < MIN_NUMBER) {
-    setMessage('Enter A number Between 1 and 20');
-    score--;
-    updateScore();
-  } else if (guess === secretNumber) {
-    setMessage('Correct');
-    document.querySelector('.number').textContent = secretNumber;
-  } else {
-    if (score > 1) {
-      setMessage(guess < secretNumber ? 'To Low' : 'To High');
-      score--;
-      updateScore();
-    } else {
-      setMessage('You Lost Click The "Again" Button to try again');
-      score = 0;
-      updateScore();
-    }
-  }
-});
+if (!guess) {
+  updateMessage('No Number');
+} else if (guess === secretNumber) {
+  updateMessage('Correct Answer');
+  document.querySelector('.number').textContent = secretNumber;
+}
