@@ -16,5 +16,5 @@ console.log(document.querySelector('.guess').value);
 
 document.querySelector('.check').addEventListener('click', function () {
   let guess = document.querySelector('.guess').value;
-  console.log(guess);
+  console.log(`The Value of Guess : ${guess}`);
 });
