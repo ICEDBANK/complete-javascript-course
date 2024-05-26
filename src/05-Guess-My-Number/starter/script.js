@@ -18,7 +18,7 @@ const MAX_SCORE = 20;
 const MAX_NUMBER = 20;
 const MIN_NUMBER = 1;
 
-const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
 console.log(`Secret Number : ${secretNumber}`);
 document.querySelector('.number').textContent = '?';
 
@@ -34,6 +34,11 @@ const updateScore = () => {
 const youWon = () => {
   document.querySelector('body').style.backgroundColor = '#60b347';
   document.querySelector('.number').style.width = '30rem';
+};
+
+const resetStyle = () => {
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
 };
 
 document.querySelector('.check').addEventListener('click', function () {
@@ -58,4 +63,13 @@ document.querySelector('.check').addEventListener('click', function () {
       updateScore();
     }
   }
+});
+
+document.querySelector('.again').addEventListener('click', function () {
+  score = MAX_SCORE;
+  updateScore();
+  document.querySelector('.number').textContent = '?';
+  resetStyle();
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  updateMessage('Start guessing...');
 });
