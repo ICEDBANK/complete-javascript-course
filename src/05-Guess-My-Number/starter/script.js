@@ -32,19 +32,23 @@ const updateScore = () => {
   document.querySelector('.score').textContent;
 };
 
-if (!guess) {
-  updateMessage('No Number');
-} else if (guess === secretNumber) {
-  updateMessage('Correct Answer');
-  document.querySelector('.number').textContent = secretNumber;
-} else {
-  if (score >= 1) {
-    updateMessage(guess < secretNumber ? 'To Low' : 'To High');
-    score--;
-    updateScore();
+document.querySelector('click').addEventListener('.click', function () {
+  let guess = 0;
+
+  if (!guess) {
+    updateMessage('No Number');
+  } else if (guess === secretNumber) {
+    updateMessage('Correct Answer');
+    document.querySelector('.number').textContent = secretNumber;
   } else {
-    updateMessage('You Lost Click "Again" Button To Restart');
-    score = 0;
-    updateScore();
+    if (score >= 1) {
+      updateMessage(guess < secretNumber ? 'To Low' : 'To High');
+      score--;
+      updateScore();
+    } else {
+      updateMessage('You Lost Click "Again" Button To Restart');
+      score = 0;
+      updateScore();
+    }
   }
-}
+});
