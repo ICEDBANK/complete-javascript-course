@@ -20,7 +20,7 @@ document.querySelector('.number').textContent = number;
 document.querySelector('.check').addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
 
-  if (!guess) {
+  if (guess == '') {
     document.querySelector('.message').textContent = 'No Number';
   }
 });
