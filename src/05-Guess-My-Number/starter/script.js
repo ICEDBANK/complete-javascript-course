@@ -15,10 +15,5 @@ console.log(document.querySelector('.guess').value);
 */
 
 document.querySelector('.check').addEventListener('click', function () {
-  let guess = document.querySelector('.guess').value;
-  console.log(`The Value of Guess : ${guess}`);
-
-  if (guess > 20 && guess < 1) {
-    alert('Enter a Valid Number Between 1 and 20');
-  }
+  let guess = Number(document.querySelector('.guess').value);
 });
