@@ -26,12 +26,12 @@ document.querySelector('.check').addEventListener('click', function () {
   let message = document.querySelector('.message').textContent;
 
   if (!guess) {
-    setmessage('Nu Number');
+    setMessage('No Number');
   } else if (guess > 20 || guess < 1) {
-    message = 'Enter a Number between 1 and 20';
+    setMessage('Enter a Number between 1 and 20');
   } else if (guess === secretNumber) {
-    message = 'Correct Number';
+    setMessage('Correct Number');
   } else if (guess !== secretNumber) {
-    message = 'Incorrect, Try Again';
+    setMessage('Incorrect, Try Again');
   }
 });
