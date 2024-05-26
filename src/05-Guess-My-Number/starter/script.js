@@ -24,12 +24,11 @@ const setMessage = message => {
 const setScore = () => {
   let score = 20;
   score--;
-  document.querySelector('.score').textContent = tempScore;
+  document.querySelector('.score').textContent = score;
 };
 
 document.querySelector('.check').addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
-  let scoreUpdate = 20;
 
   if (!guess) {
     setMessage('No Number');
