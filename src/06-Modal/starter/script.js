@@ -10,7 +10,10 @@ const btnOpenModal = document.querySelectorAll('.show-modal');
 const closeModal = function () {};
 
 // Function to open the modal
-const openModal = function () {};
+const openModal = function () {
+  modalEl.classList.remove('hidden');
+  modelOverlayEl.classList.remove('hidden');
+};
 
 // Adding event listeners to open the modal when buttons are clicked
 document.addEventListener('click', openModal);
@@ -19,6 +22,8 @@ document.addEventListener('click', openModal);
 document.addEventListener('click', closeModal);
 
 // Adding event listener to close the modal when the overlay is clicked
-document.addEventListener('click', function () {});
+document.addEventListener('click', function () {
+  closeModal();
+});
 
 // Adding event listener to detect keydown events on the whole document
