@@ -19,5 +19,6 @@ document.addEventListener('click', openModal);
 document.addEventListener('click', closeModal);
 
 // Adding event listener to close the modal when the overlay is clicked
+document.addEventListener('click', function () {});
 
 // Adding event listener to detect keydown events on the whole document
