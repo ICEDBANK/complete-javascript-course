@@ -76,6 +76,7 @@ const MAX_SCORE = 100;
 const diceEl = document.querySelector('.dice');
 const btnRoll = document.querySelector('.btn--roll');
 const btnNew = document.querySelector('.btn--new');
+const btnHold = document.querySelector('.btn--hold');
 
 let score0El = document.querySelector('#score--0');
 let score1El = document.getElementById('score--1');
@@ -86,15 +87,15 @@ diceEl.classList.add('hidden');
 
 let diceRollRandom = function () {};
 
-document.querySelector('.btn--new').addEventListener('click', function () {
+btnNew.addEventListener('click', function () {
   console.log(`New Game Button Clicked`);
 });
 
 //  The user can initiate a dice roll.
-document.querySelector('.btn--roll').addEventListener('click', function () {
+btnRoll.addEventListener('click', function () {
   console.log(`Roll Dice Button Clicked`);
 });
 
-document.querySelector('.btn--hold').addEventListener('click', function () {
+btnHold.addEventListener('click', function () {
   console.log(`Hold Score Button Clicked`);
 });
