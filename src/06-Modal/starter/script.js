@@ -1,7 +1,5 @@
 'use strict';
 
-const { Button } = require('bootstrap');
-
 // Selecting DOM elements
 const modalEl = document.querySelector('.modal');
 const modelOverlayEl = document.querySelector('.overlay');
