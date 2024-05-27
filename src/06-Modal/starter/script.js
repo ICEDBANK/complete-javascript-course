@@ -10,8 +10,10 @@ const btnOpenModal = document.querySelectorAll('.show-modal');
 const closeModal = function () {};
 
 // Function to open the modal
+const openModal = function () {};
 
 // Adding event listeners to open the modal when buttons are clicked
+document.addEventListener('click', openModal);
 
 // Adding event listener to close the modal when the close button is clicked
 
