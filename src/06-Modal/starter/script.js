@@ -26,6 +26,7 @@ btnOpenModal.forEach(button => {
 });
 
 // Adding event listener to close the modal when the close button is clicked
+btnCloseModal.addEventListener('click', closeModal);
 
 // Adding event listener to close the modal when the overlay is clicked
 document.addEventListener('click', function () {
