@@ -74,3 +74,11 @@
 document.querySelector('.btn--new').addEventListener('click', function () {
   console.log(`New Game Button Clicked`);
 });
+
+document.querySelector('.btn--roll').addEventListener('click', function () {
+  console.log(`Roll Dice Button Clicked`);
+});
+
+document.querySelector('.btn--hold').addEventListener('click', function () {
+  console.log(`Hold Score Button Clicked`);
+});
