@@ -71,10 +71,16 @@
 
 'use strict';
 
+//  The system generates a random dice roll value between 1 and 6.
+const dice = document.querySelector('.dice');
+
+let diceRollRandom = function () {};
+
 document.querySelector('.btn--new').addEventListener('click', function () {
   console.log(`New Game Button Clicked`);
 });
 
+//  The user can initiate a dice roll.
 document.querySelector('.btn--roll').addEventListener('click', function () {
   console.log(`Roll Dice Button Clicked`);
 });
