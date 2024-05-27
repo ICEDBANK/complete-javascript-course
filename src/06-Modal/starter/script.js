@@ -7,6 +7,10 @@ const btnCloseModal = document.querySelector('.close-modal');
 const btnOpenModal = document.querySelectorAll('.show-modal');
 
 // Function to close the modal
+const closeModal = function () {
+  modalEl.classList.add('hidden');
+  modelOverlayEl.classList.add('hidden');
+};
 
 // Function to open the modal
 const openModal = function () {
@@ -20,6 +24,7 @@ btnOpenModal.forEach(button => {
 });
 
 // Adding event listener to close the modal when the x button is clicked
+btnCloseModal.addEventListener('click', closeModal);
 
 // Adding event listener to close the modal when the overlay is clicked
 
