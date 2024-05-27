@@ -99,6 +99,7 @@ btnNew.addEventListener('click', function () {
 btnRoll.addEventListener('click', function () {
   console.log(`Roll Dice Button Clicked`);
   //!SECTION Generate a Random Dice Roll
+  diceRollRandom();
 });
 
 btnHold.addEventListener('click', function () {
