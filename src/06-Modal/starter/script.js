@@ -14,7 +14,6 @@ const closeModal = function () {
 
 // Function to open the modal
 const openModal = function () {
-  console.log(btnOpenModal);
   modalEl.classList.remove('hidden');
   modelOverlayEl.classList.remove('hidden');
 };
