@@ -16,6 +16,7 @@ const openModal = function () {};
 document.addEventListener('click', openModal);
 
 // Adding event listener to close the modal when the close button is clicked
+document.addEventListener('click', closeModal);
 
 // Adding event listener to close the modal when the overlay is clicked
 
