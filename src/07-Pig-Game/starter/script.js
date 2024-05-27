@@ -73,6 +73,10 @@
 
 //  The system generates a random dice roll value between 1 and 6.
 const dice = document.querySelector('.dice');
+const MAX_SCORE = 100;
+
+let score0El = document.querySelector('#score--0') = 0;
+let score1El = document.getElementById('score--1') = 0;
 
 let diceRollRandom = function () {};
 
