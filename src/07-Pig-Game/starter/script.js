@@ -72,11 +72,12 @@
 'use strict';
 
 //  The system generates a random dice roll value between 1 and 6.
-const dice = document.querySelector('.dice');
+const diceEl = document.querySelector('.dice');
 const MAX_SCORE = 100;
 
 let score0El = (document.querySelector('#score--0').textContent = 0);
 let score1El = (document.getElementById('score--1').textContent = 0);
+diceEl.classList.add('hidden');
 
 let diceRollRandom = function () {};
 
