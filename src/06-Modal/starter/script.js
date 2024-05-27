@@ -1,4 +1,22 @@
 'use strict';
+/*!SECTION
+
+    Needs:
+        3 click events
+            - for each modal needs to open up the modal and overlay to be viewed
+            = x button within the modal needs to close modal and overlay
+            = when the user clicks on the overlay to exit out of viewing the modal and overlay
+        1 global Event listener
+            - captures the keystroke "keydown" to close the modal and overlay
+        2 functions to centralize potentially redudant code
+            - openModal
+                displays modal and overlay
+            - closeModal
+                hides modal and overlay
+
+
+
+*/
 
 // Selecting DOM elements
 const modalEl = document.querySelector('.modal');
@@ -6,34 +24,11 @@ const modelOverlayEl = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
 const btnOpenModal = document.querySelectorAll('.show-modal');
 
-// Function to close the modal
-const closeModal = function () {
-  modalEl.classList.add('hidden');
-  modelOverlayEl.classList.add('hidden');
-};
-
-// Function to open the modal
 const openModal = function () {
   modalEl.classList.remove('hidden');
   modelOverlayEl.classList.remove('hidden');
 };
 
-// Adding event listeners to open the modal when buttons are clicked
 btnOpenModal.forEach(button => {
   button.addEventListener('click', openModal);
-});
-
-// Adding event listener to close the modal when the x button is clicked
-btnCloseModal.addEventListener('click', closeModal);
-
-// Adding event listener to close the modal when the overlay is clicked
-modelOverlayEl.addEventListener('click', closeModal);
-
-// Adding event listener to detect keydown events on the whole document
-document.addEventListener('keydown', function (event) {
-  // Checking if the pressed key is the 'Escape' key and if the modal is not hidden
-  if (event.key === 'Escape' && !modalEl.classList.contains('hidden')) {
-    // If conditions are met, call the closeModal function to close the modal
-    closeModal();
-  }
 });
