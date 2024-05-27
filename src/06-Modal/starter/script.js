@@ -32,3 +32,10 @@ const openModal = function () {
 btnOpenModal.forEach(button => {
   button.addEventListener('click', openModal);
 });
+
+const closeModal = function () {
+  modalEl.classList.add('hidden');
+  modelOverlayEl.classList.add('hidden');
+};
+
+btnCloseModal.addEventListener('click', closeModal);
