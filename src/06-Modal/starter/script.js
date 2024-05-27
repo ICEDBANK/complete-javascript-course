@@ -30,5 +30,5 @@ btnCloseModal.addEventListener('click', closeModal);
 modelOverlayEl.addEventListener('click', closeModal);
 
 document.addEventListener('keydown', function (event) {
-  console.log(`A key was pressed ${event}`);
+  console.log(event);
 });
