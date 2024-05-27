@@ -1,6 +1,6 @@
 'use strict';
 
-const { Button } = require("bootstrap");
+const { Button } = require('bootstrap');
 
 // Selecting DOM elements
 const modalEl = document.querySelector('.modal');
@@ -21,10 +21,11 @@ const openModal = function () {
 };
 
 // Adding event listeners to open the modal when buttons are clicked
-btnOpenModal.forEach(Button => ('click', openModal)
+btnOpenModal.forEach(button => {
+  button.addEventListener('click', openModal);
+});
 
 // Adding event listener to close the modal when the close button is clicked
-
 
 // Adding event listener to close the modal when the overlay is clicked
 document.addEventListener('click', function () {
