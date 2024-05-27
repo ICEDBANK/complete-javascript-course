@@ -85,7 +85,11 @@ score0El.textContent = 0;
 score1El.textContent = 0;
 diceEl.classList.add('hidden');
 
-let diceRollRandom = function () {};
+let diceRollRandom = function () {
+  const dice = Math.trunc(Math.random() * 6) + 1;
+  diceEl.classList.remove('hidden');
+  diceEl.src = `dice-${dice}.png`;
+};
 
 btnNew.addEventListener('click', function () {
   console.log(`New Game Button Clicked`);
@@ -94,6 +98,7 @@ btnNew.addEventListener('click', function () {
 //  The user can initiate a dice roll.
 btnRoll.addEventListener('click', function () {
   console.log(`Roll Dice Button Clicked`);
+  //!SECTION Generate a Random Dice Roll
 });
 
 btnHold.addEventListener('click', function () {
