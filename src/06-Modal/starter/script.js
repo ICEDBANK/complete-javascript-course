@@ -39,3 +39,5 @@ const closeModal = function () {
 };
 
 btnCloseModal.addEventListener('click', closeModal);
+
+modelOverlayEl.addEventListener('click', closeModal);
