@@ -30,8 +30,7 @@ btnCloseModal.addEventListener('click', closeModal);
 modelOverlayEl.addEventListener('click', closeModal);
 
 // Adding event listener to detect keydown events on the whole document
-document.addEventListener('click', function (event) {
-  console.log(event.key);
+document.addEventListener('keydown', function (event) {
   // Checking if the pressed key is the 'Escape' key and if the modal is not hidden
   if (event.key === 'Escape' && !modalEl.classList.contains('hidden')) {
     // If conditions are met, call the closeModal function to close the modal
