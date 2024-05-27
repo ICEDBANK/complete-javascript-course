@@ -28,3 +28,7 @@ btnCloseModal.addEventListener('click', closeModal);
 
 // Adding event listener to close the modal when the overlay is clicked
 modelOverlayEl.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function (event) {
+  console.log(`A key was pressed ${event}`);
+});
