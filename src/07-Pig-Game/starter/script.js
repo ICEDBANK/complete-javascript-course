@@ -92,10 +92,12 @@ btnNew.addEventListener('click', function () {
 //  The user can initiate a dice roll.
 btnRoll.addEventListener('click', function () {
   console.log(`Roll Dice Button Clicked`);
-  //!SECTION Generate a Random Dice Roll
+  //!SECTION    Generate a Random Dice Roll
   const dice = Math.trunc(Math.random() * 6) + 1;
+  //!SECTION    Display dice by removing the hidden class from element
   diceEl.classList.remove('hidden');
   diceEl.src = `dice-${dice}.png`;
+  console.log(dice);
 });
 
 btnHold.addEventListener('click', function () {
