@@ -94,10 +94,7 @@ btnNew.addEventListener('click', function () {
 });
 
 btnRoll.addEventListener('click', function () {
-  console.log(`Roll Dice Button Was clicked`);
-
   const dice = Math.trunc(Math.random() * 6) + 1;
-  console.log(dice);
   diceEl.src = `dice-${dice}.png`;
   diceEl.classList.remove('hidden');
 
