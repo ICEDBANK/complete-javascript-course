@@ -105,12 +105,8 @@ btnNew.addEventListener('click', function () {
   score0El.textContent = 0;
   score1El.textContent = 0;
   currentScore = 0;
-  player0El = document
-    .querySelector('.player--0')
-    .classList.remove('player--winner');
-  player1El = document
-    .querySelector('.player--1')
-    .classList.remove('player--winner');
+  player0El.classList.remove('player--winner');
+  player1El.classList.remove('player--winner');
   playing = true;
 });
 
