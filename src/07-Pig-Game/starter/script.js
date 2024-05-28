@@ -91,6 +91,12 @@ const score = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
 
+const handleSwitchPlayer = function () {
+  activePlayer = activePlayer === 0 ? 1 : 0;
+  player0El.classList.toggle('player--active');
+  player1El.classList.toggle('player--active');
+};
+
 btnNew.addEventListener('click', function () {
   console.log(`New Game Button Was clicked`);
 });
@@ -107,10 +113,8 @@ btnRoll.addEventListener('click', function () {
   } else {
     document.getElementById(`current--${activePlayer}`).textContent =
       currentScore;
-    activePlayer = activePlayer === 0 ? 1 : 0;
     currentScore = 0;
-    player0El.classList.toggle('player--active');
-    player1El.classList.toggle('player--active');
+    handleSwitchPlayer();
   }
 });
 
