@@ -128,4 +128,5 @@ btnhold.addEventListener('click', function () {
   //  Finish Game
 
   //  Switch to the next Player
+  handleSwitchPlayer();
 });
