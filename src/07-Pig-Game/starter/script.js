@@ -77,6 +77,8 @@ const diceEl = document.querySelector('.dice');
 const btnRoll = document.querySelector('.btn--roll');
 const btnNew = document.querySelector('.btn--new');
 const btnHold = document.querySelector('.btn--hold');
+const currentPlayer0El = document.getElementById('current--0');
+const currentPlayer1El = document.getElementById('current--1');
 
 let score0El = document.getElementById('score--0');
 let score1El = document.getElementById('score--1');
@@ -110,6 +112,10 @@ btnRoll.addEventListener('click', function () {
   } else {
     //!SECTION  Switch Player
     activePlayer = activePlayer === 0 ? 1 : 0;
+    currentScore = 0;
+    document.getElementById(
+      `current--${activePlayer}`
+    ).textContent.currentScore = 0;
   }
 });
 
