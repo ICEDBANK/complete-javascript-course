@@ -136,6 +136,7 @@ btnhold.addEventListener('click', function () {
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('play--active');
+      diceEl.classList.add('hidden');
     } else {
       //  Switch to the next Player
       handleSwitchPlayer();
