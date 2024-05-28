@@ -98,7 +98,8 @@ btnRoll.addEventListener('click', function () {
   diceEl.classList.remove('hidden');
 
   if (dice !== 1) {
-    currentScore = dice;
+    currentScore += dice;
+    score0El.textContent = currentScore;
   }
 });
 
