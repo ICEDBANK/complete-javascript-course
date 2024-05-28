@@ -106,6 +106,8 @@ btnRoll.addEventListener('click', function () {
     document.getElementById(`current--${activePlayer}`).textContent =
       currentScore;
   } else {
+    document.getElementById(`current--${activePlayer}`).textContent =
+      currentScore;
     activePlayer = activePlayer === 0 ? 1 : 0;
     currentScore = 0;
   }
