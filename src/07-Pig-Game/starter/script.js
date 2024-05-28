@@ -92,6 +92,8 @@ let currentScore = 0;
 let activePlayer = 0;
 
 const handleSwitchPlayer = function () {
+  document.getElementById(`current--${activePlayer}`).textContent =
+    currentScore;
   currentScore = 0;
   activePlayer = activePlayer === 0 ? 1 : 0;
   player0El.classList.toggle('player--active');
@@ -112,8 +114,6 @@ btnRoll.addEventListener('click', function () {
     document.getElementById(`current--${activePlayer}`).textContent =
       currentScore;
   } else {
-    document.getElementById(`current--${activePlayer}`).textContent =
-      currentScore;
     handleSwitchPlayer();
   }
 });
