@@ -85,7 +85,9 @@ score0El.textContent = 0;
 score1El.textContent = 0;
 diceEl.classList.add('hidden');
 
+const score = [0, 0];
 let currentScore = 0;
+let activePlayer = 0;
 
 btnNew.addEventListener('click', function () {
   console.log(`New Game Button Was clicked`);
@@ -101,9 +103,10 @@ btnRoll.addEventListener('click', function () {
 
   if (dice !== 1) {
     currentScore += dice;
-    current0El.textContent = currentScore;
+    document.getElementById(`current--${activePlayer}`).textContent =
+      currentScore;
   } else {
-    current0El.textContent = 0;
+    activePlayer = activePlayer === 0 ? 1 : 0;
   }
 });
 
