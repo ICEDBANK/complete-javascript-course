@@ -132,7 +132,7 @@ btnhold.addEventListener('click', function () {
       playing = false;
       document
         .querySelector(`.player--${activePlayer}`)
-        .classList.add('play--winner');
+        .classList.add('player--winner');
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('play--active');
