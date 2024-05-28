@@ -122,22 +122,24 @@ btnRoll.addEventListener('click', function () {
 });
 
 btnhold.addEventListener('click', function () {
-  //  1.) Add the current score to active players Score
-  score[activePlayer] += currentScore;
-  document.getElementById(`score--${activePlayer}`).textContent =
-    score[activePlayer];
-  //  2.) Check if Player's score is >= 100
-  if (score[activePlayer] >= 20) {
-    playing = false;
-    document
-      .querySelector(`.player--${activePlayer}`)
-      .classList.add('play--winner');
-    document
-      .querySelector(`.player--${activePlayer}`)
-      .classList.remove('play--active');
-  } else {
-    //  Switch to the next Player
-    handleSwitchPlayer();
+  if (playing) {
+    //  1.) Add the current score to active players Score
+    score[activePlayer] += currentScore;
+    document.getElementById(`score--${activePlayer}`).textContent =
+      score[activePlayer];
+    //  2.) Check if Player's score is >= 100
+    if (score[activePlayer] >= 20) {
+      playing = false;
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.add('play--winner');
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.remove('play--active');
+    } else {
+      //  Switch to the next Player
+      handleSwitchPlayer();
+    }
   }
 
   //  Finish Game
