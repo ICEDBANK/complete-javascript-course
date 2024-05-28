@@ -72,7 +72,7 @@
 'use strict';
 
 const MAX_SCORE = 100;
-const score0El = document.querySelector('#score--0');
+const score0El = document.getElementById('score--0');
 const score1El = document.getElementById('score--1');
 const diceEl = document.querySelector('.dice');
 const btnNew = document.querySelector('.btn--new');
@@ -90,15 +90,14 @@ btnNew.addEventListener('click', function () {
 btnRoll.addEventListener('click', function () {
   console.log(`Roll Dice Button Was clicked`);
 
-  let dice = 0;
-
-  dice = Math.trunc(Math.random() * 6) + 1;
+  const dice = Math.trunc(Math.random() * 6) + 1;
   console.log(dice);
   diceEl.src = `dice-${dice}.png`;
   diceEl.classList.remove('hidden');
 
   if (dice !== 1) {
-    score0El += dice;
+    let currentScore = 0;
+    currentScore += dice;
   }
 });
 
