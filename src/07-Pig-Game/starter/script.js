@@ -101,7 +101,7 @@ btnRoll.addEventListener('click', function () {
 
   if (dice !== 1) {
     currentScore += dice;
-    score0El.textContent = currentScore;
+    current0El.textContent = currentScore;
   }
 });
 
