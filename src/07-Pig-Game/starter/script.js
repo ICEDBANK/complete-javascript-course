@@ -72,3 +72,15 @@
 'use strict';
 
 //  The system generates a random dice roll value between 1 and 6.
+
+document.querySelector('.btn--new').addEventListener('click', function () {
+  console.log(`New Game Button Was clicked`);
+});
+
+document.querySelector('.btn--roll').addEventListener('click', function () {
+  console.log(`Roll Dice Button Was clicked`);
+});
+
+document.querySelector('.btn--hol').addEventListener('click', function () {
+  console.log(`Hold score Button Was clicked`);
+});
