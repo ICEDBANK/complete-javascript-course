@@ -110,6 +110,7 @@ btnNew.addEventListener('click', function () {
   player0El.classList.remove('player--winner');
   player1El.classList.remove('player--winner');
   activePlayer = 0;
+  score = [0, 0];
   playing = true;
 });
 
