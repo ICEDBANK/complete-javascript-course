@@ -81,6 +81,6 @@ document.querySelector('.btn--roll').addEventListener('click', function () {
   console.log(`Roll Dice Button Was clicked`);
 });
 
-document.querySelector('.btn--hol').addEventListener('click', function () {
+document.querySelector('.btn--hold').addEventListener('click', function () {
   console.log(`Hold score Button Was clicked`);
 });
