@@ -91,7 +91,7 @@ document.querySelector('.btn--roll').addEventListener('click', function () {
   dice = Math.trunc(Math.random() * 6) + 1;
   console.log(dice);
 
-  document.querySelector('dice').classList.remove('hidden');
+  diceEl.document.classList.remove('hidden');
 });
 
 document.querySelector('.btn--hold').addEventListener('click', function () {
