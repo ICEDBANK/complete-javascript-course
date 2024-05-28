@@ -115,5 +115,13 @@ btnRoll.addEventListener('click', function () {
 });
 
 btnhold.addEventListener('click', function () {
-  console.log(`Hold score Button Was clicked`);
+  //  1.) Add the current score to active players Score
+  score[activePlayer] += currentScore;
+  document.getElementById(`current--${activePlayer}`).textContent =
+    scores[activePlayer];
+  //  2.) Check if Player's score is >= 100
+
+  //  Finish Game
+
+  //  Switch to the next Player
 });
