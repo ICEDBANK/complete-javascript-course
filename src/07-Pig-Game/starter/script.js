@@ -90,7 +90,7 @@ document.querySelector('.btn--roll').addEventListener('click', function () {
 
   dice = Math.trunc(Math.random() * 6) + 1;
   console.log(dice);
-  diceEl.src(`dice-${dice}.png`);
+  diceEl.document.querySelector('.dice').src(`dice-${dice}.png`);
   diceEl.document.classList.remove('hidden');
 });
 
