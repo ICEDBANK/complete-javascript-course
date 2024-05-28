@@ -96,6 +96,10 @@ btnRoll.addEventListener('click', function () {
   console.log(dice);
   diceEl.src = `dice-${dice}.png`;
   diceEl.classList.remove('hidden');
+
+  if (dice !== 1) {
+    score0El += dice;
+  }
 });
 
 btnhold.addEventListener('click', function () {
