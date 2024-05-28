@@ -111,6 +111,7 @@ btnNew.addEventListener('click', function () {
   player1El = document
     .querySelector('.player--1')
     .classList.remove('player--winner');
+  playing = true;
 });
 
 btnRoll.addEventListener('click', function () {
@@ -136,7 +137,7 @@ btnhold.addEventListener('click', function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       score[activePlayer];
     //  2.) Check if Player's score is >= 100
-    if (score[activePlayer] >= MAX_SCORE) {
+    if (score[activePlayer] >= 6) {
       playing = false;
       document
         .querySelector(`.player--${activePlayer}`)
