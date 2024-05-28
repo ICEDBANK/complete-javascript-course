@@ -101,7 +101,7 @@ const handleSwitchPlayer = function () {
   player1El.classList.toggle('player--active');
 };
 
-btnNew.addEventListener('click', function () {
+const init = function () {
   score0El.textContent = 0;
   score1El.textContent = 0;
   currentScore = 0;
@@ -110,9 +110,10 @@ btnNew.addEventListener('click', function () {
   player0El.classList.remove('player--winner');
   player1El.classList.remove('player--winner');
   activePlayer = 0;
-  score = [0, 0];
   playing = true;
-});
+};
+
+btnNew.addEventListener('click', function () {});
 
 btnRoll.addEventListener('click', function () {
   if (playing) {
