@@ -108,7 +108,9 @@ const init = function () {
     player1El.classList.toggle('player--active');
   };
 
-  btnNew.addEventListener('click', function () {});
+  btnNew.addEventListener('click', function () {
+    init();
+  });
 
   btnRoll.addEventListener('click', function () {
     if (playing) {
