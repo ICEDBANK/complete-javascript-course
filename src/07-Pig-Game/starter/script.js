@@ -78,12 +78,14 @@ const btnRoll = document.querySelector('.btn--roll');
 const btnNew = document.querySelector('.btn--new');
 const btnHold = document.querySelector('.btn--hold');
 
-let score0El = document.querySelector('#score--0');
+let score0El = document.getElementById('score--0');
 let score1El = document.getElementById('score--1');
 
 score0El.textContent = 0;
 score1El.textContent = 0;
 diceEl.classList.add('hidden');
+
+let currentScore = 0;
 
 btnNew.addEventListener('click', function () {
   console.log(`New Game Button Clicked`);
@@ -98,6 +100,12 @@ btnRoll.addEventListener('click', function () {
   diceEl.classList.remove('hidden');
   diceEl.src = `dice-${dice}.png`;
   console.log(dice);
+  //!SECTION  Checked if user Rolled 1 on the dice
+  if (dice !== 1) {
+    currentScore += dice;
+    score0El.textContent = currentScore;
+  } else {
+  }
 });
 
 btnHold.addEventListener('click', function () {
