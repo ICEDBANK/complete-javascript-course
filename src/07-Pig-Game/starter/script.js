@@ -72,9 +72,12 @@
 'use strict';
 
 const MAX_SCORE = 100;
-const score0 = document.querySelector('#score--0');
-const score1 = document.getElementById('score--1');
-let diceImage = document.querySelector('.dice').classList.add('hidden');
+const score0El = document.querySelector('#score--0');
+const score1El = document.getElementById('score--1');
+const diceEl = document.classList.add('hidden');
+
+score0El.textContent = 0;
+score1El.textContent = 0;
 
 document.querySelector('.btn--new').addEventListener('click', function () {
   console.log(`New Game Button Was clicked`);
@@ -87,6 +90,8 @@ document.querySelector('.btn--roll').addEventListener('click', function () {
 
   dice = Math.trunc(Math.random() * 6) + 1;
   console.log(dice);
+
+  document.querySelector('dice').classList.remove('hidden');
 });
 
 document.querySelector('.btn--hold').addEventListener('click', function () {
