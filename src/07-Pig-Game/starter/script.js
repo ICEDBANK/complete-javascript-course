@@ -72,6 +72,7 @@
 'use strict';
 
 const MAX_SCORE = 100;
+let diceImage = (document.querySelector('.dice').textContent = 'hidden');
 
 document.querySelector('.btn--new').addEventListener('click', function () {
   console.log(`New Game Button Was clicked`);
