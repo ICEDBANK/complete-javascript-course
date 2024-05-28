@@ -101,9 +101,7 @@ const handleSwitchPlayer = function () {
   player1El.classList.toggle('player--active');
 };
 
-btnNew.addEventListener('click', function () {
-  console.log(`New Game Button Was clicked`);
-});
+btnNew.addEventListener('click', function () {});
 
 btnRoll.addEventListener('click', function () {
   if (playing) {
@@ -128,7 +126,7 @@ btnhold.addEventListener('click', function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       score[activePlayer];
     //  2.) Check if Player's score is >= 100
-    if (score[activePlayer] >= 20) {
+    if (score[activePlayer] >= MAX_SCORE) {
       playing = false;
       document
         .querySelector(`.player--${activePlayer}`)
