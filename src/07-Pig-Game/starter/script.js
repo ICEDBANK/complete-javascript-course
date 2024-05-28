@@ -126,10 +126,10 @@ btnhold.addEventListener('click', function () {
   //  2.) Check if Player's score is >= 100
   if (score[activePlayer] >= 100) {
     document
-      .querySelector(`player--${activePlayer}`)
+      .querySelector(`.player--${activePlayer}`)
       .classList.add('play--winner');
     document
-      .querySelector(`player--${activePlayer}`)
+      .querySelector(`.player--${activePlayer}`)
       .classList.remove('play--active');
   } else {
     //  Switch to the next Player
