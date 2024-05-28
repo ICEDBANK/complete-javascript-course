@@ -74,26 +74,30 @@
 const MAX_SCORE = 100;
 const score0El = document.querySelector('#score--0');
 const score1El = document.getElementById('score--1');
-const diceEl = document.querySelector('.dice').classList.add('hidden');
+const diceEl = document.querySelector('.dice');
+const btnNew = document.querySelector('.btn--new');
+const btnRoll = document.querySelector('.btn--roll');
+const btnhold = document.querySelector('.btn--hold');
 
 score0El.textContent = 0;
 score1El.textContent = 0;
+diceEl.classList.add('hidden');
 
-document.querySelector('.btn--new').addEventListener('click', function () {
+btnNew.addEventListener('click', function () {
   console.log(`New Game Button Was clicked`);
 });
 
-document.querySelector('.btn--roll').addEventListener('click', function () {
+btnRoll.addEventListener('click', function () {
   console.log(`Roll Dice Button Was clicked`);
 
   let dice = 0;
 
   dice = Math.trunc(Math.random() * 6) + 1;
   console.log(dice);
-  diceEl.document.querySelector('.dice').src(`dice-${dice}.png`);
-  diceEl.document.classList.remove('hidden');
+  diceEl.src = `dice-${dice}.png`;
+  diceEl.classList.remove('hidden');
 });
 
-document.querySelector('.btn--hold').addEventListener('click', function () {
+btnhold.addEventListener('click', function () {
   console.log(`Hold score Button Was clicked`);
 });
