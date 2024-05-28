@@ -72,6 +72,8 @@
 'use strict';
 
 const MAX_SCORE = 100;
+const score0 = document.querySelector('#score--0');
+const score1 = document.getElementById('score--1');
 let diceImage = document.querySelector('.dice').classList.add('hidden');
 
 document.querySelector('.btn--new').addEventListener('click', function () {
@@ -84,7 +86,6 @@ document.querySelector('.btn--roll').addEventListener('click', function () {
   let dice = 0;
 
   dice = Math.trunc(Math.random() * 6) + 1;
-
   console.log(dice);
 });
 
