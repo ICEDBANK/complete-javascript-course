@@ -121,7 +121,7 @@ btnRoll.addEventListener('click', function () {
 btnhold.addEventListener('click', function () {
   //  1.) Add the current score to active players Score
   score[activePlayer] += currentScore;
-  document.getElementById(`current--${activePlayer}`).textContent =
+  document.getElementById(`score--${activePlayer}`).textContent =
     score[activePlayer];
   //  2.) Check if Player's score is >= 100
 
