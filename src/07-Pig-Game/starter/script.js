@@ -110,7 +110,7 @@ btnRoll.addEventListener('click', function () {
     document.getElementById(`current--${activePlayer}`).textContent
       .currentScore;
   } else {
-    //!SECTION  Switch Player
+    //!SECTION  Switch to next Player
     activePlayer = activePlayer === 0 ? 1 : 0;
     currentScore = 0;
     document.getElementById(
