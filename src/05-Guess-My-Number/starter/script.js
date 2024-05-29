@@ -61,6 +61,7 @@ highScore.textContent = 0;
 const generateNumber = function () {
   let secretNumber = Math.trunc(Math.random() * 6) + 1;
   document.querySelector('.number').textContent = secretNumber;
+  console.log(secretNumber);
 };
 
 // Display '?' as the initial number in the UI
