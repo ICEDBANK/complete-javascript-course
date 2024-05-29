@@ -59,6 +59,7 @@ const btnCheck = document.querySelector('.check');
 highScore.textContent = 0;
 // Generate a secret number between 1 and 20
 let secretNumber = Math.trunc(Math.random() * 6) + 1;
+console.log(secretNumber);
 // Display '?' as the initial number in the UI
 
 // Initialize score to maximum score
