@@ -86,6 +86,8 @@ btnCheck.addEventListener('click', function () {
 
   if (!guess) {
     updateMessage('Enter a number');
+  } else if (guess === secretNumber) {
+    updateMessage('Correct Answer');
   }
 });
 
