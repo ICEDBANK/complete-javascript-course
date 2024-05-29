@@ -89,7 +89,7 @@ btnCheck.addEventListener('click', function () {
   } else {
     if (guess > 20 && guess < 1) {
       updateMessage(`Enter A Number Between ${MIN_NUMBER} and ${MAX_NUMBER}`);
-      console.log(guess);
+      score--;
     }
   }
 });
