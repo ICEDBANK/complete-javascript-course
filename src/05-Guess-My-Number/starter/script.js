@@ -88,7 +88,7 @@ btnCheck.addEventListener('click', function () {
     updateMessage('Correct Answer');
   } else {
     if (guess > 20 && guess < 1) {
-      updateMessage(`Enter A Number Between ${MIN_NUMBER} and $ {}`);
+      updateMessage(`Enter A Number Between ${MIN_NUMBER} and ${MAX_NUMBER}`);
     }
   }
 });
