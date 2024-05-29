@@ -79,7 +79,9 @@ const generateNumber = function () {
 
 // Event listener for 'Check' button click
 btnCheck.addEventListener('click', function () {
-  generateNumber();
+  let guess = document.querySelector('.guess');
+  guess = Number(guess.textContent);
+  console.log(guess);
 });
 
 // Check if guess is empty or not a number
