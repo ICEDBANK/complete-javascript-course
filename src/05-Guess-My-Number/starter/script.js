@@ -80,7 +80,7 @@ const updateMessage = message => {
 // Function to handle winning scenario
 
 // Function to reset styles to default
-
+generateNumber();
 // Event listener for 'Check' button click
 btnCheck.addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
