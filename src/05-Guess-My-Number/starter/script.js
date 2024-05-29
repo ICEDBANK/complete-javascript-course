@@ -53,6 +53,7 @@ const MAX_SCORE = 20;
 const MIN_SCORE = 1;
 const MAX_NUMBER = 20;
 const highScore = document.querySelector('.highscore');
+const btnCheck = document.querySelector('.check');
 
 // Initialize high score to 0
 highScore.textContent = 0;
@@ -77,6 +78,9 @@ const generateNumber = function () {
 // Function to reset styles to default
 
 // Event listener for 'Check' button click
+btnCheck.addEventListener('click', function () {
+  generateNumber();
+});
 
 // Check if guess is empty or not a number
 
