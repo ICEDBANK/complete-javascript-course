@@ -52,6 +52,7 @@
 const MAX_SCORE = 20;
 const MIN_SCORE = 1;
 const MAX_NUMBER = 20;
+const MIN_NUMBER = 1;
 const highScore = document.querySelector('.highscore');
 const btnCheck = document.querySelector('.check');
 
@@ -85,6 +86,10 @@ btnCheck.addEventListener('click', function () {
     updateMessage('Enter a number');
   } else if (guess === secretNumber) {
     updateMessage('Correct Answer');
+  } else {
+    if (guess > 20 && guess < 1) {
+      updateMessage(`Enter A Number Between ${MIN_NUMBER} and $ {}`);
+    }
   }
 });
 
