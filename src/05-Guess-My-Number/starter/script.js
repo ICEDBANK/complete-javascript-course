@@ -55,6 +55,7 @@ const MAX_NUMBER = 20;
 const MIN_NUMBER = 1;
 const highScore = document.querySelector('.highscore');
 const btnCheck = document.querySelector('.check');
+const btnAgain = document.querySelector('.again');
 
 // Initialize high score to 0
 highScore.textContent = 0;
@@ -91,6 +92,8 @@ btnCheck.addEventListener('click', function () {
     if (guess > 20 && guess < 1) {
       updateMessage(`Enter A Number Between ${MIN_NUMBER} and ${MAX_NUMBER}`);
       score--;
+    }else{
+
     }
   }
 });
