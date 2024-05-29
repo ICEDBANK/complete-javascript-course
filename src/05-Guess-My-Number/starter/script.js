@@ -49,9 +49,13 @@
 */
 
 // Define constants for game settings
+const MAX_SCORE = 20;
+const MIN_SCORE = 1;
+const MAX_NUMBER = 20;
+const highScore = document.querySelector('.highscore');
 
 // Initialize high score to 0
-
+highScore.textContent = 0;
 // Generate a secret number between 1 and 20
 
 // Display '?' as the initial number in the UI
