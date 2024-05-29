@@ -83,6 +83,10 @@ const updateMessage = message => {
 // Event listener for 'Check' button click
 btnCheck.addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
+
+  if (!guess) {
+    updateMessage('Enter a number');
+  }
 });
 
 // Check if guess is empty or not a number
