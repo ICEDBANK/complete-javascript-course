@@ -71,6 +71,7 @@ const updateMessage = message => {
 };
 
 // Function to update score displayed in UI
+const handleScore = () => {document.querySelector('.score') = score;}
 
 // Function to update and display high score
 
