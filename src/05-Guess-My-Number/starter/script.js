@@ -60,8 +60,8 @@ let secretNumber = 0;
 highScore.textContent = 0;
 // Generate a secret number between 1 and 20
 const generateNumber = function (secretNumber) {
-  let secretNumber = Math.trunc(Math.random() * 6) + 1;
-  secretNumber = document.querySelector('.number').textContent = secretNumber;
+  let number = Math.trunc(Math.random() * 6) + 1;
+  secretNumber = document.querySelector('.number').textContent;
   console.log(secretNumber);
 };
 
