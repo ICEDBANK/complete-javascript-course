@@ -57,6 +57,9 @@ const highScore = document.querySelector('.highscore');
 // Initialize high score to 0
 highScore.textContent = 0;
 // Generate a secret number between 1 and 20
+const generateNumber = function () {
+  let secretNumber = Math.trunc(Math.random() * 6) + 1;
+};
 
 // Display '?' as the initial number in the UI
 
