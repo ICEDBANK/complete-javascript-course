@@ -68,7 +68,7 @@ const generateNumber = function () {
 // Initialize score to maximum score
 
 // Function to update message displayed in UI
-const updateMessage = message => {
+const updateMessage = () => {
   let message = (document.querySelector('.message').textContent = message);
 };
 
