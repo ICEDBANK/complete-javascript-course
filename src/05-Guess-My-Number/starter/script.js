@@ -68,6 +68,9 @@ const generateNumber = function () {
 // Initialize score to maximum score
 
 // Function to update message displayed in UI
+const updateMessage = message => {
+  let message = (document.querySelector('.message').textContent = message);
+};
 
 // Function to update score displayed in UI
 
@@ -80,7 +83,6 @@ const generateNumber = function () {
 // Event listener for 'Check' button click
 btnCheck.addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
-  console.log(guess);
 });
 
 // Check if guess is empty or not a number
