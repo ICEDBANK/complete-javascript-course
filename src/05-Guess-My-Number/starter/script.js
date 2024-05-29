@@ -54,20 +54,21 @@ const MIN_SCORE = 1;
 const MAX_NUMBER = 20;
 const highScore = document.querySelector('.highscore');
 const btnCheck = document.querySelector('.check');
+let secretNumber = 0;
 
 // Initialize high score to 0
 highScore.textContent = 0;
 // Generate a secret number between 1 and 20
-const generateNumber = function () {
+const generateNumber = function (secretNumber) {
   let secretNumber = Math.trunc(Math.random() * 6) + 1;
-  document.querySelector('.number').textContent = secretNumber;
+  secretNumber = document.querySelector('.number').textContent = secretNumber;
   console.log(secretNumber);
 };
 
 // Display '?' as the initial number in the UI
 
 // Initialize score to maximum score
-
+let score = MAX_SCORE;
 // Function to update message displayed in UI
 const updateMessage = message => {
   document.querySelector('.message').textContent = message;
@@ -80,7 +81,7 @@ const updateMessage = message => {
 // Function to handle winning scenario
 
 // Function to reset styles to default
-generateNumber();
+
 // Event listener for 'Check' button click
 btnCheck.addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
