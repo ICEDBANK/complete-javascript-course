@@ -28,8 +28,8 @@ const btnOpenModal = document.querySelectorAll('.show-modal');
 
 // Function to close the modal
 const closeModal = function () {
-  modelOverlayEl.classList.toggle('hidden');
-  modalEl.classList.toggle('hidden');
+  modelOverlayEl.classList.add('hidden');
+  modalEl.classList.add('hidden');
 };
 
 // Function to open the modal
@@ -44,7 +44,7 @@ btnOpenModal.forEach(button => {
 });
 
 // Adding event listener to close the modal when the close button is clicked
-btnCloseModal.addEventListener('click', closeModal());
+btnCloseModal.addEventListener('click', closeModal);
 
 // Adding event listener to close the modal when the overlay is clicked
 
