@@ -123,6 +123,7 @@ btnCheck.addEventListener('click', function () {
       handleScore();
     } else {
       updateMessage('You Lost... Play again');
+      btnCheck.classList.add('disabled');
     }
   }
 });
@@ -130,19 +131,3 @@ btnCheck.addEventListener('click', function () {
 btnAgain.addEventListener('click', function () {
   reset();
 });
-
-// Event listener for 'Again' button click
-
-// Update and display high score
-
-// Reset guess input field
-
-// Reset score to maximum score
-
-// Reset displayed number to '?'
-
-// Reset styles to default
-
-// Generate new secret number
-
-// Display initial message
