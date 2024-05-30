@@ -80,6 +80,13 @@ const handleScore = () => {
 // Function to update and display high score
 
 // Function to handle winning scenario
+const determineWin = function () {
+  updateMessage('Correct Answer');
+  document.querySelector('body').style.backgroundColor = '#60b347';
+  document.querySelector('.number').style.width = '30rem';
+  document.query;
+  highScore = score;
+};
 
 // Function to reset styles to default
 
@@ -87,20 +94,11 @@ const handleScore = () => {
 btnCheck.addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
   console.log(guess);
-  /*
-      test to ensure guess is not empty
-      test to ensure guess === secretNumber
-      test to ensure guess < 20 || guess > 20
-      test to ensure score is greater than 1 finish with else saying you lost
-      test to ensure guess !== secret Number ( high / low)
-      else 
-
-    */
 
   if (!guess) {
     updateMessage('Enter A Number');
   } else if (guess === secretNumber) {
-    updateMessage('Correct Answer');
+    determineWin();
   } else if (guess < 1 || guess > 20) {
     updateMessage('Enter a number between 1 and 20');
     handleScore();
