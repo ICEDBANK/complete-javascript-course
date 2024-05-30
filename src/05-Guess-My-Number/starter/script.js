@@ -79,7 +79,7 @@ const handleScore = () => {
 // Function to handle winning scenario
 const determineWin = function () {
   updateMessage('Correct Answer');
-  let guess = document.querySelector('.quess');
+  let guess = document.querySelector('.guess');
   guess.textContent = '';
   document.querySelector('body').style.backgroundColor = '#60b347';
   document.querySelector('.number').style.width = '30rem';
