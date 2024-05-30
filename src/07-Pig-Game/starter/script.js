@@ -73,70 +73,72 @@
 
 // Constants and DOM element selections
 const MAX_SCORE = 100; // Maximum score to win the game
-const playerEls = [document.querySelector('.player--0'), document.querySelector('.player--1')];// Player sections
-const scoreEls =  [document.getElementById('score--0'), document.getElementById('score--1')];// Total scores
-const currentEls = [document.getElementById('current--0'), document.getElementById('current--1')]; // Current scores
-const diceEl =  document.querySelector('.dice')// Dice image element
-const btnNew =  document.querySelector('.btn--new') // New game button
-const btnRoll =  // Roll dice button
-const btnHold =  // Hold score button
+const playerEls = [
+  document.querySelector('.player--0'),
+  document.querySelector('.player--1'),
+]; // Player sections
+const scoreEls = [
+  document.getElementById('score--0'),
+  document.getElementById('score--1'),
+]; // Total scores
+const currentEls = [
+  document.getElementById('current--0'),
+  document.getElementById('current--1'),
+]; // Current scores
+const diceEl = document.querySelector('.dice'); // Dice image element
+const btnNew = document.querySelector('.btn--new'); // New game button
+const btnRoll = document.querySelector('.btn--roll'); // Roll dice button
+const btnHold = document.querySelector('.btn--hold'); // Hold score button
 
 // Initial setup for scores and game state
 const init = function () {
   // Reset total scores
-   // Reset current scores
-   // Hide the dice image
-   // Remove winner and active classes
-    // Set Player 1 as active
+  // Reset current scores
+  // Hide the dice image
+  // Remove winner and active classes
+  // Set Player 1 as active
 };
 
 // Initialize game variables
 
-
 // Function to initialize the game
 const initializeGame = function () {
-   // Reset all scores and states
-   // Array to keep track of scores for both players
+  // Reset all scores and states
+  // Array to keep track of scores for both players
   // Current score for the active player
-   // Start with Player 1
-   // Game state to track if the game is still playing
+  // Start with Player 1
+  // Game state to track if the game is still playing
 };
 
 // Function to switch the active player
 const switchPlayer = function () {
-   // Update UI for current player's score
-   // Reset current score
-   // Switch active player
+  // Update UI for current player's score
+  // Reset current score
+  // Switch active player
   // Toggle active class for both players
 };
 
 // Event listener for the "New Game" button
 
-
 // Event listener for the "Roll Dice" button
 
-    // Generate a random dice roll between 1 and 6
+// Generate a random dice roll between 1 and 6
 
-    // Display the dice image based on the roll
+// Display the dice image based on the roll
 
+// If the roll is not 1, add the roll to the current score
 
-    // If the roll is not 1, add the roll to the current score
-
-      // If the roll is 1, switch to the next player
-
+// If the roll is 1, switch to the next player
 
 // Event listener for the "Hold Score" button
 
-    // Add the current score to the active player's total score
+// Add the current score to the active player's total score
 
+// Check if the player's total score is >= MAX_SCORE
 
-    // Check if the player's total score is >= MAX_SCORE
-
-      // Switch to the next player if no one has won
-
+// Switch to the next player if no one has won
 
 // Initialize the game on load
-
 
 /*!SECTION
 
