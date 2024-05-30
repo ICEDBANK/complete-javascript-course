@@ -48,86 +48,98 @@
 
 */
 
+'use strict';
+
 // Define constants for game settings
-const MAX_SCORE = 20;
-const MIN_SCORE = 1;
-const MAX_NUMBER = 20;
-const MIN_NUMBER = 1;
-const highScore = document.querySelector('.highscore');
-const btnCheck = document.querySelector('.check');
-const btnAgain = document.querySelector('.again');
+const MAX_SCORE = 20; // Maximum score a player can start with
+const MIN_SCORE = 1; // Minimum score, typically the losing condition
+const MAX_NUMBER = 20; // Maximum number for the secret number range
+const MIN_NUMBER = 1; // Minimum number for the secret number range
+
+// Select DOM elements
+const highScoreEl = document.querySelector('.highscore'); // Element to display the high score
+const btnCheck = document.querySelector('.check'); // Button to check the guessed number
+const btnAgain = document.querySelector('.again'); // Button to reset the game
+const messageEl = document.querySelector('.message'); // Element to display messages
+const scoreEl = document.querySelector('.score'); // Element to display the current score
+const numberEl = document.querySelector('.number'); // Element to display the secret number or '?'
+const guessEl = document.querySelector('.guess'); // Input element for user's guess
 
 // Initialize high score to 0
-highScore.textContent = 0;
-// Generate a secret number between 1 and 20
-let secretNumber = Math.trunc(Math.random() * MAX_NUMBER) + 1;
-console.log(secretNumber);
+highScoreEl.textContent = 0;
+
+// Function to generate a secret number between 1 and MAX_NUMBER
+const generateSecretNumber = () => Math.trunc(Math.random() * MAX_NUMBER) + 1;
+let secretNumber = generateSecretNumber();
+console.log(secretNumber); // For debugging: log the secret number
 
 // Initialize score to maximum score
 let score = MAX_SCORE;
+
 // Function to update message displayed in UI
 const updateMessage = message => {
-  document.querySelector('.message').textContent = message;
+  messageEl.textContent = message;
 };
-
-let guess = 0;
 
 // Function to update score displayed in UI
 const handleScore = () => {
   score--;
-  document.querySelector('.score').textContent = score;
+  scoreEl.textContent = score;
 };
 
 // Function to handle winning scenario
 const determineWin = function () {
   updateMessage('Correct Answer');
-  document.querySelector('body').style.backgroundColor = '#60b347';
-  document.querySelector('.number').style.width = '30rem';
-  document.querySelector('.number').textContent = secretNumber;
-  document.query;
-  highScore.textContent < score
-    ? (highScore.textContent = score)
-    : (highScore.textContent = highScore.textContent);
+  document.querySelector('body').style.backgroundColor = '#60b347'; // Change background color to green
+  numberEl.style.width = '30rem'; // Increase the width of the number display
+  numberEl.textContent = secretNumber; // Display the secret number
 
-  btnCheck.classList.add('disabled');
+  // Update high score if current score is higher
+  if (Number(highScoreEl.textContent) < score) {
+    highScoreEl.textContent = score;
+  }
+
+  btnCheck.disabled = true; // Disable the check button after winning
 };
 
 // Function to reset styles to default
 const reset = function () {
   updateMessage('Start guessing...');
-  document.querySelector('.guess').value = 0;
-  document.querySelector('body').style.backgroundColor = '#222';
-  document.querySelector('.number').style.width = '15rem';
-  document.querySelector('.number').textContent = '?';
-  btnCheck.classList.remove('disabled');
-  score = MAX_SCORE;
-  document.querySelector('.score').textContent = score;
-  secretNumber = Math.trunc(Math.random() * MAX_NUMBER) + 1;
+  guessEl.value = ''; // Clear the guess input
+  document.querySelector('body').style.backgroundColor = '#222'; // Reset background color
+  numberEl.style.width = '15rem'; // Reset number display width
+  numberEl.textContent = '?'; // Reset number display to '?'
+  btnCheck.disabled = false; // Enable the check button
+  score = MAX_SCORE; // Reset score to maximum
+  scoreEl.textContent = score; // Update score display
+  secretNumber = generateSecretNumber(); // Generate a new secret number
+  console.log(secretNumber); // For debugging: log the new secret number
 };
 
 // Event listener for 'Check' button click
 btnCheck.addEventListener('click', function () {
-  guess = Number(document.querySelector('.guess').value);
-  console.log(guess);
+  const guess = Number(guessEl.value); // Convert the guessed value to a number
+  console.log(guess); // For debugging: log the guessed number
 
+  // Check if the guess is valid
   if (!guess) {
     updateMessage('Enter A Number');
   } else if (guess === secretNumber) {
-    determineWin();
-  } else if (guess < 1 || guess > 20) {
-    updateMessage('Enter a number between 1 and 20');
-    handleScore();
+    determineWin(); // Handle the winning scenario
+  } else if (guess < MIN_NUMBER || guess > MAX_NUMBER) {
+    updateMessage(`Enter a number between ${MIN_NUMBER} and ${MAX_NUMBER}`);
+    handleScore(); // Decrement the score for invalid guesses
   } else {
+    // Handle incorrect guesses
     if (score > 1) {
       updateMessage(guess < secretNumber ? 'Too Low' : 'Too High');
-      handleScore();
+      handleScore(); // Decrement the score for incorrect guesses
     } else {
       updateMessage('You Lost... Play again');
-      btnCheck.classList.add('disabled');
+      btnCheck.disabled = true; // Disable the check button after losing
     }
   }
 });
 
-btnAgain.addEventListener('click', function () {
-  reset();
-});
+// Event listener for 'Again' button click
+btnAgain.addEventListener('click', reset); // Reset the game when the 'Again' button is clicked
