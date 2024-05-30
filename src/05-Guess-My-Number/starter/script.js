@@ -77,8 +77,6 @@ const handleScore = () => {
   document.querySelector('.score').textContent = score;
 };
 
-// Function to update and display high score
-
 // Function to handle winning scenario
 const determineWin = function () {
   updateMessage('Correct Answer');
@@ -87,7 +85,7 @@ const determineWin = function () {
   document.querySelector('.number').textContent = secretNumber;
   document.query;
   highScore.textContent = score;
-  btnCheck.classList.add('.disabled');
+  btnCheck.classList.add('disabled');
 };
 
 // Function to reset styles to default
