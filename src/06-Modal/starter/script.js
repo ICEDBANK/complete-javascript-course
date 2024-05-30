@@ -21,7 +21,7 @@
 */
 
 // Selecting DOM elements
-const btnOpenModal = document.querySelector('.show-modal');
+const btnOpenModal = document.querySelectorAll('.show-modal');
 const btnCloseModal = document.querySelector('.close-modal');
 const modalOverlay = document.querySelector('.overlay');
 const modal = document.querySelector('.modal');
