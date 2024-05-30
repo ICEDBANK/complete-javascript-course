@@ -74,8 +74,8 @@ const updateMessage = message => {
 // Function to update score displayed in UI
 const handleScore = () => {
   score--;
-  document.querySelector('.score') = score;
-}
+  document.querySelector('.score').textContent = score;
+};
 
 // Function to update and display high score
 
@@ -87,7 +87,7 @@ const handleScore = () => {
 btnCheck.addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
   console.log(guess);
-    /*
+  /*
       test to ensure guess is not empty
       test to ensure guess === secretNumber
       test to ensure guess < 20 || guess > 20
@@ -97,30 +97,22 @@ btnCheck.addEventListener('click', function () {
 
     */
 
-      if(!guess){
-        updateMessage('Enter A Number');
-      }else if( guess === secretNumber){
-        updateMessage('Correct Answer');
-      }else if( guess < 1 || guess > 20){
-        updateMessage('Enter a number between 1 and 20');
-        handleScore();
-      }else{ 
-        if(score > 1){
-          updateMessage(guess < secretNumber ? 'Too Low' : 'Too High');
-          handleScore();
-        }else{
-          updateMessage('You Lost... Play again')
-        }
-      }
+  if (!guess) {
+    updateMessage('Enter A Number');
+  } else if (guess === secretNumber) {
+    updateMessage('Correct Answer');
+  } else if (guess < 1 || guess > 20) {
+    updateMessage('Enter a number between 1 and 20');
+    handleScore();
+  } else {
+    if (score > 1) {
+      updateMessage(guess < secretNumber ? 'Too Low' : 'Too High');
+      handleScore();
+    } else {
+      updateMessage('You Lost... Play again');
+    }
+  }
 });
-
-
-
-
-
-
-
-
 
 // Event listener for 'Again' button click
 
