@@ -93,8 +93,9 @@ const reset = function () {
   document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.number').style.width = '15rem';
   document.querySelector('.number').textContent = '?';
-  btnCheck.classList.add('disabled');
-  let score = MAX_SCORE;
+  btnCheck.classList.remove('disabled');
+  score = MAX_SCORE;
+  secretNumber = Math.trunc(Math.random() * 6) + 1;
 };
 
 // Event listener for 'Check' button click
