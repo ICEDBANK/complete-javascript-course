@@ -98,7 +98,7 @@ btnCheck.addEventListener('click', function () {
         updateMessage('Enter A Number');
       }else if( guess === secretNumber){
         updateMessage('Correct Answer');
-      }else if( guess < 1 || guess < 20){
+      }else if( guess < 1 || guess > 20){
         updateMessage('Enter a number between 1 and 20');
         score--;
       }else{ 
