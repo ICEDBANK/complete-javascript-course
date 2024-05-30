@@ -85,26 +85,32 @@ btnCheck.addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
 
   if (!guess) {
+    // Check if guess is empty or not a number
     updateMessage('Enter a number');
+    // Check if guess is correct
   } else if (guess === secretNumber) {
     updateMessage('Correct Answer');
   } else {
-    if (guess > 20 && guess < 1) {
-      updateMessage(`Enter A Number Between ${MIN_NUMBER} and ${MAX_NUMBER}`);
+    // Handle incorrect guess
+    if (guess !== secretNumber) {
       score--;
-    }else{
-
+    }else if(score > 1){
+      updateMessage( guess < 1 ? 'Too Low' : 'Too High')
+      score--;
+    }else if(guess < 1 || guess > 20){
+      
+      updateMessage(`Enter A Number Between ${MIN_NUMBER} and ${MAX_NUMBER}`);
     }
   }
 });
 
-// Check if guess is empty or not a number
 
-// Check if guess is correct
 
-// Handle incorrect guess
 
-// If score reaches 0, display message and reset score
+
+
+
+
 
 // Event listener for 'Again' button click
 
