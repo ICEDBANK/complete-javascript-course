@@ -70,6 +70,8 @@ const updateMessage = message => {
   document.querySelector('.message').textContent = message;
 };
 
+let guess = 0;
+
 // Function to update score displayed in UI
 const handleScore = () => {
   score--;
@@ -93,8 +95,6 @@ const determineWin = function () {
 // Function to reset styles to default
 const reset = function () {
   updateMessage('Start guessing...');
-  let guess = document.querySelector('.guess');
-  guess.textContent = '';
   document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.number').style.width = '15rem';
   document.querySelector('.number').textContent = '?';
