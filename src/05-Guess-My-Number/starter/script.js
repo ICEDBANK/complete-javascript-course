@@ -104,6 +104,7 @@ btnCheck.addEventListener('click', function () {
       }else{ 
         if(score > 1){
           updateMessage(guess < secretNumber ? 'Too Low' : 'Too High');
+          console.log(score);
           score--;
         }else{
           updateMessage('You Lost... Play again')
