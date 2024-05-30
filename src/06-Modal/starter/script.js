@@ -40,9 +40,7 @@ const openModal = function () {
 
 // Adding event listeners to open the modal when buttons are clicked
 btnOpenModal.foreach(button => {
-  button.addEventListener('click', function () {
-    openModal();
-  });
+  button.addEventListener('click', openModal);
 });
 
 // Adding event listener to close the modal when the close button is clicked
