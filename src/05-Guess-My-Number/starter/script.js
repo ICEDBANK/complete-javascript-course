@@ -86,7 +86,7 @@ const determineWin = function () {
   document.querySelector('.number').style.width = '30rem';
   document.querySelector('.number').textContent = secretNumber;
   document.query;
-  highScore = score;
+  highScore.textContent = score;
 };
 
 // Function to reset styles to default
