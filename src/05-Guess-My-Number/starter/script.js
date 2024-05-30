@@ -79,7 +79,8 @@ const handleScore = () => {
 // Function to handle winning scenario
 const determineWin = function () {
   updateMessage('Correct Answer');
-  guess = 0;
+  let guess = document.querySelector('.quess');
+  guess.textContent = 0;
   document.querySelector('body').style.backgroundColor = '#60b347';
   document.querySelector('.number').style.width = '30rem';
   document.querySelector('.number').textContent = secretNumber;
