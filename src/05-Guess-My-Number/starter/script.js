@@ -83,7 +83,7 @@ const handleScore = () => {document.querySelector('.score') = score;}
 // Event listener for 'Check' button click
 btnCheck.addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
-
+  console.log(guess);
     /*
       test to ensure guess is not empty
       test to ensure guess === secretNumber
