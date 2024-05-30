@@ -83,7 +83,10 @@ const determineWin = function () {
   document.querySelector('.number').style.width = '30rem';
   document.querySelector('.number').textContent = secretNumber;
   document.query;
-  highScore.textContent = score;
+  if (highScore < score) {
+    highScore.textContent = score;
+  }
+
   btnCheck.classList.add('disabled');
 };
 
