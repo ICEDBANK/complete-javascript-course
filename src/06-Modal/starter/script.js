@@ -22,7 +22,7 @@
 
 // Selecting DOM elements
 const btnShow = document.querySelector('.show-modal');
-const btnClose = document.querySelector('."close-modal');
+const btnClose = document.querySelector('.close-modal');
 const modal = document.querySelector('modal');
 
 // Function to close the modal
