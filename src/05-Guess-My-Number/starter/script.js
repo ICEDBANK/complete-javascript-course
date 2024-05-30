@@ -85,9 +85,9 @@ const determineWin = function () {
   document.querySelector('.number').style.width = '30rem';
   document.querySelector('.number').textContent = secretNumber;
   document.query;
-  if (highScore < score) {
-    highScore.textContent = score;
-  }
+  highScore.textContent < score
+    ? (highScore.textContent = score)
+    : (highScore.textContent = highScore.textContent);
 
   btnCheck.classList.add('disabled');
 };
