@@ -98,7 +98,7 @@ const reset = function () {
   document.querySelector('.number').textContent = '?';
   btnCheck.classList.remove('disabled');
   score = MAX_SCORE;
-  secretNumber = Math.trunc(Math.random() * 6) + 1;
+  secretNumber = Math.trunc(Math.random() * MAX_NUMBER) + 1;
 };
 
 // Event listener for 'Check' button click
