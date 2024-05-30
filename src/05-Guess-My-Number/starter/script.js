@@ -56,6 +56,7 @@ const MIN_NUMBER = 1;
 const highScore = document.querySelector('.highscore');
 const btnCheck = document.querySelector('.check');
 const btnAgain = document.querySelector('.again');
+const displayScore = document.querySelector('.score');
 
 // Initialize high score to 0
 highScore.textContent = 0;
@@ -72,7 +73,10 @@ const updateMessage = message => {
 };
 
 // Function to update score displayed in UI
-const handleScore = () => {document.querySelector('.score') = score;}
+const handleScore = () => {
+  score--;
+  document.querySelector('.score') = score;
+}
 
 // Function to update and display high score
 
@@ -104,8 +108,8 @@ btnCheck.addEventListener('click', function () {
       }else{ 
         if(score > 1){
           updateMessage(guess < secretNumber ? 'Too Low' : 'Too High');
-          console.log(score);
           score--;
+
         }else{
           updateMessage('You Lost... Play again')
         }
