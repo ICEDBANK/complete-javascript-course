@@ -89,6 +89,14 @@ const determineWin = function () {
 };
 
 // Function to reset styles to default
+const reset = function () {
+  updateMessage('Start guessing...');
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
+  document.querySelector('.number').textContent = '?';
+  btnCheck.classList.add('disabled');
+  let score = MAX_SCORE;
+};
 
 // Event listener for 'Check' button click
 btnCheck.addEventListener('click', function () {
