@@ -73,10 +73,10 @@
 
 // Constants and DOM element selections
 const MAX_SCORE = 100; // Maximum score to win the game
-const playerEls = [document.querySelector('player--0'), document.querySelector('player--1')];// Player sections
-const scoreEls =  // Total scores
-const currentEls =  // Current scores
-const diceEl =  // Dice image element
+const playerEls = [document.querySelector('.player--0'), document.querySelector('.player--1')];// Player sections
+const scoreEls =  [document.getElementById('score--0'), document.getElementById('score--1')];// Total scores
+const currentEls = [document.getElementById('current--0'), document.getElementById('current--1')]; // Current scores
+const diceEl =  document.querySelector('.dice')// Dice image element
 const btnNew =  // New game button
 const btnRoll =  // Roll dice button
 const btnHold =  // Hold score button
