@@ -47,5 +47,6 @@ btnOpenModal.forEach(button => {
 btnCloseModal.addEventListener('click', closeModal);
 
 // Adding event listener to close the modal when the overlay is clicked
+modelOverlayEl.addEventListener('click', closeModal);
 
 // Adding event listener to detect keydown events on the whole document
