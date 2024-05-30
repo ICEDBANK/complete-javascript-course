@@ -52,3 +52,8 @@ btnCloseModal.addEventListener('click', closeModal);
 modalOverlay.addEventListener('click', closeModal);
 
 // Adding event listener to detect keydown events on the whole document
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+});
