@@ -73,7 +73,7 @@
 
 // Constants and DOM element selections
 const MAX_SCORE = 100; // Maximum score to win the game
-const playerEls = // Player sections
+const playerEls = [document.querySelector('player--0'), document.querySelector('player--1')];// Player sections
 const scoreEls =  // Total scores
 const currentEls =  // Current scores
 const diceEl =  // Dice image element
@@ -82,7 +82,7 @@ const btnRoll =  // Roll dice button
 const btnHold =  // Hold score button
 
 // Initial setup for scores and game state
-const  = function () {
+const init = function () {
   // Reset total scores
    // Reset current scores
    // Hide the dice image
@@ -94,7 +94,7 @@ const  = function () {
 
 
 // Function to initialize the game
-const  = function () {
+const initializeGame = function () {
    // Reset all scores and states
    // Array to keep track of scores for both players
   // Current score for the active player
@@ -103,7 +103,7 @@ const  = function () {
 };
 
 // Function to switch the active player
-const  = function () {
+const switchPlayer = function () {
    // Update UI for current player's score
    // Reset current score
    // Switch active player
