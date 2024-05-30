@@ -87,6 +87,7 @@ const determineWin = function () {
   document.querySelector('.number').textContent = secretNumber;
   document.query;
   highScore.textContent = score;
+  btnCheck.classList.add('.disabled');
 };
 
 // Function to reset styles to default
