@@ -117,3 +117,8 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
