@@ -21,37 +21,34 @@
 */
 
 // Selecting DOM elements
-const modalEl = document.querySelector('.modal');
-const modelOverlayEl = document.querySelector('.overlay');
+const btnOpenModal = document.querySelector('.show-modal');
 const btnCloseModal = document.querySelector('.close-modal');
-const btnOpenModal = document.querySelectorAll('.show-modal');
+const modalOverlay = document.querySelector('.overlay');
+const modal = document.querySelector('.modal');
 
 // Function to close the modal
 const closeModal = function () {
-  modelOverlayEl.classList.add('hidden');
-  modalEl.classList.add('hidden');
+  modal.classList.add('hidden');
+  modalOverlay.classList.add('hidden');
 };
 
 // Function to open the modal
 const openModal = function () {
-  modalEl.classList.remove('hidden');
-  modelOverlayEl.classList.remove('hidden');
+  modal.classList.remove('hidden');
+  modalOverlay.classList.remove('hidden');
 };
 
 // Adding event listeners to open the modal when buttons are clicked
-btnOpenModal.forEach(button => {
-  button.addEventListener('click', openModal);
+btnOpenModal.foreach(button => {
+  button.addEventListener('click', function () {
+    openModal();
+  });
 });
 
 // Adding event listener to close the modal when the close button is clicked
 btnCloseModal.addEventListener('click', closeModal);
 
 // Adding event listener to close the modal when the overlay is clicked
-modelOverlayEl.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', closeModal);
 
 // Adding event listener to detect keydown events on the whole document
-document.addEventListener('keydown', function (event) {
-  if (event.key === 'Escape') {
-    closeModal();
-  }
-});
