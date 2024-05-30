@@ -21,20 +21,21 @@
 */
 
 // Selecting DOM elements
-const btnShow = document.querySelector('.show-modal');
-const btnClose = document.querySelector('.close-modal');
-const modal = document.querySelector('modal');
+const modalEl = document.querySelector('.modal');
+const modelOverlayEl = document.querySelector('.overlay');
+const btnCloseModal = document.querySelector('.close-modal');
+const btnOpenModal = document.querySelectorAll('.show-modal');
 
 // Function to close the modal
 
 // Function to open the modal
 const openModal = function () {
-  modal.classList.remove('hidden');
+  modalEl.classList.remove('hidden');
 };
 
 // Adding event listeners to open the modal when buttons are clicked
-btnShow.addEventListener('click', function () {
-  openModal();
+btnOpenModal.forEach(button => {
+  button.addEventListener('click', openModal);
 });
 
 // Adding event listener to close the modal when the close button is clicked
