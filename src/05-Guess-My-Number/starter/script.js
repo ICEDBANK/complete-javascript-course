@@ -120,6 +120,10 @@ btnCheck.addEventListener('click', function () {
   }
 });
 
+btnAgain.addEventListener('click', function () {
+  reset();
+});
+
 // Event listener for 'Again' button click
 
 // Update and display high score
