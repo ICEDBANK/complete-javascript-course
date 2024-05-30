@@ -56,7 +56,6 @@ const MIN_NUMBER = 1;
 const highScore = document.querySelector('.highscore');
 const btnCheck = document.querySelector('.check');
 const btnAgain = document.querySelector('.again');
-const displayScore = document.querySelector('.score');
 
 // Initialize high score to 0
 highScore.textContent = 0;
@@ -104,12 +103,11 @@ btnCheck.addEventListener('click', function () {
         updateMessage('Correct Answer');
       }else if( guess < 1 || guess > 20){
         updateMessage('Enter a number between 1 and 20');
-        score--;
+        handleScore();
       }else{ 
         if(score > 1){
           updateMessage(guess < secretNumber ? 'Too Low' : 'Too High');
-          score--;
-
+          handleScore();
         }else{
           updateMessage('You Lost... Play again')
         }
