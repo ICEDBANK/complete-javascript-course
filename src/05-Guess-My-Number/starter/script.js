@@ -95,7 +95,7 @@ const determineWin = function () {
 // Function to reset styles to default
 const reset = function () {
   updateMessage('Start guessing...');
-  document.querySelector('guess').value = 0;
+  document.querySelector('.guess').value = 0;
   document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.number').style.width = '15rem';
   document.querySelector('.number').textContent = '?';
