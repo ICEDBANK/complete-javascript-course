@@ -60,9 +60,12 @@ const btnAgain = document.querySelector('.again');
 // Initialize high score to 0
 highScore.textContent = 0;
 // Generate a secret number between 1 and 20
-let secretNumber = Math.trunc(Math.random() * 6) + 1;
-console.log(secretNumber);
-// Display '?' as the initial number in the UI
+let secretNumber = 0;
+
+const generateRandomNumber = function () {
+  secretNumber = Math.trunc(Math.random() * 6) + 1;
+  console.log(secretNumber);
+};
 
 // Initialize score to maximum score
 let score = MAX_SCORE;
