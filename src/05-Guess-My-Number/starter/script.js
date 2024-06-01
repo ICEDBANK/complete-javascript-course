@@ -58,8 +58,18 @@ const number = document.querySelector('.number');
 const score = document.querySelector('.score');
 const highscore = document.querySelector('.highscore');
 
+const updateMessage = function (message) {
+  document.querySelector('.message').textContent = message;
+};
+
+let secretNumber = Math.trunc(Math.random() * MAX_NUMBER) + 1;
+
 btnCheck.addEventListener('click', function () {
   let guess = 0;
   guess = Number(document.querySelector('.guess').value);
-  number.textContent = guess;
+
+  if ((guess = '')) {
+    updateMessage('Please Enter A Number');
+  } else if (guess === secretNumber) {
+  }
 });
