@@ -63,6 +63,7 @@ const updateMessage = function (message) {
 };
 
 let secretNumber = Math.trunc(Math.random() * MAX_NUMBER) + 1;
+console.log(secretNumber);
 
 btnCheck.addEventListener('click', function () {
   let guess = 0;
@@ -71,5 +72,6 @@ btnCheck.addEventListener('click', function () {
   if ((guess = '')) {
     updateMessage('Please Enter A Number');
   } else if (guess === secretNumber) {
+    updateMessage('Correct Answer');
   }
 });
