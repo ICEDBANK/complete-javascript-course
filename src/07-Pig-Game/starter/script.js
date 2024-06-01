@@ -91,54 +91,81 @@ const btnRoll = document.querySelector('.btn--roll'); // Roll dice button
 const btnHold = document.querySelector('.btn--hold'); // Hold score button
 
 // Initial setup for scores and game state
-const init = function () {
-  // Reset total scores
-  // Reset current scores
-  // Hide the dice image
-  // Remove winner and active classes
-  // Set Player 1 as active
+const initializeGame = function () {
+  scoreEls.forEach(scoreEl => (scoreEl.textContent = 0)); // Reset total scores
+  currentEls.forEach(currentEl => (currentEl.textContent = 0)); // Reset current scores
+  diceEl.classList.add('hidden'); // Hide the dice image
+  playerEls.forEach(playerEl =>
+    playerEl.classList.remove('player--winner', 'player--active')
+  ); // Remove winner and active classes
+  playerEls[0].classList.add('player--active'); // Set Player 1 as active
 };
 
 // Initialize game variables
+let scores, currentScore, activePlayer, playing;
 
 // Function to initialize the game
-const initializeGame = function () {
-  // Reset all scores and states
-  // Array to keep track of scores for both players
-  // Current score for the active player
-  // Start with Player 1
-  // Game state to track if the game is still playing
+const init = function () {
+  initializeGame(); // Reset all scores and states
+  scores = [0, 0]; // Array to keep track of scores for both players
+  currentScore = 0; // Current score for the active player
+  activePlayer = 0; // Start with Player 1
+  playing = true; // Game state to track if the game is still playing
 };
 
 // Function to switch the active player
 const switchPlayer = function () {
-  // Update UI for current player's score
-  // Reset current score
-  // Switch active player
-  // Toggle active class for both players
+  currentEls[activePlayer].textContent = currentScore; // Update UI for current player's score
+  currentScore = 0; // Reset current score
+  activePlayer = activePlayer === 0 ? 1 : 0; // Switch active player
+  playerEls.forEach(playerEl => playerEl.classList.toggle('player--active')); // Toggle active class for both players
 };
 
 // Event listener for the "New Game" button
+btnNew.addEventListener('click', init);
 
 // Event listener for the "Roll Dice" button
+btnRoll.addEventListener('click', function () {
+  if (playing) {
+    // Generate a random dice roll between 1 and 6
+    const dice = Math.trunc(Math.random() * 6) + 1;
+    // Display the dice image based on the roll
+    diceEl.src = `dice-${dice}.png`;
+    diceEl.classList.remove('hidden');
 
-// Generate a random dice roll between 1 and 6
-
-// Display the dice image based on the roll
-
-// If the roll is not 1, add the roll to the current score
-
-// If the roll is 1, switch to the next player
+    // If the roll is not 1, add the roll to the current score
+    if (dice !== 1) {
+      currentScore += dice;
+      currentEls[activePlayer].textContent = currentScore;
+    } else {
+      // If the roll is 1, switch to the next player
+      switchPlayer();
+    }
+  }
+});
 
 // Event listener for the "Hold Score" button
+btnHold.addEventListener('click', function () {
+  if (playing) {
+    // Add the current score to the active player's total score
+    scores[activePlayer] += currentScore;
+    scoreEls[activePlayer].textContent = scores[activePlayer];
 
-// Add the current score to the active player's total score
-
-// Check if the player's total score is >= MAX_SCORE
-
-// Switch to the next player if no one has won
+    // Check if the player's total score is >= MAX_SCORE
+    if (scores[activePlayer] >= MAX_SCORE) {
+      playing = false; // End the game
+      playerEls[activePlayer].classList.add('player--winner');
+      playerEls[activePlayer].classList.remove('player--active');
+      diceEl.classList.add('hidden');
+    } else {
+      // Switch to the next player if no one has won
+      switchPlayer();
+    }
+  }
+});
 
 // Initialize the game on load
+init();
 
 /*!SECTION
 
