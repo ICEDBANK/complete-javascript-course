@@ -56,12 +56,25 @@ const btnCheck = document.querySelector('.check');
 const btnAgain = document.querySelector('.again');
 const number = document.querySelector('.number');
 const scoreEl = document.querySelector('.score');
-const highscore = document.querySelector('.highscore');
+const highScoreEl = document.querySelector('.highscore');
 
 let score = MAX_NUMBER;
 
 const updateMessage = function (message) {
   document.querySelector('.message').textContent = message;
+};
+
+const determineWin = function () {
+  updateMessage('Correct Answer');
+  document.querySelector('body').style.backgroundColor = '#60b347';
+  numberEl.style.width = '30rem';
+  numberEl.textContent = secretNumber;
+
+  if (Number(highScoreEl.textContent) < score) {
+    highScoreEl.textContent = score;
+  }
+
+  btnCheck.disabled = true;
 };
 
 let secretNumber = Math.trunc(Math.random() * MAX_NUMBER) + 1;
@@ -76,19 +89,20 @@ btnCheck.addEventListener('click', function () {
   let guess = 0;
   guess = Number(document.querySelector('.guess').value);
 
-  if (guess === '') {
-    updateMessage('Please Enter A Number');
+  if (!guess) {
+    updateMessage('Enter A Number');
   } else if (guess === secretNumber) {
-    updateMessage('Correct Answer');
+    determineWin();
+  } else if (guess < MIN_NUMBER || guess > MAX_NUMBER) {
+    updateMessage(`Enter a number between ${MIN_NUMBER} and ${MAX_NUMBER}`);
+    updateScore();
   } else {
     if (score > 1) {
       updateMessage(guess < secretNumber ? 'Too Low' : 'Too High');
       updateScore();
-    } else if (guess < 1 || guess > 20) {
-      updateMessage('Enter a Number Between 1 and 20');
-      updateScore();
     } else {
-      updateMessage('You Lost, Try Again');
+      updateMessage('You Lost... Play again');
+      btnCheck.disabled = true;
     }
   }
 });
