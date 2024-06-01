@@ -50,25 +50,48 @@
 
 'use strict';
 
-const MAX_NUMBER = 20;
+// Define constants for game settings
+const MAX_SCORE = 20;
 const MIN_NUMBER = 1;
+const MAX_NUMBER = 20;
+
+// Select DOM elements
+const highScoreEl = document.querySelector('.highscore');
 const btnCheck = document.querySelector('.check');
 const btnAgain = document.querySelector('.again');
-const number = document.querySelector('.number');
+const messageEl = document.querySelector('.message');
 const scoreEl = document.querySelector('.score');
-const highScoreEl = document.querySelector('.highscore');
+const numberEl = document.querySelector('.number');
+const guessEl = document.querySelector('.guess');
 
-let score = MAX_NUMBER;
+// Initialize high score to 0
+highScoreEl.textContent = 0;
 
-const updateMessage = function (message) {
-  document.querySelector('.message').textContent = message;
+// Function to generate a secret number between 1 and MAX_NUMBER
+const generateSecretNumber = () => Math.trunc(Math.random() * MAX_NUMBER) + 1;
+let secretNumber = generateSecretNumber();
+console.log(secretNumber);
+
+// Initialize score to maximum score
+let score = MAX_SCORE;
+
+// Function to update message displayed in UI
+const updateMessage = message => {
+  messageEl.textContent = message;
 };
 
+// Function to update score displayed in UI
+const handleScore = () => {
+  score--;
+  scoreEl.textContent = score;
+};
+
+// Function to handle winning scenario
 const determineWin = function () {
   updateMessage('Correct Answer');
   document.querySelector('body').style.backgroundColor = '#60b347';
-  number.style.width = '30rem';
-  number.textContent = secretNumber;
+  numberEl.style.width = '30rem';
+  numberEl.textContent = secretNumber;
 
   if (Number(highScoreEl.textContent) < score) {
     highScoreEl.textContent = score;
@@ -77,17 +100,24 @@ const determineWin = function () {
   btnCheck.disabled = true;
 };
 
-let secretNumber = Math.trunc(Math.random() * MAX_NUMBER) + 1;
-console.log(secretNumber);
-
-const updateScore = function () {
-  score--;
+// Function to reset styles to default
+const reset = function () {
+  updateMessage('Start guessing...');
+  guessEl.value = '';
+  document.querySelector('body').style.backgroundColor = '#222';
+  numberEl.style.width = '15rem';
+  numberEl.textContent = '?';
+  btnCheck.disabled = false;
+  score = MAX_SCORE;
   scoreEl.textContent = score;
+  secretNumber = generateSecretNumber();
+  console.log(secretNumber);
 };
 
+// Event listener for 'Check' button click
 btnCheck.addEventListener('click', function () {
-  let guess = 0;
-  guess = Number(document.querySelector('.guess').value);
+  const guess = Number(guessEl.value);
+  console.log(guess);
 
   if (!guess) {
     updateMessage('Enter A Number');
@@ -95,14 +125,17 @@ btnCheck.addEventListener('click', function () {
     determineWin();
   } else if (guess < MIN_NUMBER || guess > MAX_NUMBER) {
     updateMessage(`Enter a number between ${MIN_NUMBER} and ${MAX_NUMBER}`);
-    updateScore();
+    handleScore();
   } else {
     if (score > 1) {
       updateMessage(guess < secretNumber ? 'Too Low' : 'Too High');
-      updateScore();
+      handleScore();
     } else {
       updateMessage('You Lost... Play again');
       btnCheck.disabled = true;
     }
   }
 });
+
+// Event listener for 'Again' button click
+btnAgain.addEventListener('click', reset);
