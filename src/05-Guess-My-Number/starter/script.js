@@ -81,11 +81,11 @@ btnCheck.addEventListener('click', function () {
   } else if (guess === secretNumber) {
     updateMessage('Correct Answer');
   } else if (score > 1) {
-    if (guess !== secretNumber) {
-      updateMessage(guess < secretNumber ? 'Too Low' : 'Too High');
-      updateScore();
-    } else if (guess < 1 || guess > 20) {
+    if (guess < 1 || guess > 20) {
       updateMessage('Enter a Number Between 1 and 20');
+      updateScore();
+    } else if (guess !== secretNumber) {
+      updateMessage(guess < secretNumber ? 'Too Low' : 'Too High');
       updateScore();
     } else {
       updateMessage('You Lost, Try Again');
