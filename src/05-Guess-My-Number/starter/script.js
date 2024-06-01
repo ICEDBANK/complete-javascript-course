@@ -67,8 +67,8 @@ const updateMessage = function (message) {
 const determineWin = function () {
   updateMessage('Correct Answer');
   document.querySelector('body').style.backgroundColor = '#60b347';
-  numberEl.style.width = '30rem';
-  numberEl.textContent = secretNumber;
+  number.style.width = '30rem';
+  number.textContent = secretNumber;
 
   if (Number(highScoreEl.textContent) < score) {
     highScoreEl.textContent = score;
