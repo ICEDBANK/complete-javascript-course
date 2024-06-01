@@ -55,8 +55,10 @@ const MIN_NUMBER = 1;
 const btnCheck = document.querySelector('.check');
 const btnAgain = document.querySelector('.again');
 const number = document.querySelector('.number');
-const score = document.querySelector('.score');
+const scoreEl = document.querySelector('.score');
 const highscore = document.querySelector('.highscore');
+
+let score = MAX_NUMBER;
 
 const updateMessage = function (message) {
   document.querySelector('.message').textContent = message;
@@ -64,6 +66,11 @@ const updateMessage = function (message) {
 
 let secretNumber = Math.trunc(Math.random() * MAX_NUMBER) + 1;
 console.log(secretNumber);
+
+const updateScore = function () {
+  score--;
+  scoreEl.textContent = score;
+};
 
 btnCheck.addEventListener('click', function () {
   let guess = 0;
@@ -73,5 +80,11 @@ btnCheck.addEventListener('click', function () {
     updateMessage('Please Enter A Number');
   } else if (guess === secretNumber) {
     updateMessage('Correct Answer');
+  } else if (score > 1) {
+    if (guess !== secretNumber) {
+      updateMessage(guess < secretNumber ? 'Too Low' : 'Too High');
+    } else if (guess < 1 || guess > 20) {
+      updateMessage('Enter a Number Between 1 and 20');
+    }
   }
 });
