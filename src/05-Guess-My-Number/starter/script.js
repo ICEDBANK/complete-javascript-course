@@ -80,12 +80,12 @@ btnCheck.addEventListener('click', function () {
     updateMessage('Please Enter A Number');
   } else if (guess === secretNumber) {
     updateMessage('Correct Answer');
-  } else if (score !== 0) {
-    if (guess < 1 || guess > 20) {
-      updateMessage('Enter a Number Between 1 and 20');
-      updateScore();
-    } else if (guess !== secretNumber) {
+  } else {
+    if (score > 1) {
       updateMessage(guess < secretNumber ? 'Too Low' : 'Too High');
+      updateScore();
+    } else if (guess < 1 || guess > 20) {
+      updateMessage('Enter a Number Between 1 and 20');
       updateScore();
     } else {
       updateMessage('You Lost, Try Again');
