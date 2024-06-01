@@ -78,7 +78,7 @@ btnCheck.addEventListener('click', function () {
   number.textContent = secretNumber;
   console.log(guess);
 
-  if ((guess = '')) {
+  if (guess === '') {
     updateMessage('Please Enter A Number');
   } else if (guess === secretNumber) {
     updateMessage('Correct Answer');
