@@ -61,5 +61,5 @@ const highscore = document.querySelector('.highscore');
 btnCheck.addEventListener('click', function () {
   let guess = 0;
   guess = Number(document.querySelector('.guess'));
-  console.log(guess);
+  number.textContent = guess;
 });
