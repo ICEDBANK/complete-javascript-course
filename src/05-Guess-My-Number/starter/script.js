@@ -54,7 +54,7 @@ const MAX_NUMBER = 20;
 const MIN_NUMBER = 1;
 const btnCheck = document.querySelector('.check');
 const btnAgain = document.querySelector('.again');
-const number = (document.querySelector('.number').textContent = 0);
+const number = document.querySelector('.number');
 const score = document.querySelector('.score');
 const highscore = document.querySelector('.highscore');
 
