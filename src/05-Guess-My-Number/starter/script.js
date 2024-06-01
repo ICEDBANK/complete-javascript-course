@@ -75,6 +75,8 @@ const updateScore = function () {
 btnCheck.addEventListener('click', function () {
   let guess = 0;
   guess = Number(document.querySelector('.guess').value);
+  number.textContent = secretNumber;
+  console.log(guess);
 
   if ((guess = '')) {
     updateMessage('Please Enter A Number');
