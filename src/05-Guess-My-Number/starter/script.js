@@ -52,8 +52,9 @@
 
 // Define constants for game settings
 const MAX_SCORE = 20;
-const MIN_NUMBER = 1;
+const MIN_SCORE = 1;
 const MAX_NUMBER = 20;
+const MIN_NUMBER = 1;
 
 // Select DOM elements
 const highScoreEl = document.querySelector('.highscore');
