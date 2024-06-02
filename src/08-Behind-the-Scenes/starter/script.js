@@ -278,8 +278,10 @@ calcAgeArrow(1988);
 
 const joshua = {
   year: 1988,
+  currentYear: 2024,
   calcAge: function () {
     console.log(this);
+    console.log(this.currentYear - this.year);
   },
 };
 joshua.calcAge();
