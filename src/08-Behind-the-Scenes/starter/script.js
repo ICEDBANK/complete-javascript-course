@@ -357,10 +357,11 @@ const me = {
   age: 36,
 };
 
-const friend = me;
-friend.age = 27;
-console.log(`Friend: ${friend.age}`);
-console.log(`Me : ${me.age}`);
+const friend = me; // you are copying the address of the object
+friend.age = 27; // You are now overwritting the value with the same address. Despite the const it is because the address is still the same despite changing
+// the parameters value.
+console.log(`Friend: ${friend.age}`); // age is pointing to the varaible address Not the value
+console.log(`Me : ${me.age}`); // age is pointing to the varaible address Not the value
 
 /*!SECTION    PRIMITIVES VS OBJECTS IN PRACTICE
     // Practical example:
