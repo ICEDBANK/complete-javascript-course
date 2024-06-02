@@ -322,6 +322,8 @@ const joshua = {
     console.log(this);
     console.log(this.currentYear - this.year);
   },
+
+  greet: () => console.log(`Hey ${this.firstName}`),
 };
 joshua.calcAge();
 
