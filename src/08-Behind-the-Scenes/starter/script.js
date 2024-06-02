@@ -201,11 +201,11 @@
 
 const myName = 'Joshua';
 if (myName === 'Joshua') {
-  console.log(`${myName} is a ${job}`);
+  console.log(`${myName} is a ${job}`); // <- Reference error since you cannont not access variables "job" before declaration (TDZ)
   const age = 2024 - 1988;
   console.log(age);
-  var job = 'Programmer';
-  console.log(x);
+  const job = 'Programmer';
+  console.log(x); // <- x is not defined
 }
 
 /*!SECTION    THE "THIS" KEYWORD
