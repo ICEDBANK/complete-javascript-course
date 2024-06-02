@@ -134,27 +134,27 @@
 // }
 
 ///*!SECTION    SCOPING PRACTICE
-    // Practical example:
-    // function outerFunction() {
-    //     const outerVar = 'I am outside!';
-    //     function innerFunction() {
-    //         const innerVar = 'I am inside!';
-    //         console.log(outerVar); // Accessible due to scope chain
-    //     }
-    //     innerFunction();
-    //     console.log(innerVar); // Error: innerVar is not defined
-    // }
-    // outerFunction();
+// Practical example:
+// function outerFunction() {
+//     const outerVar = 'I am outside!';
+//     function innerFunction() {
+//         const innerVar = 'I am inside!';
+//         console.log(outerVar); // Accessible due to scope chain
+//     }
+//     innerFunction();
+//     console.log(innerVar); // Error: innerVar is not defined
+// }
+// outerFunction();
 
-    function calcAge(birthYear) {
-        const age = 2024 = birthYear
-        console.log(firstName);
-        return age;
-    }
+function calcAge(birthYear) {
+  const age = 2024 - birthYear;
+  console.log(firstName);
+  return age;
+}
 
-    const firstName = 'Joshua';
+const firstName = 'Joshua';
 
-    calcAge(1988);
+calcAge(1988);
 
 //*/
 
