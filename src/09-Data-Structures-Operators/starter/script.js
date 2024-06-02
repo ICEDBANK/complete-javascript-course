@@ -311,4 +311,4 @@ console.log(thirdBook);
 // console.log(i, j, k);
 
 const ratings = [[[rating, ratingsCount]]];
-console.log(rating, ratingsCount);
+console.log(ratings);
