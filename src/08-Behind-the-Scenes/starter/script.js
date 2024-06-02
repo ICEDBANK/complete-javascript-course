@@ -199,36 +199,36 @@
     // let letVar = 'I am in TDZ until declared!';
 */
 // Hoisting with variables
-console.log(me); // <- is able to be hoisted but since it is not defined yet. By default it will always be "undefined"
-// console.log(job);
-// console.log(year);
+// console.log(me); // <- is able to be hoisted but since it is not defined yet. By default it will always be "undefined"
+// // console.log(job);
+// // console.log(year);
 
-var me = 'Joshua';
-let job = 'Programmer';
-const year = 1988;
+// var me = 'Joshua';
+// let job = 'Programmer';
+// const year = 1988;
 
-console.log(addDecl(2, 3));
-// console.log(addExp(2, 3));
-// console.log(addArrow(2, 3));
+// console.log(addDecl(2, 3));
+// // console.log(addExp(2, 3));
+// // console.log(addArrow(2, 3));
 
-function addDecl(a, b) {
-  return a + b;
-}
-//const addExp = function (a, b) {
-//  return a + b;
-//};
-//var addArrow = (a, b) => a + b;
+// function addDecl(a, b) {
+//   return a + b;
+// }
+// //const addExp = function (a, b) {
+// //  return a + b;
+// //};
+// //var addArrow = (a, b) => a + b;
 
-// Example
-if (!numProducts) {
-  deleteShoppingCart();
-}
+// // Example
+// if (!numProducts) {
+//   deleteShoppingCart();
+// }
 
-var numProducts = 10;
+// var numProducts = 10;
 
-function deleteShoppingCart() {
-  console.log(`All products deleted`);
-}
+// function deleteShoppingCart() {
+//   console.log(`All products deleted`);
+// }
 
 // const myName = 'Joshua';
 // if (myName === 'Joshua') {
@@ -246,7 +246,8 @@ function deleteShoppingCart() {
     // - Constructor context: In a constructor function, "this" refers to the new object being created.
     // - Arrow functions: Do not have their own "this". They inherit "this" from the parent scope.
 
-    // Analogy: "this" is like the person holding the camera in a selfie. In different contexts, the person holding the camera changes, reflecting who is currently executing the function.
+    // Analogy: "this" is like the person holding the camera in a selfie. In different contexts, the person holding the camera changes,
+    reflecting who is currently executing the function.
 */
 
 /*!SECTION    THE THIS KEYWORD IN PRACTICE
@@ -260,6 +261,14 @@ function deleteShoppingCart() {
     // };
     // obj.greet();
 */
+
+console.log(this);
+
+const calcAge = function (birthYear) {
+  console.log(2024 - birthYear);
+  console.log(this);
+};
+calcAge(1988);
 
 /*!SECTION    REGULAR FUNCTIONS VS ARROW FUNCTIONS
     // Regular Functions: Have their own "this" binding depending on how they are called.
