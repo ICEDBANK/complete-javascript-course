@@ -158,7 +158,7 @@ function calcAge(birthYear) {
       console.log(str);
     }
 
-    console.log(str);
+    //console.log(str); <- Cannot be accessed outside its block scope
   }
 
   printAge();
