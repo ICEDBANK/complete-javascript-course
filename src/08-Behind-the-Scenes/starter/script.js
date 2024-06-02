@@ -357,6 +357,9 @@ const me = {
   age: 36,
 };
 
+const friend = me;
+friend.age = 27;
+
 /*!SECTION    PRIMITIVES VS OBJECTS IN PRACTICE
     // Practical example:
     // let a = 10;
