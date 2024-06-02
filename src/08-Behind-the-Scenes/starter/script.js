@@ -321,15 +321,16 @@ const joshua = {
   calcAge: function () {
     console.log(this);
     console.log(this.currentYear - this.year);
+
+    const isMillenial = function () {
+      console.log(this);
+      console.log(`Hey ${this.firstName}`);
+    };
   },
 
   greet: function () {
     console.log(`Hey ${this.firstName}`);
   }, //     Never use Arrow function as a method
-  isMillenial: function () {
-    console.log(this);
-    console.log(`Hey ${this.firstName}`);
-  },
 };
 joshua.greet();
 joshua.calcAge();
