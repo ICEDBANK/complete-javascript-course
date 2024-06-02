@@ -50,7 +50,9 @@ console.log(w, x, y, z);
 let [main, , secondary] = restaurant.categories; // You can hop or skip
 console.log(main, secondary);
 
-const temp = main;
-main = secondary;
-secondary = temp;
-console.log(main, secondary);
+// const temp = main;
+// main = secondary;
+// secondary = temp;
+// console.log(main, secondary);
+
+main, (secondary = [secondary, main]);
