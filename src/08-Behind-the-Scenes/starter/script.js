@@ -152,6 +152,11 @@ function calcAge(birthYear) {
   function printAge() {
     const output = `${firstName}, You are ${age}, born in ${birthYear}`;
     console.log(output);
+
+    if (birthYear > 1981 && birthYear < 1996) {
+      const str = `Ohh... You are also a millenial ${firstName}`;
+      console.log(str);
+    }
   }
 
   printAge();
