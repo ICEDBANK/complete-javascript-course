@@ -1,5 +1,15 @@
 'use strict';
 
+/*!Summary
+
+    Array destructuring in JavaScript allows you to unpack values from arrays into distinct variables in a
+    clean and readable way. It can be used for simple extraction, skipping elements, setting default values,
+    handling nested arrays, swapping variables, and working with function returns.
+
+    This feature enhances the expressiveness of your code and reduces the need for repetitive and verbose statements.
+
+*/
+
 // Data needed for a later exercise
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
