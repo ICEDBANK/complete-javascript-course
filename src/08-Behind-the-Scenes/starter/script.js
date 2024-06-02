@@ -109,27 +109,29 @@
     // - Block Scope: Variables declared with let or const inside a block (e.g., if, for) are only accessible within that block.
 
     // Scope Chain: A hierarchy of scopes that determines how variables are resolved.
-    // - Analogy: Think of scope as rooms in a house. If you need something (a variable), you start searching in the room you are in (current scope). If you don’t find it, you move to the next room (outer scope) until you find it or reach the global scope (the whole house).
+    // - Analogy: Think of scope as rooms in a house. If you need something (a variable), you start searching in the room you are 
+        in (current scope). If you don’t find it, you move to the next room (outer scope) until you find it or reach the global scope (the whole house).
 */
 
 // Call stack Example
 
-const name = 'Joshua';
+const a = 'Joshua';
+firstFunction();
 
-const first = () => {
-  let a = 1;
-  const b = second(7, 9);
-  a = a + b;
-  return a;
-};
+function firstFunction() {
+  const b = 'hello';
+  secondFunction();
 
-function second(x, y) {
-  var c = 2;
-  return c;
+  function secondFunction() {
+    const c = 'hi';
+    thirdFunction();
+  }
 }
 
-const x = first();
-console.log(x);
+function thirdFunction() {
+  const d = 'hey';
+  console.log(d + c + b + a);
+}
 
 /*!SECTION    SCOPING PRACTICE
     // Practical example:
