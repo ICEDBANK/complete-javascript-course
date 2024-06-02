@@ -145,42 +145,42 @@
 //     console.log(innerVar); // Error: innerVar is not defined
 // }
 // outerFunction();
+/*
+    function calcAge(birthYear) {
+    const age = 2024 - birthYear;
 
-function calcAge(birthYear) {
-  const age = 2024 - birthYear;
+    function printAge() {
+        let output = `${firstName}, You are ${age}, born in ${birthYear}`;
+        console.log(output);
 
-  function printAge() {
-    let output = `${firstName}, You are ${age}, born in ${birthYear}`;
-    console.log(output);
+        if (birthYear > 1981 && birthYear < 1996) {
+        var millenial = true;
+        const str = `Ohh... You are also a millenial ${firstName}`;
+        console.log(str);
 
-    if (birthYear > 1981 && birthYear < 1996) {
-      var millenial = true;
-      const str = `Ohh... You are also a millenial ${firstName}`;
-      console.log(str);
+        function add(a, b) {
+            return a + b;
+        }
+        //!SECTION    Reassigning out scope's variable
+        output = 'New Output';
+        }
 
-      function add(a, b) {
-        return a + b;
-      }
-
-      output = 'New Output';
+        //console.log(str); <- Cannot be accessed outside its block scope
+        console.log(millenial);
+        // console.log(add(3, 2)); Not accesible outside of its block scope. Comment out strict mode
+        console.log(output);
     }
 
-    //console.log(str); <- Cannot be accessed outside its block scope
-    console.log(millenial);
-    // console.log(add(3, 2)); Not accesible outside of its block scope. Comment out strict mode
-    console.log(output);
-  }
+    printAge();
 
-  printAge();
+    return age;
+    }
 
-  return age;
-}
+    const firstName = 'Joshua';
 
-const firstName = 'Joshua';
+    calcAge(1988);
 
-calcAge(1988);
-
-//*/
+*/
 
 /*!SECTION    VARIABLE ENVIRONMENT: HOISTING AND THE TDZ
     // Variable Environment: Part of the execution context that holds variable and function declarations.
@@ -191,13 +191,22 @@ calcAge(1988);
     // - Analogy: The TDZ is like reaching for an ingredient before you’ve unpacked your groceries. You know you have it, but you can’t use it until you take it out of the bag (declare it).
 */
 
-/*!SECTION    HOISTING AND TDZ IN PRACTICE
+/*!SECTION    HOISTING AND TDZ IN PRACTICE  (Temporal Dead Zone, let and const)
     // Practical example:
     // console.log(hoistedVar); // undefined due to hoisting
     // console.log(letVar); // ReferenceError due to TDZ
     // var hoistedVar = 'I am hoisted!';
     // let letVar = 'I am in TDZ until declared!';
 */
+
+const myName = 'Joshua';
+if (myName === 'Joshua') {
+  console.log(`${myName} is a ${job}`);
+  const age = 2024 - 1988;
+  console.log(age);
+  var job = 'Programmer';
+  console.log(x);
+}
 
 /*!SECTION    THE "THIS" KEYWORD
     // "this" Keyword: Refers to the object that is executing the current function.
