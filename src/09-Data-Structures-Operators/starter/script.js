@@ -62,4 +62,4 @@ console.log(main, secondary);
 console.log(main, secondary);
 
 const [starter, mainCourse] = restaurant.order(2, 0);
-console.log(starter, mainCourse);
+console.log(`${starter}, and ${mainCourse}`);
