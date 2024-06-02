@@ -21,6 +21,7 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  order : function(starterIndex, mainIndex){return this.starterMenu(starterIndex), this.mainMenu(mainIndex)}
 
   openingHours: {
     thu: {
@@ -55,5 +56,7 @@ console.log(main, secondary);
 // secondary = temp;
 // console.log(main, secondary);
 
-[main, secondary] = [secondary, main];
+[main, secondary] = [secondary, main];    // utilizing destructoring we are reorganizing the values within the parameter of categories within the object restaurant
 console.log(main, secondary);
+
+
