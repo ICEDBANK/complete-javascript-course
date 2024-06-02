@@ -359,8 +359,8 @@ const me = {
 
 const friend = me;
 friend.age = 27;
-console.log(`Friend: ${friend}`);
-console.log(`Me : ${me}`);
+console.log(`Friend: ${friend.age}`);
+console.log(`Me : ${me.age}`);
 
 /*!SECTION    PRIMITIVES VS OBJECTS IN PRACTICE
     // Practical example:
