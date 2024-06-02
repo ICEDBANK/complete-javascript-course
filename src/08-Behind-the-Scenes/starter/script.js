@@ -345,23 +345,23 @@
     // Analogy: Primitives are like storing a copy of a document in a drawer (each variable has its own copy). Objects are like having a document stored in a cloud (each variable points to the same document in the cloud).
 */
 
-let age = 36;
-let oldAge = age;
-age++;
+// let age = 36;
+// let oldAge = age;
+// age++;
 
-console.log(age);
-console.log(oldAge);
+// console.log(age); // 37
+// console.log(oldAge); // 36
 
-const me = {
-  name: 'Joshua',
-  age: 36,
-};
+// const me = {
+//   name: 'Joshua',
+//   age: 36,
+// };
 
-const friend = me; // you are copying the address of the object
-friend.age = 27; // You are now overwritting the value with the same address. Despite the const it is because the address is still the same despite changing
-// the parameters value.
-console.log(`Friend: ${friend.age}`); // age is pointing to the varaible address Not the value
-console.log(`Me : ${me.age}`); // age is pointing to the varaible address Not the value
+// const friend = me; // You are copying the reference (address) of the object 'me' to 'friend'
+// friend.age = 27; // You are now changing the 'age' property of the object that both 'me' and 'friend' reference.
+
+// console.log(`Friend: ${friend.age}`); // 27, 'friend.age' points to the same object as 'me', so the change is reflected in both
+// console.log(`Me : ${me.age}`); // 27, 'me.age' points to the same object as 'friend', so the change is reflected in both
 
 /*!SECTION    PRIMITIVES VS OBJECTS IN PRACTICE
     // Practical example:
@@ -375,3 +375,9 @@ console.log(`Me : ${me.age}`); // age is pointing to the varaible address Not th
     // obj1.name = 'Bob';
     // console.log(obj1.name, obj2.name); // 'Bob', 'Bob'
 */
+
+let lastName = 'Beiler';
+let surName = lastName;
+lastName = 'Rice';
+
+console.log(surName, lastName);
