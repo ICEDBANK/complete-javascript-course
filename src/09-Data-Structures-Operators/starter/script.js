@@ -47,5 +47,5 @@ const d = arr[3];
 const [w, x, y, z] = arr; // Destructoring assignment
 console.log(w, x, y, z);
 
-const [first, second] = restaurant.categories;
+const [first, , second] = restaurant.categories;
 console.log(first, second);
