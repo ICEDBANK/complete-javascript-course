@@ -300,3 +300,6 @@ const books = [
     highlighted: true,
   },
 ];
+
+const [firstBook, secondBook] = books;
+console.log(firstBook, secondBook);
