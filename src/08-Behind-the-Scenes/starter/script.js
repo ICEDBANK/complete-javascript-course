@@ -198,15 +198,22 @@
     // var hoistedVar = 'I am hoisted!';
     // let letVar = 'I am in TDZ until declared!';
 */
+console.log(me);
+console.log(job);
+console.log(year);
 
-const myName = 'Joshua';
-if (myName === 'Joshua') {
-  console.log(`${myName} is a ${job}`); // <- Reference error since you cannont not access variables "job" before declaration (TDZ)
-  const age = 2024 - 1988;
-  console.log(age);
-  const job = 'Programmer';
-  console.log(x); // <- x is not defined
-}
+var me = 'Joshua';
+let job = 'Programmer';
+const year = 1988;
+
+// const myName = 'Joshua';
+// if (myName === 'Joshua') {
+//   console.log(`${myName} is a ${job}`); // <- Reference error since you cannont not access variables "job" before declaration (TDZ)
+//   const age = 2024 - 1988;
+//   console.log(age);
+//   const job = 'Programmer';
+//   console.log(x); // <- x is not defined
+// }
 
 /*!SECTION    THE "THIS" KEYWORD
     // "this" Keyword: Refers to the object that is executing the current function.
