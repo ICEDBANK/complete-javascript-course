@@ -61,4 +61,5 @@ console.log(main, secondary);
 [main, secondary] = [secondary, main]; // utilizing destructoring we are reorganizing the values within the parameter of categories within the object restaurant
 console.log(main, secondary);
 
-console.log(restaurant.order(2, 1));
+const [starter, mainCourse] = restaurant.order(2, 0);
+console.log(starter, mainCourse);
