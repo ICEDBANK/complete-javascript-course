@@ -22,7 +22,7 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
   order: function (starterIndex, mainIndex) {
-    return this.starterMenu[starterIndex], this.mainMenu[mainIndex];
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]]; // <- You want to return an array of values from Different parameters depending on the index (in this case)
   },
 
   openingHours: {
