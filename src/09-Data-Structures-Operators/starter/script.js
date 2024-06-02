@@ -303,3 +303,6 @@ const books = [
 
 const [firstBook, secondBook] = books;
 console.log(firstBook, secondBook);
+
+const [, , thirdBook] = books;
+console.log(thirdBook);
