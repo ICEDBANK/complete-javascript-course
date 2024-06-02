@@ -150,7 +150,7 @@ function calcAge(birthYear) {
   const age = 2024 - birthYear;
 
   function printAge() {
-    const output = `${firstName}, You are ${age}, born in ${birthYear}`;
+    let output = `${firstName}, You are ${age}, born in ${birthYear}`;
     console.log(output);
 
     if (birthYear > 1981 && birthYear < 1996) {
@@ -161,6 +161,8 @@ function calcAge(birthYear) {
       function add(a, b) {
         return a + b;
       }
+
+      output = 'New Output';
     }
 
     //console.log(str); <- Cannot be accessed outside its block scope
