@@ -375,7 +375,7 @@
     // obj1.name = 'Bob';
     // console.log(obj1.name, obj2.name); // 'Bob', 'Bob'
 */
-
+//  Primitive Type
 let lastName = 'Beiler';
 let surName = lastName;
 lastName = 'Rice';
@@ -390,5 +390,16 @@ const sarah = {
 
 const marriedSarah = sarah;
 marriedSarah.lname = 'Rice';
+console.log('Before :', sarah);
+console.log(`After :`, marriedSarah);
+
+const sarah2 = {
+  fName: 'Sarah',
+  lName: 'Beiler',
+  age: 34,
+};
+
+const sarahCopy = Object.assign({}, sarah2);
+sarahCopy.lastName = 'Rice';
 console.log('Before :', sarah);
 console.log(`After :`, marriedSarah);
