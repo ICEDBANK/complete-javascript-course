@@ -165,6 +165,7 @@ function calcAge(birthYear) {
 
     //console.log(str); <- Cannot be accessed outside its block scope
     console.log(millenial);
+    console.log(add(3, 2));
   }
 
   printAge();
