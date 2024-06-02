@@ -217,7 +217,18 @@ function addDecl(a, b) {
 const addExp = function (a, b) {
   return a + b;
 };
-const addArrow = (a, b) => a + b;
+var addArrow = (a, b) => a + b;
+
+// Example
+if (!numProducts) {
+  deleteShoppingCart();
+}
+
+var numProducts = 10;
+
+function deleteShoppingCart() {
+  console.log(`All products deleted`);
+}
 
 // const myName = 'Joshua';
 // if (myName === 'Joshua') {
