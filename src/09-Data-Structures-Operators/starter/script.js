@@ -43,3 +43,5 @@ const a = arr[0];
 const b = arr[1];
 const c = arr[2];
 const d = arr[3];
+
+const [w, x, y, z] = arr;
