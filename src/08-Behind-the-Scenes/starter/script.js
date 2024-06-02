@@ -198,13 +198,24 @@
     // var hoistedVar = 'I am hoisted!';
     // let letVar = 'I am in TDZ until declared!';
 */
-console.log(me);
-console.log(job);
-console.log(year);
+// Hoisting with variables
+console.log(me); // <- is able to be hoisted but since it is not defined yet. By default it will always be "undefined"
+// console.log(job);
+// console.log(year);
 
 var me = 'Joshua';
 let job = 'Programmer';
 const year = 1988;
+
+console.log(addDecl(2, 3));
+
+function addDecl(a, b) {
+  return a + b;
+}
+const addExp = function (a, b) {
+  return a + b;
+};
+const addArrow = (a, b) => a + b;
 
 // const myName = 'Joshua';
 // if (myName === 'Joshua') {
