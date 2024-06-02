@@ -115,25 +115,25 @@
 
 // Call stack Example
 
-const a = ' Joshua ';
-firstFunction();
+// const a = ' Joshua ';
+// firstFunction();
 
-function firstFunction() {
-  const b = ' hello ';
-  secondFunction();
+// function firstFunction() {
+//   const b = ' hello ';
+//   secondFunction();
 
-  function secondFunction() {
-    const c = ' hi ';
-    thirdFunction();
-  }
-}
+//   function secondFunction() {
+//     const c = ' hi ';
+//     thirdFunction();
+//   }
+// }
 
-function thirdFunction() {
-  const d = ' hey ';
-  console.log(d + c + b + a);
-}
+// function thirdFunction() {
+//   const d = ' hey ';
+//   console.log(d + c + b + a);
+// }
 
-/*!SECTION    SCOPING PRACTICE
+///*!SECTION    SCOPING PRACTICE
     // Practical example:
     // function outerFunction() {
     //     const outerVar = 'I am outside!';
@@ -145,7 +145,18 @@ function thirdFunction() {
     //     console.log(innerVar); // Error: innerVar is not defined
     // }
     // outerFunction();
-*/
+
+    function calcAge(birthYear) {
+        const age = 2024 = birthYear
+        console.log(firstName);
+        return age;
+    }
+
+    const firstName = 'Joshua';
+
+    calcAge(1988);
+
+//*/
 
 /*!SECTION    VARIABLE ENVIRONMENT: HOISTING AND THE TDZ
     // Variable Environment: Part of the execution context that holds variable and function declarations.
