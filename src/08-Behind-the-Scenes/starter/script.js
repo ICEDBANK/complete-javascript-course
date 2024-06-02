@@ -349,6 +349,9 @@ let age = 36;
 let oldAge = age;
 age++;
 
+console.log(age);
+console.log(oldAge);
+
 /*!SECTION    PRIMITIVES VS OBJECTS IN PRACTICE
     // Practical example:
     // let a = 10;
