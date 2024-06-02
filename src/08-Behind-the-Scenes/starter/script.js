@@ -292,6 +292,8 @@ const matilida = {
 matilida.calcAge = joshua.calcAge;
 matilida.calcAge();
 
+const f = joshua.calcAge;
+
 /*!SECTION    REGULAR FUNCTIONS VS ARROW FUNCTIONS
     // Regular Functions: Have their own "this" binding depending on how they are called.
     // Arrow Functions: Do not have their own "this". They inherit "this" from the enclosing lexical context.
