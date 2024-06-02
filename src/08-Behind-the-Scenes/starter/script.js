@@ -129,6 +129,7 @@ function second(x, y) {
 }
 
 const x = first();
+console.log(x);
 
 /*!SECTION    SCOPING PRACTICE
     // Practical example:
