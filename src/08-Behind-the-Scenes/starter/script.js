@@ -314,26 +314,26 @@
     // obj.arrowFunc();
 */
 
-const joshua = {
-  firstName: 'Joshua',
-  year: 1988,
-  currentYear: 2024,
-  calcAge: function () {
-    console.log(this);
-    console.log(this.currentYear - this.year);
+// const joshua = {
+//   firstName: 'Joshua',
+//   year: 1988,
+//   currentYear: 2024,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(this.currentYear - this.year);
 
-    const isMillenial = function () {
-      console.log(this);
-      console.log(`Hey ${this.firstName}`);
-    };
-  },
+//     const isMillenial = function () {
+//       console.log(this);
+//       console.log(`Hey ${this.firstName}`);
+//     };
+//   },
 
-  greet: function () {
-    console.log(`Hey ${this.firstName}`);
-  }, //     Never use Arrow function as a method
-};
-joshua.greet();
-joshua.calcAge();
+//   greet: function () {
+//     console.log(`Hey ${this.firstName}`);
+//   }, //     Never use Arrow function as a method
+// };
+// joshua.greet();
+// joshua.calcAge();
 
 /*!SECTION    PRIMITIVES VS OBJECTS (PRIMITIVES VS. REFERENCE TYPES)
     // Primitives: Basic data types (number, string, boolean, null, undefined, symbol, bigint).
@@ -344,6 +344,10 @@ joshua.calcAge();
 
     // Analogy: Primitives are like storing a copy of a document in a drawer (each variable has its own copy). Objects are like having a document stored in a cloud (each variable points to the same document in the cloud).
 */
+
+let age = 36;
+let oldAge = age;
+age++;
 
 /*!SECTION    PRIMITIVES VS OBJECTS IN PRACTICE
     // Practical example:
