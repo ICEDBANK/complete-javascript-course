@@ -270,31 +270,31 @@
 // };
 // calcAge(1988);
 
-const calcAgeArrow = birthYear => {
-  console.log(2024 - birthYear);
-  console.log(this); // returns Parent SCOPE i.e Window
-};
-calcAgeArrow(1988);
+// const calcAgeArrow = birthYear => {
+//   console.log(2024 - birthYear);
+//   console.log(this); // returns Parent SCOPE i.e Window
+// };
+// calcAgeArrow(1988);
 
-const joshua = {
-  year: 1988,
-  currentYear: 2024,
-  calcAge: function () {
-    console.log(this);
-    console.log(this.currentYear - this.year);
-  },
-};
-joshua.calcAge();
+// const joshua = {
+//   year: 1988,
+//   currentYear: 2024,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(this.currentYear - this.year);
+//   },
+// };
+// joshua.calcAge();
 
-const matilida = {
-  year: 2017,
-  currentYear: 2024,
-};
-matilida.calcAge = joshua.calcAge;
-matilida.calcAge();
+// const matilida = {
+//   year: 2017,
+//   currentYear: 2024,
+// };
+// matilida.calcAge = joshua.calcAge;
+// matilida.calcAge();
 
-const f = joshua.calcAge;
-f();
+// const f = joshua.calcAge;
+// f();
 
 /*!SECTION    REGULAR FUNCTIONS VS ARROW FUNCTIONS
     // Regular Functions: Have their own "this" binding depending on how they are called.
@@ -313,6 +313,17 @@ f();
     // obj.regularFunc();
     // obj.arrowFunc();
 */
+
+const joshua = {
+  firstName: 'Joshua',
+  year: 1988,
+  currentYear: 2024,
+  calcAge: function () {
+    console.log(this);
+    console.log(this.currentYear - this.year);
+  },
+};
+joshua.calcAge();
 
 /*!SECTION    PRIMITIVES VS OBJECTS (PRIMITIVES VS. REFERENCE TYPES)
     // Primitives: Basic data types (number, string, boolean, null, undefined, symbol, bigint).
