@@ -325,9 +325,14 @@ const joshua = {
 
   greet: function () {
     console.log(`Hey ${this.firstName}`);
-  }, // <- Never use Arrow function as a method
+  }, //     Never use Arrow function as a method
+  isMillenial: function () {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`);
+  },
 };
 joshua.greet();
+joshua.calcAge();
 
 /*!SECTION    PRIMITIVES VS OBJECTS (PRIMITIVES VS. REFERENCE TYPES)
     // Primitives: Basic data types (number, string, boolean, null, undefined, symbol, bigint).
