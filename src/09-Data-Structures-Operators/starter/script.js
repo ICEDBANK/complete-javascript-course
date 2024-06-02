@@ -314,5 +314,5 @@ const ratings = [
   ['rating', 4.19],
   ['ratingsCount', 144584],
 ];
-const [[, [, rating], [, ratingsCount]]] = ratings;
+const [[, rating], [, ratingsCount]] = ratings;
 console.log(rating, ratingsCount);
