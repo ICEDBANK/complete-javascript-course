@@ -45,3 +45,4 @@ const c = arr[2];
 const d = arr[3];
 
 const [w, x, y, z] = arr;
+console.log(w, x, y, z);
