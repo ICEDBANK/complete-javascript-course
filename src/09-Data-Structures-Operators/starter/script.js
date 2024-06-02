@@ -47,9 +47,10 @@ const d = arr[3];
 const [w, x, y, z] = arr; // Destructoring assignment
 console.log(w, x, y, z);
 
-const [main, , secondary] = restaurant.categories; // You can hop or skip
+let [main, , secondary] = restaurant.categories; // You can hop or skip
 console.log(main, secondary);
 
 const temp = main;
 main = secondary;
 secondary = temp;
+console.log(main, secondary);
