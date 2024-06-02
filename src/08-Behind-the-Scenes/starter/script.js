@@ -400,6 +400,6 @@ const sarah2 = {
 };
 
 const marriedSarah2 = Object.assign({}, sarah2);
-marriedSarah2.lastName = 'Rice';
+marriedSarah2.lName = 'Rice';
 console.log('Before :', sarah2);
 console.log(`After :`, marriedSarah2);
