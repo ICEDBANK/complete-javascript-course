@@ -157,6 +157,10 @@ function calcAge(birthYear) {
       var millenial = true;
       const str = `Ohh... You are also a millenial ${firstName}`;
       console.log(str);
+
+      function add(a, b) {
+        return a + b;
+      }
     }
 
     //console.log(str); <- Cannot be accessed outside its block scope
