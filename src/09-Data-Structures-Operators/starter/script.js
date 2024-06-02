@@ -310,5 +310,5 @@ console.log(thirdBook);
 // const [i, , [j, k]] = nested;
 // console.log(i, j, k);
 
-const ratings = [[[x, y]]];
+const [[, rating], [, ratingsCount]] = ratings;
 console.log(ratings);
