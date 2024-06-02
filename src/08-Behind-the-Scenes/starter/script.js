@@ -270,6 +270,12 @@ const calcAge = function (birthYear) {
 };
 calcAge(1988);
 
+const calcAgeArrow = birthYear => {
+  console.log(2024 - birthYear);
+  console.log(this);
+};
+calcAgeArrow(1988);
+
 /*!SECTION    REGULAR FUNCTIONS VS ARROW FUNCTIONS
     // Regular Functions: Have their own "this" binding depending on how they are called.
     // Arrow Functions: Do not have their own "this". They inherit "this" from the enclosing lexical context.
