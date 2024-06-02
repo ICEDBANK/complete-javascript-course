@@ -73,5 +73,5 @@ console.log(i, j, k);
 
 //    Default values
 
-const [p = 1, q = 1, r = 'end'] = [8];
+const [p = 1, q = 1, r = 'end'] = [8, 9];
 console.log(p, q, r);
