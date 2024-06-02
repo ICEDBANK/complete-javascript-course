@@ -262,13 +262,13 @@
     // obj.greet();
 */
 
-console.log(this);
+// console.log(this);
 
-const calcAge = function (birthYear) {
-  console.log(2024 - birthYear);
-  console.log(this); // Undefined
-};
-calcAge(1988);
+// const calcAge = function (birthYear) {
+//   console.log(2024 - birthYear);
+//   console.log(this); // Undefined
+// };
+// calcAge(1988);
 
 const calcAgeArrow = birthYear => {
   console.log(2024 - birthYear);
