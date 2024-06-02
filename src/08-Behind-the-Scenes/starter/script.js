@@ -288,6 +288,7 @@ joshua.calcAge();
 
 const matilida = {
   year: 2017,
+  currentYear: 2024,
 };
 matilida.calcAge = joshua.calcAge;
 matilida.calcAge();
