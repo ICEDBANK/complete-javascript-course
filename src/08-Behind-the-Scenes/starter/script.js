@@ -115,21 +115,21 @@
 
 // Call stack Example
 
-const a = 'Joshua';
+const a = ' Joshua ';
 firstFunction();
 
 function firstFunction() {
-  const b = 'hello';
+  const b = ' hello ';
   secondFunction();
 
   function secondFunction() {
-    const c = 'hi';
+    const c = ' hi ';
     thirdFunction();
   }
 }
 
 function thirdFunction() {
-  const d = 'hey';
+  const d = ' hey ';
   console.log(d + c + b + a);
 }
 
