@@ -293,6 +293,7 @@ matilida.calcAge = joshua.calcAge;
 matilida.calcAge();
 
 const f = joshua.calcAge;
+f();
 
 /*!SECTION    REGULAR FUNCTIONS VS ARROW FUNCTIONS
     // Regular Functions: Have their own "this" binding depending on how they are called.
