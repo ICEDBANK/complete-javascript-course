@@ -266,15 +266,23 @@ console.log(this);
 
 const calcAge = function (birthYear) {
   console.log(2024 - birthYear);
-  console.log(this);
+  console.log(this); // Undefined
 };
 calcAge(1988);
 
 const calcAgeArrow = birthYear => {
   console.log(2024 - birthYear);
-  console.log(this);
+  console.log(this); // returns Parent SCOPE i.e Window
 };
 calcAgeArrow(1988);
+
+const joshua = {
+  year: 1988,
+  calcAge: function () {
+    console.log(this);
+  },
+};
+joshua.calcAge();
 
 /*!SECTION    REGULAR FUNCTIONS VS ARROW FUNCTIONS
     // Regular Functions: Have their own "this" binding depending on how they are called.
