@@ -381,3 +381,14 @@ let surName = lastName;
 lastName = 'Rice';
 
 console.log(surName, lastName);
+
+const sarah = {
+  fName: 'Sarah',
+  lName: 'Beiler',
+  age: 34,
+};
+
+const marriedSarah = sarah;
+marriedSarah.lname = 'Rice';
+console.log('Before :', sarah);
+console.log(`After :`, marriedSarah);
