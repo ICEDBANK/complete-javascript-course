@@ -323,7 +323,9 @@ const joshua = {
     console.log(this.currentYear - this.year);
   },
 
-  greet: () => console.log(`Hey ${this.firstName}`),
+  greet: function () {
+    console.log(`Hey ${this.firstName}`);
+  }, // <- Never use Arrow function as a method
 };
 joshua.greet();
 
