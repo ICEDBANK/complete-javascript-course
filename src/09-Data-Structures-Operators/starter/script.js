@@ -310,9 +310,25 @@ console.log(thirdBook);
 // const [i, , [j, k]] = nested;
 // console.log(i, j, k);
 
+//  Below is the nested ratings array that contains two other arrays. Destructure the nested ratings
+//  arrays into two variables called rating and ratingsCount. In the result of your destructuring, the
+//  ratings variable should store a number 4.19, and the ratingsCount variable should store a number 144584.
+
 const ratings = [
   ['rating', 4.19],
   ['ratingsCount', 144584],
 ];
 const [[, rating], [, ratingsCount]] = ratings;
 console.log(rating, ratingsCount);
+
+/*
+
+  Below is the ratingStars array. Destructure it into three variables called fiveStarRatings, oneStarRatings 
+  and threeStarRatings. Assign the threeStarRatings variable with a default value of 0.
+
+  const [p = 1, q = 1, r = 'end'] = [8, 9];
+  console.log(p, q, r);
+
+*/
+const ratingStars = [63405, 1808];
+const [fiveStarRating, oneStarRatings, threeStarRatings = 0] = ratingStars;
