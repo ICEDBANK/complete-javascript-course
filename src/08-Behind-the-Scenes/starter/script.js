@@ -325,7 +325,7 @@ const joshua = {
 
   greet: () => console.log(`Hey ${this.firstName}`),
 };
-joshua.calcAge();
+joshua.greet();
 
 /*!SECTION    PRIMITIVES VS OBJECTS (PRIMITIVES VS. REFERENCE TYPES)
     // Primitives: Basic data types (number, string, boolean, null, undefined, symbol, bigint).
