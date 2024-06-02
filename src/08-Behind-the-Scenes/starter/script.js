@@ -352,6 +352,11 @@ age++;
 console.log(age);
 console.log(oldAge);
 
+const me = {
+  name: 'Joshua',
+  age: 36,
+};
+
 /*!SECTION    PRIMITIVES VS OBJECTS IN PRACTICE
     // Practical example:
     // let a = 10;
