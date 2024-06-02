@@ -404,3 +404,10 @@ const marriedSarah2 = Object.assign({}, sarah2); // <- Creates a new shallow cop
 marriedSarah2.lName = 'Rice';
 console.log('Before :', sarah2);
 console.log(`After :`, marriedSarah2);
+
+marriedSarah2.family.push('Joshua');
+marriedSarah2.family.push('Ava');
+marriedSarah2.family.push('Adeline');
+
+console.log('Before :', sarah2);
+console.log(`After :`, marriedSarah2);
