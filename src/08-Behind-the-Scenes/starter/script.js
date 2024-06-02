@@ -399,7 +399,7 @@ const sarah2 = {
   age: 34,
 };
 
-const sarahCopy = Object.assign({}, sarah2);
-sarahCopy.lastName = 'Rice';
-console.log('Before :', sarah);
-console.log(`After :`, marriedSarah);
+const marriedSarah2 = Object.assign({}, sarah2);
+marriedSarah2.lastName = 'Rice';
+console.log('Before :', sarah2);
+console.log(`After :`, marriedSarah2);
