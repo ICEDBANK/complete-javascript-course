@@ -70,3 +70,8 @@ const nested = [2, 4, [5, 6]]; // Destructoring a Nested Array Example
 
 const [i, , [j, k]] = nested;
 console.log(i, j, k);
+
+//    Default values
+
+const [p = 1, q = 1, r = 'end'] = [8];
+console.log(p, q, r);
