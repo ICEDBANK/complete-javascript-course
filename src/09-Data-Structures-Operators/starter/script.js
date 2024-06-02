@@ -55,4 +55,4 @@ console.log(main, secondary);
 // secondary = temp;
 // console.log(main, secondary);
 
-main, (secondary = [secondary, main]);
+[main, secondary] = [secondary, main];
