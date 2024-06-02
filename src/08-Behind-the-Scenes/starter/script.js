@@ -397,9 +397,10 @@ const sarah2 = {
   fName: 'Sarah',
   lName: 'Beiler',
   age: 34,
+  family: ['Ben', 'Lynn', 'Aaron', 'Bethany', 'Rebecca'],
 };
 
-const marriedSarah2 = Object.assign({}, sarah2);
+const marriedSarah2 = Object.assign({}, sarah2); // <- Creates a new shallow copy not a deep clone.
 marriedSarah2.lName = 'Rice';
 console.log('Before :', sarah2);
 console.log(`After :`, marriedSarah2);
