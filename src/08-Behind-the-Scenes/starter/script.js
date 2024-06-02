@@ -208,6 +208,8 @@ let job = 'Programmer';
 const year = 1988;
 
 console.log(addDecl(2, 3));
+console.log(addExp(2, 3));
+console.log(addArrow(2, 3));
 
 function addDecl(a, b) {
   return a + b;
