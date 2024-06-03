@@ -360,8 +360,8 @@ const restaurant = {
 
   orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
     console.log(
-      `Order Recieved! ${this.starterMenu[(starterIndex = 0)]} and ${
-        this.mainMenu[(mainIndex = 0)]
+      `Order Recieved! ${this.starterMenu[starterIndex]} and ${
+        this.mainMenu[mainIndex]
       } will be delivered to ${address} at ${(time = '20:00')}`
     );
   },
