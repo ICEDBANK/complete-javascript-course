@@ -358,6 +358,10 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]]; // <- You want to return an array of values from Different parameters depending on the index (in this case)
   },
 
+  orderDelivery: function(obj){
+    console.log(obj);
+  }
+
   openingHours: {
     thu: {
       open: 12,
