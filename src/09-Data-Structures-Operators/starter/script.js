@@ -379,9 +379,14 @@ const restaurant = {
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
 
+// Storing object Parameters names as custom Variable names ( usefull for api calls )
+
 const {
   name: restaurantName,
   openingHours: hours,
   categories: tags,
 } = restaurant;
 console.log(restaurantName, hours, tags);
+
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
