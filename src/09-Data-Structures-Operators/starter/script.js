@@ -344,8 +344,8 @@ handling nested objects, and working directly with function parameters and retur
 */
 
 // Data needed for a later exercise
-const flights =
-  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+//const flights =
+//  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
 // Data needed for first part of the section
 const restaurant = {
@@ -384,6 +384,15 @@ const restaurant = {
     },
   },
 };
+
+/*
+
+Summary:
+Using object destructuring in function parameters simplifies handling complex parameter
+lists and default values, making the code more readable and maintainable. It is an effective
+way to manage functions that require multiple inputs, especially when not all inputs are mandatory.
+
+*/
 
 restaurant.orderDelivery({
   time: '22:30',
@@ -429,6 +438,14 @@ const obj = { a: 23, b: 7, c: 14 };
 console.log(a, b);
 
 // Nested Objects
+
+/*!SECTION
+
+This technique is especially useful when dealing with deeply nested objects where you need
+to extract specific properties. It allows for concise and readable code by directly accessing and
+renaming the necessary values in a single step.
+
+*/
 
 const {
   fri: { open: o, close: c },
