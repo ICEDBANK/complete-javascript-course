@@ -422,6 +422,6 @@ console.log(a, b);
 // Nested Objects
 
 const {
-  fri: { open = opt, close = cle },
+  fri: { open: o, close: c },
 } = openingHours;
-console.log(opt, cle);
+console.log(o, c);
