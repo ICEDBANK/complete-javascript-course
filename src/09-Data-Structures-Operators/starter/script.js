@@ -358,9 +358,9 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]]; // <- You want to return an array of values from Different parameters depending on the index (in this case)
   },
 
-  orderDelivery: function(obj){
+  orderDelivery: function (obj) {
     console.log(obj);
-  }
+  },
 
   openingHours: {
     thu: {
@@ -377,6 +377,13 @@ const restaurant = {
     },
   },
 };
+
+restaurant.orderDelivery({
+  time: '22:30',
+  address: '123 Abc Street',
+  mainIndex: 2,
+  starterIndex: 2,
+});
 
 // Extracts name, openingHours, and categories from the restaurant object. The order of properties in the object does not matter.
 
