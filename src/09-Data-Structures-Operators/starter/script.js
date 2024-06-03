@@ -267,8 +267,8 @@ console.log(undefined || null);
 console.log(undefined || 0 || '' || 'Hello' || 23 || null);
 
 restaurant.numGuest = 23; // ,- comment this code out to see the short-circuiting take effect.
-const guest = restaurant.numGuest ? restaurant.numGuest : 10;
-console.log(guest);
+const guest1 = restaurant.numGuest ? restaurant.numGuest : 10;
+console.log(guest1);
 
 const guest2 = restaurant.numGuest || 10;
 console.log(guest2);
@@ -284,3 +284,123 @@ if (restaurant.orderPizza) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza('cheese', 'sausage');
+
+/*! Nullish Coalescing Operator ??
+
+        The nullish coalescing operator (??) is a feature in JavaScript that allows
+        you to provide a default value when dealing with null or undefined. It is
+        particularly useful for handling cases where null or undefined values might
+        appear, and you want to ensure a fallback value is used instead.
+
+    How It Works
+   
+            The nullish coalescing operator checks if the left-hand side (value) is either
+            null or undefined. If it is, it returns the right-hand side (defaultValue). If
+            it is not, it returns the left-hand side (value).
+
+                let user = null;
+                let defaultUser = "Guest";
+                let currentUser = user ?? defaultUser;
+
+                console.log(currentUser); // "Guest"
+    
+    Conclusion
+    
+        The nullish coalescing operator (??) in JavaScript provides a concise and precise way
+        to handle null and undefined values by allowing you to specify a default value. It is
+        particularly useful for cases where you want to distinguish between null/undefined and
+        other falsy values, ensuring that valid falsy values like 0 and "" are not incorrectly
+        overridden.   
+
+*/
+
+restaurant.numGuest = 0;
+const guest = restaurant.numGuest ? restaurant.numGuest : 10;
+console.log(guest);
+
+// Nullish: null and undefined (NOT 0 or '')
+const guessCorrect = restaurant.numGuest ?? 10;
+console.log(guessCorrect);
+
+/*! Logical Assignment Operators in JavaScript
+
+        Logical assignment operators combine logical operators (||, &&, ??) with assignment.
+        They provide a shorthand way to apply a logical operation and assign the result to
+        a variable. These operators make code more concise and readable.
+
+    Types of Logical Assignment Operators
+   
+        Logical OR Assignment (||=)
+        Logical AND Assignment (&&=)
+        **Nullish Coalescing Assignment (??=)
+
+    Logical OR Assignment (||=)
+    
+        The logical OR assignment operator (||=) assigns a value to a variable if the variable
+        is falsy. Falsy values include false, 0, "", null, undefined, and NaN.
+
+            let a = 0;
+                a ||= 10;
+                console.log(a); // 10
+
+                let b = '';
+                b ||= 'default';
+                console.log(b); // 'default'
+
+                let c = null;
+                c ||= 'fallback';
+                console.log(c); // 'fallback'
+
+                let d = 'initial';
+                d ||= 'new';
+                console.log(d); // 'initial'
+
+    Logical AND Assignment (&&=)
+    
+        The logical AND assignment operator (&&=) assigns a value to a variable if the variable is truthy.
+
+            let a = true;
+                a &&= false;
+                console.log(a); // false
+                
+            let b = 1;
+                b &&= 2;
+                console.log(b); // 2
+
+            let c = null;
+                c &&= 'fallback';
+                console.log(c); // null
+
+            let d = 'initial';
+                d &&= 'new';
+                console.log(d); // 'new'
+
+    Logical AND Assignment (&&=)
+    
+        The logical AND assignment operator (&&=) assigns a value to a variable if the variable is truthy.
+
+            let a;
+                a ??= 10;
+                console.log(a); // 10
+
+            let b = null;
+                b ??= 'default';
+                console.log(b); // 'default'
+
+            let c = undefined;
+                c ??= 'fallback';
+                console.log(c); // 'fallback'
+
+            let d = '';
+                d ??= 'new';
+                console.log(d); // ''
+
+
+    Logical OR Assignment (||=): Assigns a value if the variable is falsy.
+    Logical AND Assignment (&&=): Assigns a value if the variable is truthy.
+    Nullish Coalescing Assignment (??=): Assigns a value if the variable is null or undefined.
+
+    These logical assignment operators provide a concise way to handle common programming patterns,
+    making your code more readable and reducing the need for more verbose conditional statements.  
+
+*/
