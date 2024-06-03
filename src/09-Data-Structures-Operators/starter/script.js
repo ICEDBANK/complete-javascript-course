@@ -374,7 +374,7 @@ const restaurant = {
   },
 };
 
-// Destructoring Object does not have strict order
+// Extracts name, openingHours, and categories from the restaurant object. The order of properties in the object does not matter.
 
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
@@ -395,3 +395,13 @@ console.log(restaurantName, hours, tags);
 
 const { menu = [], starterMenu: starters = [] } = restaurant;
 console.log(menu, starters);
+
+// Mutating variables while Objects destructuring
+
+let a = 111;
+let b = 222;
+
+const obj = { a: 23, b: 7, c: 14 };
+
+({ a, b } = obj);
+console.log(a, b, c);
