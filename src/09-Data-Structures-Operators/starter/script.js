@@ -411,4 +411,4 @@ console.log(a, b);
 const {
   fri: { open, close },
 } = openingHours;
-console.log(fri);
+console.log(open, close);
