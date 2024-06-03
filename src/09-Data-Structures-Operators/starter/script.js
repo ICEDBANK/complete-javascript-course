@@ -360,7 +360,9 @@ const restaurant = {
 
   orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
     console.log(
-      `Order Recieved! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+      `Order Recieved! ${this.starterMenu[(starterIndex = 0)]} and ${
+        this.mainMenu[(mainIndex = 0)]
+      } will be delivered to ${address} at ${(time = '20:00')}`
     );
   },
 
@@ -385,6 +387,10 @@ restaurant.orderDelivery({
   address: '123 Abc Street',
   mainIndex: 2,
   starterIndex: 2,
+});
+
+restaurant.orderDelivery({
+  address: '456 def Street',
 });
 
 // Extracts name, openingHours, and categories from the restaurant object. The order of properties in the object does not matter.
