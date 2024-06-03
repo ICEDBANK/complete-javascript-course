@@ -379,7 +379,8 @@ const restaurant = {
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
 
-// Storing object Parameters names as custom Variable names ( usefull for api calls )
+//  Renames name to restaurantName, openingHours to hours, and categories to tags. This is useful for
+//  avoiding naming conflicts or improving code readability.
 
 const {
   name: restaurantName,
@@ -387,6 +388,10 @@ const {
   categories: tags,
 } = restaurant;
 console.log(restaurantName, hours, tags);
+
+// Provides default values ([] for both menu and starters) in case those properties do not
+// exist in the restaurant object. This is particularly useful when working with data from APIs
+// where the presence of certain properties is not guaranteed.
 
 const { menu = [], starterMenu: starters = [] } = restaurant;
 console.log(menu, starters);
