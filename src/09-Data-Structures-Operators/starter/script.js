@@ -428,7 +428,8 @@ const rest2 = {
 rest1.numGuest ??= 10;
 rest2.numGuest ??= 10;
 
-rest2.owner &&= '<ANONYMOUS';
+rest2.owner &&= '<ANONYMOUS>';
+rest1.ownder &&= '<ANONYMOUS>';
 
-console.log(rest2);
 console.log(rest1);
+console.log(rest2);
