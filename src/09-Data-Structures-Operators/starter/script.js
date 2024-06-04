@@ -418,10 +418,13 @@ const rest2 = {
 // rest2.numbGuest = rest2.numGuest || 10;
 // rest1.numbGuest = rest1.numGuest || 10;
 
-// OR assignment operator
+// OR ( Falsy ) assignment operator
 
-rest1.numGuest ||= 10;
-rest2.numGuest ||= 10;
+// rest1.numGuest ||= 10;
+// rest2.numGuest ||= 10;
+
+rest1.numGuest ??= 10;
+rest2.numGuest ??= 10;
 
 console.log(rest2);
 console.log(rest1);
