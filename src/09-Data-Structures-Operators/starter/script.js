@@ -404,3 +404,19 @@ console.log(guessCorrect);
     making your code more readable and reducing the need for more verbose conditional statements.  
 
 */
+
+const rest1 = {
+  name: 'Vinnies',
+  numGuest: 20,
+};
+
+const rest2 = {
+  name: 'Italian Delight',
+  owner: 'Vinny',
+};
+
+rest2.numbGuest = rest2.numGuest || 10;
+rest1.numbGuest = rest1.numGuest || 10;
+
+console.log(rest2);
+console.log(rest1);
