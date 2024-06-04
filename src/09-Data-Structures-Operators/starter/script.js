@@ -423,8 +423,12 @@ const rest2 = {
 // rest1.numGuest ||= 10;
 // rest2.numGuest ||= 10;
 
+// nullish assignment operator ( null or undefined )
+
 rest1.numGuest ??= 10;
 rest2.numGuest ??= 10;
+
+rest2.owner &&= '<ANONYMOUS';
 
 console.log(rest2);
 console.log(rest1);
