@@ -407,7 +407,7 @@ console.log(guessCorrect);
 
 const rest1 = {
   name: 'Vinnies',
-  numGuest: 20,
+  numGuest: 0,
 };
 
 const rest2 = {
@@ -417,6 +417,8 @@ const rest2 = {
 
 // rest2.numbGuest = rest2.numGuest || 10;
 // rest1.numbGuest = rest1.numGuest || 10;
+
+// OR assignment operator
 
 rest1.numGuest ||= 10;
 rest2.numGuest ||= 10;
