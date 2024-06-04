@@ -433,3 +433,63 @@ rest1.ownder &&= '<ANONYMOUS>';
 
 console.log(rest1);
 console.log(rest2);
+
+/*! Looping Arrays: The for-of Loop
+
+        The for...of loop is a modern and concise way to iterate over iterable objects in
+        JavaScript, such as arrays, strings, maps, sets, and more. It allows you to loop
+        through the values of an iterable object without having to manage the loop counter
+        manually.
+
+            Example 1:
+
+                for (const element of iterable) {
+                // Code to be executed for each element
+                }
+
+            Explanation:
+
+                element: The variable that holds the value of the current element in the iteration.
+                iterable: The object that you want to iterate over.
+
+            Example 2 ( Array ):
+
+                const fruits = ['apple', 'banana', 'cherry'];
+
+                for (const fruit of fruits) {
+                console.log(fruit);
+
+            Explanation:
+
+                In this example, the for...of loop iterates over each element in the fruits array,
+                logging each fruit to the console.
+
+            Example 3 ( String ): 
+
+                const greeting = 'hello';
+
+                for (const char of greeting) {
+                console.log(char);
+                }
+
+            Explanation:
+
+                Here, the for...of loop iterates over each character in the greeting string, logging each character to the console.
+            
+
+        Analogy:
+
+            Imagine you are reading a book. The book has many pages, and you want to read through each page one by one.
+
+            Book: The iterable object (e.g., an array or string).
+            Page: Each element in the iterable object.
+            Reading: The action you perform on each element (e.g., logging to the console or processing data).
+            Using a for...of loop is like flipping through each page of the book automatically, one by one, without
+            needing to know the total number of pages or keeping track of the page number.            
+
+
+*/
+
+const menu1 = [...restaurant.starterMenu, ...restaurant.mainMenu];
+for (const item of menu1) console.log(item);
+for (const [i, el] of menu1.entries()) console.log(`${i + 1}; ${el}`);
