@@ -742,9 +742,11 @@ for (const day of days) {
 console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
 
 // Arrays Optional Chaining
-const users = {
-  name: 'Joshua',
-  email: 'j.e.rice4101@gmail.com',
-};
+const users = [
+  {
+    name: 'Joshua',
+    email: 'j.e.rice4101@gmail.com',
+  },
+];
 
-console.log(users[0]?.name ?? 'No Users Available');
+console.log(users[0]?.name ?? 'users Array Empty');
