@@ -871,13 +871,13 @@ console.log(users[0]?.name ?? 'users Array Empty');
               console.log(transformedData); // { firstName: 'JOHN', lastName: 'DOE', city: 'NEW YORK' }
 
           Self-Teaching : 
-
+            
             const firstName = 'Joshua';
             const lastName = 'Rice';
             const age = 0;
             const yearBorn = 1988;
             const streetAddress = '111 Church Street';
-            const city = 'birdsboro';
+            const city = 'Birdsboro';
 
             const person = {
               name: [firstName, lastName],
@@ -890,47 +890,39 @@ console.log(users[0]?.name ?? 'users Array Empty');
                 city,
               },
             };
-            // Without Operational Chaining
-              //const town = person && person.address.city;
-            // With Operational Chaining
-              const town = person?.address?.streetAddress;
-              console.log(town);
-              const personAge = person?.age?.();
-              console.log(personAge);
-              const secondUserName = person?.name[0]?.firstName;
-              console.log(person.name[0]);
+
+            // Safely accessing 'streetAddress' using optional chaining
+            const town = person?.address?.streetAddress;
+            console.log(town); // Output: '111 Church Street'
+
+            // Safely calling 'age' method using optional chaining
+            const personAge = person?.age?.();
+            console.log(personAge); // Output: 36
+
+            // Incorrect use: 'firstName' is not a property of a string
+            const secondUserName = person?.name[0]?.firstName;
+            console.log(secondUserName); // Output: undefined (since 'firstName' is not a property of a string)
+
+            // Correct access to the first element of 'name' array
+            console.log(person.name[0]); // Output: 'Joshua'
+
+            // Getting all keys of 'person' object
+            const keys = Object.keys(person);
+            for (const key of keys) {
+              console.log(`${key} `); // Output: each key of the 'person' object
+            }
+
+            // Getting all values of 'person' object
+            const values = Object.values(person);
+            for (const value of values) {
+              console.log(value); // Output: each value of the 'person' object
+            }
+
+            // Getting all entries (key-value pairs) of 'person' object
+            const entries = Object.entries(person);
+            for (const [key, value] of entries) {
+              console.log(`${key}: ${value}`); // Output: each key-value pair of the 'person' object
+            }
           
 
 */
-
-const firstName = 'Joshua';
-const lastName = 'Rice';
-const age = 0;
-const yearBorn = 1988;
-const streetAddress = '111 Church Street';
-const city = 'birdsboro';
-
-const person = {
-  name: [firstName, lastName],
-  age() {
-    return 2024 - this.yearBorn;
-  },
-  yearBorn,
-  address: {
-    streetAddress,
-    city,
-  },
-};
-const town = person?.address?.streetAddress;
-console.log(town);
-const personAge = person?.age?.();
-console.log(personAge);
-const secondUserName = person?.name[0]?.firstName;
-console.log(person.name[0]);
-const keys = Object.keys(person);
-for (const key of keys) console.log(`${key} ` ?? 'No key To Display');
-const values = Object.values(person);
-for (const value of values) console.log(`${value} ` ?? 'No Values To Display');
-const entries = Object.entries(person);
-for (const [key, value] of entries)
-  console.log(`${key}: ${value} ` ?? 'No Key or Values for Entries To Display');
