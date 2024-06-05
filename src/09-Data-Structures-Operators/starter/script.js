@@ -13,49 +13,48 @@ const arr = [2, 3, 4, 5];
 const [w, x, y, z] = arr; // Destructuring assignment
 console.log(w, x, y, z);
 
+const WEEKDAYS = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+const openingHours = {
+  [WEEKDAYS[3]]: {
+    open: 12,
+    close: 22,
+  },
+  [WEEKDAYS[4]]: {
+    open: 11,
+    close: 23,
+  },
+  [WEEKDAYS[5]]: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
+
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+  // ES6 enhanced object literal
+  openingHours,
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
     // Returning an array of values based on the provided indexes
   },
-  orderDelivery: function ({
-    starterIndex = 0,
-    mainIndex = 1,
-    time = '20:00',
-    address,
-  }) {
+  orderDelivery({ starterIndex = 0, mainIndex = 1, time = '20:00', address }) {
     console.log(
       `Order Received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
 
-  orderPasta: function (ing1, ing2, ing3) {
+  orderPasta(ing1, ing2, ing3) {
     console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, ${ing3}`);
   },
 
-  orderPizza: function (mainIngredient, ...otherIngredients) {
+  orderPizza(mainIngredient, ...otherIngredients) {
     console.log(mainIngredient);
     console.log(otherIngredients);
-  },
-
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
   },
 };
 
@@ -81,7 +80,7 @@ const [p = 1, q = 1, r = 'end'] = [8, 9];
 console.log(p, q, r);
 
 // Example of object destructuring
-const { name, openingHours, categories } = restaurant;
+const { name, openingHours1, categories } = restaurant;
 console.log(name, openingHours, categories);
 
 // Renaming variables while destructuring
@@ -490,9 +489,18 @@ console.log(rest2);
 
 */
 
+// Create a new array 'menu1' by combining 'starterMenu' and 'mainMenu' from the 'restaurant' object using the spread operator
 const menu1 = [...restaurant.starterMenu, ...restaurant.mainMenu];
-for (const item of menu1) console.log(item);
-for (const [i, el] of menu1.entries()) console.log(`${i + 1}; ${el}`);
+
+// Iterate over each item in 'menu1' and log it to the console
+for (const item of menu1) {
+  console.log(item);
+}
+
+// Use 'menu1.entries()' to get an iterator with index-value pairs, and log each pair to the console
+for (const [i, el] of menu1.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
 
 /*! Enhanced Object Literals in JavaScript
 
@@ -538,7 +546,7 @@ for (const [i, el] of menu1.entries()) console.log(`${i + 1}; ${el}`);
 
                 You can define methods in objects without the function keyword.
 
-            Example 4 ( Computed Property Names ): 
+            Example 3 ( Computed Property Names ): 
 
                 const propName = 'status';
 
@@ -574,7 +582,160 @@ for (const [i, el] of menu1.entries()) console.log(`${i + 1}; ${el}`);
 
             Imagine you are filling out a form with your personal information. With enhanced object literals,
             it's like having an auto-fill feature that automatically fills in your information based on the variable
-            names, and you can dynamically create new fields based on your inputs.           
+            names, and you can dynamically create new fields based on your inputs. 
 
+                        
+            ( *** SEE OPENINGHOURS / RESTAURANT OBJECT STARTING ON LINE 16 *** )
 
 */
+/*! Optional Chaining in JavaScript
+
+        Optional chaining (?.) is a feature in JavaScript that allows you to safely access deeply
+        nested properties in objects without having to manually check if each reference in the chain
+        is valid (not null or undefined). If any part of the chain is null or undefined, the entire
+        expression short-circuits and returns undefined.
+
+                Syntax:
+
+                  object?.property
+                  object?.[expression]
+                  object?.method?.()
+
+
+            Example 1 ( Accessing Nested Properties ):
+
+              const user = {
+                name: 'Alice',
+                address: {
+                  city: 'Wonderland',
+                },
+              };
+
+              // Without optional chaining
+              const city = user && user.address && user.address.city; // 'Wonderland'
+
+              // With optional chaining
+              const city = user?.address?.city; // 'Wonderland'
+
+
+            Explanation:
+
+                The optional chaining operator ?. checks each step in the chain. If
+                user, user.address, or user.address.city is null or undefined, it returns undefined
+                instead of throwing an error.
+
+            Example 2 ( Accessing Methods ):
+
+              const user = {
+                name: 'Alice',
+                greet: () => 'Hello!',
+              };
+
+              // Without optional chaining
+              const greeting = user && user.greet && user.greet(); // 'Hello!'
+
+              // With optional chaining
+              const greeting = user?.greet?.(); // 'Hello!'
+
+
+            Explanation:
+
+                The ?. operator can also be used to safely call methods. If user or user.greet is null or
+                undefined, it returns undefined instead of calling the method.
+
+            Example 3 ( Accessing Array Elements ): 
+
+                const users = [
+                  { name: 'Alice' },
+                  { name: 'Bob' },
+                ];
+
+                // Without optional chaining
+                const secondUserName = users && users[1] && users[1].name; // 'Bob'
+
+                // With optional chaining
+                const secondUserName = users?.[1]?.name; // 'Bob'
+
+
+            Explanation:
+
+                The ?. operator can be used to access array elements safely. If users or users[1] is null or undefined, it returns undefined.
+                        
+                    Example 3 ( Property Value Shorthand ): 
+
+                        const name = 'Alice';
+                        const age = 30;
+
+                        const person = {
+                        name: name,
+                        age: age,
+                        };
+
+                        console.log(person); // { name: 'Alice', age: 30 }
+
+            Explanation:
+
+                The property value shorthand allows you to omit the property value if it matches the variable name.
+            
+
+        Analogy:
+
+          Think of optional chaining like a series of doors in a hallway. You want to get to the room at the end,
+          but if any door in the hallway is locked (null or undefined), you stop and don't proceed further.
+
+          Without Optional Chaining: You have to check if each door is unlocked before proceeding to the next one.
+          With Optional Chaining: You walk through the hallway, and if you encounter a locked door, you stop and
+          know that you can't get to the room at the end, but you don't cause a commotion (error).
+            
+                        
+        Practical Use Cases:
+                        
+          1. Fetching Data from APIs:
+        
+            fetch('https://api.example.com/user')
+              .then(response => response.json())
+              .then(data => {
+                const userName = data?.user?.name;
+                console.log(userName); // undefined if data.user or data.user.name is null or undefined
+              });
+
+          2. Handling Optional Configurations:
+          
+            const config = {
+              settings: {
+                theme: 'dark',
+              },
+            };
+
+            const theme = config?.settings?.theme ?? 'default';
+            console.log(theme); // 'dark'
+          
+
+*/
+const firstName = 'Joshua';
+const lastName = 'Rice';
+const age = 0;
+const yearBorn = 1988;
+const streetAddress = '111 Church Street';
+const city = 'birdsboro';
+
+const person = {
+  name: [...firstName, ...lastName],
+  age() {
+    return 2024 - this.yearBorn;
+  },
+  yearBorn,
+  address: {
+    streetAddress,
+    city,
+  },
+};
+// Without Operational Chaining
+//const town = person && person.address.city;
+// With Operational Chaining
+const town = person?.address?.streetAddress;
+console.log(town);
+const personAge = person?.age?.();
+console.log(personAge);
+const secondUserName = person?.nmae?.firstName;
+console.log(secondUserName);
