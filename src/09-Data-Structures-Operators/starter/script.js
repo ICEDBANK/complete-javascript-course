@@ -750,3 +750,142 @@ const users = [
 ];
 
 console.log(users[0]?.name ?? 'users Array Empty');
+
+/*! Optional Chaining in JavaScript
+
+        JavaScript provides several ways to loop through the properties of an object.
+        The most common methods are using Object.keys(), Object.values(), and Object.entries().
+        These methods allow you to access the keys, values, and key-value pairs of an object,
+        respectively.
+
+              Object.keys()
+
+                Syntax (keys):
+
+                  Object.keys(obj);
+
+                Example 1
+
+                  const person = {
+                    name: 'Alice',
+                    age: 25,
+                    city: 'Wonderland'
+                  };
+
+                  const keys = Object.keys(person);
+                  console.log(keys); // ["name", "age", "city"]
+
+                  // Looping through keys
+                  for (const key of keys) {
+                    console.log(key); // Logs "name", "age", "city"
+                  }
+
+
+            Explanation:
+
+                Object.keys() returns an array of a given object's property names (keys)
+
+          Object.values()
+
+            Syntax:
+
+                  Object.values(obj);
+
+                    const person = {
+                      name: 'Alice',
+                      age: 25,
+                      city: 'Wonderland'
+                    };
+
+                    const values = Object.values(person);
+                    console.log(values); // ["Alice", 25, "Wonderland"]
+
+                    // Looping through values
+                    for (const value of values) {
+                      console.log(value); // Logs "Alice", 25, "Wonderland"
+                    }
+
+            Explanation:
+
+                Object.keys() returns an array of a given object's property names (keys)
+
+            Example 3 ( Accessing Array Elements ): 
+
+                const users = [
+                  { name: 'Alice' },
+                  { name: 'Bob' },
+                ];
+
+                // Without optional chaining
+                const secondUserName = users && users[1] && users[1].name; // 'Bob'
+
+                // With optional chaining
+                const secondUserName = users?.[1]?.name; // 'Bob'
+
+
+            Explanation:
+
+        Analogy:
+
+          Think of optional chaining like a series of doors in a hallway. You want to get to the room at the end,
+          but if any door in the hallway is locked (null or undefined), you stop and don't proceed further.
+
+          Without Optional Chaining: You have to check if each door is unlocked before proceeding to the next one.
+          With Optional Chaining: You walk through the hallway, and if you encounter a locked door, you stop and
+          know that you can't get to the room at the end, but you don't cause a commotion (error).
+            
+                        
+        Practical Use Cases:
+                        
+          1. Fetching Data from APIs:
+        
+            fetch('https://api.example.com/user')
+              .then(response => response.json())
+              .then(data => {
+                const userName = data?.user?.name;
+                console.log(userName); // undefined if data.user or data.user.name is null or undefined
+              });
+
+          2. Handling Optional Configurations:
+          
+            const config = {
+              settings: {
+                theme: 'dark',
+              },
+            };
+
+            const theme = config?.settings?.theme ?? 'default';
+            console.log(theme); // 'dark'
+
+          Self-Teaching : 
+
+            const firstName = 'Joshua';
+            const lastName = 'Rice';
+            const age = 0;
+            const yearBorn = 1988;
+            const streetAddress = '111 Church Street';
+            const city = 'birdsboro';
+
+            const person = {
+              name: [firstName, lastName],
+              age() {
+                return 2024 - this.yearBorn;
+              },
+              yearBorn,
+              address: {
+                streetAddress,
+                city,
+              },
+            };
+            // Without Operational Chaining
+              //const town = person && person.address.city;
+            // With Operational Chaining
+              const town = person?.address?.streetAddress;
+              console.log(town);
+              const personAge = person?.age?.();
+              console.log(personAge);
+              const secondUserName = person?.name[0]?.firstName;
+              console.log(person.name[0]);
+          
+
+*/
