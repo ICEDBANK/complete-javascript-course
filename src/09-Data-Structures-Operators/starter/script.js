@@ -701,25 +701,27 @@ for (const [i, el] of menu1.entries()) {
             const city = 'birdsboro';
 
             const person = {
-            name: [firstName, lastName],
-            age() {
-            return 2024 - this.yearBorn;
-            },
-            yearBorn,
-            address: {
-            streetAddress,
-            city,
-            },
+              name: [firstName, lastName],
+              age() {
+                return 2024 - this.yearBorn;
+              },
+              yearBorn,
+              address: {
+                streetAddress,
+                city,
+              },
             };
             // Without Operational Chaining
-            //const town = person && person.address.city;
+              //const town = person && person.address.city;
             // With Operational Chaining
-            const town = person?.address?.streetAddress;
-            console.log(town);
-            const personAge = person?.age?.();
-            console.log(personAge);
-            const secondUserName = person?.name[0]?.firstName;
-            console.log(person.name[0]);
+              const town = person?.address?.streetAddress;
+              console.log(town);
+              const personAge = person?.age?.();
+              console.log(personAge);
+              const secondUserName = person?.name[0]?.firstName;
+              console.log(person.name[0]);
           
 
 */
+
+console.log(restaurant.openingHours.mon);
