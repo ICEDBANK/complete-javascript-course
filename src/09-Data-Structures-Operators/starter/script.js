@@ -659,25 +659,6 @@ for (const [i, el] of menu1.entries()) {
 
             Explanation:
 
-                The ?. operator can be used to access array elements safely. If users or users[1] is null or undefined, it returns undefined.
-                        
-                    Example 3 ( Property Value Shorthand ): 
-
-                        const name = 'Alice';
-                        const age = 30;
-
-                        const person = {
-                        name: name,
-                        age: age,
-                        };
-
-                        console.log(person); // { name: 'Alice', age: 30 }
-
-            Explanation:
-
-                The property value shorthand allows you to omit the property value if it matches the variable name.
-            
-
         Analogy:
 
           Think of optional chaining like a series of doors in a hallway. You want to get to the room at the end,
@@ -709,33 +690,36 @@ for (const [i, el] of menu1.entries()) {
 
             const theme = config?.settings?.theme ?? 'default';
             console.log(theme); // 'dark'
+
+          Self-Teaching : 
+
+            const firstName = 'Joshua';
+            const lastName = 'Rice';
+            const age = 0;
+            const yearBorn = 1988;
+            const streetAddress = '111 Church Street';
+            const city = 'birdsboro';
+
+            const person = {
+            name: [firstName, lastName],
+            age() {
+            return 2024 - this.yearBorn;
+            },
+            yearBorn,
+            address: {
+            streetAddress,
+            city,
+            },
+            };
+            // Without Operational Chaining
+            //const town = person && person.address.city;
+            // With Operational Chaining
+            const town = person?.address?.streetAddress;
+            console.log(town);
+            const personAge = person?.age?.();
+            console.log(personAge);
+            const secondUserName = person?.name[0]?.firstName;
+            console.log(person.name[0]);
           
 
 */
-const firstName = 'Joshua';
-const lastName = 'Rice';
-const age = 0;
-const yearBorn = 1988;
-const streetAddress = '111 Church Street';
-const city = 'birdsboro';
-
-const person = {
-  name: [firstName, lastName],
-  age() {
-    return 2024 - this.yearBorn;
-  },
-  yearBorn,
-  address: {
-    streetAddress,
-    city,
-  },
-};
-// Without Operational Chaining
-//const town = person && person.address.city;
-// With Operational Chaining
-const town = person?.address?.streetAddress;
-console.log(town);
-const personAge = person?.age?.();
-console.log(personAge);
-const secondUserName = person?.name[0]?.firstName;
-console.log(person.name[0]);
