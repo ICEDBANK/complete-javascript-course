@@ -780,10 +780,9 @@ console.log(users[0]?.name ?? 'users Array Empty');
                     console.log(key); // Logs "name", "age", "city"
                   }
 
+                Explanation:
 
-            Explanation:
-
-                Object.keys() returns an array of a given object's property names (keys)
+                  Object.keys() returns an array of a given object's property names (keys)
 
           Object.values()
 
@@ -809,53 +808,67 @@ console.log(users[0]?.name ?? 'users Array Empty');
 
                 Object.keys() returns an array of a given object's property names (keys)
 
-            Example 3 ( Accessing Array Elements ): 
+          Object.entries()
 
-                const users = [
-                  { name: 'Alice' },
-                  { name: 'Bob' },
-                ];
+            Syntax:
 
-                // Without optional chaining
-                const secondUserName = users && users[1] && users[1].name; // 'Bob'
+                  Object.entries(obj);
 
-                // With optional chaining
-                const secondUserName = users?.[1]?.name; // 'Bob'
+                    const person = {
+                      name: 'Alice',
+                      age: 25,
+                      city: 'Wonderland'
+                    };
 
+                    const entries = Object.entries(person);
+                    console.log(entries); // [["name", "Alice"], ["age", 25], ["city", "Wonderland"]]
+
+                    // Looping through entries
+                    for (const [key, value] of entries) {
+                      console.log(`${key}: ${value}`); // Logs "name: Alice", "age: 25", "city: Wonderland"
+                    }
 
             Explanation:
 
+                Object.entries() returns an array of a given object's own enumerable property [key, value] pairs.
+
         Analogy:
 
-          Think of optional chaining like a series of doors in a hallway. You want to get to the room at the end,
-          but if any door in the hallway is locked (null or undefined), you stop and don't proceed further.
+          Imagine you have a filing cabinet where each drawer has a label (key) and contains some documents (values).
 
-          Without Optional Chaining: You have to check if each door is unlocked before proceeding to the next one.
-          With Optional Chaining: You walk through the hallway, and if you encounter a locked door, you stop and
-          know that you can't get to the room at the end, but you don't cause a commotion (error).
+            Object.keys(): This is like listing all the labels on the drawers.
+            Object.values(): This is like taking out all the documents from the drawers and listing them.
+            Object.entries(): This is like opening each drawer and seeing both the label and the documents
+            inside, noting each label and its corresponding documents.
             
                         
         Practical Use Cases:
                         
-          1. Fetching Data from APIs:
+          1. Iterating Over Form Data:
         
-            fetch('https://api.example.com/user')
-              .then(response => response.json())
-              .then(data => {
-                const userName = data?.user?.name;
-                console.log(userName); // undefined if data.user or data.user.name is null or undefined
+              const formData = {
+                username: 'user123',
+                password: 'pass123',
+                email: 'user@example.com'
+              };
+
+              Object.keys(formData).forEach(key => {
+                console.log(`${key}: ${formData[key]}`);
               });
 
-          2. Handling Optional Configurations:
+          2. Transforming Objects:
           
-            const config = {
-              settings: {
-                theme: 'dark',
-              },
-            };
+              const data = {
+                firstName: 'John',
+                lastName: 'Doe',
+                city: 'New York'
+              };
 
-            const theme = config?.settings?.theme ?? 'default';
-            console.log(theme); // 'dark'
+              const transformedData = Object.fromEntries(
+                Object.entries(data).map(([key, value]) => [key, typeof value === 'string' ? value.toUpperCase() : value])
+              );
+
+              console.log(transformedData); // { firstName: 'JOHN', lastName: 'DOE', city: 'NEW YORK' }
 
           Self-Teaching : 
 
@@ -889,3 +902,30 @@ console.log(users[0]?.name ?? 'users Array Empty');
           
 
 */
+
+const firstName = 'Joshua';
+const lastName = 'Rice';
+const age = 0;
+const yearBorn = 1988;
+const streetAddress = '111 Church Street';
+const city = 'birdsboro';
+
+const person = {
+  name: [firstName, lastName],
+  age() {
+    return 2024 - this.yearBorn;
+  },
+  yearBorn,
+  address: {
+    streetAddress,
+    city,
+  },
+};
+const town = person?.address?.streetAddress;
+console.log(town);
+const personAge = person?.age?.();
+console.log(personAge);
+const secondUserName = person?.name[0]?.firstName;
+console.log(person.name[0]);
+const values = Object.values(person);
+for (const value of values) console.log(`${value} ` ?? 'No Values To Display');
