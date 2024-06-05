@@ -737,3 +737,6 @@ for (const day of days) {
   const open = restaurant.openingHours[day]?.open ?? 'closed';
   console.log(`On ${day}, we open at ${open}`);
 }
+
+// Method Optional Chaining
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
