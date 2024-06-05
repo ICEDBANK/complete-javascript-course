@@ -724,4 +724,6 @@ for (const [i, el] of menu1.entries()) {
 
 */
 
-console.log(restaurant.openingHours.mon.open);
+if (restaurant.openingHours.mon.open) {
+  console.log(restaurant.openingHours.mon.open);
+}
