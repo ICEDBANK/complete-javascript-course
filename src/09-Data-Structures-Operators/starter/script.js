@@ -493,3 +493,88 @@ console.log(rest2);
 const menu1 = [...restaurant.starterMenu, ...restaurant.mainMenu];
 for (const item of menu1) console.log(item);
 for (const [i, el] of menu1.entries()) console.log(`${i + 1}; ${el}`);
+
+/*! Enhanced Object Literals in JavaScript
+
+        Enhanced object literals in JavaScript provide a shorthand syntax and new features
+        that make it easier to create objects and work with them. These enhancements were introduced
+        in ES6 (ECMAScript 2015) and make the code more concise and readable.
+
+                Key Features:
+
+                    Property Shorthand
+                    Method Definitions
+                    Computed Property Names
+                    Property Value Shorthand
+
+            Example 1 ( Property Shorthand ):
+
+                const name = 'Alice';
+                const age = 30;
+
+                const person = {
+                name,
+                age,
+                };
+
+                console.log(person); // { name: 'Alice', age: 30 }
+
+            Explanation:
+
+                When the variable name and the property name are the same, you can omit the property name.
+
+            Example 2 ( Method Definitions ):
+
+                const person = {
+                name: 'Alice',
+                greet() {
+                    console.log('Hello!');
+                },
+                };
+
+                person.greet(); // Hello!
+
+            Explanation:
+
+                You can define methods in objects without the function keyword.
+
+            Example 4 ( Computed Property Names ): 
+
+                const propName = 'status';
+
+                const order = {
+                id: 1,
+                [propName]: 'shipped',
+                };
+
+                console.log(order); // { id: 1, status: 'shipped' }
+
+            Explanation:
+
+                You can use expressions in square brackets to compute property names dynamically.
+                        
+                    Example 3 ( Property Value Shorthand ): 
+
+                        const name = 'Alice';
+                        const age = 30;
+
+                        const person = {
+                        name: name,
+                        age: age,
+                        };
+
+                        console.log(person); // { name: 'Alice', age: 30 }
+
+            Explanation:
+
+                The property value shorthand allows you to omit the property value if it matches the variable name.
+            
+
+        Analogy:
+
+            Imagine you are filling out a form with your personal information. With enhanced object literals,
+            it's like having an auto-fill feature that automatically fills in your information based on the variable
+            names, and you can dynamically create new fields based on your inputs.           
+
+
+*/
