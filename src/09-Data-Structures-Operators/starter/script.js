@@ -728,4 +728,12 @@ for (const [i, el] of menu1.entries()) {
 //   console.log(restaurant.openingHours.mon.open);
 
 // WITH Optional Chaining
+console.log(restaurant?.openingHours?.mon?.open);
 console.log(restaurant?.openingHours?.fri?.open);
+
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+console.log(day);
+for (const day of days) {
+  const open = restaurant?.openingHours[day]?.open;
+  console.log(`On ${day}, we open at ${open}`);
+}
