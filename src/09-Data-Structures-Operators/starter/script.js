@@ -747,4 +747,4 @@ const users = {
   email: 'j.e.rice4101@gmail.com',
 };
 
-console.log(users?.[0] ?? 'No Users Available');
+console.log(users?.name[0] ?? 'No Users Available');
