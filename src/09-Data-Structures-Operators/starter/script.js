@@ -806,7 +806,7 @@ console.log(users[0]?.name ?? 'users Array Empty');
 
             Explanation:
 
-                Object.keys() returns an array of a given object's property names (keys)
+                Object.values() returns an array of a given object's property values.
 
           Object.entries()
 
@@ -929,3 +929,8 @@ const secondUserName = person?.name[0]?.firstName;
 console.log(person.name[0]);
 const keys = Object.keys(person);
 for (const key of keys) console.log(`${key} ` ?? 'No key To Display');
+const values = Object.values(person);
+for (const value of values) console.log(`${value} ` ?? 'No Values To Display');
+const entries = Object.entries(person);
+for (const [key, value] of entries)
+  console.log(`${key}: ${value} ` ?? 'No Key or Values for Entries To Display');
