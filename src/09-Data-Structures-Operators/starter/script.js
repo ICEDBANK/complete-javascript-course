@@ -737,5 +737,5 @@ const town = person?.address?.streetAddress;
 console.log(town);
 const personAge = person?.age?.();
 console.log(personAge);
-//const secondUserName = person?.nmae[0]?.firstName;
+const secondUserName = person?.name[0]?.firstName;
 console.log(person.name[0]);
