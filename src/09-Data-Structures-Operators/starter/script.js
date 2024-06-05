@@ -738,4 +738,4 @@ console.log(town);
 const personAge = person?.age?.();
 console.log(personAge);
 //const secondUserName = person?.nmae[0]?.firstName;
-console.log(person.name.firstName);
+console.log(person.name[0]);
