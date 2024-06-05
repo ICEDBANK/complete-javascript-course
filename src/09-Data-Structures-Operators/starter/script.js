@@ -740,3 +740,11 @@ for (const day of days) {
 
 // Method Optional Chaining
 console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+
+// Arrays Optional Chaining
+const users = {
+  name: 'Joshua',
+  email: 'j.e.rice4101@gmail.com',
+};
+
+console.log(users?.[0] ?? 'No Users Available');
