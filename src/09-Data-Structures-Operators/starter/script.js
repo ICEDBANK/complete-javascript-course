@@ -927,5 +927,5 @@ const personAge = person?.age?.();
 console.log(personAge);
 const secondUserName = person?.name[0]?.firstName;
 console.log(person.name[0]);
-const values = Object.values(person);
-for (const value of values) console.log(`${value} ` ?? 'No Values To Display');
+const keys = Object.keys(person);
+for (const key of keys) console.log(`${key} ` ?? 'No key To Display');
