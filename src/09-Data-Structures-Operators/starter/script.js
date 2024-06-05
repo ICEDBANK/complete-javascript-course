@@ -720,7 +720,7 @@ const streetAddress = '111 Church Street';
 const city = 'birdsboro';
 
 const person = {
-  name: [...firstName, ...lastName],
+  name: [firstName, lastName],
   age() {
     return 2024 - this.yearBorn;
   },
@@ -737,5 +737,5 @@ const town = person?.address?.streetAddress;
 console.log(town);
 const personAge = person?.age?.();
 console.log(personAge);
-const secondUserName = person?.nmae[0]?.firstName;
-console.log(secondUserName);
+//const secondUserName = person?.nmae[0]?.firstName;
+console.log(person.name.firstName);
