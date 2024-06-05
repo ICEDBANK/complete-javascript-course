@@ -724,6 +724,8 @@ for (const [i, el] of menu1.entries()) {
 
 */
 
-if (restaurant.openingHours.mon.open) {
-  console.log(restaurant.openingHours.mon.open);
-}
+// if (restaurant.openingHours && restaurant.openingHours.mon.open)
+//   console.log(restaurant.openingHours.mon.open);
+
+// WITH Optional Chaining
+console.log(restaurant?.openingHours?.open);
