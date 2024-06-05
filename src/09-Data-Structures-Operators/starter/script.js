@@ -728,4 +728,4 @@ for (const [i, el] of menu1.entries()) {
 //   console.log(restaurant.openingHours.mon.open);
 
 // WITH Optional Chaining
-console.log(restaurant?.openingHours?.open);
+console.log(restaurant?.openingHours?.fri?.open);
