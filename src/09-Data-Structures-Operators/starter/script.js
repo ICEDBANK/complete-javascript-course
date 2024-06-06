@@ -1185,6 +1185,68 @@ console.log(new Set('JoshuaRice').size);
             // Output:
             // key1: value1
             // key2: value2
-            
+
+        Removing All Elements:
+
+          Using clear() Method:
+          
+          const myMap = new Map([
+            ['key1', 'value1'],
+            ['key2', 'value2'],
+          ]);
+          myMap.clear();
+          console.log(myMap.size); // 0
+
+        Real-World Analogy:
+
+          Imagine you have a directory where each person (key) has an associated phone number
+          (value). You can look up the phone number using the person's name.
+
+          Directory: The Map.
+          Adding a Contact: Using the set() method to add a key-value pair (person-phone number).
+          Looking Up a Phone Number: Using the get() method to find the phone number for a specific person.
+          Checking if a Contact Exists: Using the has() method to see if a person is in the directory.
+          Deleting a Contact: Using the delete() method to remove a person from the directory.
+          Clearing the Directory: Using the clear() method to remove all contacts.
+
+        Practical Use Cases:
+
+          Storing Configuration Settings:        
+
+            const config = new Map();
+            config.set('theme', 'dark');
+            config.set('version', '1.2.0');
+            console.log(config.get('theme')); // 'dark'
+
+          Tracking Elements in a Collection:
+
+            const fruitCount = new Map();
+            fruitCount.set('apple', 5);
+            fruitCount.set('banana', 3);
+            console.log(fruitCount.get('apple')); // 5
+
+          Caching Results:
+
+            const cache = new Map();
+            function fetchData(key) {
+              if (cache.has(key)) {
+                return cache.get(key);
+              } else {
+                const result = // some expensive computation;
+                cache.set(key, result);
+                return result;
+              }
+            }        
+
+        Summary:
+
+          Creation: Use new Map() to create a map.
+          Adding Elements: Use set() method.
+          Deleting Elements: Use delete() method.
+          Checking Existence: Use has() method.
+          Accessing Elements: Use get() method.
+          Size: Use size property.
+          Iterating: Use for...of loop or forEach() method.
+          Clearing: Use clear() method.          
 
 */
