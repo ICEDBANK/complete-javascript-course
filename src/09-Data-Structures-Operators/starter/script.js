@@ -1096,3 +1096,95 @@ console.log(
   new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
 );
 console.log(new Set('JoshuaRice').size);
+
+/*! Maps in JavaScript
+
+        A Map is a built-in JavaScript object that allows you to store key-value pairs. Unlike regular
+        objects, Maps can use any value (object or primitive) as a key. This makes Maps a more versatile
+        and powerful way to handle collections of data.
+
+        Key Features of Maps:
+
+          1. Key-Value Pairs: Stores data as key-value pairs.
+          2. Any Value as Key: Keys can be any value, including functions, objects, or any primitive.
+          3. Order of Elements: Elements in a Map are ordered by their insertion order.
+          4. Size Property: The number of key-value pairs is easily accessible through the size property.
+          5. Iterability: You can iterate over the key-value pairs in a Map.
+
+        Basic Syntax:
+
+          // iterable: An array or any other iterable object whose elements are arrays (with a key-value pair for each entry).
+          const myMap = new Map([iterable]);
+
+        Creating a Map:
+
+          const map1 = new Map();
+          const map2 = new Map([
+            ['key1', 'value1'],
+            ['key2', 'value2'],
+          ]);
+          console.log(map2); // Map { 'key1' => 'value1', 'key2' => 'value2' }
+
+        Adding and Deleting Elements:
+
+          Adding Elements: Use the set() method.
+          Deleting Elements: Use the delete() method.
+
+          const myMap = new Map();
+          myMap.set('key1', 'value1');
+          myMap.set('key2', 'value2');
+          console.log(myMap); // Map { 'key1' => 'value1', 'key2' => 'value2' }
+
+          myMap.delete('key1');
+          console.log(myMap); // Map { 'key2' => 'value2' }
+
+        Checking for Elements:
+
+          Checking Existence: Use the has() method.
+          Size of the Map: Use the size property.
+
+          const myMap = new Map([
+            ['key1', 'value1'],
+            ['key2', 'value2'],
+          ]);
+          console.log(myMap.has('key1')); // true
+          console.log(myMap.has('key3')); // false
+          console.log(myMap.size); // 2
+
+        Accessing Elements:
+
+          Getting Values: Use the get() method.
+          
+          const myMap = new Map([
+            ['key1', 'value1'],
+            ['key2', 'value2'],
+          ]);
+          console.log(myMap.get('key1')); // 'value1'
+          console.log(myMap.get('key3')); // undefined
+
+        Iterating Over a Map:
+
+          Using for...of Loop:
+          
+            const myMap = new Map([
+              ['key1', 'value1'],
+              ['key2', 'value2'],
+            ]);
+            for (const [key, value] of myMap) {
+              console.log(`${key}: ${value}`);
+            }
+            // Output:
+            // key1: value1
+            // key2: value2
+          
+          Using forEach Method:
+          
+            myMap.forEach((value, key) => {
+              console.log(`${key}: ${value}`);
+            });
+            // Output:
+            // key1: value1
+            // key2: value2
+            
+
+*/
