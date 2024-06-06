@@ -1080,7 +1080,16 @@ console.log(ordersSet);
 for (const order of ordersSet) console.log(order);
 
 //Example
-const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staff = [
+  'Waiter',
+  'Chef',
+  'Waiter',
+  'Manager',
+  'Chef',
+  'Waiter',
+  'Hostess',
+  'Line Cook',
+];
 const staffUnique = [...new Set(staff)];
 console.log(staffUnique);
 console.log(
