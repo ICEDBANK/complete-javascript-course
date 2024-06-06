@@ -1066,3 +1066,5 @@ const ordersSet = new Set(['Pasta', 'Pizza', 'Risotto', 'Pizza', 'Pasta']);
 
 console.log(ordersSet);
 console.log(new Set('Joshua'));
+
+console.log(ordersSet.size);
