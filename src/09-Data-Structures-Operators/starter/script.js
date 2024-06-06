@@ -1065,3 +1065,4 @@ for (const [key, { open, close }] of entries)
 const ordersSet = new Set(['Pasta', 'Pizza', 'Risotto', 'Pizza', 'Pasta']);
 
 console.log(ordersSet);
+console.log(new Set('Joshua'));
