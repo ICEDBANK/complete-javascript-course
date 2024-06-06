@@ -1078,3 +1078,7 @@ ordersSet.delete('Risotto');
 console.log(ordersSet);
 
 for (const order of ordersSet) console.log(order);
+
+//Example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staffUnique = new Set(staffUnique);
