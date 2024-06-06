@@ -949,3 +949,119 @@ console.log(entries);
 // key, value
 for (const [key, { open, close }] of entries)
   console.log(`On: ${key} we open at ${open} and close at ${close}`);
+
+/*! Sets in JavaScript
+
+        A Set is a built-in JavaScript object that allows you to store unique values
+        of any type, whether primitive values or object references. This means that
+        each value in a Set can only occur once.
+
+        Key Features of Sets:
+
+          Unique Values: A Set automatically removes duplicate values.
+          Order: Values in a Set are ordered by the insertion order.
+          Iterability: You can iterate over the elements of a Set in the order of insertion.
+
+              Basic Syntax:
+
+                // iterable: An iterable object whose elements are added to the new Set. If this parameter is not specified, an empty Set is created.
+                const mySet = new Set([iterable]);
+
+                Creating A Set:
+
+                  const set1 = new Set();
+                  const set2 = new Set([1, 2, 3, 4, 4, 4]);
+                  console.log(set2); // Set { 1, 2, 3, 4 }
+
+                Adding and Deleting Elements:
+                  
+                  Adding Elements: Use the add() method.
+                  Deleting Elements: Use the delete() method.
+
+                    const mySet = new Set();
+                    mySet.add(1);
+                    mySet.add(5);
+                    mySet.add(5); // Duplicate values are ignored
+                    mySet.add('Hello');
+                    mySet.delete(1);
+                    console.log(mySet); // Set { 5, 'Hello' }
+
+                  Checking for Elements:
+
+                    Checking Existence: Use the has() method.
+                    Size of the Set: Use the size property.
+
+                        const mySet = new Set([1, 2, 3]);
+                        console.log(mySet.has(1)); // true
+                        console.log(mySet.has(5)); // false
+                        console.log(mySet.size); // 3
+
+                  Iterating Over a Set:
+
+                    Using for...of Loop:
+
+                      const mySet = new Set(['a', 'b', 'c']);
+                        for (const item of mySet) {
+                          console.log(item);
+                        }
+                        // Output:
+                        // a
+                        // b
+                        // c
+
+                    Using forEach Method:
+
+                        mySet.forEach((value) => {
+                            console.log(value);
+                          });
+                          // Output:
+                          // a
+                          // b
+                          // c
+
+                  Removing All Elements:
+                          
+                    Using clear() Method:
+
+                    const mySet = new Set([1, 2, 3]);
+                      mySet.clear();
+                      console.log(mySet.size); // 0
+
+                  Real-World Analogy
+
+                      Imagine you have a guest list for a party. You want to make sure that each person is invited only once,
+                      and you want to easily check if someone is already on the list.
+
+                        Guest List: The Set.
+                        Adding a Guest: Using the add() method to add a guest to the list.
+                        Checking the List: Using the has() method to see if someone is already on the list.
+                        Removing a Guest: Using the delete() method to remove a guest from the list.
+                        Clearing the List: Using the clear() method to remove all guests from the list.
+
+                  Practical Examples:      
+                            
+                    Removing Duplicates of an Array
+
+                        const numbers = [1, 2, 3, 3, 4, 4, 5];
+                        const uniqueNumbers = [...new Set(numbers)];
+                        console.log(uniqueNumbers); // [1, 2, 3, 4, 5]
+
+                    Storing Unique Values:
+
+                        const visitedPages = new Set();
+                        visitedPages.add('home');
+                        visitedPages.add('about');
+                        visitedPages.add('home'); // Duplicate value, will be ignored
+                        console.log(visitedPages); // Set { 'home', 'about' }
+
+                    Efficient Lookup of Unique Values:
+
+                        const uniqueIds = new Set([1, 2, 3]);
+                        console.log(uniqueIds.has(2)); // true
+                        console.log(uniqueIds.has(4)); // false
+
+*/
+
+const ordersSet = new Set(['Pasta', 'Pizza', 'Risotto', 'Pizza', 'Pasta']);
+
+console.log(ordersSet);

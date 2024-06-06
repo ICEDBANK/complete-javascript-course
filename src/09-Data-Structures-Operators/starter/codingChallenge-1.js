@@ -128,21 +128,28 @@ BONUS: Create an object called 'scorers' which contains the names of the players
 GOOD LUCK 😀
 */
 
-const gameScored = Object.entries(game?.scored ?? 'No Values');
-for (const [key, score] of gameScored) {
+//  1. Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski")
+for (const [key, score] of Object.entries(game.scored)) {
   console.log(`Goal ${Number(key) + 1}: ${score}`);
 }
 
-const averageOdd = Object.values(game.odds ?? 'No Odd Values');
+//  2. Use a loop to calculate the average odd and log it to the console (We already studied how to calculate averages, you can go check if you don't remember)
 let sum = 0;
-for (const aOdd of averageOdd) {
-  sum += aOdd;
+let odds = Object.values(game.odds);
+for (const odd of odds) {
+  sum += odd;
 }
-const oddsAverage = sum / averageOdd.length;
-console.log(oddsAverage);
+console.log(`The Average Odds is ${sum / odds.length}`);
 
-// This is hard Practice this mulitple times
-for (const [team, odd] of Object.entries(game.odds)) {
-  const teamName = team === 'x' ? 'draw' : `Victory ${game[team]}`;
-  console.log(`Odd of ${teamName}: ${odd}`);
+//  3. Print the 3 odds to the console, but in a nice formatted way, exaclty like this:
+for (const [team, odds] of Object.entries(game.odds)) {
+  let teamName = team === 'x' ? 'Draw' : `Victory ${game[team]}`;
+  console.log(`Odd of ${teamName}: ${odds}`);
 }
+
+//  BONUS
+let scorers = {};
+for (const player of game.scored) {
+  scorers[player] = (scorers[player] || 0) + 1;
+}
+console.log(scorers);
