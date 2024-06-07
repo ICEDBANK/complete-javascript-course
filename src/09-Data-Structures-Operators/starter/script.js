@@ -1285,6 +1285,8 @@ console.log(rest.get('name'));
 const time = 21;
 console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
 
+console.log(rest.size);
+
 for (const [key, value] of rest) {
   console.log(`${key}: ${value}`);
 }
