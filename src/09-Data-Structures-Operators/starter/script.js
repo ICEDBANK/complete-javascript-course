@@ -1247,20 +1247,27 @@ console.log(new Set('JoshuaRice').size);
           Accessing Elements: Use get() method.
           Size: Use size property.
           Iterating: Use for...of loop or forEach() method.
-          Clearing: Use clear() method.          
+          Clearing: Use clear() method.   
+          
+        personal code:
+
+          const riceFamily = new Map([
+            ['dad', 'Joshua'],
+            ['mom', 'Sarah'],
+            ['daughterOne', 'Ava'],
+            ['daughtertwo', 'Adeline'],
+            ['dogOne', 'Simba'],
+            ['dogtwo', 'Maverick'],
+          ]);
+
+          console.log(riceFamily);
+          riceFamily.set('Property', '111 Church Street');
+          console.log(riceFamily);
+          console.log(riceFamily.get('dad'));
+          for (const [key, value] of riceFamily) console.log(`${key}: ${value}`);
 
 */
-const riceFamily = new Map([
-  ['dad', 'Joshua'],
-  ['mom', 'Sarah'],
-  ['daughterOne', 'Ava'],
-  ['daughtertwo', 'Adeline'],
-  ['dogOne', 'Simba'],
-  ['dogtwo', 'Maverick'],
-]);
 
-console.log(riceFamily);
-riceFamily.set('Property', '111 Church Street');
-console.log(riceFamily);
-console.log(riceFamily.get('dad'));
-for (const [key, value] of riceFamily) console.log(`${key}: ${value}`);
+const rest = new Map();
+rest.set(['name', 'Vinnies'], ['location', 'Birdsboro']);
+console.log(rest);
