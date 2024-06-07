@@ -1316,5 +1316,5 @@ for (const [key, value] of question) {
 const answer1 = Number(prompt('Your Answer'));
 console.log(answer1);
 answer1 === question.get('Correct')
-  ? question.get(true).value
-  : question.get(false).value;
+  ? console.log(question.get(true))
+  : console.log(question.get(false));
