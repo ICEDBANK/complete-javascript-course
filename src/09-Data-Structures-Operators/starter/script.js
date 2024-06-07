@@ -1287,7 +1287,8 @@ console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
 
 console.log(rest.size);
 
-rest.set([1, 2], 'Test');
+const arr1 = [1, 2];
+rest.set(arr1, 'Test');
 
 for (const [key, value] of rest) {
   console.log(`${key}: ${value}`);
