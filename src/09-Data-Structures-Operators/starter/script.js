@@ -1293,3 +1293,15 @@ rest.set(arr2, 'Test');
 for (const [key, value] of rest) {
   console.log(`${key}: ${value}`);
 }
+
+const question = new Map([
+  ['question', 'What is the best programming Language in the world'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['Correct', 3],
+  [true, 'Correct'],
+  [false, 'Try Again'],
+]);
+
+console.log(question);
