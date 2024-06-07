@@ -1280,7 +1280,10 @@ rest
   .set(true, 'We are open :D')
   .set(false, 'We are closed :(');
 
-console.log(rest.get('name', true));
+console.log(rest.get('name'));
+
+const time = 21;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
 
 for (const [key, value] of rest) {
   console.log(`${key}: ${value}`);
