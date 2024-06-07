@@ -1280,6 +1280,8 @@ rest
   .set(true, 'We are open :D')
   .set(false, 'We are closed :(');
 
+console.log(rest.get('name', true));
+
 for (const [key, value] of rest) {
   console.log(`${key}: ${value}`);
 }
