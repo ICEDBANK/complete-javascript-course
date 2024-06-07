@@ -1305,3 +1305,11 @@ const question = new Map([
 ]);
 
 console.log(question);
+
+// Convert Object to map
+const hoursMap = new (Object.entries(openingHours))();
+console.log(hoursMap);
+
+for (const [key, value] of question) {
+  if (typeof key === 'number') console.log(`Answer' ${key}: ${value}`);
+}
