@@ -1250,3 +1250,17 @@ console.log(new Set('JoshuaRice').size);
           Clearing: Use clear() method.          
 
 */
+const riceFamily = new Map([
+  ['dad', 'Joshua'],
+  ['mom', 'Sarah'],
+  ['daughterOne', 'Ava'],
+  ['daughtertwo', 'Adeline'],
+  ['dogOne', 'Simba'],
+  ['dogtwo', 'Maverick'],
+]);
+
+console.log(riceFamily);
+riceFamily.set('Property', '111 Church Street');
+console.log(riceFamily);
+console.log(riceFamily.get('dad'));
+for (const [key, value] of riceFamily) console.log(`${key}: ${value}`);
