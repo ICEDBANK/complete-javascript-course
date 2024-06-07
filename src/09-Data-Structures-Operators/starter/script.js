@@ -1270,4 +1270,4 @@ console.log(new Set('JoshuaRice').size);
 
 const rest = new Map();
 rest.set(['name', 'Vinnies'], ['location', 'Birdsboro']);
-console.log(rest);
+for (const [key, value] of rest) console.log(`${key}: ${value}`);
