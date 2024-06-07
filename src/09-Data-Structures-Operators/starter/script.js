@@ -1318,3 +1318,6 @@ console.log(answer1);
 answer1 === question.get('Correct')
   ? console.log(question.get(true))
   : console.log(question.get(false));
+
+// Convert map to array
+console.log(...question);
