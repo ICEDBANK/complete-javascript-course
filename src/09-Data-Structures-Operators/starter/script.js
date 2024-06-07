@@ -1320,4 +1320,4 @@ answer1 === question.get('Correct')
   : console.log(question.get(false));
 
 // Convert map to array
-console.log(...question);
+console.log([...question]);
