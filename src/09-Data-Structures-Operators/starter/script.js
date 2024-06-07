@@ -1313,3 +1313,5 @@ console.log(hoursMap);
 for (const [key, value] of question) {
   if (typeof key === 'number') console.log(`Answer' ${key}: ${value}`);
 }
+const answer1 = Number(prompt('Your Answer'));
+console.log(answer1);
