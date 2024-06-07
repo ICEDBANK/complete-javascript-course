@@ -1268,6 +1268,18 @@ console.log(new Set('JoshuaRice').size);
 
 */
 
-const rest = new Map();
-rest.set(['name', 'Vinnies'], ['location', 'Birdsboro']);
-for (const [key, value] of rest) console.log(`${key}: ${value}`);
+const rest = new Map([
+  ['name', 'Vinnies'],
+  ['location', 'Birdsboro'],
+]);
+
+rest
+  .set('categories', ['Itaiian', 'Pizzeria', 'Vegeterian', 'Organic'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open :D')
+  .set(false, 'We are closed :(');
+
+for (const [key, value] of rest) {
+  console.log(`${key}: ${value}`);
+}
