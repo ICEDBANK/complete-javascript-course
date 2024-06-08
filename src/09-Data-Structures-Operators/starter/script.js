@@ -1525,8 +1525,18 @@ checkBaggage('I have a laptop, some food and a pocket knife'); // Output: "Not b
 checkBaggage('Socks camera'); // Output: "Boarding"
 checkBaggage('Got some snacks and a gun for protection'); // Output: "Not boarding"
 
+/* Strings Lesson 3
+
+
+*/
+
 console.log('a+very+nice+string'.split('+'));
 console.log('Joshua Rice'.split(' '));
 const [fn, ln] = 'Joshua Rice'.split(' ');
 const newName = ['Mr.', fn, ln.toUpperCase()].join(' ');
 console.log(newName);
+
+const capitalizeName = function (name) {};
+
+capitalizeName('Sarah lynn Beiler Rice');
+capitalizeName('joshua rice');
