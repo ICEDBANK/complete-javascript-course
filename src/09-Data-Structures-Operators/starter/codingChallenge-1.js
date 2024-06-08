@@ -182,5 +182,5 @@ const gameEvents = new Map([
 const events = [...new Set(gameEvents.values())];
 console.log(`Game Events: ${events}`);
 
-gameEvents.delete('64');
-console.log(`Game Events: ${gameEvents}`);
+events.delete('64');
+console.log(`Game Events: ${events}`);
