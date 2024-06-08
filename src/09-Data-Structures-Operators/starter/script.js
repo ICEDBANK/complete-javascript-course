@@ -1582,3 +1582,4 @@ console.log(message4.repeat(4));
 const planesInLine = function (n) {
   console.log(`There are ${n} planes in line for takeoff ${'✈️'.repeat(n)}`);
 };
+planesInLine(3);
