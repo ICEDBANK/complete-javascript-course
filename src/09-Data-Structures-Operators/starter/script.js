@@ -1399,32 +1399,64 @@ for (const [key, value] of question) {
 
 */
 
-const airline = 'Tap Air Portugal';
-const plane = 'A320';
+/* Strings Lesson 1
+
+    This code demonstrates how to use string methods like indexOf, lastIndexOf,
+    and slice to manipulate and analyze strings. The checkMiddleSeat function
+    determines if a seat is a middle seat based on the last character of the seat string.
+
+*/
+
+const airline = 'Tap Air Portugal'; // Declare a constant string variable for the airline name
+const plane = 'A320'; // Declare a constant string variable for the plane model
+
+// Loop through each character of the 'plane' string and log it to the console
 for (const str of plane) console.log(`${str}`);
 
-console.log(airline.indexOf('r'));
-console.log(airline.lastIndexOf('r'));
-console.log(airline.indexOf('Portugal'));
+// Log the first index of the character 'r' in the 'airline' string
+console.log(airline.indexOf('r')); // Output: 6
 
-console.log(airline.slice(4));
-console.log(airline.slice(4, 7));
+// Log the last index of the character 'r' in the 'airline' string
+console.log(airline.lastIndexOf('r')); // Output: 10
 
-console.log(airline.slice(0, airline.indexOf(' ')));
-console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+// Log the index of the substring 'Portugal' in the 'airline' string
+console.log(airline.indexOf('Portugal')); // Output: 8
 
-console.log(airline.slice(-2));
-console.log(airline.slice(1, -1));
+// Use slice to extract part of the 'airline' string starting from index 4 to the end
+console.log(airline.slice(4)); // Output: "Air Portugal"
 
+// Use slice to extract part of the 'airline' string from index 4 to 7 (7 not included)
+console.log(airline.slice(4, 7)); // Output: "Air"
+
+// Use slice to extract the first word in the 'airline' string
+console.log(airline.slice(0, airline.indexOf(' '))); // Output: "Tap"
+
+// Use slice to extract the last word in the 'airline' string
+console.log(airline.slice(airline.lastIndexOf(' ') + 1)); // Output: "Portugal"
+
+// Use slice to extract the last 2 characters of the 'airline' string
+console.log(airline.slice(-2)); // Output: "al"
+
+// Use slice to extract from the second character to the second-to-last character of the 'airline' string
+console.log(airline.slice(1, -1)); // Output: "ap Air Portuga"
+
+// Function to check if a given seat is a middle seat
 const checkMiddleSeat = function (seat) {
-  // B and E are middle seats
+  // Extract the last character of the seat string
   const s = seat.slice(-1);
+  // Check if the last character is 'B' or 'E'
   if (s === 'B' || s === 'E') {
-    console.log('You got the Middle Seat');
+    console.log('You got the Middle Seat'); // Log message if it's a middle seat
   } else {
-    console.log('Unlucky');
+    console.log('Unlucky'); // Log message if it's not a middle seat
   }
 };
-checkMiddleSeat('118');
-checkMiddleSeat('23C');
-checkMiddleSeat('3E');
+
+// Call the checkMiddleSeat function with different seat values
+checkMiddleSeat('118'); // Output: "Unlucky"
+checkMiddleSeat('23C'); // Output: "Unlucky"
+checkMiddleSeat('3E'); // Output: "You got the Middle Seat"
+
+const tapAirPortugal = 'Tap Air Portugal';
+console.log(tapAirPortugal.toLocaleLowerCase);
+console.log(tapAirPortugal.toUpperCase);
