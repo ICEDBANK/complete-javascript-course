@@ -243,3 +243,4 @@ const camelCase = function (str) {
   const [s1, s2] = str.split('_');
   console.log([s1, s2]);
 };
+camelCase(string1);
