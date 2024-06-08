@@ -1470,4 +1470,6 @@ console.log(passanger, passangerCorrect);
 
 // Comparing emails
 const email = 'j.e.rice4101@gmail.com';
-const emailEl = '  j.e.rice4101@gmail.com\n';
+const emailEl = '  J.e.rice4101@gmail.com\n';
+const emailLower = emailEl.toLowerCase();
+const trimmedEmail = emailLower.trim();
