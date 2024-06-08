@@ -1418,7 +1418,13 @@ console.log(airline.slice(1, -1));
 
 const checkMiddleSeat = function (seat) {
   // B and E are middle seats
-  checkMiddleSeat('118');
-  checkMiddleSeat('23C');
-  checkMiddleSeat('3E');
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') {
+    console.log('You got the Middle Seat');
+  } else {
+    console.log('Unlucky');
+  }
 };
+checkMiddleSeat('118');
+checkMiddleSeat('23C');
+checkMiddleSeat('3E');
