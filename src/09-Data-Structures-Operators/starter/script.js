@@ -1552,7 +1552,8 @@ const capitalizeName = function (name) {
   // Iterate over each word in the array
   for (const n of names) {
     // Capitalize the first letter of the word and add it to the 'namesUpper' array
-    namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase));
   }
 
   // Join the words back into a single string and log it
@@ -1562,3 +1563,7 @@ const capitalizeName = function (name) {
 // Call the capitalizeName function with different names
 capitalizeName('sarah lynn beiler rice'); // Output: "Sarah Lynn Beiler Rice"
 capitalizeName('joshua rice'); // Output: "Joshua Rice"
+
+// Padding Strings
+const message3 = 'Go to gate 23!';
+console.log(message3.padStart(25, '+'));
