@@ -1493,3 +1493,7 @@ const plane2 = 'Airbus A320neo';
 console.log(plane2.includes('A320'));
 
 console.log(plane.startsWith('Airbus'));
+
+if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log('Part of the New ARirbus family');
+}
