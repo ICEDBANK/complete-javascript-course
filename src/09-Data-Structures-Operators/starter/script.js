@@ -1314,10 +1314,90 @@ for (const [key, value] of question) {
   if (typeof key === 'number') console.log(`Answer' ${key}: ${value}`);
 }
 //const answer1 = Number(prompt('Your Answer'));
-console.log(answer1);
+//console.log(answer1);
 answer1 === question.get('Correct')
   ? console.log(question.get(true))
   : console.log(question.get(false));
 
 // Convert map to array
 console.log([...question]);
+
+/* JavaScript Data Structures: Pros and Cons
+
+  JavaScript provides several built-in data structures to handle and manipulate data. Here,
+  we will discuss the most commonly used data structures: arrays, objects, sets, and maps,
+  along with their pros and cons.
+
+  1. Arrays
+
+    Description
+
+      An array is an ordered collection of elements, which can be of any type. Each element in an array has a numerical index, starting from 0.
+
+    Pros
+
+      Indexed Access: Elements can be accessed via their index, making it easy to iterate and access specific items.
+      Built-in Methods: Arrays come with a variety of built-in methods like map, filter, reduce, sort, etc., which provide powerful ways to manipulate data.
+      Dynamic Size: Arrays can dynamically grow or shrink in size as elements are added or removed.
+
+    Cons
+
+      Performance: Inserting or deleting elements, especially in the middle of the array, can be slow as it may require shifting elements.
+      Homogeneous Assumption: While arrays can hold any type of data, using arrays for mixed types of data can be less intuitive and harder to manage.
+
+  2. Objects
+      
+      Description
+
+        An object is a collection of key-value pairs where keys are strings (or symbols) and values can be any type.
+
+      Pros
+
+        Flexible Key Types: Allows for keys to be more descriptive (as strings or symbols) rather than just numerical indices.
+        Fast Lookup: Direct access to values via their keys, making lookups quick.
+        Methods and Properties: Objects can store methods and properties, allowing for complex data structures.
+
+      Cons
+
+        No Order Guarantee: The order of properties in an object is not guaranteed, which can be problematic for ordered data.
+        Serialization Issues: Objects with methods or non-serializable properties can be problematic when converting to JSON.
+
+  3. Sets
+
+      Description
+
+        A set is a collection of unique values. Each value can only occur once in a set.
+
+      Pros
+
+        Unique Values: Automatically removes duplicate values, ensuring all values are unique.
+        Fast Lookup: Provides quick checks for the existence of a value using has() method.
+        Iteration: Maintains the insertion order of elements, making it easy to iterate through the values.
+
+      Cons
+
+        No Key-Value Structure: Unlike objects or maps, sets do not associate values with keys, limiting their use cases.
+        Limited Methods: Fewer built-in methods compared to arrays and objects.
+
+  4. Maps
+
+      Description
+
+        A map is a collection of key-value pairs where both keys and values can be any type. Maps maintain the insertion order of elements.
+
+      Pros
+
+        Flexible Key Types: Allows any type of key (including objects and functions), not just strings or symbols.
+        Order Guarantee: Maintains the insertion order of keys, which can be useful for ordered data.
+        Size Property: Provides a size property for easily getting the number of key-value pairs.
+
+      Cons
+
+        Memory Overhead: Can use more memory than objects for storing key-value pairs.
+        Serialization Issues: Like objects, maps can also have issues when converting to JSON, especially if keys are non-serializable.
+
+
+*/
+
+const airline = 'Tap Air Portuagal';
+const plane = 'A320';
