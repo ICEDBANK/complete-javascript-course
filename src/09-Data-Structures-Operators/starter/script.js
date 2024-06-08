@@ -1488,3 +1488,8 @@ const announcement =
   'All Passengers come to boarding door 23. Boarding door 23';
 console.log(announcement.replace(/door/g, 'gate'));
 console.log(announcement.replaceAll('door', 'gate'));
+
+const plane2 = 'Airbus A320neo';
+console.log(plane2.includes('A320'));
+
+console.log(plane.startsWith('Airb'));
