@@ -231,8 +231,8 @@ Afterwards, test with your own test data!
 GOOD LUCK 😀
 */
 
-const = underscore_case
- first_name
-const = Some_Variableconst =  
-  const = calculate_AGE
-const = delayed_departure
+const string1 = 'underscore_case';
+const string2 = 'first_name';
+const string3 = 'Some_Variable';
+const string4 = 'calculate_AGE';
+const string5 = 'delayed_departure';
