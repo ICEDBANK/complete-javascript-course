@@ -182,5 +182,5 @@ const gameEvents = new Map([
 const events = [...new Set(gameEvents.values())];
 console.log(`Game Events: ${events}`);
 
-gameEvents.delete('64');
+gameEvents.delete(64);
 for (const [key, value] of gameEvents) console.log(`${key}: ${value}`);
