@@ -1553,7 +1553,7 @@ const capitalizeName = function (name) {
   for (const n of names) {
     // Capitalize the first letter of the word and add it to the 'namesUpper' array
     // namesUpper.push(n[0].toUpperCase() + n.slice(1));
-    namesUpper.push(n.replace(n[0], n[0].toUpperCase));
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
   }
 
   // Join the words back into a single string and log it
