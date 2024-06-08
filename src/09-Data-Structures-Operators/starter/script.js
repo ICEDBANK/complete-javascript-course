@@ -1460,3 +1460,10 @@ checkMiddleSeat('3E'); // Output: "You got the Middle Seat"
 const tapAirPortugal = 'Tap Air Portugal';
 console.log(tapAirPortugal.toLocaleLowerCase);
 console.log(tapAirPortugal.toUpperCase);
+
+// Fix Capitalization in name
+const passanger = 'JoShUa';
+const passangerLower = passanger.toLowerCase();
+const passangerCorrect =
+  passangerLower[0].toUpperCase() + passangerLower.slice(1);
+console.log(passanger, passangerCorrect);
