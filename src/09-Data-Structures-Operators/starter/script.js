@@ -1530,22 +1530,35 @@ checkBaggage('Got some snacks and a gun for protection'); // Output: "Not boardi
 
 */
 
-console.log('a+very+nice+string'.split('+'));
-console.log('Joshua Rice'.split(' '));
-const [fn, ln] = 'Joshua Rice'.split(' ');
-const newName = ['Mr.', fn, ln.toUpperCase()].join(' ');
-console.log(newName);
+// Split the string 'a+very+nice+string' at each '+' and log the resulting array
+console.log('a+very+nice+string'.split('+')); // Output: ['a', 'very', 'nice', 'string']
 
+// Split the string 'Joshua Rice' at each space and log the resulting array
+console.log('Joshua Rice'.split(' ')); // Output: ['Joshua', 'Rice']
+
+// Use array destructuring to split 'Joshua Rice' and assign the first name to 'fn' and last name to 'ln'
+const [fn, ln] = 'Joshua Rice'.split(' ');
+
+// Create a new string by joining 'Mr.', the first name, and the last name in uppercase
+const newName = ['Mr.', fn, ln.toUpperCase()].join(' ');
+console.log(newName); // Output: "Mr. Joshua RICE"
+
+// Function to capitalize the first letter of each word in a name
 const capitalizeName = function (name) {
+  // Split the name into an array of words
   const names = name.split(' ');
   const namesUpper = [];
 
+  // Iterate over each word in the array
   for (const n of names) {
-    namesUpper.push = n[0].toUpperCase() + n.slice(1);
+    // Capitalize the first letter of the word and add it to the 'namesUpper' array
+    namesUpper.push(n[0].toUpperCase() + n.slice(1));
   }
 
+  // Join the words back into a single string and log it
   console.log(namesUpper.join(' '));
 };
 
-capitalizeName('Sarah lynn Beiler Rice');
-capitalizeName('joshua rice');
+// Call the capitalizeName function with different names
+capitalizeName('sarah lynn beiler rice'); // Output: "Sarah Lynn Beiler Rice"
+capitalizeName('joshua rice'); // Output: "Joshua Rice"
