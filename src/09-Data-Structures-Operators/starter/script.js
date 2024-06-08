@@ -1536,7 +1536,16 @@ const [fn, ln] = 'Joshua Rice'.split(' ');
 const newName = ['Mr.', fn, ln.toUpperCase()].join(' ');
 console.log(newName);
 
-const capitalizeName = function (name) {};
+const capitalizeName = function (name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+
+  for (const n of names) {
+    namesUpper = n[0].toUpperCase() + n.slice(1);
+  }
+
+  console.log(namesUpper.join(' '));
+};
 
 capitalizeName('Sarah lynn Beiler Rice');
 capitalizeName('joshua rice');
