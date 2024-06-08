@@ -237,16 +237,16 @@ Some_Variable
 calculate_AGE
 delayed_departure`;
 
-const lines = inputString.split('\n').map(line => line.trim());
-
-const camelCaseLines = lines.map(line => camelCase(line));
-
 // Modify your camelCase function to return the result
 const camelCase = function (str) {
   let [s1, s2] = str.split('_');
   s2 = s2.charAt(0).toUpperCase() + s2.slice(1);
   return s1 + s2;
 };
+
+const lines = inputString.split('\n').map(line => line.trim());
+
+const camelCaseLines = lines.map(line => camelCase(line));
 
 camelCaseLines.forEach((line, index) => {
   const checkmarks = '✅'.repeat(index + 1);
