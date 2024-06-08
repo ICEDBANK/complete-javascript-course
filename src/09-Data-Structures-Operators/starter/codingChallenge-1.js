@@ -179,5 +179,5 @@ const gameEvents = new Map([
   [92, '🔶 Yellow card'],
 ]);
 
-const events = [new Set(...gameEvents.values())];
+const events = [...new Set(gameEvents.values())];
 console.log(`Game Events: ${events}`);
