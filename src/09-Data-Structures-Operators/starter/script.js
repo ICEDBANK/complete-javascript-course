@@ -1415,3 +1415,10 @@ console.log(airline.slice(airline.lastIndexOf(' ') + 1));
 
 console.log(airline.slice(-2));
 console.log(airline.slice(1, -1));
+
+const checkMiddleSeat = function (seat) {
+  // B and E are middle seats
+  checkMiddleSeat('118');
+  checkMiddleSeat('23C');
+  checkMiddleSeat('3E');
+};
