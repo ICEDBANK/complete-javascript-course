@@ -1399,6 +1399,9 @@ for (const [key, value] of question) {
 
 */
 
-const airline = 'Tap Air Portuagal';
+const airline = 'Tap Air Portugal';
 const plane = 'A320';
 for (const str of plane) console.log(`${str}`);
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf('Portugal'));
