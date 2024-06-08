@@ -1486,4 +1486,4 @@ console.log(priceUSD);
 
 const announcement =
   'All Passengers come to boarding door 23. Boarding door 23';
-console.log(announcement.replace('door', 'gate').replace('door', 'gate'));
+console.log(announcement.replaceAll('door', 'gate'));
