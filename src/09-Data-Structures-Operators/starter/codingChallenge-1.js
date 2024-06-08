@@ -241,6 +241,7 @@ const stringArray = [];
 
 const camelCase = function (str) {
   const [s1, s2] = str.split('_');
+  s2[0].toUpper();
   console.log([s1, s2]);
 };
 camelCase(string1);
