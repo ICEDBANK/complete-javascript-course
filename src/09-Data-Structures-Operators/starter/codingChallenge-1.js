@@ -179,7 +179,5 @@ const gameEvents = new Map([
   [92, '🔶 Yellow card'],
 ]);
 
-const events = new Set(...gameEvents[gameEvents.values()]);
-events.forEach(value => {
-  console.log(value);
-});
+const events = [...new Set(gameEvents.values())];
+console.log(events);
