@@ -1478,3 +1478,8 @@ console.log(trimmedEmail);
 const normalizedEmail = emailEl.toLowerCase().trim();
 console.log(normalizedEmail);
 console.log(trimmedEmail === normalizedEmail);
+
+// Replacing
+const priceGB = '288,97£';
+const priceUSD = priceGB.replace('£', '$').replace(',', '.');
+console.log(priceUSD);
