@@ -236,3 +236,10 @@ const string2 = 'first_name';
 const string3 = 'Some_Variable';
 const string4 = 'calculate_AGE';
 const string5 = 'delayed_departure';
+
+const stringArray = [];
+
+const camelCase = function (str) {
+  const [s1, s2] = str.split('_');
+  console.log([s1, s2]);
+};
