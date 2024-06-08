@@ -1526,3 +1526,5 @@ checkBaggage('Socks camera'); // Output: "Boarding"
 checkBaggage('Got some snacks and a gun for protection'); // Output: "Not boarding"
 
 console.log('a+very+nice+string'.split('+'));
+console.log('Joshua Rice'.split(' '));
+const [fn, ln] = 'Joshua Rice'.split(' ');
