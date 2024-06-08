@@ -1500,7 +1500,7 @@ if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
 
 const checkBaggage = function (items) {
   const baggage = items.toLowerCase();
-  if (baggage.includes('Knife') || baggage.includes('gun')) {
+  if (baggage.includes('knife') || baggage.includes('gun')) {
     console.log('Not boarding');
   } else {
     console.log('Boarding');
