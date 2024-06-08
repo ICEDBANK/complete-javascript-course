@@ -1315,12 +1315,12 @@ for (const [key, value] of question) {
 }
 //const answer1 = Number(prompt('Your Answer'));
 //console.log(answer1);
-answer1 === question.get('Correct')
-  ? console.log(question.get(true))
-  : console.log(question.get(false));
+// answer1 === question.get('Correct')
+//   ? console.log(question.get(true))
+//   : console.log(question.get(false));
 
-// Convert map to array
-console.log([...question]);
+// // Convert map to array
+// console.log([...question]);
 
 /* JavaScript Data Structures: Pros and Cons
 
