@@ -1568,3 +1568,9 @@ capitalizeName('joshua rice'); // Output: "Joshua Rice"
 const message3 = 'Go to gate 23!';
 console.log(message3.padStart(25, '+'));
 console.log(message3.padEnd(25, '+'));
+
+const maskCreditCard = function (number) {
+  const str = number + '';
+  str.padStart(12, '*');
+};
+console.log(1234567891011121);
