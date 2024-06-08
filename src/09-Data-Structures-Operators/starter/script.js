@@ -1406,3 +1406,4 @@ console.log(airline.indexOf('r'));
 console.log(airline.lastIndexOf('r'));
 console.log(airline.indexOf('Portugal'));
 console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
