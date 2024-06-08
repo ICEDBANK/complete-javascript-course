@@ -1567,3 +1567,4 @@ capitalizeName('joshua rice'); // Output: "Joshua Rice"
 // Padding Strings
 const message3 = 'Go to gate 23!';
 console.log(message3.padStart(25, '+'));
+console.log(message3.padEnd(25, '+'));
