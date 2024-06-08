@@ -1477,3 +1477,4 @@ console.log(trimmedEmail);
 
 const normalizedEmail = emailEl.toLowerCase().trim();
 console.log(normalizedEmail);
+console.log(trimmedEmail === normalizedEmail);
