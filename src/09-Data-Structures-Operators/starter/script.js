@@ -1528,4 +1528,4 @@ checkBaggage('Got some snacks and a gun for protection'); // Output: "Not boardi
 console.log('a+very+nice+string'.split('+'));
 console.log('Joshua Rice'.split(' '));
 const [fn, ln] = 'Joshua Rice'.split(' ');
-['Mr.', fn, ln.toUpperCase().join(' ')];
+['Mr.', fn, ln.toUpperCase()].join(' ');
