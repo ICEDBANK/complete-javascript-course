@@ -244,5 +244,6 @@ const camelCase = function (str) {
   s2 = s2.charAt(0).toUpperCase() + s2.slice(1);
   stringArray.push().join(s1, s2);
   console.log([s1, s2]);
+  console.log(stringArray);
 };
 camelCase(string1);
