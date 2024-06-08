@@ -1497,3 +1497,8 @@ console.log(plane.startsWith('Airbus'));
 if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
   console.log('Part of the New ARirbus family');
 }
+
+const checkBaggage = function (items) {};
+checkBaggage('I have a laptop, soom food and a pocket knife');
+checkBaggage('Socks camera');
+checkBaggage('Got some snacks and a gun for protection');
