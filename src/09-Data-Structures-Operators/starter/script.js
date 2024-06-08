@@ -1401,4 +1401,4 @@ for (const [key, value] of question) {
 
 const airline = 'Tap Air Portuagal';
 const plane = 'A320';
-for (const str of plane) console.log(`str{plane}`);
+for (const str of plane) console.log(`${str}`);
