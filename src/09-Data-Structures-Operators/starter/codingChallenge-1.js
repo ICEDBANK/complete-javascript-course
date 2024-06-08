@@ -180,4 +180,6 @@ const gameEvents = new Map([
 ]);
 
 const events = new Set(...gameEvents);
-console.log(`Events Array ${events.forEach(value)}`);
+events.forEach(value => {
+  console.log(value);
+});
