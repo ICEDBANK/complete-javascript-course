@@ -1473,3 +1473,7 @@ const email = 'j.e.rice4101@gmail.com';
 const emailEl = '  J.e.rice4101@gmail.com\n';
 const emailLower = emailEl.toLowerCase();
 const trimmedEmail = emailLower.trim();
+console.log(trimmedEmail);
+
+const normalizedEmail = emailEl.toLowerCase().trim();
+console.log(normalizedEmail);
