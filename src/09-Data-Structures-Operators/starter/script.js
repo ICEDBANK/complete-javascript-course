@@ -1479,33 +1479,50 @@ const normalizedEmail = emailEl.toLowerCase().trim();
 console.log(normalizedEmail);
 console.log(trimmedEmail === normalizedEmail);
 
-// Replacing
-const priceGB = '288,97£';
+/* String Lesson 2
+
+This code demonstrates how to use various string methods for manipulating and checking string content in JavaScript.
+
+*/
+
+const priceGB = '288,97£'; // Declare a constant string representing the price in GBP
+// Replace '£' with '$' and ',' with '.' to convert the format to USD
 const priceUSD = priceGB.replace('£', '$').replace(',', '.');
-console.log(priceUSD);
+console.log(priceUSD); // Output: "288.97$"
 
 const announcement =
-  'All Passengers come to boarding door 23. Boarding door 23';
-console.log(announcement.replace(/door/g, 'gate'));
-console.log(announcement.replaceAll('door', 'gate'));
+  'All Passengers come to boarding door 23. Boarding door 23'; // Declare a constant string for an announcement
+// Replace all instances of 'door' with 'gate' using a regular expression with the global flag
+console.log(announcement.replace(/door/g, 'gate')); // Output: "All Passengers come to boarding gate 23. Boarding gate 23"
+// Replace all instances of 'door' with 'gate' using the replaceAll method
+console.log(announcement.replaceAll('door', 'gate')); // Output: "All Passengers come to boarding gate 23. Boarding gate 23"
 
-const plane2 = 'Airbus A320neo';
-console.log(plane2.includes('A320'));
+const plane2 = 'Airbus A320neo'; // Declare a constant string representing the plane model
+// Check if the string includes 'A320'
+console.log(plane2.includes('A320')); // Output: true
 
-console.log(plane.startsWith('Airbus'));
+// Check if the string starts with 'Airbus'
+console.log(plane2.startsWith('Airbus')); // Output: true
 
-if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
-  console.log('Part of the New ARirbus family');
+// Check if the string starts with 'Airbus' and ends with 'neo'
+if (plane2.startsWith('Airbus') && plane2.endsWith('neo')) {
+  console.log('Part of the New Airbus family'); // Output: "Part of the New Airbus family"
 }
 
+// Function to check if baggage contains prohibited items
 const checkBaggage = function (items) {
-  const baggage = items.toLowerCase();
+  const baggage = items.toLowerCase(); // Convert the items string to lowercase
+  // Check if the baggage includes 'knife' or 'gun'
   if (baggage.includes('knife') || baggage.includes('gun')) {
-    console.log('Not boarding');
+    console.log('Not boarding'); // Log 'Not boarding' if prohibited items are found
   } else {
-    console.log('Boarding');
+    console.log('Boarding'); // Log 'Boarding' if no prohibited items are found
   }
 };
-checkBaggage('I have a laptop, soom food and a pocket knife');
-checkBaggage('Socks camera');
-checkBaggage('Got some snacks and a gun for protection');
+
+// Call the checkBaggage function with different strings
+checkBaggage('I have a laptop, some food and a pocket knife'); // Output: "Not boarding"
+checkBaggage('Socks camera'); // Output: "Boarding"
+checkBaggage('Got some snacks and a gun for protection'); // Output: "Not boarding"
+
+console.log('a+very+nice+string'.split('+'));
