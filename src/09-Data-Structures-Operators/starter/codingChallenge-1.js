@@ -231,19 +231,24 @@ Afterwards, test with your own test data!
 GOOD LUCK 😀
 */
 
-const string1 = 'underscore_case';
-const string2 = 'first_name';
-const string3 = 'Some_Variable';
-const string4 = 'calculate_AGE';
-const string5 = 'delayed_departure';
+const inputString = `underscore_case
+first_name
+Some_Variable
+calculate_AGE
+delayed_departure`;
 
-const stringArray = [];
+const lines = inputString.split('\n').map(line => line.trim());
 
+const camelCaseLines = lines.map(line => camelCase(line));
+
+// Modify your camelCase function to return the result
 const camelCase = function (str) {
   let [s1, s2] = str.split('_');
   s2 = s2.charAt(0).toUpperCase() + s2.slice(1);
-  stringArray.push(s1 + s2);
-  console.log([s1, s2]);
-  console.log(stringArray);
+  return s1 + s2;
 };
-camelCase(string1);
+
+camelCaseLines.forEach((line, index) => {
+  const checkmarks = '✅'.repeat(index + 1);
+  console.log(`${line.padEnd(20)} ${checkmarks}`);
+});
