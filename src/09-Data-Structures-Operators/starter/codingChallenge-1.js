@@ -188,12 +188,9 @@ gameEvents.delete(64);
 for (const [key, value] of gameEvents) console.log(`${key}: ${value}`);
 
 // 3. Print the average time an event happened
-const time = 90;
-const averageEventInterval = time / gameEvents.size;
+const time = [...gameEvents.keys()].pop();
 console.log(
-  `An event happened, on average, every ${averageEventInterval.toFixed(
-    2
-  )} minutes`
+  `An event happened, on average, every ${time / gameEvents.size} minutes`
 );
 
 // 4. Log events with their respective halves
