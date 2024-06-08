@@ -1571,6 +1571,7 @@ console.log(message3.padEnd(25, '+'));
 
 const maskCreditCard = function (number) {
   const str = number + '';
-  str.padStart(12, '*');
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
 };
-console.log(1234567891011121);
+console.log(maskCreditCard(1234567891011121));
