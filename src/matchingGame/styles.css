@@ -11,7 +11,7 @@ body {
 
 .game-container {
   text-align: center;
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  background: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 15px;
   box-shadow: 5px 5px 15px #aaaaaa, -5px -5px 15px #ffffff;
@@ -30,12 +30,25 @@ body {
   padding: 10px;
   border-radius: 10px;
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .player.active {
   background-color: #ffd1dc;
   color: #000;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.player .player-name {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.player .score {
+  font-size: 2em;
+  font-weight: bold;
 }
 
 .game-board {
