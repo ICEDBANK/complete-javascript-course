@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
     "images/adventure-kitty.jpg",
     "images/diver-kitty.jpg",
     "images/pilot-kitty.jpg",
-    "images/programmer=kitty.jpg",
+    "images/programmer-kitty.jpg",
     "images/sailor-kitty.jpg",
-    "images/pharmacist-kitty.jpg",
+    "images/pharmacist-kitty-1.jpg",
     "images/machinist-kitty.jpg",
     "images/school-kitty.jpg",
     "images/hunter-kitty.jpg",
-    "images/firefighter-kitty.jpg",
+    "images/firefigher-kitty-1.jpg",
   ];
 
   const cardsArray = [...imgArray, ...imgArray];
