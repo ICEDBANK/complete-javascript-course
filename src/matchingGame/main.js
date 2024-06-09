@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener("DOMContentLoaded", () => {
   const gameBoard = document.getElementById("gameBoard");
   const resetButton = document.getElementById("resetButton");
@@ -7,37 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const player1Element = document.getElementById("player1");
   const player2Element = document.getElementById("player2");
 
-  // Define the alphabet array
-  const alphaArray = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    // "G",
-    // "H",
-    // "I",
-    // "J",
-    // "K",
-    // "L",
-    // "M",
-    // "N",
-    // "O",
-    // "P",
-    // "Q",
-    // "R",
-    // "S",
-    // "T",
-    // "U",
-    // "V",
-    // "W",
-    // "X",
-    // "Y",
-    // "Z",
-  ];
-
-  // Create the cards array by duplicating the alphabet array
+  const alphaArray = ["A", "B", "C", "D", "E", "F"];
   const cardsArray = [...alphaArray, ...alphaArray];
 
   let shuffledCards = [];
@@ -46,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let playerTurn = 1;
   let scores = [0, 0];
 
-  // Sound effects
   const flipSound = new Audio("sounds/flip.mp3");
   const matchSound = new Audio("sounds/match.mp3");
   const noMatchSound = new Audio("sounds/nomatch.mp3");
@@ -84,7 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function flipCard() {
-    if (lockBoard || this === firstCard) return;
+    if (lockBoard || this === firstCard || this.classList.contains("matched"))
+      return;
     this.classList.add("flip");
     flipSound.play();
 
@@ -104,9 +73,11 @@ document.addEventListener("DOMContentLoaded", () => {
       matchSound.play();
       scores[playerTurn - 1]++;
       updateScore();
+      firstCard.classList.add("matched");
+      secondCard.classList.add("matched");
       resetBoard();
     } else {
-      playerTurn = 3 - playerTurn; // Switch player turn immediately
+      playerTurn = 3 - playerTurn;
       updateActivePlayer();
       noMatchSound.play();
       setTimeout(unflipCards, 1000);
