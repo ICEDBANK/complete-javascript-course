@@ -27,8 +27,8 @@ const handleUserInput = function () {
     // Add the new task to the taskObject array
     taskObject.push(newTask);
 
-    // Add the task to the table
-    addTask(newTask);
+    // Update the display of tasks
+    displayTasks();
 
     // Clear the input fields
     taskDescInputEl.value = "";
@@ -38,7 +38,7 @@ const handleUserInput = function () {
   }
 };
 
-const addTask = function (task) {
+const addTask = function (task, index) {
   // Create a new row
   const row = document.createElement("tr");
 
@@ -52,29 +52,60 @@ const addTask = function (task) {
   descCell.innerText = task.description;
   statusCell.innerText = task.completed ? "Completed" : "Pending";
 
+  // Add buttons for removing and completing tasks
+  const actionsCell = document.createElement("td");
+  const removeButton = document.createElement("button");
+  removeButton.innerText = "Remove";
+  removeButton.onclick = function () {
+    removeTask(index);
+  };
+
+  const completeButton = document.createElement("button");
+  completeButton.innerText = "Complete";
+  completeButton.onclick = function () {
+    markTaskCompleted(index);
+  };
+
+  actionsCell.appendChild(removeButton);
+  actionsCell.appendChild(completeButton);
+
   // Append the cells to the row
   row.appendChild(titleCell);
   row.appendChild(descCell);
   row.appendChild(statusCell);
+  row.appendChild(actionsCell);
 
   // Append the row to the table body
   taskTableBodyEl.appendChild(row);
 };
 
-const removeTask = function (taskNameOrIndex) {
-  // Remove a task by name or index.
+const removeTask = function (index) {
+  // Remove a task by index
+  taskObject.splice(index, 1);
+  displayTasks();
 };
 
-const markTaskCompleted = function (taskNameOrIndex) {
-  // Mark a specified task as completed.
+const markTaskCompleted = function (index) {
+  // Mark a specified task as completed
+  taskObject[index].completed = true;
+  displayTasks();
 };
 
 const displayTasks = function () {
-  // Display the current list of tasks with their statuses.
+  // Clear the table body
+  taskTableBodyEl.innerHTML = "";
+
+  // Display all tasks
+  taskObject.forEach((task, index) => {
+    addTask(task, index);
+  });
 };
 
 const validateTaskExists = function (taskNameOrIndex) {
-  // Check if a task exists by name or index.
+  // Check if a task exists by name or index
+  return typeof taskNameOrIndex === "number"
+    ? taskObject[taskNameOrIndex] !== undefined
+    : taskObject.find((task) => task.title === taskNameOrIndex) !== undefined;
 };
 
 btnTaskAdd.addEventListener("click", handleUserInput);
