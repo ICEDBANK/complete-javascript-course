@@ -7,17 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const player2Element = document.getElementById("player2");
 
   const imgArray = [
-    "images/kittens/space_kitty.jpg",
-    "images/kittens/adventure_kitty.jpg",
-    "images/kittens/diver_kitty.jpg",
-    "images/kittens/pilot_kitty.jpg",
-    "images/kittens/programmer_kitty.jpg",
-    "images/kittens/sailor_kitty.jpg",
-    "images/kittens/pharmacist_kitty.jpg",
-    "images/kittens/machinist_kitty.jpg",
-    "images/kittens/school_kitty.jpg",
-    "images/kittens/hunter_kitty.jpg",
-    "images/kittens/firefighter_kitty.jpg",
+    "images/space_kitty.jpg",
+    "images/adventure_kitty.jpg",
+    "images/diver_kitty.jpg",
+    "images/pilot_kitty.jpg",
+    "images/programmer_kitty.jpg",
+    "images/sailor_kitty.jpg",
+    "images/pharmacist_kitty.jpg",
+    "images/machinist_kitty.jpg",
+    "images/school_kitty.jpg",
+    "images/hunter_kitty.jpg",
+    "images/firefighter_kitty.jpg",
   ];
 
   const cardsArray = [...imgArray, ...imgArray];
