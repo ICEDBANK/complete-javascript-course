@@ -44,7 +44,7 @@ const hight5 = function () {
 };
 document.body.addEventListener('click', hight5);
 
-['Joshua', 'Sarah', 'Ava'].forEach(high5);
+['Joshua', 'Sarah', 'Ava'].forEach(hight5);
 
 // Summary:
 // In JavaScript, functions are first-class citizens, meaning they can be treated like any other value.
