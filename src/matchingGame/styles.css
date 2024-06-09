@@ -44,11 +44,32 @@ body {
 .player .player-name {
   font-size: 1.4em;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.player .player-name img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
 
 .player .score {
   font-size: 2em;
   font-weight: bold;
+  animation: scoreChange 0.5s ease-in-out;
+}
+
+@keyframes scoreChange {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .game-board {
