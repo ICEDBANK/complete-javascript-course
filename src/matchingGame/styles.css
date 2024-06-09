@@ -19,6 +19,27 @@ body {
   max-width: 1200px;
 }
 
+.title {
+  font-size: 3em;
+  color: #ff69b4;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  letter-spacing: 2px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .scoreboard {
   display: flex;
   justify-content: space-around;
