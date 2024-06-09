@@ -26,6 +26,7 @@ const handleUserInput = function () {
     // Add the new task to the taskObject array
     taskObject.push(newTask);
     console.log(taskObject); // Log the current tasks for debugging
+    addTask(taskObject);
 
     // Clear the input fields
     taskDescInputEl.value = "";
