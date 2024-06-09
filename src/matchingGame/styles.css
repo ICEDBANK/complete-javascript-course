@@ -60,11 +60,12 @@ body {
 
 .player1 {
   background-image: url("images/player1-icon.png");
-  margin-left: 10px;
+  padding-left: 20px;
 }
 
 .player2 {
   background-image: url("images/player2-icon.png");
+  padding-left: 20px;
 }
 
 .score {
