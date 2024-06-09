@@ -4,6 +4,7 @@
 const btnTaskAdd = document.getElementById("add-task");
 const taskDescInputEl = document.querySelector("#task-desc-input");
 const taskTitleInputEl = document.querySelector("#task-title-input");
+const taskTableBodyEl = document.querySelector("#task-table tbody");
 
 // let variable Declaraction
 let taskObject = [];
@@ -25,8 +26,9 @@ const handleUserInput = function () {
 
     // Add the new task to the taskObject array
     taskObject.push(newTask);
-    console.log(taskObject); // Log the current tasks for debugging
-    addTask(taskObject);
+
+    // Add the task to the table
+    addTask(newTask);
 
     // Clear the input fields
     taskDescInputEl.value = "";
