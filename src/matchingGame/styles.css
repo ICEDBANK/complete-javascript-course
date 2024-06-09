@@ -1,0 +1,112 @@
+/* styles.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f7f7f7;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.game-container {
+  text-align: center;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px #aaaaaa, -5px -5px 15px #ffffff;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.player {
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.player.active {
+  background-color: #ffd1dc;
+  color: #000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  grid-gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(145deg, #ffb6c1, #ff8a9e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: transform 0.5s, background-color 0.3s, box-shadow 0.3s;
+  transform-style: preserve-3d;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px #c9737a, -5px -5px 15px #ff9aa2;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+  background: linear-gradient(145deg, #ffdde1, #ffb6c1);
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.card .front {
+  background: linear-gradient(145deg, #ffdde1, #ffb6c1);
+  color: #000;
+  transform: rotateY(180deg);
+  box-shadow: inset 2px 2px 5px #aaaaaa, inset -2px -2px 5px #ffffff;
+}
+
+.card .back {
+  background: linear-gradient(145deg, #ffb6c1, #ff8a9e);
+  color: #fff;
+  font-size: 1.5em;
+  box-shadow: inset 2px 2px 5px #c9737a, inset -2px -2px 5px #ff9aa2;
+}
+
+#resetButton {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(145deg, #ff9aa2, #ff6f91);
+  color: #fff;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 5px 5px 15px #c9737a, -5px -5px 15px #ff9aa2;
+}
+
+#resetButton:hover {
+  background: linear-gradient(145deg, #ff6f91, #ff9aa2);
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px #ff6f91, -5px -5px 15px #ff9aa2;
+}
