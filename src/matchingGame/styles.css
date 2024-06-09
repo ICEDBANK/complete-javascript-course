@@ -48,9 +48,37 @@ body {
 }
 
 .player {
-  padding: 10px;
-  border-radius: 10px;
+  width: 200px;
+  padding: 20px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #ffdee2, #ffc1c9);
+  box-shadow: 5px 5px 15px #c9737a, -5px -5px 15px #ff9aa2;
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.player-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ff69b4;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.score {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #fff;
+  background: #ff69b4;
+  padding: 10px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .player.active {
