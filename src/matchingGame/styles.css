@@ -48,29 +48,15 @@ body {
 }
 
 .player {
-  width: 150px;
-  height: 150px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 10px;
   border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
-.player1 {
-  background-image: url("images/player1-icon.png");
-}
-
-.player2 {
-  background-image: url("images/player2-icon.png");
-}
-
-.score {
-  font-size: 2.5em;
-  font-weight: bold;
-  color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+.player.active {
+  background-color: #ffd1dc;
+  color: #000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .game-board {
