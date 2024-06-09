@@ -12,28 +12,46 @@
     <title>To-Do-List Manager</title>
   </head>
   <body>
-    <div class="container">
-      <!-- Content here -->
-      <div class="mb-3">
-        <label for="task-Title" id="task-title-label">Task Title: </label>
-        <input type="text" id="task-title-input" />
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Task Manager</h1>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="task-title-input" class="form-label">Task Title:</label>
+          <input
+            type="text"
+            id="task-title-input"
+            class="form-control"
+            placeholder="Enter task title"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="task-desc-input" class="form-label"
+            >Task Description:</label
+          >
+          <input
+            type="text"
+            id="task-desc-input"
+            class="form-control"
+            placeholder="Enter task description"
+          />
+        </div>
       </div>
-      <div class="mb-3">
-        <label for="task-desc" id="task-desc-label">Task Description: </label>
-        <input type="text" id="task-desc-input" />
+      <div class="row mb-4">
+        <div class="col text-center">
+          <button id="add-task" class="btn btn-primary">Add Task</button>
+        </div>
       </div>
-      <button id="add-task">Add Task</button>
-      <table id="task-table" border="1">
-        <thead>
+      <table class="table table-striped">
+        <thead class="thead-dark">
           <tr>
-            <th>Task Title</th>
-            <th>Task Description</th>
-            <th>Status</th>
-            <th>Actions</th>
+            <th scope="col">Task Title</th>
+            <th scope="col">Task Description</th>
+            <th scope="col">Status</th>
+            <th scope="col">Actions</th>
           </tr>
         </thead>
-        <tbody>
-          <!-- Tasks will be added here -->
+        <tbody id="task-table-body">
+          <!-- Task rows will be dynamically added here -->
         </tbody>
       </table>
     </div>
