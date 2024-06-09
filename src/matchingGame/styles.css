@@ -86,6 +86,13 @@ body {
   box-shadow: inset 2px 2px 5px #aaaaaa, inset -2px -2px 5px #ffffff;
 }
 
+.card .front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 .card .back {
   background: linear-gradient(145deg, #ffb6c1, #ff8a9e);
   color: #fff;
@@ -108,5 +115,5 @@ body {
 #resetButton:hover {
   background: linear-gradient(145deg, #ff6f91, #ff9aa2);
   transform: scale(1.1);
-  box-shadow: 5px 5px 15px #ff6f91, -5px -5px 15px #ff9aa2;
+  box-shadow: 5px 5px;
 }
