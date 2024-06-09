@@ -4,7 +4,7 @@
 const btnTaskAdd = document.getElementById("add-task");
 const taskDescInputEl = document.querySelector("#task-desc-input");
 const taskTitleInputEl = document.querySelector("#task-title-input");
-const taskTableBodyEl = document.querySelector("#task-table tbody");
+const taskTableBodyEl = document.querySelector("#task-table");
 
 // let variable Declaraction
 let taskObject = [];
