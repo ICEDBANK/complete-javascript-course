@@ -48,14 +48,13 @@ body {
 }
 
 .player {
-  position: relative;
   width: 150px;
   height: 150px;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   border-radius: 10px;
 }
 
@@ -68,7 +67,6 @@ body {
 }
 
 .score {
-  position: absolute;
   font-size: 2.5em;
   font-weight: bold;
   color: white;
