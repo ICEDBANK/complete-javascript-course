@@ -8,16 +8,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const imgArray = [
     "images/space-kitty.jpg",
-    "images/adventure-kitty.jpg",
     "images/diver-kitty.jpg",
+    "images/adventure-kitty.jpg",
     "images/pilot-kitty.jpg",
     "images/programmer-kitty.jpg",
     "images/sailor-kitty.jpg",
-    "images/pharmacist-kitty-1.jpg",
+    "images/pharmacist-kitty.jpg",
     "images/machinist-kitty.jpg",
     "images/school-kitty.jpg",
     "images/hunter-kitty.jpg",
-    "images/firefigher-kitty-1.jpg",
+    "images/firefighter-kitty.jpg",
+    "images/engineer-kitty.jpg",
+    "images/chemist-kitty.jpg",
+    "images/unicorn-kitty.jpg",
+    "images/family-kitty.jpg",
   ];
 
   const cardsArray = [...imgArray, ...imgArray];
