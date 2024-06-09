@@ -6,22 +6,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const player1Element = document.getElementById("player1");
   const player2Element = document.getElementById("player2");
 
-  // Define the image array
   const imgArray = [
-    "images/space_kitty.jpg",
-    "images/adventure_kitty.jpg",
-    "images/diver_kitty.jpg",
-    "images/pilot_kitty.jpg",
-    "images/programmer_kitty.jpg",
-    "images/sailor_kitty.jpg",
-    "images/pharmacist_kitty.jpg",
-    "images/machinist_kitty.jpg",
-    "images/school_kitty.jpg",
-    "images/hunter_kitty.jpg",
-    "images/firefighter_kitty.jpg",
+    "images/kittens/space_kitty.jpg",
+    "images/kittens/adventure_kitty.jpg",
+    "images/kittens/diver_kitty.jpg",
+    "images/kittens/pilot_kitty.jpg",
+    "images/kittens/programmer_kitty.jpg",
+    "images/kittens/sailor_kitty.jpg",
+    "images/kittens/pharmacist_kitty.jpg",
+    "images/kittens/machinist_kitty.jpg",
+    "images/kittens/school_kitty.jpg",
+    "images/kittens/hunter_kitty.jpg",
+    "images/kittens/firefighter_kitty.jpg",
   ];
 
-  // Create the cards array by duplicating the image array
   const cardsArray = [...imgArray, ...imgArray];
 
   let shuffledCards = [];
