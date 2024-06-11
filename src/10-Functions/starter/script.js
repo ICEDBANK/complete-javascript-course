@@ -1,5 +1,237 @@
 'use strict';
 
+// Overview of the call and apply Methods in JavaScript
+
+const lufthansa = {
+  airline: 'Lufthansa',
+  iataCode: 'LH',
+  bookings: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}: ${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.iataCode}: ${flightNum}`, name });
+  },
+};
+
+lufthansa.book(239, 'Joshua Rice');
+lufthansa.book(635, 'Sarah Rice');
+console.log(lufthansa);
+
+const euroWings = {
+  name: 'EuroWings',
+  iataCode: 'EW',
+  bookings: [],
+};
+
+const book = lufthansa.book;
+
+// Will returned undefined because we are trying to use the 'this' keyword
+//  book(23, 'Sarah Williams');
+
+book.call(euroWings, 23, 'Sarah Williams');
+console.log(euroWings);
+
+// Summary:
+// The `call` and `apply` methods in JavaScript are used to invoke functions with a specified `this` context.
+// They allow you to call a function and explicitly set the `this` value inside the function.
+
+// Key Points:
+// - Both `call` and `apply` methods are used to set the `this` context of a function.
+// - The main difference between `call` and `apply` is how they handle arguments:
+//   - `call` accepts an argument list.
+//   - `apply` accepts a single array of arguments.
+
+// Syntax:
+// The syntax for using `call` and `apply` is similar.
+
+// `call`:
+// functionName.call(thisArg, arg1, arg2, ...)
+
+// `apply`:
+// functionName.apply(thisArg, [arg1, arg2, ...])
+
+// Example of call:
+// const person = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+// };
+
+// function greet(greeting) {
+//   return `${greeting}, ${this.firstName} ${this.lastName}!`;
+// }
+
+// console.log(greet.call(person, 'Hello')); // Output: Hello, John Doe!
+
+// Example of apply:
+// const person = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+// };
+
+// function greet(greeting) {
+//   return `${greeting}, ${this.firstName} ${this.lastName}!`;
+// }
+
+// console.log(greet.apply(person, ['Hello'])); // Output: Hello, John Doe!
+
+// Analogy:
+// Think of `call` and `apply` as similar to making a phone call to a person (function).
+// With `call`, you are giving them specific instructions one by one (arguments individually).
+// With `apply`, you are handing them a written note with all the instructions at once (an array of arguments).
+
+// Practical Examples:
+// 1. Using call to set the this context:
+// const car = {
+//   brand: 'Toyota',
+//   getCarInfo: function(model) {
+//     return `${this.brand} ${model}`;
+//   },
+// };
+
+// const anotherCar = {
+//   brand: 'Honda',
+// };
+
+// console.log(car.getCarInfo.call(anotherCar, 'Civic')); // Output: Honda Civic
+
+// 2. Using apply to set the this context:
+// function introduce(name, age) {
+//   return `My name is ${name} and I am ${age} years old. I am a ${this.profession}.`;
+// }
+
+// const person = {
+//   profession: 'developer',
+// };
+
+// console.log(introduce.apply(person, ['Alice', 30])); // Output: My name is Alice and I am 30 years old. I am a developer.
+
+// Tips:
+// 1. Use `call` when you have a fixed number of arguments and want to list them individually.
+// 2. Use `apply` when you have an array of arguments, especially if the number of arguments can vary.
+
+// Example of using apply with variable arguments:
+// function sum() {
+//   return Array.prototype.reduce.apply(arguments, [(total, num) => total + num, 0]);
+// }
+
+// console.log(sum(1, 2, 3, 4)); // Output: 10
+
+// Use Cases:
+// - Borrowing Methods: You can use `call` or `apply` to borrow methods from other objects.
+// - Invoking Functions: They are helpful when you need to invoke functions with a specific `this` context.
+// - Variadic Functions: `apply` is useful when dealing with functions that accept a variable number of arguments.
+
+// Practice and Application:
+// Mastering `call` and `apply` is important for understanding and controlling the `this` context in JavaScript.
+// Practice by using them in different scenarios, such as borrowing methods from other objects and working with variadic functions.
+
+// Overview of Functions Accepting Callback Functions in JavaScript
+const greet = greeting => {
+  return name => {
+    console.log(`${greeting}, ${name}`);
+  };
+};
+
+const greaterHey = greet('hey');
+greaterHey('Joshua'); // Output: hey, Joshua
+
+// Summary:
+// A callback function is a function that is passed as an argument to another function
+// and is executed after some operation has been completed. Callbacks are used to handle asynchronous operations
+// and allow for more flexible and modular code.
+
+// Key Points:
+// - Callbacks are functions passed as arguments to other functions.
+// - They are often used for asynchronous operations, such as handling events, making API calls, or reading files.
+// - Callbacks ensure that code execution continues smoothly and certain operations happen only after others complete.
+
+// Example of a Callback Function:
+// function fetchData(callback) {
+//   setTimeout(() => {
+//     const data = { name: 'John', age: 30 };
+//     callback(data);
+//   }, 1000);
+// }
+
+// function displayData(data) {
+//   console.log(data);
+// }
+
+// fetchData(displayData); // Output after 1 second: { name: 'John', age: 30 }
+
+// Analogy:
+// Think of callback functions as a relay baton in a relay race. When one runner (function) finishes their part,
+// they pass the baton (callback function) to the next runner (function). This ensures that each part of the process
+// happens in the correct order.
+
+// Practical Examples:
+// 1. Event Handling:
+// document.getElementById('myButton').addEventListener('click', function() {
+//   alert('Button clicked!');
+// });
+
+// 2. Array Methods (e.g., map, filter, reduce):
+// const numbers = [1, 2, 3, 4, 5];
+// const doubled = numbers.map(function(num) {
+//   return num * 2;
+// });
+// console.log(doubled); // Output: [2, 4, 6, 8, 10]
+
+// 3. Asynchronous Operations:
+// function getData(callback) {
+//   setTimeout(function() {
+//     const data = 'some data';
+//     callback(data);
+//   }, 2000);
+// }
+
+// function processData(data) {
+//   console.log('Processing:', data);
+// }
+
+// getData(processData); // Output after 2 seconds: Processing: some data
+
+// Benefits of Callback Functions:
+// - **Asynchronous Processing**: Callbacks allow for non-blocking operations, enabling code to continue running while waiting for an operation to complete.
+// - **Modularity**: They enable you to pass different functions as callbacks, making your code more modular and reusable.
+// - **Event Handling**: Callbacks are essential for handling user interactions and other events.
+
+// Tips for Using Callback Functions:
+// 1. **Naming**: Use descriptive names for your callback functions to make your code more readable.
+// 2. **Error Handling**: When dealing with asynchronous operations, consider adding error handling in your callbacks.
+// 3. **Anonymous Functions**: You can use anonymous functions as callbacks, but for complex operations, named functions can improve readability.
+
+// Example of Error Handling in Callbacks:
+// function fetchData(callback, errorCallback) {
+//   setTimeout(() => {
+//     const error = false;
+//     if (error) {
+//       errorCallback('An error occurred.');
+//     } else {
+//       const data = { name: 'John', age: 30 };
+//       callback(data);
+//     }
+//   }, 1000);
+// }
+
+// function handleError(error) {
+//   console.error(error);
+// }
+
+// fetchData(displayData, handleError); // Output after 1 second: { name: 'John', age: 30 }
+// // If an error occurred: An error occurred.
+
+// Use Cases:
+// - **API Calls**: Making HTTP requests to fetch or send data to a server.
+// - **Event Listeners**: Responding to user actions like clicks, typing, or hovering.
+// - **Timers**: Performing operations after a set amount of time with `setTimeout` or `setInterval`.
+
+// Practice and Application:
+// To become proficient with callback functions, practice creating and using them in various scenarios,
+// such as handling events, performing asynchronous operations, and using array methods. Understanding callbacks
+// is essential for mastering JavaScript, especially when dealing with asynchronous code.
+
 // Overview of First-Class and Higher-Order Functions in JavaScript
 
 // Function to remove all spaces from a string and convert it to lowercase
