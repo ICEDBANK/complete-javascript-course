@@ -19,7 +19,7 @@ lufthansa.book(635, 'Sarah Rice');
 console.log(lufthansa);
 
 const euroWings = {
-  name: 'EuroWings',
+  airline: 'EuroWings',
   iataCode: 'EW',
   bookings: [],
 };
@@ -39,6 +39,7 @@ const swiss = {
 };
 
 book.call(swiss, 654, 'John Doe');
+console.log(swiss);
 
 // Summary:
 // The `call` and `apply` methods in JavaScript are used to invoke functions with a specified `this` context.
