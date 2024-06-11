@@ -46,6 +46,7 @@ book.apply(swiss, flightData);
 console.log(swiss);
 
 book.call(swiss, ...flightData);
+console.log(swiss);
 
 // Summary:
 // The `call` and `apply` methods in JavaScript are used to invoke functions with a specified `this` context.
