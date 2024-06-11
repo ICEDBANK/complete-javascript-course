@@ -2,6 +2,8 @@
 
 // Overview of the bind Method in JavaScript
 
+//    { *** <--- See Line 139 ---> *** }
+
 // Summary:
 // The `bind` method in JavaScript creates a new function that, when called, has its `this` keyword set to the provided value.
 // It also allows you to partially apply arguments to the function.
@@ -113,10 +115,10 @@ const euroWings = {
 
 const book = lufthansa.book;
 
-// Will returned undefined because we are trying to use the 'this' keyword
-//  book(23, 'Sarah Williams');
+// Will return undefined because we are trying to use the 'this' keyword
+// book(23, 'Sarah Williams');
 
-book.call(euroWings, 23, 'Sarah Williams');
+// book.call(euroWings, 23, 'Sarah Williams');
 console.log(euroWings);
 
 const swiss = {
@@ -128,12 +130,36 @@ const swiss = {
 book.call(swiss, 654, 'John Doe');
 console.log(swiss);
 
-const flightData = [561, 'jane Doe'];
+const flightData = [561, 'Jane Doe'];
 book.apply(swiss, flightData);
 console.log(swiss);
 
 book.call(swiss, ...flightData);
 console.log(swiss);
+
+const bookEW = book.bind(euroWings);
+const bookLX = book.bind(swiss);
+const bookLH = book.bind(lufthansa);
+
+bookEW(23, 'Seven Williams');
+
+const bookEW23 = book.bind(euroWings, 23);
+bookEW23('Joshua Rice');
+bookEW23('Martha Cooper');
+
+// With Event Listeners
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  // console.log(`Buy Plane clicked`);
+  // console.log(this);
+  this.planes++;
+  console.log(this.planes);
+};
+
+// Binding the correct context to the event listener
+document
+  .querySelector('.buy')
+  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
 
 // Summary:
 // The `call` and `apply` methods in JavaScript are used to invoke functions with a specified `this` context.
@@ -374,12 +400,12 @@ transformer('JavaScript is the best!', oneWord);
 // Transformed string: javascriptisthebest!
 // Transformed by: oneWord
 
-const hight5 = function () {
-  console.log(`👋`);
-};
-document.body.addEventListener('click', hight5);
+// const hight5 = function () {
+//   console.log(`👋`);
+// };
+// document.body.addEventListener('click', hight5);
 
-['Joshua', 'Sarah', 'Ava'].forEach(hight5);
+// ['Joshua', 'Sarah', 'Ava'].forEach(hight5);
 
 // Summary:
 // In JavaScript, functions are first-class citizens, meaning they can be treated like any other value.
