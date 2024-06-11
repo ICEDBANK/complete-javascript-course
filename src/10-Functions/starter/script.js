@@ -23,7 +23,7 @@ const euroWings = {
   iataCode: 'EW',
   bookings: [],
 };
-console.log(euroWings);
+
 const book = lufthansa.book;
 
 // Will returned undefined because we are trying to use the 'this' keyword
