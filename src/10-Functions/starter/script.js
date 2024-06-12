@@ -45,7 +45,7 @@ const poll = {
     const inputValue = prompt(outputString);
     const answer = parseInt(inputValue);
 
-    if (isNaN(answer) || answer < 0 || answer > inputValue.length) {
+    if (isNaN(answer) || answer < 0 || answer > this.answers.length) {
       alert(`${answer} is Not a Valid Entry`);
     } else {
       this.answers[inputValue]++;
