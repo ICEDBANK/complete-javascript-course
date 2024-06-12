@@ -51,6 +51,9 @@ const poll = {
       inputValue > this.answers.length
     ) {
       alert(`Your Input ( ${inputValue} ) is Not Valid`);
+    } else {
+      this.answers[inputValue];
+      this.displayResults();
     }
   },
   displayResults() {
