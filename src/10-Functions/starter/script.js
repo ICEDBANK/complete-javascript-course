@@ -40,7 +40,7 @@ const poll = {
   answers: new Array(4).fill(0),
   registerNewAnswer() {
     const outputString = prompt(
-      `${this.question}\n${options.join('\n')}\n(Write option number)`
+      `${this.question}\n${this.options.join('\n')}\n(Write option number)`
     );
     const answer = parseInt(outputString);
 
