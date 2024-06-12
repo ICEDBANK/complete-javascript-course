@@ -44,6 +44,9 @@ const poll = {
     )}(Write option number)`;
     const input = prompt(output);
   },
+  displayResults() {
+    console.log(`Poll Results: ${this.answers}`);
+  },
 };
 
 // Overview of the bind Method in JavaScript
