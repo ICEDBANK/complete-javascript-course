@@ -42,6 +42,8 @@ const poll = {
     const outputString = `${this.question}\n${this.options.join(
       '\n'
     )}\n( Input Option Number )`;
+
+    const inputValue = prompt(outputString);
   },
   displayResults() {
     console.log(`Poll Results: ${this.answers}`);
