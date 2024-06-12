@@ -40,6 +40,8 @@ const poll = {
   answers: new Array(4).fill(0),
   registerNewAnswer() {
     const outputString = prompt(`${this.question}`);
+    const answer = parseInt(outputString);
+    console.log(answer);
   },
 };
 document
