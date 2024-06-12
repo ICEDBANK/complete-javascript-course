@@ -48,7 +48,7 @@ const poll = {
     if (isNaN(answer) || answer < 0 || answer > this.answers.length) {
       alert(`${answer} is Not a Valid Entry`);
     } else {
-      this.answers[inputValue]++;
+      this.answers[answer]++;
       console.log(answers);
     }
   },
