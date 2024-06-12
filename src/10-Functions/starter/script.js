@@ -53,7 +53,7 @@ const poll = {
     }
   },
   displayResults() {
-    console.log(`Your Results: ${this.answers}`);
+    console.log(`Poll Results: ${this.answers}`);
   },
 };
 document
