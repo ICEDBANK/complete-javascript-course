@@ -39,7 +39,9 @@ const poll = {
   // This generates [0, 0, 0, 0]. More in the next section 😃
   answers: new Array(4).fill(0),
   registerNewAnswer() {
-    const outputString = prompt(`${this.question}`);
+    const outputString = prompt(
+      `${this.question}\n${options.join('\n')}\n(Write option number)`
+    );
     const answer = parseInt(outputString);
 
     if (isNaN(answer) || answer < 0 || answer > outputString.length) {
