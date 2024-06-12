@@ -44,6 +44,9 @@ const poll = {
 
     if (isNaN(answer) || answer < 0 || answer > outputString.length) {
       alert(`${answer} is Not a Valid Entry`);
+    } else {
+      this.answers[answer]++;
+      console.log(answers);
     }
   },
 };
