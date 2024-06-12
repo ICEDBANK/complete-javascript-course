@@ -44,7 +44,14 @@ const poll = {
     )}\n( Input Option Number )`;
 
     const inputValue = Number(prompt(outputString));
-    alert(`You Entered ${typeof inputValue}`);
+
+    if (
+      isNaN(inputValue) ||
+      inputValue < 0 ||
+      inputValue > this.answers.length
+    ) {
+      alert(`Your Input ( ${inputValue} ) is Not Valid`);
+    }
   },
   displayResults() {
     console.log(`Poll Results: ${this.answers}`);
