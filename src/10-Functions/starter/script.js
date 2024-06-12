@@ -53,8 +53,11 @@ const poll = {
       console.log(`${answerNumber} is Not Valid`);
     } else {
       this.answers[answerNumber]++;
-      console.log(`Poll Results : ${this.answers}`);
+      this.displayResults();
     }
+  },
+  displayResults() {
+    console.log(`Poll Results: ${this.answers}`);
   },
 };
 document
