@@ -42,7 +42,19 @@ const poll = {
     const questionString = `${this.question}\n${this.options.join(
       '\n'
     )}\n(Write option number)`;
-    prompt(questionString);
+    const answer = prompt(questionString);
+    const answerNumber = parseInt(answer);
+
+    if (
+      isNaN(answerNumber) ||
+      answerNumber < 0 ||
+      answerNumber > answer.length
+    ) {
+      console.log(`${answerNumber} is Not Valid`);
+    } else {
+      this.answer[answers]++;
+      console.log(`Poll Results : ${this.answers}`);
+    }
   },
 };
 document
