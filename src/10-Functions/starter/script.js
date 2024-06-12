@@ -43,6 +43,14 @@ const poll = {
       '\n'
     )}(Write option number)`;
     const input = prompt(output);
+    const answer = Number(input);
+
+    if (isNaN(answer) || answer < 0 || answer > this.answers.length) {
+      alert(`${answer} is Not a Valid Entry`);
+    } else {
+      this.answers[answer]++;
+      this.displayResults();
+    }
   },
   displayResults() {
     console.log(`Poll Results: ${this.answers}`);
