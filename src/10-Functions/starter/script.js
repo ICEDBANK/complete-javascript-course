@@ -52,7 +52,7 @@ const poll = {
     ) {
       console.log(`${answerNumber} is Not Valid`);
     } else {
-      this.answer[answers]++;
+      this.answers[answerNumber]++;
       console.log(`Poll Results : ${this.answers}`);
     }
   },
