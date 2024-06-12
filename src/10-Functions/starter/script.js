@@ -42,6 +42,9 @@ const poll = {
     prompt(`${question}, ${options}`);
   },
 };
+document
+  .querySelector('.poll')
+  .addEventListener('click', poll.registerNewAnswer);
 
 // Overview of the bind Method in JavaScript
 
