@@ -52,14 +52,30 @@ const poll = {
       this.displayResults();
     }
   },
-  displayResults() {
-    console.log(`Poll Results: ${this.answers.join(', ')}`);
+  displayResults(results = this.answers, type = 'array') {
+    if (type === 'array') {
+      console.log(results);
+    } else if (type === 'string') {
+      console.log(`Poll results are: ${results.join(', ')}`);
+    }
   },
 };
 
 document
   .querySelector('.poll')
   .addEventListener('click', poll.registerNewAnswer.bind(poll));
+
+// Bonus: Using the 'displayResults' method with test data
+const testData1 = [5, 2, 3];
+const testData2 = [1, 5, 3, 9, 6, 1];
+
+// Display test data as array
+poll.displayResults(testData1);
+poll.displayResults(testData2);
+
+// Display test data as string
+poll.displayResults(testData1, 'string');
+poll.displayResults(testData2, 'string');
 
 // Overview of the bind Method in JavaScript
 
