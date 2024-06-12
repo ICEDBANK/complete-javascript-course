@@ -49,7 +49,7 @@ const poll = {
       alert(`${answer} is Not a Valid Entry`);
     } else {
       this.answers[answer]++;
-      console.log(this.answers);
+      this.displayResults();
     }
   },
 };
