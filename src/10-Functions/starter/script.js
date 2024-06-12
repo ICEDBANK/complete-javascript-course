@@ -42,6 +42,7 @@ const poll = {
     const output = `${this.question}\n${this.options.join(
       '\n'
     )}(Write option number)`;
+    const input = prompt(output);
   },
 };
 
