@@ -52,7 +52,7 @@ const poll = {
     ) {
       alert(`Your Input ( ${inputValue} ) is Not Valid`);
     } else {
-      this.answers[inputValue];
+      this.answers[inputValue]++;
       this.displayResults();
     }
   },
