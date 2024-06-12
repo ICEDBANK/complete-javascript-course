@@ -36,28 +36,13 @@ GOOD LUCK 😀
 const poll = {
   question: 'What is your favourite programming language?',
   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
+  // This generates [0, 0, 0, 0]. More in the next section 😃
   answers: new Array(4).fill(0),
-  registerNewAnswer() {
+  registerNewAnswer(question, options) {
     const questionString = `${this.question}\n${this.options.join(
       '\n'
     )}\n(Write option number)`;
-    const answer = prompt(questionString);
-
-    const answerNumber = parseInt(answer);
-
-    if (
-      isNaN(answerNumber) ||
-      answerNumber < 0 ||
-      answerNumber >= this.answers.length
-    ) {
-      alert('Invalid option! Please enter a number between 0 and 3.');
-    } else {
-      this.answers[answerNumber]++;
-      this.displayResults();
-    }
-  },
-  displayResults() {
-    console.log('Poll results:', this.answers);
+    prompt(questionString);
   },
 };
 document
