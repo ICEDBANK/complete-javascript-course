@@ -167,6 +167,18 @@ console.log(addTax(0.06, 1600));
 const addVat = addTax.bind(null, 0.23);
 console.log(addVat(100));
 
+const subTax (rate, value) {
+  value - value * rate;
+  return subVat (null, 0.06) => console.log(`${value}`, rate);
+}
+const greet = greeting => {
+  return name => {
+    console.log(`${greeting}, ${name}`);
+  };
+};
+
+
+
 // Summary:
 // The `call` and `apply` methods in JavaScript are used to invoke functions with a specified `this` context.
 // They allow you to call a function and explicitly set the `this` value inside the function.
