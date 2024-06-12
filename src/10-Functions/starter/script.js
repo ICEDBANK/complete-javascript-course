@@ -36,31 +36,41 @@ GOOD LUCK 😀
 const poll = {
   question: 'What is your favourite programming language?',
   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
-  // This generates [0, 0, 0, 0]. More in the next section 😃
+  // This generates [0, 0, 0, 0] to keep track of poll answers
   answers: new Array(4).fill(0),
+
+  // Method to register a new answer
   registerNewAnswer() {
+    // Create the prompt message
     const output = `${this.question}\n${this.options.join(
       '\n'
-    )}(Write option number)`;
+    )}\n(Write option number)`;
+    // Get user input
     const input = prompt(output);
+    // Convert the input to a number
     const answer = Number(input);
 
+    // Validate the input and update the answers array
     if (isNaN(answer) || answer < 0 || answer >= this.answers.length) {
-      alert(`${answer} is Not a Valid Entry`);
+      alert(`${input} is not a valid entry`); // Show alert for invalid entry
     } else {
-      this.answers[answer]++;
-      this.displayResults();
+      this.answers[answer]++; // Increment the count for the chosen option
+      this.displayResults(); // Display the current poll results
     }
   },
+
+  // Method to display the results
   displayResults(results = this.answers, type = 'array') {
+    // Display the results based on the specified type
     if (type === 'array') {
-      console.log(results);
+      console.log(results); // Display as array
     } else if (type === 'string') {
-      console.log(`Poll results are: ${results.join(', ')}`);
+      console.log(`Poll results are: ${results.join(', ')}`); // Display as string
     }
   },
 };
 
+// Add an event listener to the button to trigger the poll
 document
   .querySelector('.poll')
   .addEventListener('click', poll.registerNewAnswer.bind(poll));
