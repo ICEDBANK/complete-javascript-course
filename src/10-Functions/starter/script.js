@@ -39,15 +39,16 @@ const poll = {
   // This generates [0, 0, 0, 0]. More in the next section 😃
   answers: new Array(4).fill(0),
   registerNewAnswer() {
-    const outputString = prompt(
-      `${this.question}\n${this.options.join('\n')}\n(Write option number)`
-    );
-    const answer = parseInt(outputString);
+    const outputString = `${this.question}\n${this.options.join(
+      '\n'
+    )}\n(Write option number)`;
+    const inputValue = prompt(outputString);
+    const answer = parseInt(inputValue);
 
     if (isNaN(answer) || answer < 0 || answer > outputString.length) {
       alert(`${answer} is Not a Valid Entry`);
     } else {
-      this.answers[outputString]++;
+      this.answers[inputValue]++;
       console.log(answers);
     }
   },
