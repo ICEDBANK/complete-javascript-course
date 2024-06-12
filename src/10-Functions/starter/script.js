@@ -170,7 +170,7 @@ console.log(addVat(100));
 // Function that returns another function to subtract tax
 const createTaxSubtractor = function (rate) {
   return function (value) {
-    value + value * rate;
+    return value + value * rate;
   };
 };
 
