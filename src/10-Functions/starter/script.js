@@ -44,7 +44,7 @@ const poll = {
     )}\n( Input Option Number )`;
 
     const inputValue = Number(prompt(outputString));
-    alert(`You Entered ${inputValue}`);
+    alert(`You Entered ${typeof inputValue}`);
   },
   displayResults() {
     console.log(`Poll Results: ${this.answers}`);
