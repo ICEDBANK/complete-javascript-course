@@ -168,7 +168,11 @@ const addVat = addTax.bind(null, 0.23);
 console.log(addVat(100));
 
 // Function that returns another function to subtract tax
-const createTaxSubtractor = rate => value => value - value * rate;
+const createTaxSubtractor = function (rate) {
+  return function (value) {
+    value + value * rate;
+  };
+};
 
 const subTax = createTaxSubtractor(0.06);
 console.log(subTax(1600)); // Output: 1504
