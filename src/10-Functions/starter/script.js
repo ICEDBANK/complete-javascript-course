@@ -39,31 +39,11 @@ const poll = {
   // This generates [0, 0, 0, 0]. More in the next section 😃
   answers: new Array(4).fill(0),
   registerNewAnswer() {
-    const outputString = `${this.question}\n${this.options.join(
+    const output = `${this.question}\n${this.options.join(
       '\n'
-    )}\n( Input Option Number )`;
-
-    const inputValue = Number(prompt(outputString));
-
-    if (
-      isNaN(inputValue) ||
-      inputValue < 0 ||
-      inputValue > this.answers.length
-    ) {
-      alert(`Your Input ( ${inputValue} ) is Not Valid`);
-    } else {
-      this.answers[inputValue]++;
-      this.displayResults();
-    }
-  },
-  displayResults() {
-    console.log(`Poll Results: ${this.answers}`);
+    )}(Write option number)`;
   },
 };
-
-document
-  .querySelector('.poll')
-  .addEventListener('click', poll.registerNewAnswer.bind(poll));
 
 // Overview of the bind Method in JavaScript
 
