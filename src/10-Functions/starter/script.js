@@ -52,6 +52,9 @@ const poll = {
       this.displayResults();
     }
   },
+  displayResults() {
+    console.log(`Your Results: ${this.answers}`);
+  },
 };
 document
   .querySelector('.poll')
