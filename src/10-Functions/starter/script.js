@@ -39,7 +39,7 @@ const poll = {
   // This generates [0, 0, 0, 0]. More in the next section 😃
   answers: new Array(4).fill(0),
   registerNewAnswer(question, options) {
-    prompt(`${question}, ${options.value}`);
+    prompt(`${question}, ${[options]}`);
   },
 };
 document
