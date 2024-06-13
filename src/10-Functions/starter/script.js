@@ -1,4 +1,271 @@
 'use strict';
+///////////////////////////////////////
+// Coding Challenge #2
+
+/* 
+This is more of a thinking challenge than a coding challenge 🤓
+
+Take the IIFE below and at the end of the function, attach an event listener that changes the color of the selected h1 element ('header') to blue, each time the BODY element is clicked. Do NOT select the h1 element again!
+
+And now explain to YOURSELF (or someone around you) WHY this worked! Take all the time you need. Think about WHEN exactly the callback function is executed, and what that means for the variables involved in this example.
+
+GOOD LUCK 😀
+*/
+(function () {
+  const header = document.querySelector('h1');
+  header.style.color = 'red';
+
+  document.querySelector('body').addEventListener('click', function () {
+    header.style.color = 'blue';
+  });
+})();
+
+// Overview of Closures in JavaScript
+
+// securebooking is a function that demonstrates the use of closures.
+// It maintains a private variable `passengerCount` that can only be modified by the inner function.
+const securebooking = function () {
+  let passengerCount = 0;
+
+  // The returned function forms a closure that retains access to `passengerCount`.
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} total passengers`);
+  };
+};
+
+// Create a new booking function by invoking `securebooking`.
+const booker = securebooking();
+
+// Each call to `booker` increments the `passengerCount` and logs the result.
+booker(); // Output: 1 total passengers
+booker(); // Output: 2 total passengers
+booker(); // Output: 3 total passengers
+
+// Example 1:
+
+let f;
+
+// Function `g` assigns a closure to `f` that captures and uses the variable `a`.
+const g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+};
+
+// Function `h` assigns a closure to `f` that captures and uses the variable `b`.
+const h = function () {
+  const b = 87;
+  f = function () {
+    console.log(b * 2);
+  };
+};
+
+// Invoke `g` to set `f` to the closure created inside `g`.
+g();
+// Invoke `f` to see the effect of the closure from `g`.
+f(); // Output: 46
+
+// Invoke `h` to set `f` to the closure created inside `h`.
+h();
+// Invoke `f` to see the effect of the closure from `h`.
+f(); // Output: 174
+
+// Example 2:
+
+// `boardPassengers` demonstrates how closures work with asynchronous code.
+const boardPassengers = function (n, wait) {
+  const perGroup = n / 3;
+
+  // The inner function forms a closure that captures `n` and `perGroup` and executes after `wait` seconds.
+  setTimeout(function () {
+    console.log(`We are now boarding all ${n} passengers`);
+    console.log(`There are 3 groups, each with ${perGroup} passengers`);
+  }, wait * 1000);
+
+  console.log(`Will start boarding in ${wait} seconds`);
+};
+
+// Closures have priority over global scope variables.
+// Even though `perGroup` is declared globally, the closure uses the `perGroup` variable from `boardPassengers`.
+const perGroup = 1000;
+boardPassengers(100, 3); // Outputs: Will start boarding in 3 seconds, We are now boarding all 100 passengers, There are 3 groups, each with 33.333333333333336 passengers
+
+// Summary:
+// A closure is a function that retains access to its lexical scope, even when the function is executed outside that scope.
+// Closures are an important concept in JavaScript that allow functions to access variables from an enclosing scope or environment,
+// even after that scope has exited.
+
+// Key Points:
+// - Closures are created whenever a function is created inside another function and the inner function references variables from the outer function.
+// - Closures allow for data encapsulation and the creation of private variables.
+
+// Syntax:
+// Closures are typically created when an inner function is returned from an outer function,
+// and the inner function retains access to the variables in the outer function's scope.
+
+// Example:
+// function outerFunction() {
+//   var outerVariable = 'I am outside!';
+
+//   function innerFunction() {
+//     console.log(outerVariable);
+//   }
+
+//   return innerFunction;
+// }
+
+// var closure = outerFunction();
+// closure(); // Output: I am outside!
+
+// Analogy:
+// Think of a closure as a backpack. When you define a function inside another function,
+// it's like putting all the variables from the outer function into a backpack.
+// When the inner function is carried outside, it still has access to everything in that backpack.
+
+// Practical Examples:
+// 1. Creating private variables:
+// function createCounter() {
+//   let count = 0;
+
+//   return {
+//     increment: function() {
+//       count++;
+//       return count;
+//     },
+//     decrement: function() {
+//       count--;
+//       return count;
+//     },
+//     getCount: function() {
+//       return count;
+//     }
+//   };
+// }
+
+// const counter = createCounter();
+// console.log(counter.increment()); // Output: 1
+// console.log(counter.getCount()); // Output: 1
+// console.log(counter.decrement()); // Output: 0
+
+// 2. Functions with partially applied arguments (partial application):
+// function multiply(x) {
+//   return function(y) {
+//     return x * y;
+//   };
+// }
+
+// const double = multiply(2);
+// console.log(double(5)); // Output: 10
+
+// Tips:
+// 1. Use closures to create private data that cannot be accessed from outside the function scope.
+// 2. Closures are often used in event handlers, callbacks, and functional programming to maintain state.
+
+// Use Cases:
+// - Data Encapsulation: Closures allow you to create functions with private variables that cannot be accessed from outside the function scope.
+// - Maintaining State: Closures help maintain state between function calls, making them useful for things like counters and iterators.
+// - Functional Programming: Closures are fundamental in functional programming patterns, enabling higher-order functions and partial application.
+
+// Example of Maintaining State:
+// function createGreeting(greeting) {
+//   return function(name) {
+//     return `${greeting}, ${name}!`;
+//   };
+// }
+
+// const sayHello = createGreeting('Hello');
+// console.log(sayHello('Alice')); // Output: Hello, Alice!
+// console.log(sayHello('Bob')); // Output: Hello, Bob!
+
+// Practice and Application:
+// Understanding closures is essential for mastering JavaScript. They are used extensively in real-world JavaScript applications.
+// Practice by creating functions that return other functions and retain access to their lexical scope,
+// and observe how closures maintain state and create private variables.
+
+// Overview of Immediately Invoked Function Expressions (IIFE) in JavaScript
+
+(function () {
+  console.log('Testing');
+})();
+
+// Summary:
+// An Immediately Invoked Function Expression (IIFE) is a function that is executed immediately after it is defined.
+// It is a design pattern that is also known as a Self-Executing Anonymous Function and has two main parts:
+// - The function itself is defined within parentheses.
+// - The function is then executed with the following parentheses.
+
+// Key Points:
+// - IIFEs are commonly used to create a new scope to avoid polluting the global scope.
+// - They are useful for creating private variables and methods.
+// - They execute immediately, making them suitable for initialization tasks.
+
+// Syntax:
+// The basic syntax of an IIFE involves wrapping a function in parentheses and immediately invoking it.
+// (function() {
+//   // Function body
+// })();
+
+// Example:
+// (function() {
+//   var message = 'Hello, World!';
+//   console.log(message);
+// })(); // Output: Hello, World!
+
+// Analogy:
+// Think of an IIFE as a secret message that self-destructs after being read.
+// You open the message (define the function), read it immediately (invoke the function),
+// and then it disappears without leaving any trace in the global scope.
+
+// Practical Examples:
+// 1. Creating a new scope to avoid global variables:
+// (function() {
+//   var localVariable = 'I am local';
+//   console.log(localVariable); // Output: I am local
+// })();
+
+// console.log(typeof localVariable); // Output: undefined
+
+// 2. Initializing a module:
+// var counter = (function() {
+//   var count = 0;
+//   return {
+//     increment: function() {
+//       count++;
+//       return count;
+//     },
+//     reset: function() {
+//       count = 0;
+//       return count;
+//     }
+//   };
+// })();
+
+// console.log(counter.increment()); // Output: 1
+// console.log(counter.increment()); // Output: 2
+// console.log(counter.reset()); // Output: 0
+
+// Tips:
+// 1. Use IIFEs to create isolated scopes for your code to avoid conflicts with other scripts.
+// 2. IIFEs are especially useful in older JavaScript code to avoid polluting the global namespace.
+
+// Use Cases:
+// - Avoiding Global Variables: IIFEs help in creating a local scope for your variables and functions, preventing global namespace pollution.
+// - Encapsulation: They allow for encapsulation of code, creating private variables and methods.
+// - Initialization: IIFEs can be used to execute code that needs to run once, such as initialization of variables or setup code.
+
+// Example of Avoiding Global Variables:
+// (function() {
+//   var privateVar = 'This is private';
+//   console.log(privateVar); // Output: This is private
+// })();
+
+// console.log(typeof privateVar); // Output: undefined
+
+// Practice and Application:
+// Understanding and using IIFEs can help you write cleaner, more modular JavaScript code.
+// Practice by using IIFEs to encapsulate your code and create private scopes for your variables and functions.
 
 ///////////////////////////////////////
 // Coding Challenge #1
