@@ -87,4 +87,5 @@ console.log(...arr);
 
 // Splice Array Method
 console.log(arr.splice(2));
+arr.splice(-1);
 console.log(arr);
