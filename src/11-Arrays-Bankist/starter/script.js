@@ -87,3 +87,4 @@ console.log(...arr);
 
 // Splice Array Method
 console.log(arr.splice(2));
+console.log(arr);
