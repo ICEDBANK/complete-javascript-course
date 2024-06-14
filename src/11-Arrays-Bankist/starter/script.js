@@ -110,3 +110,5 @@ console.log(letters.join(' - '));
 const arr3 = [23, 11, 64];
 console.log(arr3[0]);
 console.log(arr3.at(0));
+
+console.log(arr3.at(-1));
