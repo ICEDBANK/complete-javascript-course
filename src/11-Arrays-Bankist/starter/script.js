@@ -101,5 +101,8 @@ console.log(arr2);
 
 //Concat Array Method
 
-const letters = arr.concat(...arr, arr2);
+const letters = arr.concat(arr2);
 console.log(letters);
+
+// Join Array Method
+console.log(letters.join(' - '));
