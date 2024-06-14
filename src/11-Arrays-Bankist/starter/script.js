@@ -111,4 +111,9 @@ const arr3 = [23, 11, 64];
 console.log(arr3[0]);
 console.log(arr3.at(0));
 
+// Getting last array element
+console.log(arr3[arr.length - 1]);
+console.log(arr.slice(-1)[0]);
 console.log(arr3.at(-1));
+
+console.log(`joshua`.at(-1));
