@@ -149,6 +149,6 @@ rice = new Map([
   ['Adeline', 2],
 ]);
 
-rice.forEach(function (key, value) {
+rice.forEach(function (value, key) {
   console.log(`The Rice Family consist of ${key} at age ${value}`);
 });
