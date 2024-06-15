@@ -125,7 +125,7 @@ rice.forEach(function (family, index) {
   console.log(`${index + 1}: ${family} Rice`);
 });
 
-const bankBalance = 0;
+let bankBalance = 0;
 
 movements.forEach(function (transactions, index) {
   transactions > 0
