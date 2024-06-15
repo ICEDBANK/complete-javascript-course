@@ -127,6 +127,6 @@ rice.forEach(function (family, index) {
 
 movements.forEach(function (transactions, index) {
   transactions > 0
-    ? console.log(`${inxex + 1}: You Deposited : ${transactions}`)
-    : console.log(`${inxex + 1}: You Charged : ${transactions}`);
+    ? console.log(`${index + 1}: You Deposited : ${transactions}`)
+    : console.log(`${index + 1}: You Charged : ${transactions}`);
 });
