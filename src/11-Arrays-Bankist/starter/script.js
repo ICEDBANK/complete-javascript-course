@@ -117,3 +117,10 @@ console.log(arr.slice(-1)[0]);
 console.log(arr3.at(-1));
 
 console.log(`joshua`.at(-1));
+
+// forEach Loop
+const rice = ['Joshua', 'Sarah', 'Ava', 'Adeline'];
+
+rice.forEach(function (family, index) {
+  console.log(`${index}: ${family} Rice`);
+});
