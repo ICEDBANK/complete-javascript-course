@@ -127,16 +127,16 @@ rice.forEach(function (family, index) {
 
 let bankBalance = 0;
 
-movements.forEach(function (transactions, index) {
+movements.forEach(function (transactions, index, array) {
   transactions > 0
     ? console.log(
         `${index + 1}: You Deposited : ${transactions}`,
         (bankBalance += transactions),
-        `Your Balance is :${bankBalance}`
+        `Your Balance is :${bankBalance} : ${array.transactions}`
       )
     : console.log(
         `${index + 1}: You Charged : ${transactions}`,
         (bankBalance += transactions),
-        `Your Balance is :${bankBalance}`
+        `Your Balance is :${bankBalance} ${array.transactions}`
       );
 });
