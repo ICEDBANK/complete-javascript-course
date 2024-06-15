@@ -119,7 +119,7 @@ console.log(arr3.at(-1));
 console.log(`joshua`.at(-1));
 
 // forEach Loop
-const rice = ['Joshua', 'Sarah', 'Ava', 'Adeline'];
+let rice = ['Joshua', 'Sarah', 'Ava', 'Adeline'];
 
 rice.forEach(function (family, index) {
   console.log(`${index + 1}: ${family} Rice`);
@@ -140,3 +140,13 @@ movements.forEach(function (transactions, index, array) {
         `Your Balance is :${bankBalance} ${array[index]}`
       );
 });
+
+// Map is an array of arrays with key value pairs
+rice = new Map([
+  ['Joshua', 36],
+  ['Sarah', 35],
+  ['Ava', 6],
+  ['Adeline', 2],
+]);
+
+console.log(rice);
