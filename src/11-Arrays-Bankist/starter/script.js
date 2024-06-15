@@ -153,6 +153,4 @@ rice.forEach(function (value, key) {
   console.log(`The Rice Family consist of ${key} at age ${value}`);
 });
 
-let x = 10;
-x = x++;
-console.log(x);
+console.log('Hello' instanceof String);
