@@ -122,5 +122,5 @@ console.log(`joshua`.at(-1));
 const rice = ['Joshua', 'Sarah', 'Ava', 'Adeline'];
 
 rice.forEach(function (family, index) {
-  console.log(`${index}: ${family} Rice`);
+  console.log(`${index + 1}: ${family} Rice`);
 });
