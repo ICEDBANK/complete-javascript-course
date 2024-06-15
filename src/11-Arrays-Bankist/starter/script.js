@@ -124,3 +124,9 @@ const rice = ['Joshua', 'Sarah', 'Ava', 'Adeline'];
 rice.forEach(function (family, index) {
   console.log(`${index + 1}: ${family} Rice`);
 });
+
+movements.forEach(function (transactions, index) {
+  transactions > 0
+    ? console.log(`${inxex + 1}: You Deposited : ${transactions}`)
+    : console.log(`${inxex + 1}: You Charged : ${transactions}`);
+});
