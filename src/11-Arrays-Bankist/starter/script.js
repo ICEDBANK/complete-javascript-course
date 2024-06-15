@@ -155,6 +155,6 @@ rice.forEach(function (value, key) {
 
 console.log('Hello' instanceof String);
 
-currencies.forEach(function (value, Key) {
+currencies.forEach(function (value, key) {
   console.log(`${value} : ${key}`);
 });
