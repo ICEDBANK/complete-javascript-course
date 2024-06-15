@@ -149,4 +149,6 @@ rice = new Map([
   ['Adeline', 2],
 ]);
 
-console.log(rice);
+rice.map(function (key, value) {
+  console.log(`The Rice Family consist of ${key} at age ${value}`);
+});
