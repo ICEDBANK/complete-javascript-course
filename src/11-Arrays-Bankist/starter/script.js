@@ -132,11 +132,11 @@ movements.forEach(function (transactions, index, array) {
     ? console.log(
         `${index + 1}: You Deposited : ${transactions}`,
         (bankBalance += transactions),
-        `Your Balance is :${bankBalance} : ${array.transactions}`
+        `Your Balance is :${bankBalance} : ${array[transactions]}`
       )
     : console.log(
         `${index + 1}: You Charged : ${transactions}`,
         (bankBalance += transactions),
-        `Your Balance is :${bankBalance} ${array.transactions}`
+        `Your Balance is :${bankBalance} ${array[transactions]}`
       );
 });
