@@ -231,6 +231,7 @@ const checkDogs = function (arr1, arr2) {
   let juliaCorrected = arr1.splice();
   juliaCorrected.splice(0, 1);
   juliaCorrected.splice(-2);
+  console.log(juliaCorrected);
   const shallowArr2 = [...arr2];
 
   juliaCorrected.forEach(function (dogAgg, i) {
