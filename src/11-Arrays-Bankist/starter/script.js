@@ -226,8 +226,10 @@ const julia = [3, 5, 2, 12, 7];
 const kate = [10, 5, 6, 1, 4];
 
 const checkDogs = function (arr1, arr2) {
-  let shallowArr = (() => [arr1.shift(), arr1.pop().join()])();
+  let arr1First = arr1.shift();
+  let arr1Second = arr1.pop();
+  const shallowArr1 = [arr1First, arr1Second];
   const shallowArr2 = [...arr2];
-  console.log(shallowArr);
+  console.log(shallowArr1);
 };
 checkDogs(julia, kate);
