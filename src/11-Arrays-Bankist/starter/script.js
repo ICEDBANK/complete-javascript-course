@@ -228,13 +228,12 @@ const julia2 = [9, 16, 6, 8, 3];
 const kate2 = [10, 5, 6, 1, 4];
 
 const checkDogs = function (arr1, arr2) {
-  let juliaCorrected = arr1.splice();
-  juliaCorrected.splice(0, 1);
-  juliaCorrected.splice(-2);
-  console.log(juliaCorrected);
+  let first = arr1.splice(0, 1);
+  let second = arr1.splice(-2);
+  const shallowArr1 = [first, second];
   const shallowArr2 = [...arr2];
 
-  juliaCorrected.forEach(function (dogAgg, i) {
+  shallowArr1.forEach(function (dogAgg, i) {
     dogAgg >= 3
       ? console.log(
           `Julia's Dog number ${i + 1} is an adult, and is ${dogAgg} years old`
