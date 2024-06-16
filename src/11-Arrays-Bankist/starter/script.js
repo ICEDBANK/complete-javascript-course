@@ -196,7 +196,7 @@ rice.map(function (x) {
 const conversion = movements.map(function (x) {
   const euroToUsd = 1.1;
   const conversion = x * euroToUsd;
-  return Number.parseFloat(conversion).toFixed(2);
+  return Number(conversion.toFixed(2));
 });
 
 console.log(conversion);
