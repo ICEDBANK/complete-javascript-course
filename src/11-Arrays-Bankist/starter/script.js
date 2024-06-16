@@ -232,7 +232,7 @@ const checkDogs = function (arr1, arr2) {
   console.log(first);
   let second = arr1.pop(-2);
   console.log(second);
-  const shallowArr1 = [...first, ...second];
+  const shallowArr1 = [first, second];
   const shallowArr2 = [...arr2];
 
   shallowArr1.forEach(function (dogAgg, i) {
