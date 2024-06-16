@@ -256,3 +256,37 @@ console.log(`<--- Test Data For Coding Challeng #1 Example 1---->`);
 checkDogs(julia, kate);
 console.log(`<--- Test Data For Coding Challeng #1 Example 2---->`);
 checkDogs(julia2, kate2);
+
+//    Refactoring the Above Code
+
+const checkDogs = function (dogsJulia, dogsKate) {
+  // Create a shallow copy of Julia's array and remove cat ages (first and last two elements)
+  const juliaCorrected = dogsJulia.slice(1, -2);
+
+  // Combine corrected Julia's data with Kate's data
+  const allDogs = [...juliaCorrected, ...dogsKate];
+
+  // Iterate over each dog's age in allDogs array
+  allDogs.forEach(function (age, i) {
+    // Determine if the dog is an adult or a puppy
+    const dogType = age >= 3 ? 'adult' : 'puppy';
+    const owner = i < juliaCorrected.length ? 'Julia' : 'Kate';
+
+    // Output the result to the console
+    console.log(
+      `${owner}'s Dog number ${i + 1} is a ${dogType}, and is ${age} years old`
+    );
+  });
+};
+
+// Test Data 1
+const julia1 = [3, 5, 2, 12, 7];
+const kate1 = [4, 1, 15, 8, 3];
+console.log('<--- Test Data For Coding Challenge #1 Example 1 --->');
+checkDogs(julia1, kate1);
+
+// Test Data 2
+const julia2 = [9, 16, 6, 8, 3];
+const kate2 = [10, 5, 6, 1, 4];
+console.log('<--- Test Data For Coding Challenge #1 Example 2 --->');
+checkDogs(julia2, kate2);
