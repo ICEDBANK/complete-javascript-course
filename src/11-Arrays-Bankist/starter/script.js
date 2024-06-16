@@ -228,9 +228,8 @@ const julia2 = [9, 16, 6, 8, 3];
 const kate2 = [10, 5, 6, 1, 4];
 
 const checkDogs = function (arr1, arr2) {
-  let arr1First = arr1.shift();
-  let arr1Second = arr1.pop();
-  const shallowArr1 = [arr1First, arr1Second];
+  let juliaCorrected = arr1.splice(1, -2);
+  const shallowArr1 = [juliaCorrected, arr1Second];
   const shallowArr2 = [...arr2];
 
   shallowArr1.forEach(function (dogAgg, i) {
