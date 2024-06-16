@@ -61,6 +61,11 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+// Instead of working with Global variables pass into functions
+const displayMovements = function (movements) {};
+
+displayMovements(account1.movements);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -158,3 +163,8 @@ console.log('Hello' instanceof String);
 currencies.forEach(function (value, key) {
   console.log(`${value} : ${key}`);
 });
+
+// forEach Sets
+const currencyUnique = new Set(['USD', 'Rpl', 'Yen']);
+
+currencyUnique.forEach(function (value) {});
