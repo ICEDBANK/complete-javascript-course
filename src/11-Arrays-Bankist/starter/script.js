@@ -233,13 +233,13 @@ const checkDogs = function (arr1, arr2) {
 
   shallowArr1.forEach(function (dogAgg, i) {
     dogAgg >= 3
-      ? `Dog number ${i} is an adult, and is ${dogAgg} years old`
-      : `Dog number ${i} is an adult, and is ${dogAgg} years old`;
+      ? console.log(`Dog number ${i} is an adult, and is ${dogAgg} years old`)
+      : console.log(`Dog number ${i} is an adult, and is ${dogAgg} years old`);
   });
   shallowArr2.forEach(function (dogAgg, i) {
     dogAgg >= 3
-      ? `Dog number ${i} is an adult, and is ${dogAgg} years old`
-      : `Dog number ${i} is an adult, and is ${dogAgg} years old`;
+      ? console.log(`Dog number ${i} is an adult, and is ${dogAgg} years old`)
+      : console.log(`Dog number ${i} is an adult, and is ${dogAgg} years old`);
   });
 };
 checkDogs(julia, kate);
