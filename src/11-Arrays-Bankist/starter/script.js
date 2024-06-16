@@ -193,6 +193,13 @@ rice.map(function (x) {
   console.log(`Hello ${pass}`);
 });
 
+const conversion = movements.map(function (x) {
+  const euroToUsd = 1.1;
+  return x * euroToUsd;
+});
+
+console.log(conversion);
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
