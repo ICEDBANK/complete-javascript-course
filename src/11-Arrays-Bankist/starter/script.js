@@ -195,7 +195,7 @@ rice.map(function (x) {
 
 const conversion = movements.map(function (x = 0) {
   x = x * 1.1;
-  return x;
+  return x.toFixed(2);
 });
 
 console.log(conversion);
