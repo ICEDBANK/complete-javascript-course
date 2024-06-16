@@ -237,7 +237,7 @@ const checkDogs = function (arr1, arr2) {
           `Dog number ${i + 1} is an adult, and is ${dogAgg} years old`
         )
       : console.log(
-          `Dog number ${i + 1} is an adult, and is ${dogAgg} years old`
+          `Dog number ${i + 1} is an puppy, and is ${dogAgg} years old`
         );
   });
   shallowArr2.forEach(function (dogAgg, i) {
@@ -246,7 +246,7 @@ const checkDogs = function (arr1, arr2) {
           `Dog number ${i + 1} is an adult, and is ${dogAgg} years old`
         )
       : console.log(
-          `Dog number ${i + 1} is an adult, and is ${dogAgg} years old`
+          `Dog number ${i + 1} is an puppy, and is ${dogAgg} years old`
         );
   });
 };
