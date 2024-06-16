@@ -224,3 +224,8 @@ GOOD LUCK 😀
 
 const julia = [3, 5, 2, 12, 7];
 const kate = [10, 5, 6, 1, 4];
+
+const checkDogs = function (arr1, arr2) {
+  const shallowArr1 = [...arr1];
+  const shallowArr2 = [...arr2];
+};
