@@ -229,7 +229,9 @@ const kate2 = [10, 5, 6, 1, 4];
 
 const checkDogs = function (arr1, arr2) {
   let first = arr1.splice(0, 1);
+  console.log(first);
   let second = arr1.splice(-2);
+  console.log(second);
   const shallowArr1 = [...first, ...second];
   const shallowArr2 = [...arr2];
 
