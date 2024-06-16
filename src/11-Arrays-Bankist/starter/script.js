@@ -64,6 +64,8 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // Instead of working with Global variables pass into functions
 const displayMovements = function (movements) {
   movements.forEach(function (move, i) {
+    containerMovements.innerHTML = '';
+
     const type = move > 0 ? 'deposit' : 'withdrawal';
 
     const html = ` 
