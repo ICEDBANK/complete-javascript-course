@@ -229,7 +229,7 @@ const kate2 = [10, 5, 6, 1, 4];
 
 const checkDogs = function (arr1, arr2) {
   let juliaCorrected = arr1.splice(1, -2);
-  const shallowArr1 = [juliaCorrected];
+  const shallowArr1 = [...juliaCorrected];
   const shallowArr2 = [...arr2];
 
   shallowArr1.forEach(function (dogAgg, i) {
