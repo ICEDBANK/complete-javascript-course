@@ -252,4 +252,7 @@ const checkDogs = function (arr1, arr2) {
         );
   });
 };
+console.log(`<--- Test Data For Coding Challeng #1 Example 1---->`);
 checkDogs(julia, kate);
+console.log(`<--- Test Data For Coding Challeng #1 Example 2---->`);
+checkDogs(julia2, kate2);
