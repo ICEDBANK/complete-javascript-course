@@ -232,7 +232,7 @@ const checkDogs = function (arr1, arr2) {
   juliaCorrected = arr1.splice(-2);
   const shallowArr2 = [...arr2];
 
-  shallowArr1.forEach(function (dogAgg, i) {
+  juliaCorrected.forEach(function (dogAgg, i) {
     dogAgg >= 3
       ? console.log(
           `Julia's Dog number ${i + 1} is an adult, and is ${dogAgg} years old`
