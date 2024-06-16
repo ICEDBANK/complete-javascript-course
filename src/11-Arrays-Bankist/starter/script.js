@@ -194,8 +194,8 @@ rice.map(function (x) {
 });
 
 const conversion = movements.map(function (x = 0) {
-  x = x * 1.1;
-  return x.toFixed(2);
+  x = Math.round(x * 1.1 * 100) / 100;
+  return x;
 });
 
 console.log(conversion);
