@@ -228,7 +228,7 @@ const julia2 = [9, 16, 6, 8, 3];
 const kate2 = [10, 5, 6, 1, 4];
 
 const checkDogs = function (arr1, arr2) {
-  let first = arr1.splice(0, 1);
+  let first = arr1.shift();
   console.log(first);
   let second = arr1.splice(-2);
   console.log(second);
