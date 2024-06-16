@@ -185,6 +185,12 @@ const currencyUnique = new Set(['USD', 'Rpl', 'Yen']);
 
 currencyUnique.forEach(function (value) {});
 
+// map function Call not to be confused with the Map data structure
+
+rice.map(function (x) {
+  console.log(value, key);
+});
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
