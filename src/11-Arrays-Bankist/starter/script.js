@@ -259,7 +259,7 @@ checkDogs(julia2, kate2);
 
 //    Refactoring the Above Code
 
-const checkDogs = function (dogsJulia, dogsKate) {
+const checkDogs1 = function (dogsJulia, dogsKate) {
   // Create a shallow copy of Julia's array and remove cat ages (first and last two elements)
   const juliaCorrected = dogsJulia.slice(1, -2);
 
@@ -283,10 +283,10 @@ const checkDogs = function (dogsJulia, dogsKate) {
 const julia1 = [3, 5, 2, 12, 7];
 const kate1 = [4, 1, 15, 8, 3];
 console.log('<--- Test Data For Coding Challenge #1 Example 1 --->');
-checkDogs(julia1, kate1);
+checkDogs1(julia1, kate1);
 
 // Test Data 2
-const julia2 = [9, 16, 6, 8, 3];
-const kate2 = [10, 5, 6, 1, 4];
+const julia3 = [9, 16, 6, 8, 3];
+const kate3 = [10, 5, 6, 1, 4];
 console.log('<--- Test Data For Coding Challenge #1 Example 2 --->');
-checkDogs(julia2, kate2);
+checkDogs1(julia3, kate3);
