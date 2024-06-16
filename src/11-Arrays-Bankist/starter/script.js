@@ -202,6 +202,12 @@ const conversion = movements.map(function (x = 0) {
 
 console.log(conversion);
 
+const movementsUsdfor = [];
+for (const mov of movements) {
+  movementsUsdfor.push(mov * 1.1);
+}
+console.log(movementsUsdfor);
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
