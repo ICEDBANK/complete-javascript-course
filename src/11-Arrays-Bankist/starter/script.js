@@ -187,8 +187,10 @@ currencyUnique.forEach(function (value) {});
 
 // map function Call not to be confused with the Map data structure
 
-rice.map(function () {
-  console.log(value, key);
+rice = ['Joshua', 'Sarah', 'Ava', 'Adeline'];
+rice.map(function (x) {
+  let pass = x;
+  console.log(`Hello ${pass}`);
 });
 
 ///////////////////////////////////////
