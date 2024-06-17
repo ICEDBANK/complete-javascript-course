@@ -214,6 +214,8 @@ for (const mov of movements) {
 }
 console.log(movementsUsdfor);
 
+console.log(`<---- Movements Description Arrow Function ---->`);
+
 const movementsDesc = movements.map((transactions, index, array) => {
   if (transactions > 0) {
     return (
