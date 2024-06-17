@@ -84,7 +84,7 @@ displayMovements(account1.movements);
 
 const verifyLogin = function (user, pin) {
   user = inputLoginUsername.innerHTML;
-  pin = inputLoginPin;
+  pin = inputLoginPin.innerHTML;
   console.log(`<----- ${user} , ${pin} -----> `);
 };
 
