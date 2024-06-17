@@ -86,13 +86,13 @@ const verifyLogin = function (user, pin) {
   user = inputLoginUsername.value;
   pin = inputLoginPin.value;
   console.log(
-    `<----- ${user} ${inputLoginUsername.value}, ${pin} ${inputLoginPin.value} -----> `
+    `<----- ${user} ${inputLoginUsername.textContent}, ${pin} ${inputLoginPin.textContent} -----> `
   );
 };
 
 btnLogin.addEventListener(
   'click',
-  verifyLogin(inputLoginUsername.value, inputLoginPin.value)
+  verifyLogin(inputLoginUsername.textContent, inputLoginPin.textContent)
 );
 
 /////////////////////////////////////////////////
