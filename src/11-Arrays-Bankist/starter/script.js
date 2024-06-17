@@ -88,8 +88,8 @@ const createUserNames = function (user) {
   const username = user
     .toLocaleLowerCase()
     .split(' ')
-    .map(value => value[0]);
-  console.log(username);
+    .map(value => value[0])
+    .join('');
 };
 
 /////////////////////////////////////////////////
