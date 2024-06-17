@@ -85,6 +85,7 @@ displayMovements(account1.movements);
 const verifyLogin = function (user, pin) {
   user = inputLoginUsername.innerHTML;
   pin = inputLoginPin;
+  console.log(`${user} , ${pin}`);
 };
 
 btnLogin.addEventListener('click', verifyLogin);
