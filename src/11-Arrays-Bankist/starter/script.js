@@ -82,6 +82,13 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
+const verifyLogin = function (user, pin) {
+  user = inputLoginUsername.innerHTML;
+  pin = inputLoginPin;
+};
+
+btnLogin.addEventListener('click', function () {});
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -216,7 +223,7 @@ console.log(movementsUsdfor);
 
 console.log(`<---- Movements Description Arrow Function ---->`);
 
-const movementsDesc = movements.map((transactions, index, array) => {
+const movementsDesc = movements.map((transactions, index) => {
   if (transactions > 0) {
     return (
       `${index + 1}: You Deposited : ${Math.round((transactions * 100) / 100)}`,
