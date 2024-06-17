@@ -90,7 +90,7 @@ const verifyLogin = function (user, pin) {
   );
 };
 
-btnLogin.addEventListener('click', verifyLogin());
+btnLogin.addEventListener('click', verifyLogin(inputLoginUsername.value, inputLoginPin.value);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
