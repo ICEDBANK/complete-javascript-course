@@ -206,6 +206,8 @@ const conversion = movements.map(x => Math.round(x * 1.1 * 100) / 100);
 
 console.log(conversion);
 
+// Imperative programming paradigm
+
 const movementsUsdfor = [];
 for (const mov of movements) {
   movementsUsdfor.push(Math.round(mov * 1.1 * 100) / 100);
