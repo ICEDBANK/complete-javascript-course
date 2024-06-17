@@ -87,7 +87,7 @@ const verifyLogin = function (user, pin) {
   pin = inputLoginPin;
 };
 
-btnLogin.addEventListener('click', function () {});
+btnLogin.addEventListener('click', verifyLogin);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
