@@ -214,6 +214,20 @@ for (const mov of movements) {
 }
 console.log(movementsUsdfor);
 
+movements.map((transactions, index, array) => {
+  transactions > 0
+    ? console.log(
+        `${index + 1}: You Deposited : ${transactions}`,
+        (bankBalance += transactions),
+        `Your Balance is :${bankBalance} : ${array[index]}`
+      )
+    : console.log(
+        `${index + 1}: You Charged : ${transactions}`,
+        (bankBalance += transactions),
+        `Your Balance is :${bankBalance} ${array[index]}`
+      );
+});
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
