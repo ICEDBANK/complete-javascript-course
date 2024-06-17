@@ -228,17 +228,13 @@ const movementsDesc = movements.map((transactions, index) => {
     return (
       `${index + 1}: You Deposited : ${Math.round((transactions * 100) / 100)}`,
       (bankBalance += transactions),
-      `Your Balance is :${Math.round((bankBalance * 100) / 100)} : ${
-        array[index]
-      }`
+      `Your Balance is :${Math.round((bankBalance * 100) / 100)}`
     );
   } else {
     return (
       `${index + 1}: You Charged : ${Math.round((transactions * 100) / 100)}`,
       (bankBalance += transactions),
-      `Your Balance is :${Math.round((bankBalance * 100) / 100)} ${
-        array[index]
-      }`
+      `Your Balance is :${Math.round((bankBalance * 100) / 100)} `
     );
   }
 });
