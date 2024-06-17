@@ -91,7 +91,7 @@ const createUserNames = function (accounts) {
   return username;
 };
 
-console.log(createUserNames('Steven Thomas Williams'));
+console.log(createUserNames(accounts));
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
