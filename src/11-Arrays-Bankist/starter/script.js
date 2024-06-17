@@ -196,6 +196,7 @@ rice.map(function (x) {
 });
 
 // Functional programming paradigm in practice
+
 // const conversion = movements.map(function (x = 0) {
 //   x = Math.round(x * 1.1 * 100) / 100;
 //   return x;
