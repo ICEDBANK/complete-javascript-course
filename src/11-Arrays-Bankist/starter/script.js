@@ -90,6 +90,7 @@ const createUserNames = function (user) {
     .split(' ')
     .map(value => value[0])
     .join('');
+  return username;
 };
 
 /////////////////////////////////////////////////
