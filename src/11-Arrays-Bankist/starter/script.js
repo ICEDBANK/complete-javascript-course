@@ -219,13 +219,13 @@ console.log(`<---- Movements Description Arrow Function ---->`);
 const movementsDesc = movements.map((transactions, index, array) => {
   if (transactions > 0) {
     return (
-      `${index + 1}: You Deposited : ${transactions}`,
+      `${index + 1}: You Deposited : ${Math.round((transactions * 100) / 100)}`,
       (bankBalance += transactions),
       `Your Balance is :${bankBalance} : ${array[index]}`
     );
   } else {
     return (
-      `${index + 1}: You Charged : ${transactions}`,
+      `${index + 1}: You Charged : ${Math.round((transactions * 100) / 100)}`,
       (bankBalance += transactions),
       `Your Balance is :${bankBalance} ${array[index]}`
     );
