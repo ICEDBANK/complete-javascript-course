@@ -86,9 +86,7 @@ const user = 'Steven Thomas Williams';
 const username = user
   .toLocaleLowerCase()
   .split(' ')
-  .map(function (value) {
-    return value[0];
-  });
+  .map(value => value[0]);
 console.log(username);
 
 /////////////////////////////////////////////////
