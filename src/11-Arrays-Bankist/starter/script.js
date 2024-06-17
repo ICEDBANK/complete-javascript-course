@@ -231,7 +231,7 @@ const movementsDesc = movements.map((transactions, index, array) => {
     );
   }
 });
-movementsDesc(movements);
+console.log(movementsDesc);
 
 ///////////////////////////////////////
 // Coding Challenge #1
