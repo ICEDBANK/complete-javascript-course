@@ -82,8 +82,8 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
-const createUserNames = function (accounts) {
-  const username = accounts
+const createUserNames = function (user) {
+  const username = user
     .toLocaleLowerCase()
     .split(' ')
     .map(value => value[0])
