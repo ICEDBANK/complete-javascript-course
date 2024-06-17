@@ -86,7 +86,7 @@ const createUserNames = function (user) {
   const username = user
     .toLocaleLowerCase()
     .split(' ')
-    .map(value => value[0])
+    .map(name => name[0])
     .join('');
   return username;
 };
