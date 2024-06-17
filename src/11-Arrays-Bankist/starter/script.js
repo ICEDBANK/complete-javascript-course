@@ -82,9 +82,7 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
-const user = 'Steven Thomas Williams';
-
-const createUserNames = function (user) {
+const createUserNames = function (accounts) {
   const username = user
     .toLocaleLowerCase()
     .split(' ')
@@ -92,6 +90,8 @@ const createUserNames = function (user) {
     .join('');
   return username;
 };
+
+console.log(createUserNames('Steven Thomas Williams'));
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
