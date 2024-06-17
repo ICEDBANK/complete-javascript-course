@@ -82,18 +82,9 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
-const verifyLogin = function (user, pin) {
-  user = inputLoginUsername.value;
-  pin = inputLoginPin.value;
-  console.log(
-    `<----- ${user} ${inputLoginUsername.textContent}, ${pin} ${inputLoginPin.textContent} -----> `
-  );
-};
-
-btnLogin.addEventListener(
-  'click',
-  verifyLogin(inputLoginUsername.textContent, inputLoginPin.textContent)
-);
+const user = 'Steven Thomas Williams';
+const username = user.toLocaleLowerCase().split(' ');
+console.log(username);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
