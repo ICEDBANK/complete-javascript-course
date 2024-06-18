@@ -268,6 +268,9 @@ console.log(withdrawls);
 
 console.log(`<---- Reduce Method ---->`);
 
+const balanceValue = movements.reduce((move, current) => (move += current));
+console.log(balanceValue);
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
