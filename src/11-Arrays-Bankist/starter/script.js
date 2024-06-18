@@ -262,10 +262,9 @@ for (const move of movements) {
 }
 console.log(depositFor);
 
-const withdrawl = movements.filter(function (move) {
+const withdrawls = movements.filter(move => {
   return move < 0;
 });
-console.log(withdrawl);
 
 ///////////////////////////////////////
 // Coding Challenge #1
