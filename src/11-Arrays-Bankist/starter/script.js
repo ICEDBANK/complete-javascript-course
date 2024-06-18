@@ -248,9 +248,9 @@ console.log(movementsDesc);
 
 console.log(`<---- filter Method ---->`);
 
-const deposit = movements.filter(function (move) {
-  console.log(movements);
-});
+const deposit = movements.filter(function (move) {});
+
+console.log(movements);
 
 ///////////////////////////////////////
 // Coding Challenge #1
