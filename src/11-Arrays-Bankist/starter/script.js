@@ -101,7 +101,7 @@ const calcPrintBalance = function (movements) {
   console.log(`<---- ${balance} ----> `);
 };
 
-calcPrintBalance(movements);
+calcPrintBalance(account4.movements);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
