@@ -274,7 +274,20 @@ const balanceValue = movements.reduce(function (acc, current) {
   return acc + current;
 }, 0);
 
-const roundedBalance = Math.round(balanceValue * 100) / 100;
+const roundedBalance = function (sum) {
+  Math.round(sum * 100) / 100;
+  console.log(sum);
+};
+
+console.log(roundedBalance);
+
+const totalDeposits = deposit.reduce(function (acc, current) {
+  return acc + current;
+});
+
+const totalWithdrawls = withdrawls.reduce(function (acc, current) {
+  return acc + current;
+});
 
 console.log(roundedBalance);
 
