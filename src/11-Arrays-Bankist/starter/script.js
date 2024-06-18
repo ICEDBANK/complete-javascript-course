@@ -272,7 +272,7 @@ console.log(`<---- Reduce Method ---->`);
 
 const balanceValue = movements.reduce(function (acc, current) {
   return acc + current;
-});
+}, 0);
 
 const roundedBalance = Math.round(balanceValue * 100) / 100;
 
