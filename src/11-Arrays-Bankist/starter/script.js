@@ -286,7 +286,7 @@ const totalDeposits = deposit.reduce(function (acc, current) {
 const totalWithdrawls = withdrawls.reduce(function (acc, current) {
   return acc + current;
 });
-roundedBalance(deposit);
+roundedBalance(balanceValue);
 roundedBalance(totalDeposits);
 roundedBalance(totalWithdrawls);
 
