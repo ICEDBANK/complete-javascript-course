@@ -266,6 +266,8 @@ const withdrawls = movements.filter(move => {
   return move < 0;
 });
 
+console.log(withdrawls);
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
