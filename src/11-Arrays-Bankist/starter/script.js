@@ -268,7 +268,7 @@ console.log(withdrawls);
 
 console.log(`<---- Reduce Method ---->`);
 
-const balanceValue = movements.reduce((move, current) => (move += current));
+const balanceValue = movements.reduce((move, current) => (Math.round((move += current) * 100) / 100);
 console.log(balanceValue);
 
 ///////////////////////////////////////
