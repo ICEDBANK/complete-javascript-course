@@ -98,7 +98,7 @@ const calcPrintBalance = function (movements) {
   const balance = movements.reduce(function (acc, curr) {
     acc + curr;
   }, 0);
-  console.log(balance);
+  console.log(`<---- ${balance} ----> `);
 };
 
 /////////////////////////////////////////////////
