@@ -246,6 +246,8 @@ const movementsDesc = movements.map((transactions, index) => {
 });
 console.log(movementsDesc);
 
+console.log(`<---- filter Method ---->`);
+
 const deposit = movements.filter(function (move) {
   console.log(movements);
 });
