@@ -271,10 +271,7 @@ console.log(`<---- Reduce Method ---->`);
 //    Reduce Method accepts two parameters accumulator and current
 
 const roundedBalance = function (sum) {
-  for (const sumtotal of sum) {
-    sumtotal += sum;
-    console.log(sumtotal);
-  }
+  return (sum = Math.round(sum * 100) / 100);
 };
 
 const balanceValue = movements.reduce(function (acc, current) {
