@@ -253,6 +253,7 @@ const deposit = movements.filter(function (move) {
 });
 
 console.log(movements);
+console.log(deposit);
 
 ///////////////////////////////////////
 // Coding Challenge #1
