@@ -83,6 +83,7 @@ const displayMovements = function (movements) {
 displayMovements(account1.movements);
 
 const calcDisplayBalance = function (movements) {
+  console.log(movements);
   const balance = movements.reduce(function (acc, curr) {
     acc + curr;
   }, 0);
