@@ -270,22 +270,23 @@ console.log(`<---- Reduce Method ---->`);
 
 //    Reduce Method accepts two parameters accumulator and current
 
-const balanceValue = movements.reduce(function (acc, current) {
-  return acc + current;
-}, 0);
-
 const roundedBalance = function (sum = 0) {
   Math.round(sum * 100) / 100;
   console.log(sum);
 };
 
+const balanceValue = movements.reduce(function (acc, current) {
+  return acc + current;
+}, 0);
+
 const totalDeposits = deposit.reduce(function (acc, current) {
   return acc + current;
-});
+}, 0);
 
 const totalWithdrawls = withdrawls.reduce(function (acc, current) {
   return acc + current;
-});
+}, 0);
+
 roundedBalance(balanceValue);
 roundedBalance(totalDeposits);
 roundedBalance(totalWithdrawls);
