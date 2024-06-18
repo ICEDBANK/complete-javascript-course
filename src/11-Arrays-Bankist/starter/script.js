@@ -304,7 +304,7 @@ const maxValue = movements.reduce((acc, cur) => {
   } else {
     return cur;
   }
-}, 0);
+}, movements[0]);
 console.log(maxValue);
 
 ///////////////////////////////////////
