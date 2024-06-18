@@ -257,7 +257,9 @@ console.log(deposit);
 
 const depositFor = [];
 
-for (const move of movements) if (move > 0) depositFor.push(move);
+for (const move of movements) {
+  if (move > 0) depositFor.push(move);
+}
 console.log(depositFor);
 
 ///////////////////////////////////////
