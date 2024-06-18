@@ -286,7 +286,8 @@ const totalWithdrawls = withdrawls.reduce(function (acc, current) {
   return acc + current;
 }, 0);
 
-roundedBalance(balanceValue);
+console.log(`Balance Value: ${roundedBalance(balanceValue)}`);
+
 roundedBalance(totalDeposits);
 roundedBalance(totalWithdrawls);
 
