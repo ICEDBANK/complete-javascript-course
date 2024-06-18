@@ -246,6 +246,10 @@ const movementsDesc = movements.map((transactions, index) => {
 });
 console.log(movementsDesc);
 
+const deposit = movements.filter(function (move) {
+  console.log(movements);
+});
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
