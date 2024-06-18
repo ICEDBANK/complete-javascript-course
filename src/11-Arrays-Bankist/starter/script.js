@@ -286,9 +286,9 @@ const totalDeposits = deposit.reduce(function (acc, current) {
 const totalWithdrawls = withdrawls.reduce(function (acc, current) {
   return acc + current;
 });
-console.log(roundedBalance(deposit));
-console.log(roundedBalance(totalDeposits));
-console.log(roundedBalance(totalWithdrawls));
+roundedBalance(deposit);
+roundedBalance(totalDeposits);
+roundedBalance(totalWithdrawls);
 
 ///////////////////////////////////////
 // Coding Challenge #1
