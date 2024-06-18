@@ -296,6 +296,17 @@ roundedBalance(balanceValue);
 roundedBalance(totalDeposits);
 roundedBalance(totalWithdrawls);
 
+//    Maximum value in Movements Array
+
+const maxValue = movements.reduce((acc, cur) => {
+  if (acc > cur) {
+    return acc;
+  } else {
+    return cur;
+  }
+}, 0);
+console.log(maxValue);
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
