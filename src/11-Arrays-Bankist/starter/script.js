@@ -272,9 +272,9 @@ console.log(`<---- Reduce Method ---->`);
 
 const roundedBalance = function (sum) {
   for (const sumtotal of sum) {
+    sumtotal += Math.round(sum * 100) / 100;
+    console.log(sumtotal);
   }
-  sumtotal = Math.round(sum * 100) / 100;
-  console.log(sumtotal);
 };
 
 const balanceValue = movements.reduce(function (acc, current) {
