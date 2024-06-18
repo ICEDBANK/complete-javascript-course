@@ -248,7 +248,9 @@ console.log(movementsDesc);
 
 console.log(`<---- filter Method ---->`);
 
-const deposit = movements.filter(function (move) {});
+const deposit = movements.filter(function (move) {
+  return move > 0;
+});
 
 console.log(movements);
 
