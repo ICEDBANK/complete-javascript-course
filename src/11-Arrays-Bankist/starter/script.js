@@ -266,6 +266,8 @@ const withdrawls = movements.filter(move => move < 0);
 
 console.log(withdrawls);
 
+console.log(`<---- Reduce Method ---->`);
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
