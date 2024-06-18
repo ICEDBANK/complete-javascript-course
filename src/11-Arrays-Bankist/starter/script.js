@@ -272,7 +272,7 @@ console.log(`<---- Reduce Method ---->`);
 
 const roundedBalance = function (sum) {
   for (const sumtotal of sum) {
-    sumtotal += Math.round(sum * 100) / 100;
+    sumtotal += sum;
     console.log(sumtotal);
   }
 };
