@@ -101,6 +101,8 @@ const calcPrintBalance = function (movements) {
   console.log(`<---- ${balance} ----> `);
 };
 
+calcPrintBalance(movements);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
