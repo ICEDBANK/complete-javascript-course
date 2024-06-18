@@ -93,7 +93,13 @@ const createUserNames = function (accs) {
 };
 
 createUserNames(accounts);
-console.log(accounts);
+
+const calcPrintBalance = function (movements) {
+  const balance = movements.reduce(function (acc, curr) {
+    acc + curr;
+  }, 0);
+  console.log(balance);
+};
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -286,8 +292,7 @@ const totalWithdrawls = withdrawls.reduce(function (acc, current) {
   return acc + current;
 }, 0);
 
-console.log(`Balance Value: ${roundedBalance(balanceValue)}`);
-
+croundedBalance(balanceValue);
 roundedBalance(totalDeposits);
 roundedBalance(totalWithdrawls);
 
