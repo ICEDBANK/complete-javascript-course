@@ -430,6 +430,9 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
+let dogAge = 0;
+let humanAge = 0;
+
 const calcAverageHumanAge = function (arr = []) {
   if (dogAge <= 2) {
     humanAge = 2 * dogAge;
