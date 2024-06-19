@@ -437,3 +437,6 @@ const calcAverageHumanAge = function () {
     humanAge = dogAge * 4 + 16;
   }
 };
+const averageHumanAge = function () {};
+
+calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
