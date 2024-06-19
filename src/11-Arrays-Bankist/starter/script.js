@@ -430,4 +430,10 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
-const calcAverageHumanAge = function () {};
+const calcAverageHumanAge = function () {
+  if (dogAge <= 2) {
+    humanAge = 2 * dogAge;
+  } else {
+    humanAge = dogAge * 4 + 16;
+  }
+};
