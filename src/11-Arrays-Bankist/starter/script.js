@@ -430,28 +430,6 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
-let dogAge = 0;
-let humanAge = 0;
-let avgAge = [];
-
-const calcAverageHumanAge = function (arr = []) {
-  if (dogAge <= 2) {
-    humanAge = 2 * dogAge;
-  } else {
-    humanAge = dogAge * 4 + 16;
-  }
+const calcAverageHumanAge = function (ages) {
+  const humanAge = ages.map(dogAge => (dog < 2 ? 2 * dogAge : dogAge * 4 + 16));
 };
-
-const averageHumanAge = function (arr = []) {
-  const avgAge = arr.reduce(function (acc, curr) {
-    return acc + curr / arr.length; // Return the updated accumulator value
-  }, 0);
-  return avgAge;
-};
-
-console.log(avgAge);
-
-calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
-calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
-averageHumanAge([5, 2, 4, 1, 15, 8, 3]);
-averageHumanAge([16, 6, 10, 5, 6, 1, 4]);
