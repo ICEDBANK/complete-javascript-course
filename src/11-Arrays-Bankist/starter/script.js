@@ -436,4 +436,12 @@ const testData2 = [16, 6, 10, 5, 6, 1, 4];
 const calcAverageHumanAge = function (ages) {
   const humanYears = ages.map(dog => (dog <= 2 ? 2 * dog : dog * 4 + 16));
   const dogFilter = humanYears.filter(dog => dog <= 18);
+  if (dogFilter.length > 0) {
+    const average = dogFilter.reduce(
+      (acc, curr) => acc + curr / dogFilter.length
+    );
+    return average;
+  } else {
+    return 0;
+  }
 };
