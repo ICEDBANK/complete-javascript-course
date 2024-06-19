@@ -438,4 +438,4 @@ const calcAverageHumanAge = function (ages) {
   console.log(humanAge);
 };
 
-calcAverageHumanAge(testData1);
+calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
