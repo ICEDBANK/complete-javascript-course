@@ -430,23 +430,48 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
-const testData1 = [5, 2, 4, 1, 15, 8, 3];
-const testData2 = [16, 6, 10, 5, 6, 1, 4];
+// const testData1 = [5, 2, 4, 1, 15, 8, 3];
+// const testData2 = [16, 6, 10, 5, 6, 1, 4];
+
+// const calcAverageHumanAge = function (ages) {
+//   const humanYears = ages.map(dog => (dog <= 2 ? 2 * dog : dog * 4 + 16));
+//   console.log(`Human Years ${humanYears}`);
+//   const dogFilter = humanYears.filter(dog => dog >= 18);
+//   console.log(`Filtered Years ${dogFilter}`);
+//   if (dogFilter.length > 0) {
+//     const average = dogFilter.reduce(
+//       (acc, curr) => (acc + curr) / dogFilter.length
+//     );
+//     return average;
+//   } else {
+//     return 0;
+//   }
+// };
+
+// console.log(calcAverageHumanAge(testData1));
+// // console.log(calcAverageHumanAge(testData2));
 
 const calcAverageHumanAge = function (ages) {
-  const humanYears = ages.map(dog => (dog <= 2 ? 2 * dog : dog * 4 + 16));
-  console.log(`Human Years ${humanYears}`);
-  const dogFilter = humanYears.filter(dog => dog >= 18);
-  console.log(`Filtered Years ${dogFilter}`);
-  if (dogFilter.length > 0) {
-    const average = dogFilter.reduce(
-      (acc, curr) => (acc + curr) / dogFilter.length
-    );
-    return average;
+  const humanAges = ages.map(dogAge =>
+    dogAge <= 2 ? 2 * dogAge : 16 + dogAge * 4
+  );
+
+  const adultDogs = humanAges.filter(humanAge => humanAge >= 18);
+
+  if (adultDogs.length > 0) {
+    const averageHumanAge =
+      adultDogs.reduce(function (acc, curr) {
+        return acc + curr;
+      }, 0) / adultDogs.length;
+    return averageHumanAge;
   } else {
     return 0;
   }
 };
 
-console.log(calcAverageHumanAge(testData1));
-// console.log(calcAverageHumanAge(testData2));
+// Test Data
+const testData1 = [5, 2, 4, 1, 15, 8, 3];
+const testData2 = [16, 6, 10, 5, 6, 1, 4];
+
+console.log(calcAverageHumanAge(testData1)); // Output: 43
+console.log(calcAverageHumanAge(testData2)); // Output: 47.3333
