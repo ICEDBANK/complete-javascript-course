@@ -435,7 +435,7 @@ const testData2 = [16, 6, 10, 5, 6, 1, 4];
 
 const calcAverageHumanAge = function (ages) {
   const humanAge = ages.map(dogAge =>
-    dogAge < 2 ? 2 * dogAge : dogAge * 4 + 16
+    dogAge <= 2 ? 2 * dogAge : dogAge * 4 + 16
   );
   console.log(humanAge);
 };
