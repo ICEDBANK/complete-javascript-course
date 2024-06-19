@@ -443,8 +443,8 @@ const calcAverageHumanAge = function (arr = []) {
 };
 
 const averageHumanAge = function (arr = []) {
-  avgAge = arr.reduce(function (acc, curr) {
-    acc + curr / arr.length;
+  const avgAge = arr.reduce(function (acc, curr) {
+    return acc + curr / arr.length; // Return the updated accumulator value
   }, 0);
   return avgAge;
 };
