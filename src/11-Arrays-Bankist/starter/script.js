@@ -451,3 +451,8 @@ const calcAverageHumanAge = function (ages) {
 
 console.log(calcAverageHumanAge(testData1));
 console.log(calcAverageHumanAge(testData2));
+
+const calcAverageHumanAge1 = function (ages) {
+  const humanAges = ages.map(age => (age <= 2 ? 2 * age : age * 4 + 16));
+};
+calcAverageHumanAge1(testData1);
