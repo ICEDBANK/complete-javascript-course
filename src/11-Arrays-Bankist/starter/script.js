@@ -456,7 +456,7 @@ const calcAverageHumanAge1 = function (ages) {
   const humanAges = ages.map(age => (age <= 2 ? 2 * age : age * 4 + 16));
   const adult = humanAges.filter(age => age >= 18);
   console.log(humanAges, adult);
-  const average = adult.reduce((acc, age) => acc + age, 0 / adult.length);
+  const average = adult.reduce((acc, age) => acc + age, 0) / adult.length;
   return average;
 };
 console.log(calcAverageHumanAge1(testData1));
