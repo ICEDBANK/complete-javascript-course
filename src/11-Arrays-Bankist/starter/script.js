@@ -437,9 +437,16 @@ const calcAverageHumanAge = function (ages) {
   const humanAge = ages.map(dogAge =>
     dogAge <= 2 ? 2 * dogAge : dogAge * 4 + 16
   );
-  console.log(humanAge);
   const adultDog = humanAge.filter(adult => adult > 18);
-  console.log(adultDog);
+
+  if (adultDog.length > 0) {
+    const averageHumanAge = adultDog.reduce(function (acc, curr) {
+      acc + curr / adultDog.length;
+    });
+    return averageHumanAge;
+  } else {
+    return adultDog[0];
+  }
 };
 
 calcAverageHumanAge(testData1);
