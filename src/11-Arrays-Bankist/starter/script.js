@@ -439,9 +439,10 @@ const calcAverageHumanAge = function (ages) {
   const dogFilter = humanYears.filter(dog => dog >= 18);
   console.log(`Filtered Years ${dogFilter}`);
   if (dogFilter.length > 0) {
-    const average = dogFilter.reduce(
-      (acc, curr) => acc + curr / dogFilter.length
-    );
+    const average =
+      dogFilter.reduce(function (acc, curr) {
+        return acc + curr;
+      }, 0) / dogFilter.length;
     return average;
   } else {
     return 0;
@@ -449,7 +450,7 @@ const calcAverageHumanAge = function (ages) {
 };
 
 console.log(calcAverageHumanAge(testData1));
-// console.log(calcAverageHumanAge(testData2));
+console.log(calcAverageHumanAge(testData2));
 
 // const calcAverageHumanAge = function (ages) {
 //   const humanAges = ages.map(dogAge =>
