@@ -439,10 +439,11 @@ const calcAverageHumanAge = function (ages) {
   );
   const adultDog = humanAge.filter(adult => adult > 18);
 
-  if (adultDog.length > 0) {
-    const averageHumanAge = adultDog.reduce(function (acc, curr) {
-      acc + curr / adultDog.length;
-    });
+  if (adultDogs.length > 0) {
+    const averageHumanAge =
+      adultDogs.reduce(function (acc, curr) {
+        return acc + curr;
+      }, 0) / adultDogs.length;
     return averageHumanAge;
   } else {
     return 0;
