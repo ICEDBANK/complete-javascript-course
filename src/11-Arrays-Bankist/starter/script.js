@@ -430,14 +430,12 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
-const testData1 = [5, 2, 4, 1, 15, 8, 3];
-const testData2 = [16, 6, 10, 5, 6, 1, 4];
-
 const calcAverageHumanAge = function (ages) {
-  const humanAge = ages.map(dogAge =>
-    dogAge <= 2 ? 2 * dogAge : dogAge * 4 + 16
+  const humanAges = ages.map(dogAge =>
+    dogAge <= 2 ? 2 * dogAge : 16 + dogAge * 4
   );
-  const adultDog = humanAge.filter(adult => adult > 18);
+
+  const adultDogs = humanAges.filter(humanAge => humanAge >= 18);
 
   if (adultDogs.length > 0) {
     const averageHumanAge =
@@ -450,5 +448,9 @@ const calcAverageHumanAge = function (ages) {
   }
 };
 
-console.log(calcAverageHumanAge(testData1));
-console.log(calcAverageHumanAge(testData2));
+// Test Data
+const testData1 = [5, 2, 4, 1, 15, 8, 3];
+const testData2 = [16, 6, 10, 5, 6, 1, 4];
+
+console.log(calcAverageHumanAge(testData1)); // Output: 43
+console.log(calcAverageHumanAge(testData2)); // Output: 47.3333
