@@ -445,8 +445,9 @@ const calcAverageHumanAge = function (ages) {
     });
     return averageHumanAge;
   } else {
-    return adultDog[0];
+    return 0;
   }
 };
 
-calcAverageHumanAge(testData1);
+console.log(calcAverageHumanAge(testData1));
+console.log(calcAverageHumanAge(testData2));
