@@ -441,8 +441,9 @@ const calcAverageHumanAge = function (arr = []) {
   }
 };
 const averageHumanAge = function (arr = []) {
-  arr.reduce((acc, curr) => (acc + curr) / arr.length);
-  console.log(arr);
+  arr.reduce(function (acc, curr) {
+    return (acc + curr) / arr.length;
+  }, 0);
 };
 
 calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
