@@ -434,21 +434,6 @@ const testData1 = [5, 2, 4, 1, 15, 8, 3];
 const testData2 = [16, 6, 10, 5, 6, 1, 4];
 
 const calcAverageHumanAge = function (ages) {
-  const humanAge = ages.map(dogAge =>
-    dogAge <= 2 ? 2 * dogAge : dogAge * 4 + 16
-  );
-  const adultDog = humanAge.filter(adult => adult > 18);
-
-  if (adultDog.length > 0) {
-    const averageHumanAge =
-      adultDog.reduce(function (acc, curr) {
-        return acc + curr;
-      }, 0) / adultDog.length;
-    return averageHumanAge;
-  } else {
-    return 0;
-  }
+  const humanYears = ages.map(dog => (dog <= 2 ? 2 * dog : dog * 4 + 16));
+  const dogFilter = humanYears.filter(dog => dog <= 18);
 };
-
-console.log(calcAverageHumanAge(testData1));
-console.log(calcAverageHumanAge(testData2));
