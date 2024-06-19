@@ -443,7 +443,7 @@ const calcAverageHumanAge = function (ages) {
       dogFilter.reduce(function (acc, curr) {
         return acc + curr;
       }, 0) / dogFilter.length;
-    return average;
+    return Math.round(average * 100) / 100;
   } else {
     return 0;
   }
@@ -451,28 +451,3 @@ const calcAverageHumanAge = function (ages) {
 
 console.log(calcAverageHumanAge(testData1));
 console.log(calcAverageHumanAge(testData2));
-
-// const calcAverageHumanAge = function (ages) {
-//   const humanAges = ages.map(dogAge =>
-//     dogAge <= 2 ? 2 * dogAge : 16 + dogAge * 4
-//   );
-
-//   const adultDogs = humanAges.filter(humanAge => humanAge >= 18);
-
-//   if (adultDogs.length > 0) {
-//     const averageHumanAge =
-//       adultDogs.reduce(function (acc, curr) {
-//         return acc + curr;
-//       }, 0) / adultDogs.length;
-//     return averageHumanAge;
-//   } else {
-//     return 0;
-//   }
-// };
-
-// // Test Data
-// const testData1 = [5, 2, 4, 1, 15, 8, 3];
-// const testData2 = [16, 6, 10, 5, 6, 1, 4];
-
-// console.log(calcAverageHumanAge(testData1)); // Output: 43
-// console.log(calcAverageHumanAge(testData2)); // Output: 47.3333
