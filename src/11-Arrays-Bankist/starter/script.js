@@ -440,7 +440,7 @@ const calcAverageHumanAge = function (ages) {
   console.log(`Filtered Years ${dogFilter}`);
   if (dogFilter.length > 0) {
     const average = dogFilter.reduce(
-      (acc, curr) => acc + curr / dogFilter.length
+      (acc, curr) => (acc + curr) / dogFilter.length
     );
     return average;
   } else {
