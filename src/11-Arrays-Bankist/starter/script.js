@@ -80,14 +80,10 @@ const displayMovements = function (movements) {
   });
 };
 
-displayMovements(account1.movements);
-
 const calcDisplayBalance = function (movements) {
   const balance = movements.reduce((acc, curr) => acc + curr, 0);
   labelBalance.textContent = `${balance} €`;
 };
-
-calcDisplayBalance(account1.movements);
 
 const calcDisplayInSummary = function (movements) {
   const income = movements
@@ -110,10 +106,8 @@ const calcDisplayInSummary = function (movements) {
       return int >= 1; // Keep all elements in the array
     })
     .reduce((acc, curr) => acc + curr, 0);
-  labelSumInterest.textContent = `${interest}€`;
+  labelSumInterest.textContent = `${Math.round(interest * 100) / 100}€`;
 };
-
-calcDisplayInSummary(account1.movements);
 
 // const calcDisplayInterestSummary = function (movements) {
 //   const interest = movements
@@ -136,6 +130,35 @@ const createUserNames = function (accs) {
 };
 
 createUserNames(accounts);
+
+// Event Listeners
+
+let currentAccount;
+
+btnLogin.addEventListener('click', function (e) {
+  e.preventDefault();
+  currentAccount = accounts.find(
+    acc => acc.username === inputLoginUsername.value
+  );
+  console.log(currentAccount);
+
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    // Display U.I and Welcome Message
+    labelWelcome.textContent = `Welcome Back ${
+      currentAccount.owner.split(' ')[0]
+    }`;
+    containerApp.style.opacity = 100;
+    // Display movements
+    displayMovements(currentAccount.movements);
+
+    // Display balance
+    calcDisplayBalance(currentAccount.movements);
+
+    // Display summary
+    calcDisplayInSummary(currentAccount.movements);
+    console.log(`LOGIN`);
+  }
+});
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -356,6 +379,31 @@ const totalDepositsUsd = movements
   .reduce((acc, curr) => acc + curr, 0);
 
 console.log(totalDepositsUsd);
+
+console.log(`<---- Find Method ---->`);
+
+// Find only returns the first element that meets the condition and does not return an array like filter
+
+const riceFind = rice.find((member, index) => index === 4);
+console.log(riceFind);
+
+const firstWithdrawal = movements.find(move => move < 0);
+console.log(movements);
+console.log(firstWithdrawal);
+
+const account = accounts.find(acc => acc.owner === 'Jessica Davis');
+console.log(account);
+
+let foundAccount;
+
+for (const acc of accounts) {
+  if (acc.owner === 'Jessica Davis') {
+    foundAccount = acc;
+    break;
+  }
+}
+
+console.log(foundAccount);
 
 ///////////////////////////////////////
 // Coding Challenge #1
