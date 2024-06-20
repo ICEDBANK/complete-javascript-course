@@ -411,6 +411,8 @@ const kate3 = [10, 5, 6, 1, 4];
 console.log('<--- Test Data For Coding Challenge #1 Example 2 --->');
 checkDogs1(julia3, kate3);
 
+console.log(`<---- Coding Challenge #2 --->`);
+
 ///////////////////////////////////////
 // Coding Challenge #2
 
