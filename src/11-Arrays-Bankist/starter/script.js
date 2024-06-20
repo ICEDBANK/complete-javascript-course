@@ -515,12 +515,11 @@ console.log(calcAverageHumanAge1(testData1));
 
 console.log(`<---- Coding Challeng #3 ---->`);
 
-const calcAverageHumanAge2 = ages => {
+const calcAverageHumanAge2 = ages =>
   ages
     .map(dog => (dog <= 2 ? dog * 2 : dog * 4 + 16))
     .filter(dog => dog >= 18)
     .reduce((acc, curr) => acc + curr / ages.length, 0);
-};
 
 console.log(calcAverageHumanAge2(testData1));
 console.log(calcAverageHumanAge2(testData2));
