@@ -314,7 +314,7 @@ const totalDepositsUsd = movements
   .filter(move => move > 0)
   // .map(move => move * eurToUsd)
   .map((move, i, arr) => {
-    console.log(arr);
+    console.log(`Array: ${arr}`);
     return move * eurToUsd;
   })
   .reduce((acc, curr) => acc + curr, 0);
