@@ -439,11 +439,10 @@ const calcAverageHumanAge2 = function (ages) {
     .map(dog => (dog <= 2 ? 2 * dog : dog * 4 + 16))
     .filter(dog => dog >= 18)
     .reduce((acc, curr, _, arr) => (acc + curr) / arr.length, 0);
-  return Math.round(ageConversion * 100) / 100;
+  return ageConversion;
 };
 
-console.log(calcAverageHumanAge2(testData1)); // Output should be around 38.00
-// Output: 47.33
+console.log(calcAverageHumanAge2(testData1));
 
 // const calcAverageHumanAge = function (ages) {
 //   const humanYears = ages.map(dog => (dog <= 2 ? 2 * dog : dog * 4 + 16));
