@@ -95,11 +95,7 @@ const calcDisplayInSummary = function (movements) {
     .reduce((acc, curr) => acc + curr);
 
   labelSumIn.textContent = `${income}€`;
-};
 
-calcDisplayInSummary(account1.movements);
-
-const calcDisplayOutSummary = function (movements) {
   const withdrawls = movements
     .filter(mov => mov < 0)
     .reduce((acc, curr) => acc + curr);
@@ -107,7 +103,7 @@ const calcDisplayOutSummary = function (movements) {
   labelSumOut.textContent = `${withdrawls}€`;
 };
 
-calcDisplayOutSummary(account1.movements);
+calcDisplayInSummary(account1.movements);
 
 // const calcDisplayInterestSummary = function (movements) {
 //   const interest = movements
