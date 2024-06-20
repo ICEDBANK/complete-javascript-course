@@ -431,7 +431,6 @@ GOOD LUCK 😀
 */
 
 const testData1 = [5, 2, 4, 1, 15, 8, 3];
-const testData2 = [16, 6, 10, 5, 6, 1, 4];
 
 const calcAverageHumanAge2 = function (ages) {
   const ageConversion = ages
@@ -441,7 +440,7 @@ const calcAverageHumanAge2 = function (ages) {
   return Math.round(ageConversion * 100) / 100;
 };
 
-console.log(calcAverageHumanAge2(testData1));
+console.log(calcAverageHumanAge2(testData1)); // Output: 47.33
 
 // const calcAverageHumanAge = function (ages) {
 //   const humanYears = ages.map(dog => (dog <= 2 ? 2 * dog : dog * 4 + 16));
