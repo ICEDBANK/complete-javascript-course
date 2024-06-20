@@ -93,6 +93,8 @@ const calcDisplaySummary = function (movements) {
   const income = movements
     .filter(mov => mov > 0)
     .reduce((acc, curr) => acc + curr);
+
+  labelSumIn.textContent = `${income}`;
 };
 
 calcDisplaySummary(movements);
