@@ -440,10 +440,10 @@ const calcAverageHumanAge2 = function (ages) {
 
   if (dogFilter.length > 0) {
     const average =
-      dogFilter.reduce(function (acc, curr) {
+      ageConversion.reduce(function (acc, curr) {
         return acc + curr;
-      }, 0) / dogFilter.length;
-    return Math.round(average * 100) / 100;
+      }, 0) / ageConversion.length;
+    return Math.round(ageConversion * 100) / 100;
   } else {
     return 0;
   }
