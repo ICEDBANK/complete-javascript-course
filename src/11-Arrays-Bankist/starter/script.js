@@ -307,6 +307,14 @@ const maxValue = movements.reduce((acc, cur) => {
 }, movements[0]);
 console.log(maxValue);
 
+console.log(`<---- Method Chaining ---->`);
+
+const eurToUsd = 1.1;
+movements
+  .filter(move => move > 0)
+  .map(move => move * eurToUsd)
+  .reduce((acc, curr) => acc + move, 0);
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
