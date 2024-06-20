@@ -100,11 +100,11 @@ const calcDisplayInSummary = function (movements) {
 calcDisplayInSummary(account1.movements);
 
 const calcDisplayOutSummary = function (movements) {
-  const income = movements
-    .filter(mov => mov > 0)
+  const withdrawls = movements
+    .filter(mov => mov < 0)
     .reduce((acc, curr) => acc + curr);
 
-  labelSumIn.textContent = `${income}€`;
+  labelSumIn.textContent = `${withdrawls}€`;
 };
 
 calcDisplayOutSummary(account1.movements);
