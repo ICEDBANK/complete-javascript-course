@@ -411,8 +411,6 @@ const kate3 = [10, 5, 6, 1, 4];
 console.log('<--- Test Data For Coding Challenge #1 Example 2 --->');
 checkDogs1(julia3, kate3);
 
-console.log(`<---- Coding Challenge #2 --->`);
-
 ///////////////////////////////////////
 // Coding Challenge #2
 
@@ -433,47 +431,48 @@ GOOD LUCK 😀
 */
 
 const testData1 = [5, 2, 4, 1, 15, 8, 3];
+const testData2 = [16, 6, 10, 5, 6, 1, 4];
 
 const calcAverageHumanAge2 = function (ages) {
   const ageConversion = ages
-    .map(dog => (dog <= 2 ? 2 * dog : dog * 4 + 16))
+    .map(dog => (dog <= 2 ? dog * 2 : dog * 4 + 16))
     .filter(dog => dog >= 18);
 
-  if (ageConversion.length > 0) {
+  if (dogFilter.length > 0) {
     const average =
-      ageConversion.reduce((acc, curr) => acc + curr, 0) / ageConversion.length;
+      dogFilter.reduce(function (acc, curr) {
+        return acc + curr;
+      }, 0) / dogFilter.length;
     return Math.round(average * 100) / 100;
   } else {
     return 0;
   }
 };
 
-console.log(calcAverageHumanAge2(testData1)); // Output should be around 44
+const calcAverageHumanAge = function (ages) {
+  const humanYears = ages.map(dog => (dog <= 2 ? 2 * dog : dog * 4 + 16));
+  console.log(`Human Years ${humanYears}`);
+  const dogFilter = humanYears.filter(dog => dog >= 18);
+  console.log(`Filtered Years ${dogFilter}`);
+  if (dogFilter.length > 0) {
+    const average =
+      dogFilter.reduce(function (acc, curr) {
+        return acc + curr;
+      }, 0) / dogFilter.length;
+    return Math.round(average * 100) / 100;
+  } else {
+    return 0;
+  }
+};
 
-// const calcAverageHumanAge = function (ages) {
-//   const humanYears = ages.map(dog => (dog <= 2 ? 2 * dog : dog * 4 + 16));
-//   console.log(`Human Years ${humanYears}`);
-//   const dogFilter = humanYears.filter(dog => dog >= 18);
-//   console.log(`Filtered Years ${dogFilter}`);
-//   if (dogFilter.length > 0) {
-//     const average =
-//       dogFilter.reduce(function (acc, curr) {
-//         return acc + curr;
-//       }, 0) / dogFilter.length;
-//     return Math.round(average * 100) / 100;
-//   } else {
-//     return 0;
-//   }
-// };
+console.log(calcAverageHumanAge2(testData1));
+console.log(calcAverageHumanAge2(testData2));
 
-// console.log(calcAverageHumanAge(testData1));
-// console.log(calcAverageHumanAge(testData2));
-
-// const calcAverageHumanAge1 = function (ages) {
-//   const humanAges = ages.map(age => (age <= 2 ? 2 * age : age * 4 + 16));
-//   const adult = humanAges.filter(age => age >= 18);
-//   console.log(humanAges, adult);
-//   const average = adult.reduce((acc, age) => acc + age, 0) / adult.length;
-//   return average;
-// };
-// console.log(calcAverageHumanAge1(testData1));
+const calcAverageHumanAge1 = function (ages) {
+  const humanAges = ages.map(age => (age <= 2 ? 2 * age : age * 4 + 16));
+  const adult = humanAges.filter(age => age >= 18);
+  console.log(humanAges, adult);
+  const average = adult.reduce((acc, age) => acc + age, 0) / adult.length;
+  return average;
+};
+console.log(calcAverageHumanAge1(testData1));
