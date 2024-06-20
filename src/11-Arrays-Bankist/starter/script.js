@@ -528,3 +528,5 @@ const calcAverageHumanAge1 = function (ages) {
   return average;
 };
 console.log(calcAverageHumanAge1(testData1));
+
+console.log(`<---- Coding Challeng #3 ---->`);
