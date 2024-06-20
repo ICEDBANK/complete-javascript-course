@@ -311,12 +311,12 @@ console.log(`<---- Method Chaining ---->`);
 
 const eurToUsd = 1.1;
 const totalDepositsUsd = movements
-  .filter(move => move > 0);
-  // .map(move => move * eurToUsd)
-  .map((move, i, arr) => {
-    console.log(`Array: ${arr}`);
-    return move * eurToUsd;
-  })
+  .filter(move => move > 0)
+  .map(move => move * eurToUsd)
+  // .map((move, i, arr) => {
+  //   console.log(`Array: ${arr}`);
+  //   return move * eurToUsd;
+  // })
   .reduce((acc, curr) => acc + curr, 0);
 
 console.log(totalDepositsUsd);
