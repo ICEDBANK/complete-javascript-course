@@ -311,7 +311,7 @@ console.log(`<---- Method Chaining ---->`);
 
 const eurToUsd = 1.1;
 const totalDepositsUsd = movements
-  .filter(move => move > 0)
+  .filter(move => move > 0);
   // .map(move => move * eurToUsd)
   .map((move, i, arr) => {
     console.log(`Array: ${arr}`);
