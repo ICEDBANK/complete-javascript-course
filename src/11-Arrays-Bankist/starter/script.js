@@ -501,8 +501,8 @@ const calcAverageHumanAge = function (ages) {
   }
 };
 
-console.log(calcAverageHumanAge2(testData1));
-console.log(calcAverageHumanAge2(testData2));
+console.log(calcAverageHumanAge(testData1));
+console.log(calcAverageHumanAge(testData2));
 
 const calcAverageHumanAge1 = function (ages) {
   const humanAges = ages.map(age => (age <= 2 ? 2 * age : age * 4 + 16));
@@ -521,3 +521,6 @@ const calcAverageHumanAge2 = function (ages) {
     .filter(dog => dog >= 18)
     .reduce((acc, curr) => acc + curr / ages.length, 0);
 };
+
+console.log(calcAverageHumanAge2(testData1));
+console.log(calcAverageHumanAge2(testData2));
