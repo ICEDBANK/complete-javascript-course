@@ -437,12 +437,18 @@ const testData1 = [5, 2, 4, 1, 15, 8, 3];
 const calcAverageHumanAge2 = function (ages) {
   const ageConversion = ages
     .map(dog => (dog <= 2 ? 2 * dog : dog * 4 + 16))
-    .filter(dog => dog >= 18)
-    .reduce((acc, curr, _, arr) => (acc + curr) / arr.length, 0);
-  return ageConversion;
+    .filter(dog => dog >= 18);
+
+  if (ageConversion.length > 0) {
+    const average =
+      ageConversion.reduce((acc, curr) => acc + curr, 0) / ageConversion.length;
+    return Math.round(average * 100) / 100;
+  } else {
+    return 0;
+  }
 };
 
-console.log(calcAverageHumanAge2(testData1));
+console.log(calcAverageHumanAge2(testData1)); // Output should be around 44
 
 // const calcAverageHumanAge = function (ages) {
 //   const humanYears = ages.map(dog => (dog <= 2 ? 2 * dog : dog * 4 + 16));
