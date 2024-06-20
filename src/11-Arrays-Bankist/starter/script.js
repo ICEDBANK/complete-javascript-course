@@ -310,10 +310,12 @@ console.log(maxValue);
 console.log(`<---- Method Chaining ---->`);
 
 const eurToUsd = 1.1;
-movements
+const totalDepositsUsd = movements
   .filter(move => move > 0)
   .map(move => move * eurToUsd)
-  .reduce((acc, curr) => acc + move, 0);
+  .reduce((acc, curr) => acc + curr, 0);
+
+console.log(totalDepositsUsd);
 
 ///////////////////////////////////////
 // Coding Challenge #1
