@@ -109,15 +109,15 @@ const calcDisplayOutSummary = function (movements) {
 
 calcDisplayOutSummary(account1.movements);
 
-const calcDisplayInterestSummary = function (movements) {
-  const interest = movements
-    .filter(mov => mov > 0)
-    .reduce((acc, curr) => acc + curr * account1.interestRate);
+// const calcDisplayInterestSummary = function (movements) {
+//   const interest = movements
+//     .filter(mov => mov > 0)
+//     .reduce((acc, curr) => acc + curr * account1.interestRate);
 
-  labelSumInterest.textContent = `${interest}€`;
-};
+//   labelSumInterest.textContent = `${interest}€`;
+// };
 
-calcDisplayInterestSummary(account1.movements);
+// calcDisplayInterestSummary(account1.movements);
 
 const createUserNames = function (accs) {
   accs.forEach(function (acc) {
