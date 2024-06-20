@@ -443,7 +443,7 @@ const calcAverageHumanAge2 = function (ages) {
       ageConversion.reduce(function (acc, curr) {
         return acc + curr;
       }, 0) / ageConversion.length;
-    return Math.round(ageConversion * 100) / 100;
+    return Math.round(average * 100) / 100;
   } else {
     return 0;
   }
