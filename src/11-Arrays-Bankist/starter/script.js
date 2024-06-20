@@ -433,6 +433,13 @@ GOOD LUCK 😀
 const testData1 = [5, 2, 4, 1, 15, 8, 3];
 const testData2 = [16, 6, 10, 5, 6, 1, 4];
 
+const calcAverageHumanAge2 = function(ages){
+  const ageConversion = ages
+    .map(dog => (dog <= 2 ? 2 * dog : dog * 4 + 16));
+    .filter(dog => dog >= 18)
+    
+}
+
 const calcAverageHumanAge = function (ages) {
   const humanYears = ages.map(dog => (dog <= 2 ? 2 * dog : dog * 4 + 16));
   console.log(`Human Years ${humanYears}`);
