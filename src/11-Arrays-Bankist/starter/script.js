@@ -443,30 +443,30 @@ const calcAverageHumanAge2 = function (ages) {
 
 console.log(calcAverageHumanAge2(testData1));
 
-const calcAverageHumanAge = function (ages) {
-  const humanYears = ages.map(dog => (dog <= 2 ? 2 * dog : dog * 4 + 16));
-  console.log(`Human Years ${humanYears}`);
-  const dogFilter = humanYears.filter(dog => dog >= 18);
-  console.log(`Filtered Years ${dogFilter}`);
-  if (dogFilter.length > 0) {
-    const average =
-      dogFilter.reduce(function (acc, curr) {
-        return acc + curr;
-      }, 0) / dogFilter.length;
-    return Math.round(average * 100) / 100;
-  } else {
-    return 0;
-  }
-};
+// const calcAverageHumanAge = function (ages) {
+//   const humanYears = ages.map(dog => (dog <= 2 ? 2 * dog : dog * 4 + 16));
+//   console.log(`Human Years ${humanYears}`);
+//   const dogFilter = humanYears.filter(dog => dog >= 18);
+//   console.log(`Filtered Years ${dogFilter}`);
+//   if (dogFilter.length > 0) {
+//     const average =
+//       dogFilter.reduce(function (acc, curr) {
+//         return acc + curr;
+//       }, 0) / dogFilter.length;
+//     return Math.round(average * 100) / 100;
+//   } else {
+//     return 0;
+//   }
+// };
 
-console.log(calcAverageHumanAge(testData1));
-console.log(calcAverageHumanAge(testData2));
+// console.log(calcAverageHumanAge(testData1));
+// console.log(calcAverageHumanAge(testData2));
 
-const calcAverageHumanAge1 = function (ages) {
-  const humanAges = ages.map(age => (age <= 2 ? 2 * age : age * 4 + 16));
-  const adult = humanAges.filter(age => age >= 18);
-  console.log(humanAges, adult);
-  const average = adult.reduce((acc, age) => acc + age, 0) / adult.length;
-  return average;
-};
-console.log(calcAverageHumanAge1(testData1));
+// const calcAverageHumanAge1 = function (ages) {
+//   const humanAges = ages.map(age => (age <= 2 ? 2 * age : age * 4 + 16));
+//   const adult = humanAges.filter(age => age >= 18);
+//   console.log(humanAges, adult);
+//   const average = adult.reduce((acc, age) => acc + age, 0) / adult.length;
+//   return average;
+// };
+// console.log(calcAverageHumanAge1(testData1));
