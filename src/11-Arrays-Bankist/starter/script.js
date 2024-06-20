@@ -106,7 +106,8 @@ const calcDisplayInSummary = function (movements) {
     .filter(move => move > 0)
     .map(deposit => (deposit * 1.2) / 100)
     .filter((int, i, arr) => {
-      console.log(arr);
+      console.log(arr); // Log the array for debugging
+      return true; // Keep all elements in the array
     })
     .reduce((acc, curr) => acc + curr, 0);
   labelSumInterest.textContent = `${interest}€`;
