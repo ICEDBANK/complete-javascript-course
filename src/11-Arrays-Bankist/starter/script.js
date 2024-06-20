@@ -519,7 +519,7 @@ const calcAverageHumanAge2 = ages =>
   ages
     .map(dog => (dog <= 2 ? dog * 2 : dog * 4 + 16))
     .filter(dog => dog >= 18)
-    .reduce((acc, curr) => acc + curr / ages.length, 0);
+    .reduce((acc, curr, i, arr) => acc + curr / arr.length, 0);
 
 console.log(calcAverageHumanAge2(testData1));
 console.log(calcAverageHumanAge2(testData2));
