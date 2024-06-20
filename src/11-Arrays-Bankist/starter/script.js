@@ -97,7 +97,7 @@ const calcDisplaySummary = function (movements) {
   labelSumIn.textContent = `${income}`;
 };
 
-calcDisplaySummary(movements);
+calcDisplaySummary(account1.movements);
 
 const createUserNames = function (accs) {
   accs.forEach(function (acc) {
