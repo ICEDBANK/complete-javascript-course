@@ -89,7 +89,7 @@ const calcDisplayBalance = function (movements) {
 
 calcDisplayBalance(account1.movements);
 
-const calcDisplaySummary = function (movements) {
+const calcDisplayInSummary = function (movements) {
   const income = movements
     .filter(mov => mov > 0)
     .reduce((acc, curr) => acc + curr);
@@ -97,7 +97,17 @@ const calcDisplaySummary = function (movements) {
   labelSumIn.textContent = `${income}€`;
 };
 
-calcDisplaySummary(account1.movements);
+calcDisplayInSummary(account1.movements);
+
+const calcDisplayOutSummary = function (movements) {
+  const income = movements
+    .filter(mov => mov > 0)
+    .reduce((acc, curr) => acc + curr);
+
+  labelSumIn.textContent = `${income}€`;
+};
+
+calcDisplayOutSummary(account1.movements);
 
 const createUserNames = function (accs) {
   accs.forEach(function (acc) {
