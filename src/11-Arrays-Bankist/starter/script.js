@@ -101,6 +101,10 @@ const calcDisplayInSummary = function (movements) {
     .reduce((acc, curr) => acc + curr);
 
   labelSumOut.textContent = `${Math.abs(withdrawls)}€`;
+
+  const interest = movements
+    .filter(move => move > 0)
+    .map(deposit => (deposit * 1.2) / 100);
 };
 
 calcDisplayInSummary(account1.movements);
