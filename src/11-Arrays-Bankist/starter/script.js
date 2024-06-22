@@ -465,7 +465,7 @@ const riceFamily = [
 const fam = riceFamily.some(fam => fam.age > 18);
 console.log(`${fam}`);
 
-const fam2 = riceFamily.every(fam => fam.age > 18);
+const fam2 = riceFamily.every(fam => fam.age < 50);
 console.log(`${fam2}`);
 
 ///////////////////////////////////////
