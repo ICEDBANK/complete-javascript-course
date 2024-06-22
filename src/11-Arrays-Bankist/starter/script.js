@@ -455,8 +455,15 @@ console.log(foundAccount);
 
 console.log(`<---- Some and Every Method ---->`);
 
-const test = rice;
-console.log(`${test}`);
+const riceFamily = [
+  { name: 'Joshua', age: 36 },
+  { name: 'Sarah', age: 35 },
+  { name: 'Ava', age: 6 },
+  { name: 'Adeline', age: 2 },
+];
+
+const fam = riceFamily.some(fam => fam.age > 1);
+console.log(`${fam}`);
 
 ///////////////////////////////////////
 // Coding Challenge #1
