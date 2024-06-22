@@ -453,6 +453,11 @@ for (const acc of accounts) {
 
 console.log(foundAccount);
 
+console.log(`<---- Some and Every Method ---->`);
+
+const test = rice;
+console.log(`${test}`);
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
