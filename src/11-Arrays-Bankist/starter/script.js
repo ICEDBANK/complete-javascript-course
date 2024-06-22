@@ -199,10 +199,10 @@ btnClose.addEventListener('click', function (e) {
     const index = accounts.findIndex(
       acc => acc.username === currentAccount.username
     );
-    console.log(`${index}`);
+    console.log(`You have deleted ${accounts}`);
     accounts.splice(index, 1);
 
-    // containerApp.style.opacity = 0;
+    containerApp.style.opacity = 0;
   }
 
   // inputCloseUsername.value = inputClosePin.value = '';
