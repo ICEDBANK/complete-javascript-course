@@ -201,7 +201,7 @@ btnClose.addEventListener('click', function (e) {
     const index = accounts.findIndex(
       acc => acc.username === currentAccount.username
     );
-    console.log(`You have deleted ${index}`);
+    console.log(`You have deleted ${accounts}`);
     accounts.splice(index, 1);
 
     containerApp.style.opacity = 0;
