@@ -462,7 +462,7 @@ const riceFamily = [
   { name: 'Adeline', age: 2 },
 ];
 
-const fam = riceFamily.some(fam => fam.age > 1);
+const fam = riceFamily.some(fam => fam.age > 18);
 console.log(`${fam}`);
 
 ///////////////////////////////////////
