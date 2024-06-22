@@ -192,22 +192,20 @@ btnTransfer.addEventListener('click', function (e) {
 
 btnClose.addEventListener('click', function (e) {
   e.preventDefault();
-  console.log(`Delete Button Clicked`);
   if (
     inputCloseUsername.value === currentAccount.username &&
-    Number(inputClosePin.value === currentAccount.pin)
+    +inputClosePin.value === currentAccount.pin
   ) {
-    console.log(`${inputCloseUsername.value}, ${inputClosePin.value}`);
     const index = accounts.findIndex(
       acc => acc.username === currentAccount.username
     );
     console.log(`You have deleted ${accounts}`);
     accounts.splice(index, 1);
 
-    containerApp.style.opacity = 0;
+    // containerApp.style.opacity = 0;
   }
 
-  inputCloseUsername.value = inputClosePin.value = '';
+  // inputCloseUsername.value = inputClosePin.value = '';
 });
 
 /////////////////////////////////////////////////
