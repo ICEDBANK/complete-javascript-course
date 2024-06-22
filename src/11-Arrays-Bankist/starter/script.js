@@ -204,6 +204,7 @@ btnClose.addEventListener('click', function (e) {
     accounts.splice(index, 1);
 
     containerApp.style.opacity = 0;
+    console.log(`You have deleted ${index}`);
   }
 
   inputCloseUsername.value = inputClosePin.value = '';
