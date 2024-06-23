@@ -506,8 +506,9 @@ console.log(movements.some(deposits));
 console.log(`<---- flat and flatMap methods ---->`);
 
 const arr4 = [1, (2)[((3)[(5, 6)], (4)[(7, 8)])]];
+const arr5 = [[1, 2, 4], [4, 5, 6], 7, 8];
 
-console.log(arr4.flat());
+console.log(arr5.flat());
 
 ///////////////////////////////////////
 // Coding Challenge #1
