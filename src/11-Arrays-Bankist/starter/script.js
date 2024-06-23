@@ -204,7 +204,7 @@ btnLoan.addEventListener('click', function (e) {
   }
   // update ui
 
-  inputLoanAmount = '';
+  inputLoanAmount.value = '';
 });
 
 btnClose.addEventListener('click', function (e) {
