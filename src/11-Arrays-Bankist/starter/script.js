@@ -519,11 +519,18 @@ console.log(arr4.flat(2));
 // const overallBallance = allMovements.reduce((acc, move) => acc + move, 0);
 // console.log(overallBallance);
 
+// Flat
 const overallBallance = accounts
   .map(acc => acc.movements)
   .flat()
   .reduce((acc, move) => acc + move, 0);
 console.log(overallBallance);
+
+// FlatMap
+const overallBallance2 = accounts
+  .flatMap(acc => acc.movements)
+  .reduce((acc, move) => acc + move, 0);
+console.log(overallBallance2);
 
 ///////////////////////////////////////
 // Coding Challenge #1
