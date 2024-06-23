@@ -503,6 +503,10 @@ console.log(account4.movements.every(mov => mov > 0));
 const deposits = move => move > 0;
 console.log(movements.some(deposits));
 
+console.log(`<---- flat and flatMap methods ---->`);
+
+const arr4 = [1, (2)[((3)[(5, 6)], (4)[(7, 8)])]];
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
