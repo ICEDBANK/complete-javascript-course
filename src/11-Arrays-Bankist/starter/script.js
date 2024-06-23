@@ -202,6 +202,9 @@ btnLoan.addEventListener('click', function (e) {
 
     updateUI(currentAccount);
   }
+  // update ui
+
+  inputLoanAmount = '';
 });
 
 btnClose.addEventListener('click', function (e) {
