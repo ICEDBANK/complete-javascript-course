@@ -551,6 +551,12 @@ const sortMovements = movements.sort((a, b) => {
 });
 console.log(sortMovements);
 
+sortMovements = movements.sort((a, b) => {
+  if (a > b) return -1;
+  if (b > a) return 1;
+});
+console.log(sortMovements);
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
