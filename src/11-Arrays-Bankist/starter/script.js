@@ -540,6 +540,11 @@ console.log(rice);
 riceFamily.sort((a, b) => a.age - b.age);
 console.log(riceFamily);
 
+// Numbers sorting method
+
+console.log(movements);
+console.log(movements.sort);
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
