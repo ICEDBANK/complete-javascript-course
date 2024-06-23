@@ -543,7 +543,7 @@ console.log(riceFamily);
 // Numbers sorting method
 
 console.log(movements);
-console.log(movements.sort);
+console.log(movements.sort());
 
 ///////////////////////////////////////
 // Coding Challenge #1
