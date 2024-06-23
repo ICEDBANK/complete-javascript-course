@@ -507,6 +507,8 @@ console.log(`<---- flat and flatMap methods ---->`);
 
 const arr4 = [1, (2)[((3)[(5, 6)], (4)[(7, 8)])]];
 
+console.log(arr4.flat());
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
