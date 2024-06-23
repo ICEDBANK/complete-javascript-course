@@ -526,11 +526,19 @@ const overallBallance = accounts
   .reduce((acc, move) => acc + move, 0);
 console.log(overallBallance);
 
-// FlatMap
+// FlatMap only use if you only need the first level of a multidimensional arrays
 const overallBallance2 = accounts
   .flatMap(acc => acc.movements)
   .reduce((acc, move) => acc + move, 0);
 console.log(overallBallance2);
+
+console.log(`<---- Sorting Array methods ---->`);
+
+rice.sort();
+console.log(rice);
+
+riceFamily.sort((a, b) => b.age - a.age);
+console.log(riceFamily);
 
 ///////////////////////////////////////
 // Coding Challenge #1
