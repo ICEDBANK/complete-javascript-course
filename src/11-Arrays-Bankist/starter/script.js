@@ -537,7 +537,7 @@ console.log(`<---- Sorting Array methods ---->`);
 rice.sort();
 console.log(rice);
 
-riceFamily.sort((a, b) => b.age - a.age);
+riceFamily.sort((a, b) => a.age - b.age);
 console.log(riceFamily);
 
 ///////////////////////////////////////
