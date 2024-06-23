@@ -471,7 +471,7 @@ console.log(`${fam2}`);
 console.log(movements);
 console.log(movements.includes(-130));
 
-const depositCheck = movements.some(dep => dep > 5000);
+const depositCheck = movements.some(dep => dep > 1500);
 console.log(depositCheck);
 
 ///////////////////////////////////////
