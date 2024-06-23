@@ -545,7 +545,10 @@ console.log(riceFamily);
 console.log(movements);
 console.log(movements.sort());
 
-const sortMovements = movements.sort((a, b) => a - b);
+const sortMovements = movements.sort((a, b) => {
+  if (a > b) return 1;
+  if (b > a) return -1;
+});
 console.log(sortMovements);
 
 ///////////////////////////////////////
