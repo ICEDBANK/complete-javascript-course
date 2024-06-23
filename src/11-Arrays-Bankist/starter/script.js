@@ -545,17 +545,21 @@ console.log(riceFamily);
 console.log(movements);
 console.log(movements.sort());
 
+// Acending Order
 let sortMovements = movements.sort((a, b) => {
   if (a > b) return 1;
   if (b > a) return -1;
 });
 console.log(sortMovements);
 
+// Decending Order
 sortMovements = movements.sort((a, b) => {
   if (a > b) return -1;
   if (b > a) return 1;
 });
 console.log(sortMovements);
+
+sortMovements.sort((a, b) => a - b);
 
 ///////////////////////////////////////
 // Coding Challenge #1
