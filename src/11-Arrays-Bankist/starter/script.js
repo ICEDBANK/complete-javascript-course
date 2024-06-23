@@ -511,6 +511,9 @@ const arr5 = [[1, 2, 4], [4, 5, 6], 7, 8];
 console.log(arr5.flat());
 console.log(arr4.flat(2));
 
+const accountMovements = accounts.map(acc => acc.movements);
+console.log(accountMovements);
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
