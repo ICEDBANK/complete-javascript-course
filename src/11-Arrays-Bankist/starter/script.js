@@ -468,6 +468,9 @@ console.log(`${fam}`);
 const fam2 = riceFamily.every(fam => fam.age < 50);
 console.log(`${fam2}`);
 
+console.log(movements);
+console.log(movements.includes(-130));
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
