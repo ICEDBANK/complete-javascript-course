@@ -560,6 +560,10 @@ sortMovements = movements.sort((a, b) => {
 console.log(sortMovements);
 
 sortMovements.sort((a, b) => a - b);
+console.log(sortMovements);
+
+sortMovements.sort((a, b) => b - a);
+console.log(sortMovements);
 
 ///////////////////////////////////////
 // Coding Challenge #1
