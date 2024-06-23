@@ -546,6 +546,7 @@ console.log(movements);
 console.log(movements.sort());
 
 const sortMovements = movements.sort((a, b) => a - b);
+console.log(sortMovements);
 
 ///////////////////////////////////////
 // Coding Challenge #1
