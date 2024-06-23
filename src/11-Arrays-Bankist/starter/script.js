@@ -517,6 +517,7 @@ console.log(accountMovements);
 const allMovements = accountMovements.flat();
 console.log(allMovements);
 const overallBallance = allMovements.reduce((acc, move) => acc + move, 0);
+console.log(overallBallance);
 
 ///////////////////////////////////////
 // Coding Challenge #1
