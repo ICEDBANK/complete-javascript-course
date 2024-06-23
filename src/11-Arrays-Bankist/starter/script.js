@@ -77,11 +77,16 @@ const displayMovements = function (movements) {
         </div>`;
 
     containerMovements.insertAdjacentHTML('afterbegin', html);
+    2;
   });
+  2;
 };
-
+2;
+2;
 const calcDisplayBalance = function (acc) {
+  2;
   acc.balance = acc.movements.reduce((acc, curr) => acc + curr, 0);
+  2;
   labelBalance.textContent = `${acc.balance} €`;
 };
 
@@ -490,6 +495,8 @@ console.log(movements.includes(-130));
 
 const depositCheck = movements.some(dep => dep > 1500);
 console.log(depositCheck);
+
+console.log(movements.every(mov => mov > 0));
 
 ///////////////////////////////////////
 // Coding Challenge #1
