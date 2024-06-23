@@ -514,6 +514,9 @@ console.log(arr4.flat(2));
 const accountMovements = accounts.map(acc => acc.movements);
 console.log(accountMovements);
 
+const allMovements = accountMovements.flat();
+console.log(allMovements);
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
