@@ -577,6 +577,14 @@ console.log(sortMovements);
 sortMovements.sort((a, b) => b - a);
 console.log(sortMovements);
 
+console.log(`<---- More Ways of Creating and Filling Arrays ---->`);
+
+console.log([1, 2, 3, 4, 5, 6, 7]);
+console.log(new Array(1, 2, 3, 4, 5, 6, 7));
+
+const x = new Array(7);
+console.log(x);
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
