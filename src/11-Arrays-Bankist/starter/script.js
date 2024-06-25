@@ -893,7 +893,15 @@ console.log(numDeposits);
 let a = 10;
 console.log(++a);
 
-const sums = accounts.flatMap(acc => acc.movements);
+const sums = accounts
+  .flatMap(acc => acc.movements)
+  .reduce(
+    (count, curr) => {
+      cur > 0 ? (sum.deposit += curr) : (sums.withdrawls += cur);
+      return sums;
+    },
+    { deposit: 0, withdrawls: 0 }
+  );
 
 /* 
 Julia and Kate are still studying dogs, and this time they are studying if dogs are eating too much or too little.
