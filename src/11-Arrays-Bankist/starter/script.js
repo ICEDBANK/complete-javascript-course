@@ -886,7 +886,7 @@ const numDeposits = accounts
 
 const numDeposits2 = accounts
   .flatMap(acc => acc.movements)
-  .reduce((count, curr) => (curr >= 1000 ? count + 1 : count), 0);
+  .reduce((count, curr) => (curr >= 1000 ? ++count : count), 0);
 
 console.log(numDeposits);
 
