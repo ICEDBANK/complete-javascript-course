@@ -448,8 +448,8 @@ const allPositiveMovements = movements.every(mov => mov > 0);
 console.log(allPositiveMovements);
 
 // Separate callback
-const deposits = move => move > 0;
-console.log(movements.some(deposits));
+const deposits1 = move => move > 0;
+console.log(movements.some(deposits1));
 
 // flat and flatMap methods
 const arr4 = [[[1, 2], 3], [4, [5, 6]], 7, 8];
