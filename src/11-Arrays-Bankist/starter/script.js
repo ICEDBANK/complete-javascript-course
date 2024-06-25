@@ -602,8 +602,10 @@ const dice = Array.from(
 
 console.log(dice);
 
-const movementsUI = Array.from(document.querySelectorAll('.movements_value'));
-console.log(movementsUI);
+labelBalance.addEventListener('click', function () {
+  const movementsUI = Array.from(document.querySelectorAll('.movements_value'));
+  console.log(movementsUI);
+});
 
 ///////////////////////////////////////
 // Coding Challenge #1
