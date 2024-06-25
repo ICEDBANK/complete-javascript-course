@@ -897,7 +897,7 @@ const sums = accounts
   .flatMap(acc => acc.movements)
   .reduce(
     (count, curr) => {
-      cur > 0 ? (sum.deposit += curr) : (sums.withdrawls += cur);
+      curr > 0 ? (sums.deposit += curr) : (sums.withdrawls += curr);
       return sums;
     },
     { deposit: 0, withdrawls: 0 }
