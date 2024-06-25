@@ -318,14 +318,14 @@ movements.forEach(function (transaction, index, array) {
 });
 
 // Using forEach with Map
-family = new Map([
+const ricefamily = new Map([
   ['Joshua', 36],
   ['Sarah', 35],
   ['Ava', 6],
   ['Adeline', 2],
 ]);
 
-family.forEach(function (value, key) {
+ricefamily.forEach(function (value, key) {
   console.log(`The Rice Family consists of ${key} at age ${value}`);
 });
 
@@ -337,7 +337,7 @@ currencyUnique.forEach(function (value) {
 });
 
 // map function (array method)
-const greetings = family.map(function (x) {
+const greetings = ricefamily.map(function (x) {
   console.log(`Hello ${x}`);
 });
 
