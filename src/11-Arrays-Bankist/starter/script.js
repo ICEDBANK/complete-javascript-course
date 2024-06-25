@@ -890,6 +890,9 @@ const numDeposits2 = accounts
 
 console.log(numDeposits);
 
+let a = 10;
+console.log(++a);
+
 /* 
 Julia and Kate are still studying dogs, and this time they are studying if dogs are eating too much or too little.
 Eating too much means the dog's current food portion is larger than the recommended portion, and eating too little is the opposite.
