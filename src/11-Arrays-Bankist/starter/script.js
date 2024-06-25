@@ -337,7 +337,7 @@ currencyUnique.forEach(function (value) {
 });
 
 // map function (array method)
-const greetings = rice.map(x => console.log(`Hello ${x}`));
+// const greetings = rice.map(x => console.log(`Hello ${x}`));
 
 // Functional programming paradigm in practice
 const conversion = movements.map(x => Math.round(x * 1.1 * 100) / 100);
