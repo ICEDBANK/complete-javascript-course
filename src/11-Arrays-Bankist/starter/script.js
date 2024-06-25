@@ -589,6 +589,8 @@ console.log(x.map(() => 5));
 x.fill(1, 3, 5);
 console.log(x);
 
+Array.from({ length: 7 }, () => 1);
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
