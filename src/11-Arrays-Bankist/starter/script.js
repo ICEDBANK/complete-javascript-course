@@ -875,7 +875,7 @@ console.log(calcAverageHumanAge2(testData2));
 
 const bankDepositSum = accounts.map(acc => acc.movements);
 
-console.log(bankdeposit);
+console.log(bankDepositSum);
 
 /* 
 Julia and Kate are still studying dogs, and this time they are studying if dogs are eating too much or too little.
