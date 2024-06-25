@@ -873,7 +873,7 @@ console.log(calcAverageHumanAge2(testData2));
 ///////////////////////////////////////
 // Coding Challenge #4
 
-const bankDepositSum = accounts.map(acc => acc.movements);
+const bankDepositSum = accounts.flatMap(acc => acc.movements);
 
 console.log(bankDepositSum);
 
