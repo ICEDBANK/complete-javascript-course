@@ -880,6 +880,16 @@ const bankDepositSum = accounts
 
 console.log(bankDepositSum);
 
+const numDeposits = accounts
+  .flatMap(acc => acc.movements)
+  .filter(move => move >= 1000).length;
+
+const numDeposits2 = accounts
+  .flatMap(acc => acc.movements)
+  .reduce((count, curr) => (curr >= 1000 ? count + 1 : count), 0);
+
+console.log(numDeposits);
+
 /* 
 Julia and Kate are still studying dogs, and this time they are studying if dogs are eating too much or too little.
 Eating too much means the dog's current food portion is larger than the recommended portion, and eating too little is the opposite.
