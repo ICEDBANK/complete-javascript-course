@@ -589,7 +589,8 @@ console.log(x.map(() => 5));
 x.fill(1, 3, 5);
 console.log(x);
 
-Array.from({ length: 7 }, () => 1);
+const y = Array.from({ length: 7 }, () => 1);
+console.log(y);
 
 ///////////////////////////////////////
 // Coding Challenge #1
