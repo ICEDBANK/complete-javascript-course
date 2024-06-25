@@ -586,7 +586,7 @@ const x = new Array(7);
 console.log(x);
 
 console.log(x.map(() => 5));
-x.fill(1, 3);
+x.fill(1, 3, 5);
 console.log(x);
 
 ///////////////////////////////////////
