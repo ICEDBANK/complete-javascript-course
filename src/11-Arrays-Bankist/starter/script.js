@@ -603,7 +603,9 @@ const dice = Array.from(
 console.log(dice);
 
 labelBalance.addEventListener('click', function () {
-  const movementsUI = Array.from(document.querySelectorAll('.movements_value'));
+  const movementsUI = Array.from(
+    document.querySelectorAll('.movements__value')
+  );
   console.log(movementsUI);
 });
 
