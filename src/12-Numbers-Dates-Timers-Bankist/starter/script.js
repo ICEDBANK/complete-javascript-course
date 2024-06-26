@@ -325,3 +325,11 @@ console.log(Math.floor(-23.9));
 //Rounding Decimals
 console.log((2.7).toFixed(0));
 console.log(+(2.75453).toFixed(3));
+
+console.log(5 % 2);
+console.log(5 / 2);
+console.log(5 % 2);
+console.log(5 % 2);
+console.log(5 % 2);
+console.log(5 % 2);
+console.log(5 % 2);
