@@ -326,6 +326,7 @@ console.log(Math.floor(-23.9));
 console.log((2.7).toFixed(0));
 console.log(+(2.75453).toFixed(3));
 
+// Remainder Operator isEven is a practical function implementation
 console.log(5 % 2);
 console.log(5 / 2);
 console.log(8 % 3);
@@ -340,3 +341,8 @@ console.log(isEven(8));
 console.log(isEven(23));
 console.log(isEven(10));
 console.log(isEven(513));
+
+[...document.querySelector('.movements_row')],
+  forEach(function (row, i) {
+    if (i % 2 === 0) row.style.backgroundColor = 'orangered';
+  });
