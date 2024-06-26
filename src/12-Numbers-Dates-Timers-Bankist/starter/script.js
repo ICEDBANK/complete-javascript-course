@@ -313,9 +313,9 @@ const randomInt = (min, max) =>
 console.log(randomInt(10, 20));
 
 // Rounding Interegers
-console.log(Math.trunc(23.4));
+console.log(Math.round(23.4));
 console.log(Math.round(23.9));
 console.log(Math.ceil(23.9));
 console.log(Math.ceil(23.9));
-console.log(Math.round(23.9));
-console.log(Math.round(23.9));
+console.log(Math.floor(23.9));
+console.log(Math.floor(23.9));
