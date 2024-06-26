@@ -344,7 +344,7 @@ console.log(isEven(513));
 
 labelBalance.addEventListener('click', function () {
   [...document.querySelectorAll('.movements_row')],
-    forEach(function (row, i) {
+    array.forEach((row, i) => {
       if (i % 2 === 0) row.style.backgroundColor = 'orangered';
     });
 });
