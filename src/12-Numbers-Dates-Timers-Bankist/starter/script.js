@@ -279,5 +279,9 @@ console.log(23 === 23.0);
 console.log(0.1 + 0.2);
 
 // String Conversion
-console.log(+'23');
+console.log(Number('23'));
 console.log(+`23`);
+
+//Parsing
+
+console.log(Number.parseInt('30px'));
