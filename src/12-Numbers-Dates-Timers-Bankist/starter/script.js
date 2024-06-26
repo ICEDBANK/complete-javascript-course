@@ -349,7 +349,7 @@ console.log(isEven(513));
 //     });
 // });
 
-// Numeric Seperators
+// Numeric Seperators ( Use underscore '_' to make your numbers more readable)
 
 const diameter = 287_460_000_000;
 console.log(diameter);
