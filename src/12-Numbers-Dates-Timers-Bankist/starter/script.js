@@ -7,7 +7,7 @@
 /////////////////////////////////////////////////
 // Data
 
-// DIFFERENT DATA! Contains movement dates, currency and locale
+// Different data! Contains movement dates, currency and locale
 
 const account1 = {
   owner: 'Jonas Schmedtmann',
@@ -32,7 +32,7 @@ const account1 = {
 const account2 = {
   owner: 'Jessica Davis',
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
-  interestRate: 1.5,
+  interestRate: 1.5, // %
   pin: 2222,
 
   movementsDates: [
@@ -49,10 +49,13 @@ const account2 = {
   locale: 'en-US',
 };
 
+// Array containing all accounts
 const accounts = [account1, account2];
 
 /////////////////////////////////////////////////
 // Elements
+
+// Selecting DOM elements
 const labelWelcome = document.querySelector('.welcome');
 const labelDate = document.querySelector('.date');
 const labelBalance = document.querySelector('.balance__value');
@@ -81,11 +84,14 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 // Functions
 
+// Function to display account movements (transactions)
 const displayMovements = function (movements, sort = false) {
-  containerMovements.innerHTML = '';
+  containerMovements.innerHTML = ''; // Clear previous movements
 
+  // Sort movements if required
   const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
 
+  // Generate HTML for each movement and insert into container
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
 
@@ -94,7 +100,7 @@ const displayMovements = function (movements, sort = false) {
         <div class="movements__type movements__type--${type}">${
       i + 1
     } ${type}</div>
-        <div class="movements__value">${mov}€</div>
+        <div class="movements__value">${mov.toFixed(2)}€</div>
       </div>
     `;
 
@@ -102,33 +108,36 @@ const displayMovements = function (movements, sort = false) {
   });
 };
 
+// Function to calculate and display the balance of the account
 const calcDisplayBalance = function (acc) {
   acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
-  labelBalance.textContent = `${acc.balance}€`;
+  labelBalance.textContent = `${acc.balance.toFixed(2)}€`;
 };
 
+// Function to calculate and display the summary (incomes, outgoings, interest)
 const calcDisplaySummary = function (acc) {
+  // Calculate incomes
   const incomes = acc.movements
     .filter(mov => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
-  labelSumIn.textContent = `${incomes}€`;
+  labelSumIn.textContent = `${incomes.toFixed(2)}€`;
 
+  // Calculate outgoings
   const out = acc.movements
     .filter(mov => mov < 0)
     .reduce((acc, mov) => acc + mov, 0);
-  labelSumOut.textContent = `${Math.abs(out)}€`;
+  labelSumOut.textContent = `${Math.abs(out).toFixed(2)}€`;
 
+  // Calculate interest
   const interest = acc.movements
     .filter(mov => mov > 0)
     .map(deposit => (deposit * acc.interestRate) / 100)
-    .filter((int, i, arr) => {
-      // console.log(arr);
-      return int >= 1;
-    })
+    .filter(int => int >= 1) // Only include interest >= 1€
     .reduce((acc, int) => acc + int, 0);
-  labelSumInterest.textContent = `${interest}€`;
+  labelSumInterest.textContent = `${interest.toFixed(2)}€`;
 };
 
+// Function to create usernames for each account (based on owner's initials)
 const createUsernames = function (accs) {
   accs.forEach(function (acc) {
     acc.username = acc.owner
@@ -140,6 +149,7 @@ const createUsernames = function (accs) {
 };
 createUsernames(accounts);
 
+// Function to update the UI with account information
 const updateUI = function (acc) {
   // Display movements
   displayMovements(acc.movements);
@@ -155,17 +165,18 @@ const updateUI = function (acc) {
 // Event handlers
 let currentAccount;
 
+// Login event handler
 btnLogin.addEventListener('click', function (e) {
-  // Prevent form from submitting
-  e.preventDefault();
+  e.preventDefault(); // Prevent form from submitting
 
+  // Find the account by username
   currentAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value
   );
-  console.log(currentAccount);
 
+  // Verify PIN
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
-    // Display UI and message
+    // Display welcome message and UI
     labelWelcome.textContent = `Welcome back, ${
       currentAccount.owner.split(' ')[0]
     }`;
@@ -180,21 +191,26 @@ btnLogin.addEventListener('click', function (e) {
   }
 });
 
+// Transfer event handler
 btnTransfer.addEventListener('click', function (e) {
   e.preventDefault();
+
   const amount = Number(inputTransferAmount.value);
   const receiverAcc = accounts.find(
     acc => acc.username === inputTransferTo.value
   );
+
+  // Clear input fields
   inputTransferAmount.value = inputTransferTo.value = '';
 
+  // Validate transfer conditions
   if (
     amount > 0 &&
     receiverAcc &&
     currentAccount.balance >= amount &&
     receiverAcc?.username !== currentAccount.username
   ) {
-    // Doing the transfer
+    // Perform the transfer
     currentAccount.movements.push(-amount);
     receiverAcc.movements.push(amount);
 
@@ -203,24 +219,30 @@ btnTransfer.addEventListener('click', function (e) {
   }
 });
 
+// Loan event handler
 btnLoan.addEventListener('click', function (e) {
   e.preventDefault();
 
   const amount = Number(inputLoanAmount.value);
 
+  // Validate loan conditions (at least one deposit with 10% of the requested loan amount)
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
-    // Add movement
+    // Add loan movement
     currentAccount.movements.push(amount);
 
     // Update UI
     updateUI(currentAccount);
   }
+
+  // Clear input field
   inputLoanAmount.value = '';
 });
 
+// Close account event handler
 btnClose.addEventListener('click', function (e) {
   e.preventDefault();
 
+  // Validate close account conditions
   if (
     inputCloseUsername.value === currentAccount.username &&
     Number(inputClosePin.value) === currentAccount.pin
@@ -228,8 +250,6 @@ btnClose.addEventListener('click', function (e) {
     const index = accounts.findIndex(
       acc => acc.username === currentAccount.username
     );
-    console.log(index);
-    // .indexOf(23)
 
     // Delete account
     accounts.splice(index, 1);
@@ -238,9 +258,11 @@ btnClose.addEventListener('click', function (e) {
     containerApp.style.opacity = 0;
   }
 
+  // Clear input fields
   inputCloseUsername.value = inputClosePin.value = '';
 });
 
+// Sort movements event handler
 let sorted = false;
 btnSort.addEventListener('click', function (e) {
   e.preventDefault();
