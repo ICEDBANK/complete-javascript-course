@@ -311,3 +311,11 @@ console.log(Math.trunc(Math.random() * 6) + 1);
 const randomInt = (min, max) =>
   Math.trunc(Math.random() * (max - min) + 1) + min;
 console.log(randomInt(10, 20));
+
+// Rounding Interegers
+console.log(Math.trunc(23.4));
+console.log(Math.round(23.9));
+console.log(Math.ceil(23.9));
+console.log(Math.ceil(23.9));
+console.log(Math.round(23.9));
+console.log(Math.round(23.9));
