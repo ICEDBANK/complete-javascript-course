@@ -351,4 +351,5 @@ console.log(isEven(513));
 
 // Numeric Seperators
 
-const diameter = 2874600000;
+const diameter = 287_460_000_000;
+console.log(diameter);
