@@ -175,7 +175,7 @@ btnLogin.addEventListener('click', function (e) {
   );
 
   // Verify PIN
-  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+  if (currentAccount?.pin === +inputLoginPin.value) {
     // Display welcome message and UI
     labelWelcome.textContent = `Welcome back, ${
       currentAccount.owner.split(' ')[0]
@@ -195,7 +195,7 @@ btnLogin.addEventListener('click', function (e) {
 btnTransfer.addEventListener('click', function (e) {
   e.preventDefault();
 
-  const amount = Number(inputTransferAmount.value);
+  const amount = +inputTransferAmount.value;
   const receiverAcc = accounts.find(
     acc => acc.username === inputTransferTo.value
   );
@@ -223,7 +223,7 @@ btnTransfer.addEventListener('click', function (e) {
 btnLoan.addEventListener('click', function (e) {
   e.preventDefault();
 
-  const amount = Number(inputLoanAmount.value);
+  const amount = +inputLoanAmount.value;
 
   // Validate loan conditions (at least one deposit with 10% of the requested loan amount)
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
@@ -245,7 +245,7 @@ btnClose.addEventListener('click', function (e) {
   // Validate close account conditions
   if (
     inputCloseUsername.value === currentAccount.username &&
-    Number(inputClosePin.value) === currentAccount.pin
+    +inputClosePin.value === currentAccount.pin
   ) {
     const index = accounts.findIndex(
       acc => acc.username === currentAccount.username
@@ -277,3 +277,7 @@ btnSort.addEventListener('click', function (e) {
 console.log(23 === 23.0);
 
 console.log(0.1 + 0.2);
+
+// String Conversion
+console.log(+'23');
+console.log(+`23`);
