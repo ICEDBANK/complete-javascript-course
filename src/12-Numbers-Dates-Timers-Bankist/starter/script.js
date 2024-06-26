@@ -294,3 +294,6 @@ console.log(Number.isNaN(20));
 console.log(Number.isNaN('20'));
 console.log(Number.isNaN(+'20px'));
 console.log(Number.isNaN(32 / 0));
+
+console.log(Number.isFinite(20));
+console.log(Number.isFinite(32 / 0));
