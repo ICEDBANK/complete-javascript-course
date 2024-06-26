@@ -134,7 +134,9 @@ const calcDisplaySummary = function (acc) {
     .map(deposit => (deposit * acc.interestRate) / 100)
     .filter(int => int >= 1) // Only include interest >= 1€
     .reduce((acc, int) => acc + int, 0);
-  labelSumInterest.textContent = `${Math.round(interest * 100) / 100}€`;
+  labelSumInterest.textContent = `${Math.abs(
+    Math.round(interest * 100) / 100
+  )}€`;
 };
 
 // Function to create usernames for each account (based on owner's initials)
