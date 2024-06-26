@@ -357,3 +357,60 @@ console.log(diameter);
 console.log(+`230000`);
 // Will not work when converting strings to numbers same with parseInt
 console.log(+`230_000`);
+
+// Working With BIGINT (primitive data type)
+
+// Numbers are represented in 64 bits
+
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(2 ** 55 - 1); // Unsafe Number Example
+
+console.log(15604098409152658180163158640n);
+console.log(BigInt(654061046));
+
+console.log(10000n + 1392940n);
+
+const huge = 15604098409152658180163158640n;
+const num = 23;
+console.log(huge * BigInt(num));
+
+// Exceptions
+console.log(20n > 15);
+console.log(20n == 20);
+
+// Division
+
+console.log(10n / 3n);
+
+// Creating Dates
+const now = new Date();
+console.log(now);
+
+console.log(new Date('Wed Jun 26 2024 14:10:42'));
+console.log(new Date('December 25, 2024'));
+
+console.log(new Date(account1.movementsDates[0]));
+console.log(new Date(2037, 10, 19, 15, 23, 5));
+console.log(new Date(2037, 10, 31));
+
+console.log(new Date(0));
+console.log(new Date(3 * 24 * 60 * 60 * 1000));
+
+// Working with Dates methods
+
+const future = new Date(2037, 10, 19, 15, 23);
+console.log(future.getFullYear());
+console.log(future.getMonth());
+console.log(future.getDate());
+console.log(future.getDay());
+console.log(future.getHours());
+console.log(future.getMinutes());
+console.log(future.getSeconds());
+console.log(future.toISOString());
+console.log(future.getTime());
+
+console.log(Date.now());
+
+future.setFullYear(2040);
+console.log(future);
