@@ -120,7 +120,7 @@ const calcDisplaySummary = function (acc) {
   const incomes = acc.movements
     .filter(mov => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
-  labelSumIn.textContent = `${incomes.toFixed(2)}€`;
+  labelSumIn.textContent = `${Math.round(incomes * 100) / 100}€`;
 
   // Calculate outgoings
   const out = acc.movements
