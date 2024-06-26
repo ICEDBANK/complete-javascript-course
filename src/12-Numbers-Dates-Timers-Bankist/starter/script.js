@@ -355,4 +355,5 @@ const diameter = 287_460_000_000;
 console.log(diameter);
 
 console.log(+`230000`);
+// Will not work when converting strings to numbers same with parseInt
 console.log(+`230_000`);
