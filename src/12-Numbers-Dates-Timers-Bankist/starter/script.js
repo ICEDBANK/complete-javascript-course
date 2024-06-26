@@ -275,7 +275,6 @@ btnSort.addEventListener('click', function (e) {
 // LECTURES
 
 console.log(23 === 23.0);
-
 console.log(0.1 + 0.2);
 
 // String Conversion
@@ -283,17 +282,26 @@ console.log(Number('23'));
 console.log(+`23`);
 
 //Parsing
-
 console.log(Number.parseInt('30px', 10));
 console.log(Number.parseInt('e23', 10));
 
 console.log(Number.parseInt('2.5rem'));
 console.log(Number.parseFloat('2.5rem'));
 
+// Checking If Value Is NaN
 console.log(Number.isNaN(20));
 console.log(Number.isNaN('20'));
 console.log(Number.isNaN(+'20px'));
 console.log(Number.isNaN(32 / 0));
 
+// Checking If Value Is A Number
 console.log(Number.isFinite(20));
 console.log(Number.isFinite(32 / 0));
+
+//Math Namespace
+console.log(Math.sqrt(25));
+console.log(25 ** (1 / 3));
+console.log(Math.max(5, 18, 23, '11', 2));
+console.log(Math.max(5, 18, '23px', '11', 2));
+console.log(Math.min(5, 18, 23, '11', 2));
+console.log(Math.min(5, 18, '23px', '11', 2));
