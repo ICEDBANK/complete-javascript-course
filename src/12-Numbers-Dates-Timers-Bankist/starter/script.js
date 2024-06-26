@@ -228,7 +228,7 @@ btnLoan.addEventListener('click', function (e) {
   // Validate loan conditions (at least one deposit with 10% of the requested loan amount)
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
     // Add loan movement
-    currentAccount.movements.push(amount);
+    currentAccount.movements.push(Math.round(amount * 100) / 100);
 
     // Update UI
     updateUI(currentAccount);
