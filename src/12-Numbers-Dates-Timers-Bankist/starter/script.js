@@ -120,13 +120,13 @@ const calcDisplaySummary = function (acc) {
   const incomes = acc.movements
     .filter(mov => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
-  labelSumIn.textContent = `${Math.round(incomes * 100) / 100}€`;
+  labelSumIn.textContent = `${incomes.toFixed(2)}€`;
 
   // Calculate outgoings
   const out = acc.movements
     .filter(mov => mov < 0)
     .reduce((acc, mov) => acc + mov, 0);
-  labelSumOut.textContent = `${Math.round(out * 100) / 100}€`;
+  labelSumOut.textContent = `${Math.abs(out).toFixed(2)}€`;
 
   // Calculate interest
   const interest = acc.movements
@@ -134,9 +134,7 @@ const calcDisplaySummary = function (acc) {
     .map(deposit => (deposit * acc.interestRate) / 100)
     .filter(int => int >= 1) // Only include interest >= 1€
     .reduce((acc, int) => acc + int, 0);
-  labelSumInterest.textContent = `${Math.abs(
-    Math.round(interest * 100) / 100
-  )}€`;
+  labelSumInterest.textContent = `${interest.toFixed(2)}€`;
 };
 
 // Function to create usernames for each account (based on owner's initials)
