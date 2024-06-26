@@ -211,8 +211,8 @@ btnTransfer.addEventListener('click', function (e) {
     receiverAcc?.username !== currentAccount.username
   ) {
     // Perform the transfer
-    currentAccount.movements.push(-amount);
-    receiverAcc.movements.push(amount);
+    currentAccount.movements.push(Math.round(-amount * 100) / 100);
+    receiverAcc.movements.push(Math.round(amount * 100) / 100);
 
     // Update UI
     updateUI(currentAccount);
