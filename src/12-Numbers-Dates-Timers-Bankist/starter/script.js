@@ -232,6 +232,9 @@ const options = {
   year: 'numeric',
   weekday: 'long',
 };
+const local = navigator.language;
+console.log(local);
+
 labelDate.textContent = new Intl.DateTimeFormat('en-US', options).format(now1);
 
 btnLogin.addEventListener('click', function (e) {
