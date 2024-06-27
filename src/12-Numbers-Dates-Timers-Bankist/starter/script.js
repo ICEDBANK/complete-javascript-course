@@ -419,3 +419,7 @@ console.log(future);
 
 const future1 = new Date(2037, 10, 19, 15, 23);
 console.log(+future1);
+
+const calcDatePassed = (date1, date2) => abs(date2 - date1);
+
+calcDatePassed(new Date(2037, 10, 19), new Date(now));
