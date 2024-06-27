@@ -89,7 +89,6 @@ const formatMovementDate = function (date) {
   const day = `${date.getDate()}`.padStart(2, 0);
   const month = `${date.getMonth() + 1}`.padStart(2, 0);
   const year = date.getFullYear();
-  const displayDate = `${month}/${day}/${year}`;
 
   const calcDatePassed = (date1, date2) =>
     (date2 - date1) / (1000 * 60 * 60 * 24);
@@ -106,6 +105,7 @@ const displayMovements = function (movements, sort = false) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
 
     const date = new Date(acc.movementsDates[i]);
+    const displayDate = `${month}/${day}/${year}`;
 
     const html = `
       <div class="movements__row">
