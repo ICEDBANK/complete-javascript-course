@@ -86,7 +86,6 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
 // Function to display account movements (transactions)
 const formatMovementDate = function (date) {
-  const date = new Date(acc.movementsDates[i]);
   const day = `${date.getDate()}`.padStart(2, 0);
   const month = `${date.getMonth() + 1}`.padStart(2, 0);
   const year = date.getFullYear();
@@ -105,6 +104,8 @@ const displayMovements = function (movements, sort = false) {
   // Generate HTML for each movement and insert into container
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
+
+    const date = new Date(acc.movementsDates[i]);
 
     const html = `
       <div class="movements__row">
