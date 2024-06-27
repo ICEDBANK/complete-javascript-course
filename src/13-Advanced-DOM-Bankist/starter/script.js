@@ -70,3 +70,4 @@ const allSections = document.querySelectorAll('.section');
 console.log(allSections);
 
 document.getElementById('section--1');
+const allButtons = document.getElementsByTagName('button');
