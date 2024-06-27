@@ -223,6 +223,7 @@ updateUI(currentAccount);
 containerApp.style.opacity = 100;
 
 const now1 = new Date();
+const options = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
 labelDate.textContent = new Intl.DateTimeFormat('en-US').format(now1);
 
 btnLogin.addEventListener('click', function (e) {
