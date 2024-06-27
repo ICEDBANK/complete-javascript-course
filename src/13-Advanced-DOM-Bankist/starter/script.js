@@ -29,3 +29,34 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+/* 
+
+  Review What Is The DOM
+
+    ALLOWS US TO MAKE JS INTERACT WITH THE BROWSER,
+
+    We can write js to create modify and delet HTML elements and styles classes and attributes and listen and respond to events
+
+    DOM Tree is generated from an HTML document which can then interact with
+
+    DOM is a very complex API that contains lots of methods properties.
+
+  How the DOM API IS ORGANIZED BEHIND THE SCENES
+
+    Represensted by Javascript object
+
+    EventTarget
+      Window
+      Node -> 
+        Element ->
+          HTMLElement ->
+            HTMLButtonElement
+            HTMLDivElement
+        Text
+        Comment
+        Document
+    
+    InHERITANCE OF METHODS AND PROPERTIES - Any HTMLELEMENT will have access to addEventListener().cloneNode() or .closest() methods
+
+*/
