@@ -77,3 +77,8 @@ console.log(document.getElementsByClassName('btn'));
 
 // Creating and inserting Elements
 const message = document.createElement('div');
+message.classList.add('cookie-message');
+message.textContent =
+  'We use cookied for Improved functionality and analytics.';
+message.innerHTML =
+  'We use cookied for Improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button>';
