@@ -60,3 +60,5 @@ document.addEventListener('keydown', function (e) {
     InHERITANCE OF METHODS AND PROPERTIES - Any HTMLELEMENT will have access to addEventListener().cloneNode() or .closest() methods
 
 */
+
+console.log(document.documentElement);
