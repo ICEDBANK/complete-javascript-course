@@ -91,6 +91,9 @@ const formatMovementDate = function (date) {
   const month = `${date.getMonth() + 1}`.padStart(2, 0);
   const year = date.getFullYear();
   const displayDate = `${month}/${day}/${year}`;
+
+  const calcDatePassed = (date1, date2) =>
+    (date2 - date1) / (1000 * 60 * 60 * 24);
 };
 
 const displayMovements = function (movements, sort = false) {
