@@ -532,5 +532,5 @@ const calcDatePassed = (date1, date2) =>
 const calcDate = calcDatePassed(new Date(now), new Date(2024, 10, 19));
 console.log(Math.abs(calcDate));
 
-const num2 = 3884764.23;
-console.log('Us', new Intl.NumberFormat('en-US').format(num2));
+// const num2 = 3884764.23;
+// console.log('Us', new Intl.NumberFormat('en-US').format(num2));
