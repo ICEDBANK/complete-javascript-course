@@ -217,10 +217,10 @@ const startLogOutTimer = function () {
 // Event handlers
 let currentAccount, timer;
 
-// FAKE ALWAYS LOGGED IN
-// currentAccount = account1;
-// updateUI(currentAccount);
-// containerApp.style.opacity = 100;
+//FAKE ALWAYS LOGGED IN
+currentAccount = account1;
+updateUI(currentAccount);
+containerApp.style.opacity = 100;
 
 btnLogin.addEventListener('click', function (e) {
   // Prevent form from submitting
@@ -516,3 +516,5 @@ const calcDatePassed = (date1, date2) =>
 
 const calcDate = calcDatePassed(new Date(now), new Date(2024, 10, 19));
 console.log(Math.abs(calcDate));
+
+// Internationalizing Numbers / Dates
