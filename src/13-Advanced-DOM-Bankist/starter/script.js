@@ -93,5 +93,6 @@ document
   .querySelector('.btn--close-cookie')
   .addEventListener('click', function (e) {
     e.preventDefault;
-    message.remove();
+    // message.remove();
+    message.parentElement.removeChild(message);
   });
