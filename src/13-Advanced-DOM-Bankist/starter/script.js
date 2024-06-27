@@ -74,3 +74,6 @@ const allButtons = document.getElementsByTagName('button');
 console.log(allButtons);
 
 console.log(document.getElementsByClassName('btn'));
+
+// Creating and inserting Elements
+const message = document.createElement('div');
