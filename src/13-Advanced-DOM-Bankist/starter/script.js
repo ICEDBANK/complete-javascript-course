@@ -66,4 +66,5 @@ console.log(document.head);
 console.log(document.body);
 
 document.querySelector('.header');
-document.querySelectorAll('.section');
+const allSections = document.querySelectorAll('.section');
+console.log(allSections);
