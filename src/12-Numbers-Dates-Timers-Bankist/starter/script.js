@@ -227,7 +227,7 @@ const options = {
   hour: 'numeric',
   minute: 'numeric',
   second: 'numeric',
-  month: 'Long',
+  month: 'long',
   day: 'numeric',
   year: 'numeric',
 };
