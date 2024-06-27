@@ -87,3 +87,11 @@ header.append(message);
 // header.append(message.cloneNode(true));
 header.before(message);
 header.after(message);
+
+// Delete Element
+document
+  .querySelector('.btn--close-cookie')
+  .addEventListener('click', function (e) {
+    e.preventDefault;
+    message.remove();
+  });
