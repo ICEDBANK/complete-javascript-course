@@ -85,6 +85,14 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // Functions
 
 // Function to display account movements (transactions)
+const formatMovementDate = function (date) {
+  const date = new Date(acc.movementsDates[i]);
+  const day = `${date.getDate()}`.padStart(2, 0);
+  const month = `${date.getMonth() + 1}`.padStart(2, 0);
+  const year = date.getFullYear();
+  const displayDate = `${month}/${day}/${year}`;
+};
+
 const displayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = ''; // Clear previous movements
 
