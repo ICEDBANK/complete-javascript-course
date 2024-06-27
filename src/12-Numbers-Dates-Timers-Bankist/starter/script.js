@@ -414,3 +414,8 @@ console.log(Date.now());
 
 future.setFullYear(2040);
 console.log(future);
+
+// Date Operations
+
+const future1 = new Date(2037, 10, 19, 15, 23);
+console.log(+future1);
