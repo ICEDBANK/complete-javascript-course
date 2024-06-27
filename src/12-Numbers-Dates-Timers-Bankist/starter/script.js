@@ -423,5 +423,5 @@ console.log(+future1);
 const calcDatePassed = (date1, date2) =>
   (date2 - date1) / (1000 * 60 * 60 * 24);
 
-const calcDate = calcDatePassed(new Date(now), new Date(2037, 10, 19));
+const calcDate = calcDatePassed(new Date(now), new Date(2024, 10, 19));
 console.log(Math.abs(calcDate));
