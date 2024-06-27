@@ -222,6 +222,9 @@ currentAccount = account1;
 updateUI(currentAccount);
 containerApp.style.opacity = 100;
 
+const now1 = new Date();
+labelDate.textContent = new Intl.DateTimeFormat('en-US');
+
 btnLogin.addEventListener('click', function (e) {
   // Prevent form from submitting
   e.preventDefault();
