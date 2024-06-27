@@ -82,6 +82,8 @@ message.textContent =
   'We use cookied for Improved functionality and analytics.';
 message.innerHTML =
   'We use cookied for Improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button>';
-header.prepend(message);
-// header.append(message);
-header.append(message.cloneNode(true));
+// header.prepend(message);
+header.append(message);
+// header.append(message.cloneNode(true));
+header.before(message);
+header.after(message);
